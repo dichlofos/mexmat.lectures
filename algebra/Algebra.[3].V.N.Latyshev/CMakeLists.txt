@@ -1,0 +1,1 @@
+texify(Algebra.[3].V.N.Latyshev algebra-3s-latyshev)
