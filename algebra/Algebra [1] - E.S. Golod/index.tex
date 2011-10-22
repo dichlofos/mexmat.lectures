@@ -1,0 +1,36 @@
+\documentclass[a4paper,11pt,twoside]{article}
+\usepackage{math}
+
+\def\existz{\exists\,!\,}
+\makeindex
+
+\begin{document}
+
+\author{Boris Agafontsev inspired by Evgeny Golod}
+\date{\today}
+\title{Algebra}
+
+ \input{title}
+ \input{abstract}
+
+\markboth{}{}
+\tableofcontents
+
+ \include{sets}
+ \include{permutation}
+ \include{groups}
+ \include{vector}
+ \include{matrix}
+ \include{determinant}
+ \include{equations}
+ \include{complex}
+ \include{polynom}
+
+\input{index.ind}
+
+\include{end}
+\markboth{Для заметок}{Для заметок}
+\newpage\strut
+\newpage\strut
+
+\end{document}
