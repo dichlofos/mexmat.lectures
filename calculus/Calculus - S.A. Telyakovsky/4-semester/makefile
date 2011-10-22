@@ -1,0 +1,18 @@
+DocName = "Calculus [4] - S.A. Telyakovsky"
+RarName = "calculus-4s-telyakovsky"
+
+t:
+ mpost --tex=latex pictures.mp
+ latex --src $(DocName).tex
+ dvips $(DocName).dvi
+a: t
+ wt $(RarName).rar $(DocName).ps
+r: a c
+c clean:
+ del *.dvi *.mpx *.log *.aux *.toc
+p: t
+ gs -sDEVICE=pdfwrite -sOutputFile=$(DocName).pdf -r1200 -dNOPAUSE -dBATCH -g9912x14028 $(DocName).ps
+b: p
+ wr $(RarName)-pdf.rar $(DocName).pdf 
+ cp $(DocName).pdf $(RarName).pdf
+all: a b
