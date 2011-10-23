@@ -24,9 +24,6 @@ macro(texify)
 	set (RN "${ARGV1}")
 	add_custom_command(OUTPUT
 		"${FN}.dvi"
-		"${FN}.log"
-		"${FN}.aux"
-		"${FN}.toc"
 		COMMAND "${LATEX}" ${LATEX_OPTS} "${FN}.tex"
 		DEPENDS "${FN}.tex"
 	)
@@ -50,10 +47,29 @@ macro(texify)
 		COMMAND "${RAR}" ${RAR_TEXT_OPTS} "${RN}.rar" "${FN}.ps"
 		DEPENDS "${FN}.ps"
 	)
+	add_custom_command(OUTPUT
+		"${RN}-pdf.rar"
+		COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}-pdf.rar" "${FN}.pdf"
+		DEPENDS "${FN}.pdf"
+	)
+	add_custom_command(OUTPUT
+		"${RN}.pdf"
+		COMMAND cp "${FN}.pdf" "${RN}.pdf"
+		DEPENDS "${FN}.pdf"
+	)
 	add_custom_target("Make ${FN}.dvi" ALL DEPENDS "${FN}.dvi")
 	add_custom_target("Make ${FN}.ps" ALL DEPENDS "${FN}.ps")
 	add_custom_target("Make ${FN}.pdf" ALL DEPENDS "${FN}.pdf")
 	add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
+	add_custom_target("Make ${RN}-pdf.rar" ALL DEPENDS "${RN}-pdf.rar")
+	add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
+	set (AUX_CLEAN_FILES
+		"${FN}.aux"
+		"${FN}.log"
+		"${FN}.toc"
+	)
+	set_directory_properties(PROPERTIES
+		ADDITIONAL_MAKE_CLEAN_FILES "${AUX_CLEAN_FILES}")
 endmacro(texify)
 
 add_subdirectory(algebra)
