@@ -1,0 +1,1 @@
+texify(EP.Linear.Algebra.[2].V.M.Manuilov ep-linearalgebra-manuilov)

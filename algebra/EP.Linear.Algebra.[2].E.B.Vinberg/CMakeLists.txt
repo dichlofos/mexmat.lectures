@@ -1,0 +1,1 @@
+texify(EP.Linear.Algebra.[2].E.B.Vinberg ep-linearalgebra-vinberg)
