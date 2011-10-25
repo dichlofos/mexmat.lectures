@@ -16,3 +16,6 @@ add_subdirectory(EP.Linear.Algebra.[2].V.V.Fedorchuk)
 
 # linear algebra
 add_subdirectory(Linear.Algebra.[2].E.B.Vinberg)
+
+# sk
+add_subdirectory(EP.Lie.Groups.[S].E.B.Vinberg)

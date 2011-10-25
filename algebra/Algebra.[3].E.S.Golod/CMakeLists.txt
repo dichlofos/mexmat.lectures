@@ -1,0 +1,1 @@
+texify(Algebra.[3].E.S.Golod algebra-3s-golod)

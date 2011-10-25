@@ -1,0 +1,1 @@
+texify(EP.Algebra.[3].E.B.Vinberg ep-algebra-3s-vinberg)

@@ -1,0 +1,1 @@
+texify(EP.Lie.Groups.[S].E.B.Vinberg ep-liegroups-vinberg)
