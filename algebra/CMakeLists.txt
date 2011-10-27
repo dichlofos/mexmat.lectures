@@ -19,7 +19,10 @@ add_subdirectory(Linear.Algebra.[2].E.B.Vinberg)
 
 # problems
 add_subdirectory(PR.Algebra.[3].I.V.Arzhantsev)
+add_subdirectory(PR.Linear.Algebra.[2].I.A.Dynnikov)
 
 # sk
-add_subdirectory(EP.Lie.Groups.[S].E.B.Vinberg)
 add_subdirectory(EP.Alg.Geometry.and.Inv.Theory.Sem.[S].D.A.Timashev,I.V.Arjantsev)
+add_subdirectory(EP.Lie.Groups.[S].E.B.Vinberg)
+add_subdirectory(EP.Symmetric.Spaces.[S].E.B.Vinberg)
+add_subdirectory(EP.Reflection.Groups.[S].E.B.Vinberg)
