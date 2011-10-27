@@ -17,5 +17,9 @@ add_subdirectory(EP.Linear.Algebra.[2].V.V.Fedorchuk)
 # linear algebra
 add_subdirectory(Linear.Algebra.[2].E.B.Vinberg)
 
+# problems
+add_subdirectory(PR.Algebra.[3].I.V.Arzhantsev)
+
 # sk
 add_subdirectory(EP.Lie.Groups.[S].E.B.Vinberg)
+add_subdirectory(EP.Alg.Geometry.and.Inv.Theory.Sem.[S].D.A.Timashev,I.V.Arjantsev)

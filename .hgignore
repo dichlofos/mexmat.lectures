@@ -1,4 +1,7 @@
 CMakeFiles
 \.cmake$
 ^CMakeCache.txt$
-#^Makefile$
+(.*/|^)Makefile$
+.*\.aux$
+.*\.log$
+.*\.toc$
