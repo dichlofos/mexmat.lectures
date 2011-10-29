@@ -1,4 +1,5 @@
 # algebra
+add_subdirectory(Algebra.[1].E.S.Golod)
 add_subdirectory(Algebra.[3].E.S.Golod)
 add_subdirectory(Algebra.[3].V.N.Latyshev)
 

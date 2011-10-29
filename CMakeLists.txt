@@ -1,6 +1,6 @@
 project (MMLectures)
 
-find_program(LATEX latex)
+find_program(LATEX texify)
 find_program(DVIPS dvips)
 find_program(MPOST mpost)
 find_program(GS gs)
@@ -67,6 +67,9 @@ macro(texify)
 		"${FN}.aux"
 		"${FN}.log"
 		"${FN}.toc"
+		"${FN}.ind"
+		"${FN}.ilg"
+		"${FN}.idx"
 	)
 	set_directory_properties(PROPERTIES
 		ADDITIONAL_MAKE_CLEAN_FILES "${AUX_CLEAN_FILES}")
