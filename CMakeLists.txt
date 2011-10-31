@@ -15,13 +15,22 @@ set (RAR_BIN_OPTS a -md4096 -s -m5)
 message (STATUS "Found LaTeX: ${LATEX}")
 message (STATUS "Found MetaPost: ${MPOST}")
 
-macro(picture)
-	message(FATAL_ERROR "Not implemented yet. ")
-endmacro(picture)
+macro(mmPicture)
+	set (PN "${ARGV0}")
+	set (TN "${ARGV1}")
+	add_custom_command(OUTPUT
+		"${PN}.done"
+		COMMAND "${MPOST}" ${MPOST_OPTS} "${PN}.mp" && touch "${PN}.done"
+		DEPENDS "${PN}.mp"
+	)
+	add_custom_target("Make pictures from ${PN} for ${TN}" ALL DEPENDS "${PN}.done")
+	add_dependencies("Make ${TN}.dvi" "Make pictures from ${PN} for ${TN}")
+endmacro(mmPicture)
 
 macro(texify)
 	set (FN "${ARGV0}")
 	set (RN "${ARGV1}")
+	set (PN "${ARGV2}")
 	add_custom_command(OUTPUT
 		"${FN}.dvi"
 		COMMAND "${LATEX}" ${LATEX_OPTS} "${FN}.tex"
@@ -63,7 +72,13 @@ macro(texify)
 	add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
 	add_custom_target("Make ${RN}-pdf.rar" ALL DEPENDS "${RN}-pdf.rar")
 	add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
+	
+	if (PN)
+		message(STATUS "Processing pictures")
+		mmPicture("${PN}" "${FN}")
+	endif (PN)
 	set (AUX_CLEAN_FILES
+		"${AUX_CLEAN_FILES}"
 		"${FN}.aux"
 		"${FN}.log"
 		"${FN}.toc"
@@ -88,3 +103,4 @@ endmacro(mmPack)
 
 
 add_subdirectory(algebra)
+add_subdirectory(calculus)
