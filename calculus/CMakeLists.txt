@@ -1,0 +1,1 @@
+add_subdirectory(Approximation.Theory.[S].A.M.Sedletsky)
