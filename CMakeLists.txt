@@ -75,4 +75,16 @@ macro(texify)
 		ADDITIONAL_MAKE_CLEAN_FILES "${AUX_CLEAN_FILES}")
 endmacro(texify)
 
+macro(mmPack)
+	set (RN "${ARGV0}")
+	set (FN "${ARGV1}")
+	add_custom_command(OUTPUT
+		"${RN}.rar"
+		COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}.rar" "${FN}"
+		DEPENDS "${FN}"
+	)
+	add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
+endmacro(mmPack)
+
+
 add_subdirectory(algebra)
