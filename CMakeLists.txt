@@ -23,8 +23,15 @@ macro(mmPicture)
 		COMMAND "${MPOST}" ${MPOST_OPTS} "${PN}.mp" && touch "${PN}.done"
 		DEPENDS "${PN}.mp"
 	)
-	add_custom_target("Make pictures from ${PN} for ${TN}" ALL DEPENDS "${PN}.done")
-	add_dependencies("Make ${TN}.dvi" "Make pictures from ${PN} for ${TN}")
+	add_custom_target("MetaPosing ${PN} for ${TN}" ALL DEPENDS "${PN}.done")
+	add_dependencies("Make ${TN}.dvi" "MetaPosing ${PN} for ${TN}")
+	message(STATUS "Clean files: ${AUX_CLEAN_FILES}")
+	set (AUX_CLEAN_FILES
+		"${AUX_CLEAN_FILES}"
+		"${PN}.log"
+		"${PN}.mpx"
+	)
+	
 endmacro(mmPicture)
 
 macro(texify)
@@ -74,7 +81,7 @@ macro(texify)
 	add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
 	
 	if (PN)
-		message(STATUS "Processing pictures")
+		message(STATUS "Processing pictures for ${FN}...")
 		mmPicture("${PN}" "${FN}")
 	endif (PN)
 	set (AUX_CLEAN_FILES
