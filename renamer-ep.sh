@@ -9,31 +9,34 @@ fi
 dirName="$1"
 course="$2"
 nn="$3"
+prefix="`echo -n "$dirName" | perl -p -e 's/^(..).*/\1/'`"
 
-discipline="`echo $dirName | perl -p -e 's/EP - ([^-]+) - .*/\1/'`"
-author="`echo $dirName | perl -p -e 's/EP - .* - (.*)/\1/'`"
+discipline="`echo -n "$dirName" | perl -p -e 's/ \[.+\]//' | perl -p -e 's/'$prefix' - ([^-]+) - .*/\1/'`"
+author="`echo -n "$dirName" | perl -p -e 's/'$prefix' - .* - (.*)/\1/'`"
 
 properAuthor="`echo -n "$author" | sed -e 's/ //g'`"
-properDirName="EP.$discipline.[$course].$properAuthor"
+properDirName="$prefix.$discipline.[$course].$properAuthor"
 
 disciplineLC="`echo -n "$discipline" | tr [A-Z] [a-z]`"
 authorLC="`echo -n "$author" | perl -p -e 's/^[A-Za-z]+\.[A-Za-z]+\. //' | tr [A-Z] [a-z]`"
 distCourse="`echo -n "$course" | perl -p -e 's/\./s/g' | perl -p -e 's/$/s/'`"
 
 if [ -n "$nn" ] ; then
-	oldTexName="EP - $discipline - $author"
+	oldTexName="$prefix - $discipline - $author"
 else
-	oldTexName="EP - $discipline [$course] - $author"
+	oldTexName="$prefix - $discipline [$course] - $author"
 fi
-newTexName="EP.$discipline.[$course].$properAuthor"
-distrName="ep-$disciplineLC-$distCourse-$authorLC"
+newTexName="$prefix.$discipline.[$course].$properAuthor"
+prefixLC="`echo -n "$prefix" | tr [A-Z] [a-z]`"
+distrName="$prefixLC-$disciplineLC-$distCourse-$authorLC"
 
 #exit 0
 
 hg mv "$dirName" "$properDirName"
 cd "$properDirName"
 hg mv "$oldTexName.tex" "$newTexName.tex"
-hg rm -f makefile
+hg rm -f [Mm]akefile
+rm -f [Mm]akefile
 echo "texify ($newTexName $distrName)" > CMakeLists.txt
 hg add CMakeLists.txt
 cd -

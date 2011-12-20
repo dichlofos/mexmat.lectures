@@ -8,7 +8,7 @@ fi
 
 dirName="$1"
 course="$2"
-ep="$3"
+subd="$3"
 
 discipline="`echo $dirName | perl -p -e 's/([^-]+) - .*/\1/'`"
 echo "DISC='$discipline'"
