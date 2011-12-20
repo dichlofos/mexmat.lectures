@@ -1,0 +1,1 @@
+texify(Calculus.[2].T.P.Lukashenko calculus-2s-lukashenko)

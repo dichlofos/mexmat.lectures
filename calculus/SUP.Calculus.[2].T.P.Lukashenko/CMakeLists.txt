@@ -1,0 +1,1 @@
+texify(SUP.Calculus.[2].T.P.Lukashenko sup-calculus-2s-lukashenko)

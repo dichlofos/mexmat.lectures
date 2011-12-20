@@ -1,0 +1,1 @@
+mmPack(linearalgebra-zaytsev Linear.Algebra.[2].M.V.Zaytsev.doc)

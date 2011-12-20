@@ -1,0 +1,1 @@
+texify(EP.Alg.Geometry.and.Inv.Theory.Sem.[S].D.A.Timashev,I.V.Arjantsev ep-agit-timashev-arjantsev)
