@@ -1,0 +1,1 @@
+mmPack(complexcalculus-5s-sorokin "*.doc")
