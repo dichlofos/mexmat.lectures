@@ -1,0 +1,1 @@
+texify(Complex.Calculus.[6].V.K.Beloshapka complexcalculus-6s-beloshapka pictures)
