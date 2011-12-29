@@ -1,0 +1,6 @@
+add_subdirectory(EP.Real.Calculus.[4].M.I.Dyachenko)
+add_subdirectory(EP.Real.Calculus.[4].V.I.Bogachev)
+add_subdirectory(PR.Real.Calculus.[4].A.A.Shkalikov)
+add_subdirectory(PR.Real.Calculus.[4].V.A.Skvortsov)
+add_subdirectory(Real.Calculus.[4].O.G.Smolyanov)
+add_subdirectory(Real.Calculus.[4].V.A.Skvortsov)
