@@ -1,1 +1,1 @@
-texify(Linear.Algebra.[2].E.B.Vinberg linearalgebra-vinberg)
+texify(Linear.Algebra.[2].E.B.Vinberg linear.algebra-2s-vinberg)

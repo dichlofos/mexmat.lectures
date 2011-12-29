@@ -1,1 +1,1 @@
-texify(Group.Theory.[S].A.A.Klyachko group-theory-klyachko)
+texify(Group.Theory.[S].A.A.Klyachko group.theory-klyachko)

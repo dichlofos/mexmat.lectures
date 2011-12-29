@@ -1,1 +1,1 @@
-texify(EP.Algebraic.Geometry.and.Invariant.Theory.[S].I.V.Arjantsev ep-agit-arjantsev)
+texify(EP.Algebraic.Geometry.and.Invariant.Theory.[S].I.V.Arjantsev ep-alg.geom.inv.theory-arjantsev)

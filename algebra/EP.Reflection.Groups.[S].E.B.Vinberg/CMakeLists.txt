@@ -1,1 +1,1 @@
-texify(EP.Reflection.Groups.[S].E.B.Vinberg ep-reflectiongroups-vinberg)
+texify(EP.Reflection.Groups.[S].E.B.Vinberg ep-reflection.groups-vinberg)

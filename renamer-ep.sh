@@ -32,7 +32,7 @@ newTexName="$prefix.$properDiscipline.[$course].$properAuthor"
 prefixLC="`echo -n "$prefix" | tr [A-Z] [a-z]`"
 distrName="$prefixLC-$disciplineLC-$distCourse-$authorLC"
 
-exit 0
+#exit 0
 
 hg=
 $hg mv "$dirName" "$properDirName"

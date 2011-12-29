@@ -1,1 +1,1 @@
-texify(Complex.Calculus.[5].E.P.Dolzhenko complexcalculus-5s-dolzhenko pictures)
+texify(Complex.Calculus.[5].E.P.Dolzhenko complex.calculus-5s-dolzhenko pictures)
