@@ -8,7 +8,7 @@ etex
 
 input dmvnmpl;
 
-beginfig(1);
+beginfig(10);
 
 numeric u;
 u:=1.2cm;
