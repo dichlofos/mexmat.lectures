@@ -19,7 +19,7 @@ properDiscipline="`echo -n "$discipline" | tr \  \.`"
 properAuthor="`echo -n "$author" | sed -e 's/ //g'`"
 properDirName="$prefix.$properDiscipline.[$course].$properAuthor"
 
-disciplineLC="`echo -n "$discipline" | tr [A-Z] [a-z] | sed -e 's/ //g'`"
+disciplineLC="`echo -n "$discipline" | tr [A-Z] [a-z] | sed -e 's/ /./g'`"
 authorLC="`echo -n "$author" | perl -p -e 's/^[A-Za-z]+\.[A-Za-z]+\. //' | tr [A-Z] [a-z]`"
 distCourse="`echo -n "$course" | perl -p -e 's/\./s/g' | perl -p -e 's/$/s/'`"
 
