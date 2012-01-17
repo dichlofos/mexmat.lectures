@@ -1,0 +1,1 @@
+texify(Functional.Calculus.[5].O.G.Smolyanov.tex functional.calculus-5s-smolyanov)

@@ -1,0 +1,1 @@
+texify(Functional.Calculus.[5].V.V.Ryzhikov functional.calculus-5s-ryzhikov pictures)
