@@ -1,0 +1,1 @@
+texify(EP.Number.Theory.[7].A.I.Galochkin ep-number.theory-7s-galochkin)
