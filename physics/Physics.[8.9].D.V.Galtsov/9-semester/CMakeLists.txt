@@ -1,0 +1,1 @@
+texify(Physics.Math.Base.[9].D.V.Galtsov physics.math.base-9s-galtsov)
