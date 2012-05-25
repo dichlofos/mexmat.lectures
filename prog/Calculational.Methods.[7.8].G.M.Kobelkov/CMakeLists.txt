@@ -1,0 +1,1 @@
+texify(Calculational.Methods.[7.8].G.M.Kobelkov calculational.methods-7s8s-kobelkov pictures)
