@@ -1,8 +1,28 @@
 \documentclass[a4paper,11pt,twoside]{article}
-\usepackage{math}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{dmvn}
+\usepackage{wrapfig}
+\usepackage[dvips]{graphicx}
+\usepackage{multirow}
+\usepackage{subfloat}
+\usepackage{epigraph}
+\usepackage{subfig}
+\usepackage{hyperref}
+\usepackage{color}
 
 \def\existz{\exists\,!\,}
-\makeindex
+%% Legacy
+\newcommand{\spc}{\colon} 
+\newcommand{\ab}{{\bf a}}
+\newcommand{\bb}{{\bf b}}
+\newcommand{\cb}{{\bf c}}
+\newcommand{\eb}{{\bf e}}
+\newcommand{\xb}{{\bf x}}
+\newcommand\qedsymbol{$\blacktriangleleft$\!}
+\newcommand{\adj}{} %It means somtheing I do not understand
+
+%\makeindex
 
 \begin{document}
 
@@ -10,26 +30,21 @@
 \date{\today}
 \title{Algebra}
 
- \input{title}
- \input{abstract}
+\dmvntitle{Курс лекций}{по алгебре}{Лектор - Голод Евгений Соломонович}{I курс, 1 семестр, отделение математики}{2006}
 
-\markboth{}{}
-\tableofcontents
-
- \include{sets}
- \include{permutation}
- \include{groups}
- \include{vector}
- \include{matrix}
- \include{determinant}
- \include{equations}
- \include{complex}
- \include{polynom}
-
-\input{Algebra.[1].E.S.Golod.ind}
-
+\include{sets}
+\include{permutation}
+\include{groups}
+\include{vector}
+\include{matrix}
+%\include{determinant}
+\include{equations}
+\include{complex}
+\include{polynom}
+\include{biblio}
 \include{end}
-\markboth{��� �������}{��� �������}
+
+\markboth{Для заметок}{Для заметок}
 \newpage\strut
 \newpage\strut
 
