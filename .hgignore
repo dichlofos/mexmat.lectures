@@ -6,4 +6,5 @@ CMakeFiles
 .*\.log$
 .*\.toc$
 build
+(.*)\.~
 (.*)\.out

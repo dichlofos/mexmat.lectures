@@ -1,9 +1,0 @@
-CMakeFiles
-\.cmake$
-^CMakeCache.txt$
-(.*/|^)Makefile$
-.*\.aux$
-.*\.log$
-.*\.toc$
-build
-*.out
