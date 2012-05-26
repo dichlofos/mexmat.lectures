@@ -1,20 +1,34 @@
-cmake_minimum_required(VERSION 2.8)
-project (MMLectures "NONE")
+cmake_minimum_required(VERSION 2.8.0)
+project (MMLectures NONE)
+## Logic is pretty clear. Especially if you know automake.
+set(LATEX_texify_opts --src)
+set(LATEX_latex_opts)
+set(DVIPS_dvips_opts)
+set(MPOST_mpost_opts --tex=latex)
+set(GS_gs_opts -sDEVICE=pdfwrite -r1200 -dNOPAUSE -dBATCH -g9912x14028)
+set(ARC_winrar_opts  a -md4096 -s -m5)
+set(ARC_gzip_opts --best)
 
-find_program(LATEX NAMES texify latex)
-find_program(DVIPS dvips)
-find_program(MPOST mpost)
-find_program(GS gs)
-find_program(RAR winrar)
+function(require_program program names)
+  list(REMOVE_AT ARGV 0)
+  foreach(alter ${ARGV})
+    find_program(${program} ${alter})
+    if (NOT "${${program}}" STREQUAL "${program}-NOTFOUND")
+      set("${program}_OPTS" "${${program}_${alter}_opts}" PARENT_SCOPE)
+    endif()
+  endforeach(alter)
+  if( "${${program}}" STREQUAL "${program}-NOTFOUND")
+    message(FATAL_ERROR "Required program ${program} not found. Aborted.")
+  endif()
+  message(STATUS "Found ${program} via ${${program}}")
+endfunction(require_program)
 
-set (MPOST_OPTS --tex=latex)
-set (LATEX_OPTS --src)
-set (GS_OPTS -sDEVICE=pdfwrite -r1200 -dNOPAUSE -dBATCH -g9912x14028)
-set (RAR_TEXT_OPTS a -md4096 -s -m5)
-set (RAR_BIN_OPTS a -md4096 -s -m5)
-
-message (STATUS "Found LaTeX: ${LATEX}")
-message (STATUS "Found MetaPost: ${MPOST}")
+require_program(LATEX texify latex)
+require_program(DVIPS dvips)
+require_program(MPOST mpost)
+require_program(GS gs)
+require_program(ARC gzip winrar)
+require_program(ASY asy)
 
 macro(mmPicture)
 	set (PN "${ARGV0}")
@@ -32,7 +46,6 @@ macro(mmPicture)
 		"${PN}.log"
 		"${PN}.mpx"
 	)
-	
 endmacro(mmPicture)
 
 macro(texify)
@@ -61,12 +74,12 @@ macro(texify)
 	)
 	add_custom_command(OUTPUT
 		"${RN}.rar"
-		COMMAND "${RAR}" ${RAR_TEXT_OPTS} "${RN}.rar" "${FN}.ps"
+		COMMAND "${ARC}" ${ARC_TEXT_OPTS} "${RN}.rar" "${FN}.ps"
 		DEPENDS "${FN}.ps"
 	)
 	add_custom_command(OUTPUT
 		"${RN}-pdf.rar"
-		COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}-pdf.rar" "${FN}.pdf"
+		COMMAND "${ARC}" ${ARC_BIN_OPTS} "${RN}-pdf.rar" "${FN}.pdf"
 		DEPENDS "${FN}.pdf"
 	)
 	add_custom_command(OUTPUT
@@ -103,7 +116,7 @@ macro(mmPack)
 	set (FN "${ARGV1}")
 	add_custom_command(OUTPUT
 		"${RN}.rar"
-		COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}.rar" "${FN}"
+		COMMAND "${ARC}" ${ARC_BIN_OPTS} "${RN}.rar" "${FN}"
 		DEPENDS "${FN}"
 	)
 	add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
@@ -115,6 +128,7 @@ add_subdirectory(calculus)
 add_subdirectory(ccalculus)
 add_subdirectory(fcalculus)
 add_subdirectory(mechanics)
-add_subdirectory(nt)
-add_subdirectory(rcalculus)
 add_subdirectory(misc)
+add_subdirectory(nt)
+add_subdirectory(prog)
+add_subdirectory(rcalculus)
