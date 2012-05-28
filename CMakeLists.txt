@@ -27,8 +27,27 @@ require_program(LATEX texify latex)
 require_program(DVIPS dvips)
 require_program(MPOST mpost)
 require_program(GS gs)
-require_program(ARC gzip winrar)
+require_program(ARC winrar gzip)
 require_program(ASY asy)
+
+# Of course, It is exteremely wrong. But what else can I do,
+# faced extemely non-expressive language?
+function(archive filename)
+  get_filename_component(arcbin ${ARC} NAME)
+  if (${arcbin} STREQUAL "gzip")
+    message(STATUS "Processing archive")
+    add_custom_target("${filename}.gz"
+      COMMAND ${ARC} ${ARC_OPTS} ${filename}
+      DEPENDS ${filename})
+    add_dependencies(archive "${filename}.gz")
+  elseif(${arcbin} STREQUAL "winrar")
+    add_custom_command(OUTPUT  "${filename}.rar"
+		COMMAND ${ARC} ${ARC_OPTS} "${filename}.rar" ${filename}
+		DEPENDS ${filename})
+    add_dependencies(archive "${filename}.gz")
+  endif()   
+  add_dependencies(archive "bar.zoo")
+endfunction(archive)
 
 macro(mmPicture)
 	set (PN "${ARGV0}")
@@ -47,6 +66,7 @@ macro(mmPicture)
 		"${PN}.mpx"
 	)
 endmacro(mmPicture)
+
 
 macro(texify)
 	set (FN "${ARGV0}")
@@ -111,7 +131,7 @@ macro(texify)
 		ADDITIONAL_MAKE_CLEAN_FILES "${AUX_CLEAN_FILES}")
 endmacro(texify)
 
-macro(mmPack)
+function(mmPack)
 	set (RN "${ARGV0}")
 	set (FN "${ARGV1}")
 	add_custom_command(OUTPUT
@@ -120,7 +140,7 @@ macro(mmPack)
 		DEPENDS "${FN}"
 	)
 	add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
-endmacro(mmPack)
+endfunction(mmPack)
 
 
 add_subdirectory(algebra)
@@ -132,3 +152,5 @@ add_subdirectory(misc)
 add_subdirectory(nt)
 add_subdirectory(prog)
 add_subdirectory(rcalculus)
+
+add_subdirectory(test)
