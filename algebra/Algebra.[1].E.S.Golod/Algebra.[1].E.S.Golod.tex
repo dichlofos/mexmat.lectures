@@ -1,15 +1,15 @@
-\documentclass[a4paper,11pt,twoside]{article}
+\documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{dmvn}
-\usepackage{wrapfig}
 \usepackage[dvips]{graphicx}
-\usepackage{multirow}
-\usepackage{subfloat}
-\usepackage{epigraph}
-\usepackage{subfig}
-\usepackage{hyperref}
 \usepackage{color}
+\usepackage{epigraph}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{subfig}
+\usepackage{subfloat}
+\usepackage{wrapfig}
 
 \def\existz{\exists\,!\,}
 %% Legacy
@@ -17,16 +17,17 @@
 \newcommand\qedsymbol{$\blacktriangleleft$\!}
 \newcommand{\adj}{} %It means somtheing I do not understand
 
-%\makeindex
-
 \begin{document}
+%% \author{Boris Agafontsev inspired by Evgeny Golod}
+%% \date{\today}
+%% \title{Algebra}
 
-\author{Boris Agafontsev inspired by Evgeny Golod}
-\date{\today}
-\title{Algebra}
+\dmvntitle{Курс лекций}{по алгебре}{Лектор - Голод Евгений
+  Соломонович}{I курс, 1 семестр, отделение математики}{2006}
 
-\dmvntitle{Курс лекций}{по алгебре}{Лектор - Голод Евгений Соломонович}{I курс, 1 семестр, отделение математики}{2006}
-
+ 
+ 
+\include{intro}
 \include{sets}
 \include{permutation}
 \include{groups}
@@ -38,9 +39,4 @@
 \include{polynom}
 \include{biblio}
 \include{end}
-
-\markboth{Для заметок}{Для заметок}
-\newpage\strut
-\newpage\strut
-
 \end{document}

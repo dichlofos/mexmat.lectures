@@ -7,7 +7,7 @@ set(DVIPS_dvips_opts)
 set(MPOST_mpost_opts --tex=latex)
 set(GS_gs_opts -sDEVICE=pdfwrite -r1200 -dNOPAUSE -dBATCH -g9912x14028)
 set(ARC_winrar_opts  a -md4096 -s -m5)
-set(ARC_gzip_opts --best)
+set(ARC_gzip_opts --best --force)
 
 function(require_program program names)
   list(REMOVE_AT ARGV 0)
