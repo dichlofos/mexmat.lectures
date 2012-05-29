@@ -1,10 +1,14 @@
-\documentclass[draft]{article}%
-\usepackage[cp1251]{inputenc}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% WARNING. A LOT OF LEGACY MACROS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper]{article}%
+\usepackage[utf8]{inputenc}%
 \usepackage[russian]{babel}%
 \usepackage{graphicx}%
 \usepackage{amsmath}%
 \usepackage{amssymb}%
 \usepackage{latexsym}%
+\usepackage{dmvn}
 
 % Standard page layout
 \textheight=250mm
@@ -15,9 +19,9 @@
 \renewcommand{\c}{\mathbb{C}}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\pr}{{\rm pr\,}}%
-\newcommand{\rk}{{\rm rk\,}}%
-\newcommand{\de}{\par\noindent\underline{Def}.\ }%
-\newcommand{\ab}{\par\noindent}%
+\renewcommand{\rk}{{\rm rk\,}}%
+\renewcommand{\de}{\par\noindent\underline{Def}.\ }%
+\renewcommand{\ab}{\par\noindent}%
 \newcommand{\te}{\par\noindent{\bf Теорема.}\ }%
 \newcommand{\dok}{\par\noindent{\textsl{Доказательство}.}\ }%
 \newcommand{\qed}{\quad${{\bf Q.E.D.}}$}
@@ -25,12 +29,12 @@
 \newcommand{\sled}{\par\noindent{\bf Следствие.}\ }%
 \newcommand{\baz}[1]{\left(#1_1,\dots,#1_n\right)}%
 \newcommand{\lr}{\Leftrightarrow}%
-\newcommand{\nn}[1]{#1_1,#1_2,\dots,#1_n}%
+\renewcommand{\nn}[1]{#1_1,#1_2,\dots,#1_n}%
 \newcommand{\lob}[1]{\left\langle#1\right\rangle}%
 \newcommand{\ps}{\oplus}
 \newcommand{\rom}[1]{{\rm#1\,}}
 \newcommand{\op}[1]{$\mathcal{#1}$}
-\newcommand{\om}[1]{\mathcal{#1}}
+\renewcommand{\om}[1]{\mathcal{#1}}
 \newcommand{\oi}[1]{\overrightarrow{#1}}%
 \renewcommand{\le}{\leqslant}
 \renewcommand{\ge}{\geqslant}
@@ -38,12 +42,10 @@
 \newcommand{\ty}{\otimes}
 
 \begin{document}
-%\input linal1.tex
-\title{Подготовка к экзамену по курсу \\ ''Линейная алгебра и геометрия''}%
-\author{(весна 2003г., лектор - Э.Б.~Винберг)}%
-\date{13 июня 2003 г.}%
-\maketitle%
-\hrule%
+\dmvntitle{Курс лекций}{
+  по линейной алгебре}{
+  Лектор -- Э.Б.Винберг}{
+  II курс, 4й семестр}{2003}
 \section{Базис и размерность векторного пространства.}%
 \label{q1}%
 \par\de Векторным пространством над полем $K$ называется аддитивная абелева группа $V$, в которой определена
