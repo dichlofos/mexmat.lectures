@@ -30,44 +30,44 @@
 \scriptsize
 \setlength{\baselineskip}{0pt}
 
-%\sel{Непрерывность интеграла}
+%\sel{РќРµРїСЂРµСЂС‹РІРЅРѕСЃС‚СЊ РёРЅС‚РµРіСЂР°Р»Р°}
 \delim
-1. $f \contd{a}{A}{b}{B} \then F(y)=\intl{a}{A}f(x,y)dx \cont{b}{B}$, можно менять порядок интегрирования.
+1. $f \contd{a}{A}{b}{B} \then F(y)=\intl{a}{A}f(x,y)dx \cont{b}{B}$, РјРѕР¶РЅРѕ РјРµРЅСЏС‚СЊ РїРѕСЂСЏРґРѕРє РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ.
 
-2. Если, кроме того, $f'_y \contd{a}{A}{b}{B} \then \frac{d}{dy}\intl{a}{A}f(x,y)dx=\intl{a}{A}f'_y(x,y)dx$ при  $y \in (b,B)$.
+2. Р•СЃР»Рё, РєСЂРѕРјРµ С‚РѕРіРѕ, $f'_y \contd{a}{A}{b}{B} \then \frac{d}{dy}\intl{a}{A}f(x,y)dx=\intl{a}{A}f'_y(x,y)dx$ РїСЂРё  $y \in (b,B)$.
 
-3. Пусть $\ph(y), \ps(y) \diff{a}{A} \then \frac{d}{dy}\intl{\ph}{\ps}f(x,y)dx=f(\ps,y)\ps'-f(\ph,y)\ph'+\intl{\ph}{\ps}f'_y(x,y)dx$.
+3. РџСѓСЃС‚СЊ $\ph(y), \ps(y) \diff{a}{A} \then \frac{d}{dy}\intl{\ph}{\ps}f(x,y)dx=f(\ps,y)\ps'-f(\ph,y)\ph'+\intl{\ph}{\ps}f'_y(x,y)dx$.
 \delim
-%\sel{Равномерная сходимость, дифференцирование и интегрирование}
-1. Если $\intl{a}{\infty}f(x,y)dx$ сходится равномерно на $(y_1,y_2)$, и $f \contdi{a}{\infty}{y_1}{y_2} \then \intl{a}{\infty}f(x,y)dx \conti{y_1}{y_2}$.
+%\sel{Р Р°РІРЅРѕРјРµСЂРЅР°СЏ СЃС…РѕРґРёРјРѕСЃС‚СЊ, РґРёС„С„РµСЂРµРЅС†РёСЂРѕРІР°РЅРёРµ Рё РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёРµ}
+1. Р•СЃР»Рё $\intl{a}{\infty}f(x,y)dx$ СЃС…РѕРґРёС‚СЃСЏ СЂР°РІРЅРѕРјРµСЂРЅРѕ РЅР° $(y_1,y_2)$, Рё $f \contdi{a}{\infty}{y_1}{y_2} \then \intl{a}{\infty}f(x,y)dx \conti{y_1}{y_2}$.
 
-2. Если $f,f'_y \contdi{a}{\infty}{y_1}{y_2}$, $\intl{a}{\infty}f(x,y)dx \to$, $\intl{a}{\infty}f'_y(x,y)dx \dra$, то
+2. Р•СЃР»Рё $f,f'_y \contdi{a}{\infty}{y_1}{y_2}$, $\intl{a}{\infty}f(x,y)dx \to$, $\intl{a}{\infty}f'_y(x,y)dx \dra$, С‚Рѕ
 $\frac{d}{dy}\intl{a}{\infty}f(x,y)dx=\intl{a}{\infty}f'_y(x,y)dx$.
 
-3. Если $f \contd{a}{\infty}{y_1}{y_2}$ и $\intl{a}{\infty}f(x,y)dx \dra$ на $[y_1,y_2]$, то $\intl{y_1}{y_2}\intl{a}{\infty}f(x,y)dxdy=
+3. Р•СЃР»Рё $f \contd{a}{\infty}{y_1}{y_2}$ Рё $\intl{a}{\infty}f(x,y)dx \dra$ РЅР° $[y_1,y_2]$, С‚Рѕ $\intl{y_1}{y_2}\intl{a}{\infty}f(x,y)dxdy=
 \intl{a}{\infty}\intl{y_1}{y_2}f(x,y)dydx$.
 
-4. (3) верно и для неограниченных $(y_1,y_2)$, если $f(x,y) \ge 0$ и внутренние интегралы непрерывны.
+4. (3) РІРµСЂРЅРѕ Рё РґР»СЏ РЅРµРѕРіСЂР°РЅРёС‡РµРЅРЅС‹С… $(y_1,y_2)$, РµСЃР»Рё $f(x,y) \ge 0$ Рё РІРЅСѓС‚СЂРµРЅРЅРёРµ РёРЅС‚РµРіСЂР°Р»С‹ РЅРµРїСЂРµСЂС‹РІРЅС‹.
 \delim
-%\sel{Полезные формулы}
-1. Фруллани: $\intl{0}{\infty}\frac{f(ax)-f(bx)}{x}dx=f(0)\ln\frac{b}{a}$, где $a,b>0, f \cont{0}{\infty}$ и $\fa A>0 \exi
+%\sel{РџРѕР»РµР·РЅС‹Рµ С„РѕСЂРјСѓР»С‹}
+1. Р¤СЂСѓР»Р»Р°РЅРё: $\intl{0}{\infty}\frac{f(ax)-f(bx)}{x}dx=f(0)\ln\frac{b}{a}$, РіРґРµ $a,b>0, f \cont{0}{\infty}$ Рё $\fa A>0 \exi
 \intl{A}{\infty}\frac{f(x)}{x}dx$.
 
-2. Эйлера -- Пуассона: $\intl{0}{\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$.
+2. Р­Р№Р»РµСЂР° -- РџСѓР°СЃСЃРѕРЅР°: $\intl{0}{\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$.
 
-3. Дирихле: $\intl{0}{\infty}\frac{\sin\alpha x}{x}dx=\frac{\pi}{2}\sgn \alpha$.
+3. Р”РёСЂРёС…Р»Рµ: $\intl{0}{\infty}\frac{\sin\alpha x}{x}dx=\frac{\pi}{2}\sgn \alpha$.
 
-4. $\Gamma(x)=\intl{0}{\infty}t^{x-1}e^{-t}dt$, понижение $\Gamma(x+1)=x\Gamma(x)$, $\Gamma(n+1)=n!$, дополнение $\Gamma(x)\Gamma(1-x)=\frac{\pi}{\sin \pi x}$.
+4. $\Gamma(x)=\intl{0}{\infty}t^{x-1}e^{-t}dt$, РїРѕРЅРёР¶РµРЅРёРµ $\Gamma(x+1)=x\Gamma(x)$, $\Gamma(n+1)=n!$, РґРѕРїРѕР»РЅРµРЅРёРµ $\Gamma(x)\Gamma(1-x)=\frac{\pi}{\sin \pi x}$.
 
-5. $\textbf{B}(x,y)=\intl{0}{1}t^{x-1}(1-t)^{y-1}dt$, связь $\textbf{B}(x,y)=\frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$.
+5. $\textbf{B}(x,y)=\intl{0}{1}t^{x-1}(1-t)^{y-1}dt$, СЃРІСЏР·СЊ $\textbf{B}(x,y)=\frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$.
 \delim
-%\sel{Фурье}
-1. Если $f:\R \to \R$, то $f(x)=\intl{0}{\infty}[a(t)\cos tx+b(t)\sin tx]dt$, где $a(t)=\frac{1}{\pi}\intl{-\infty}{\infty}f(x)\cos tx dx$ и
+%\sel{Р¤СѓСЂСЊРµ}
+1. Р•СЃР»Рё $f:\R \to \R$, С‚Рѕ $f(x)=\intl{0}{\infty}[a(t)\cos tx+b(t)\sin tx]dt$, РіРґРµ $a(t)=\frac{1}{\pi}\intl{-\infty}{\infty}f(x)\cos tx dx$ Рё
 $b(t)=\frac{1}{\pi}\intl{-\infty}{\infty}f(x)\sin tx dx$.
 
-2. $F(x)=\frac{1}{\sqrt{2\pi}}\intl{-\infty}{\infty}f(t)e^{-itx}dt$, а $f(x)=\frac{1}{\sqrt{2\pi}}\vp\intl{-\infty}{\infty}F(t)e^{itx}dt$.
+2. $F(x)=\frac{1}{\sqrt{2\pi}}\intl{-\infty}{\infty}f(t)e^{-itx}dt$, Р° $f(x)=\frac{1}{\sqrt{2\pi}}\vp\intl{-\infty}{\infty}F(t)e^{itx}dt$.
 
-3. $f(x)=\frac{a_0}{2}+\suml{n=1}{\infty}\bh{a_n\cos\npxl+b_n\sin\npxl}$, где $a_n=\frac{1}{l}\intl{-l}{l}f(x)\cos\npxl dx$,
-а $b_n=\frac{1}{l}\intl{-l}{l}f(x)\sin\npxl dx$.
+3. $f(x)=\frac{a_0}{2}+\suml{n=1}{\infty}\bh{a_n\cos\npxl+b_n\sin\npxl}$, РіРґРµ $a_n=\frac{1}{l}\intl{-l}{l}f(x)\cos\npxl dx$,
+Р° $b_n=\frac{1}{l}\intl{-l}{l}f(x)\sin\npxl dx$.
 \delim
 \end{document}

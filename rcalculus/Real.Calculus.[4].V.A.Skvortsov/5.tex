@@ -1,19 +1,19 @@
 
-% пятая лекция по комплану. сказания о интеграле Лебега
+% РїСЏС‚Р°СЏ Р»РµРєС†РёСЏ РїРѕ РєРѕРјРїР»Р°РЅСѓ. СЃРєР°Р·Р°РЅРёСЏ Рѕ РёРЅС‚РµРіСЂР°Р»Рµ Р›РµР±РµРіР°
 
 \begin{center}
-\textbf{Лекция 5.}
+\textbf{Р›РµРєС†РёСЏ 5.}
 \end{center}
 
 
 $(X, \EuScript(M), \mu)$
 
-$\mu$ --- $\delta$--конечна, если $X = \bigcup_{i = 1}^\infty X_i,
+$\mu$ --- $\delta$--РєРѕРЅРµС‡РЅР°, РµСЃР»Рё $X = \bigcup_{i = 1}^\infty X_i,
 \; \mu X_i < +\infty$
 
 $(L) \int\limits_{E} f d\mu = \sup\limits_{E = \bigcup_j E_j}
 \left( \sum\limits_j (\inf\limits_{x \in E_j} f(x)) \mu E_j
-\right)$, для меры и $f(x)$ разрешено принимать значение
+\right)$, РґР»СЏ РјРµСЂС‹ Рё $f(x)$ СЂР°Р·СЂРµС€РµРЅРѕ РїСЂРёРЅРёРјР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ
 $+\infty$.
 %
 %
@@ -24,7 +24,7 @@ $+\infty$.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%          стр 8.1    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%          СЃС‚СЂ 8.1    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -33,44 +33,44 @@ $+\infty$.
 %
 %
 
-Если интеграл принимает значение $\infty$, мы не будем говорить,
-что функция интегрируема.
+Р•СЃР»Рё РёРЅС‚РµРіСЂР°Р» РїСЂРёРЅРёРјР°РµС‚ Р·РЅР°С‡РµРЅРёРµ $\infty$, РјС‹ РЅРµ Р±СѓРґРµРј РіРѕРІРѕСЂРёС‚СЊ,
+С‡С‚Рѕ С„СѓРЅРєС†РёСЏ РёРЅС‚РµРіСЂРёСЂСѓРµРјР°.
 
-\textbf{Определение.} \quad Суммируемая функция --- интегрируемая
-по Лебегу с конечным значением интеграла.
+\textbf{РћРїСЂРµРґРµР»РµРЅРёРµ.} \quad РЎСѓРјРјРёСЂСѓРµРјР°СЏ С„СѓРЅРєС†РёСЏ --- РёРЅС‚РµРіСЂРёСЂСѓРµРјР°СЏ
+РїРѕ Р›РµР±РµРіСѓ СЃ РєРѕРЅРµС‡РЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј РёРЅС‚РµРіСЂР°Р»Р°.
 
-\textbf{Утверждение} \quad Если $f(x)$ измерима и $f(x) \geqslant
-0$ (на измеримом множестве) и суммируема, то тогда $f(x)$ конечна
-и суммируема, то тогда $f(x)$ конечна~п.в.
+\textbf{РЈС‚РІРµСЂР¶РґРµРЅРёРµ} \quad Р•СЃР»Рё $f(x)$ РёР·РјРµСЂРёРјР° Рё $f(x) \geqslant
+0$ (РЅР° РёР·РјРµСЂРёРјРѕРј РјРЅРѕР¶РµСЃС‚РІРµ) Рё СЃСѓРјРјРёСЂСѓРµРјР°, С‚Рѕ С‚РѕРіРґР° $f(x)$ РєРѕРЅРµС‡РЅР°
+Рё СЃСѓРјРјРёСЂСѓРµРјР°, С‚Рѕ С‚РѕРіРґР° $f(x)$ РєРѕРЅРµС‡РЅР°~Рї.РІ.
 
 $\{ x \in E : f(x) = + \infty \} = E \: \backslash \: (\bigcup_{N
 = 1}^\infty \{ f(x) < N \}) \quad \Rightarrow$
 
-$\{ x \in E : f(x) = + \infty \}$ --- измеримо $\Rightarrow$
+$\{ x \in E : f(x) = + \infty \}$ --- РёР·РјРµСЂРёРјРѕ $\Rightarrow$
 
 $\mu \: \{ x \in E : f(x) = + \infty \} = 0$
 
-$E_1 \subset E, E_1$ --- измеримо, $f(x) \geqslant 0 \Rightarrow$
+$E_1 \subset E, E_1$ --- РёР·РјРµСЂРёРјРѕ, $f(x) \geqslant 0 \Rightarrow$
 
 $\int_{E_1} f d\mu \leqslant \int_E f d\mu$
 
 $f(x) \leqslant g(x) \Rightarrow \int_E f d\mu \leqslant \int_E g
 d\mu$
 
-$f(x) = a_j, \; x \in E_j \; (f(x) - \text{простая функция}) $
+$f(x) = a_j, \; x \in E_j \; (f(x) - \text{РїСЂРѕСЃС‚Р°СЏ С„СѓРЅРєС†РёСЏ}) $
 
-Тогда $(L) \int_E f d\mu = \sum_{j = 1}^n a_j \mu E_j$
+РўРѕРіРґР° $(L) \int_E f d\mu = \sum_{j = 1}^n a_j \mu E_j$
 
-Это можно считать определением интеграла для простой
-неотрицательной функции.
+Р­С‚Рѕ РјРѕР¶РЅРѕ СЃС‡РёС‚Р°С‚СЊ РѕРїСЂРµРґРµР»РµРЅРёРµРј РёРЅС‚РµРіСЂР°Р»Р° РґР»СЏ РїСЂРѕСЃС‚РѕР№
+РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕР№ С„СѓРЅРєС†РёРё.
 
-$f, g$ --- простые функции
+$f, g$ --- РїСЂРѕСЃС‚С‹Рµ С„СѓРЅРєС†РёРё
 
 $f(x) = a_j, \quad x \in E_j$
 
 $g(x) = b_i, \quad x \in E_i$
 
-Тогда:
+РўРѕРіРґР°:
 
 1. \quad $\int_E (f + g) d \mu = \sum_i \sum_j (a_j + b_i) \: \mu
 (E_j \bigcap E'_i) = \int_E f d\mu + \int_E g d\mu$
@@ -81,8 +81,8 @@ $g(x) = b_i, \quad x \in E_i$
 f d\mu = \int_E f d\mu$
 
 
-\textbf{Теорема (о вычислении интеграла Лебега через простые
-функции)} \quad
+\textbf{РўРµРѕСЂРµРјР° (Рѕ РІС‹С‡РёСЃР»РµРЅРёРё РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР° С‡РµСЂРµР· РїСЂРѕСЃС‚С‹Рµ
+С„СѓРЅРєС†РёРё)} \quad
 
 %
 %
@@ -93,7 +93,7 @@ f d\mu = \int_E f d\mu$
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%          стр 9.0    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%          СЃС‚СЂ 9.0    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -102,10 +102,10 @@ f d\mu = \int_E f d\mu$
 %
 %
 
-$f(x) \geqslant \mbox{ на Е - измер., } f_k (x) \nearrow f(x),
-\{f_k(x)\}$ --- последовательность простых измеримых функций.
+$f(x) \geqslant \mbox{ РЅР° Р• - РёР·РјРµСЂ., } f_k (x) \nearrow f(x),
+\{f_k(x)\}$ --- РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РїСЂРѕСЃС‚С‹С… РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№.
 
-Тогда $(L) \int_E f d\mu = lim_{k \rightarrow \infty} \int_E f_k d
+РўРѕРіРґР° $(L) \int_E f d\mu = lim_{k \rightarrow \infty} \int_E f_k d
 \mu$
 
 $\blacklozenge$
@@ -116,23 +116,23 @@ $(L) \int_E f_k d\mu \leqslant (L) \int_E f d\mu \; \Rightarrow \;
 \lim_{k \rightarrow \infty} (L) \int_E f_k d\mu \leqslant (L)
 \int_E f d\mu$
 
-Докажем неравенство в другую сторону
+Р”РѕРєР°Р¶РµРј РЅРµСЂР°РІРµРЅСЃС‚РІРѕ РІ РґСЂСѓРіСѓСЋ СЃС‚РѕСЂРѕРЅСѓ
 
 $\inf\limits_{x \in E_j} f(x) = a_j, E = \bigcup_{j = 1}^n E_j$
 
 $\lim\limits_{k \rightarrow \infty} f_k(x) \geqslant a_j \quad
 \forall x \in E_j$
 
-Возьмем $\varepsilon > 0$
+Р’РѕР·СЊРјРµРј $\varepsilon > 0$
 
 $A_{jk} = \{ x \in E_j : f_k(x) > a_j - \varepsilon\}$
 
-$E_j = \bigcup\limits_k A_{jk} \quad (\text{так как } lim_{k
+$E_j = \bigcup\limits_k A_{jk} \quad (\text{С‚Р°Рє РєР°Рє } lim_{k
 \rightarrow \infty} f_k \geqslant a_j)$
 
-$A_{jk} \subset A_{j(k + 1)}$ (так как $f_k$ --- монотонная), то
-есть это монотонно растущая последовательность $\Rightarrow$ (по
-непрерывности меры) $\mu A_{jk} \xrightarrow[k \rightarrow
+$A_{jk} \subset A_{j(k + 1)}$ (С‚Р°Рє РєР°Рє $f_k$ --- РјРѕРЅРѕС‚РѕРЅРЅР°СЏ), С‚Рѕ
+РµСЃС‚СЊ СЌС‚Рѕ РјРѕРЅРѕС‚РѕРЅРЅРѕ СЂР°СЃС‚СѓС‰Р°СЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ $\Rightarrow$ (РїРѕ
+РЅРµРїСЂРµСЂС‹РІРЅРѕСЃС‚Рё РјРµСЂС‹) $\mu A_{jk} \xrightarrow[k \rightarrow
 \infty]{} \mu E_j$
 
 $\int_{E_j} f_k d\mu \geqslant \int_{A_{jk}} f_k d\mu > (a_j -
@@ -141,15 +141,15 @@ $\int_{E_j} f_k d\mu \geqslant \int_{A_{jk}} f_k d\mu > (a_j -
 $\lim_{k \rightarrow \infty} \int_{E_j} f_k d\mu \geqslant a_j \mu
 E_j$
 
-Получаем $\lim_{k \rightarrow \infty} \int_E f_k d\mu \geqslant
-\sum_{j} a_j \mu E_j$, так как разбиение произвольно, то $\lim_{k
+РџРѕР»СѓС‡Р°РµРј $\lim_{k \rightarrow \infty} \int_E f_k d\mu \geqslant
+\sum_{j} a_j \mu E_j$, С‚Р°Рє РєР°Рє СЂР°Р·Р±РёРµРЅРёРµ РїСЂРѕРёР·РІРѕР»СЊРЅРѕ, С‚Рѕ $\lim_{k
 \rightarrow \infty} \int_E f_k d\mu \geqslant
 \sup\limits_{\bigcup_{j = 1}^n E_j = E} \sum_j a_j \mu E_j = (L)
 \int_E f d\mu$
 
 $\lozenge$
 
-Предельным переходом получаем для $f, g \geqslant 0$
+РџСЂРµРґРµР»СЊРЅС‹Рј РїРµСЂРµС…РѕРґРѕРј РїРѕР»СѓС‡Р°РµРј РґР»СЏ $f, g \geqslant 0$
 
 $1. \int_E (f + g) d\mu = \int_E f d\mu + \int_E g d\mu$
 
@@ -158,10 +158,10 @@ $2. \int_E c f d\mu = c \int_E f d \mu$
 $3. \int_{E_1} f d \mu + \int_{E_2}f d \mu = \int_{E_1 \bigcup
 E_2} f d \mu f d\mu, \quad E_1 \bigcap E_2 = \varnothing$
 
-Значение интеграла не зависит от значения $f(x)$ на множестве меры
+Р—РЅР°С‡РµРЅРёРµ РёРЅС‚РµРіСЂР°Р»Р° РЅРµ Р·Р°РІРёСЃРёС‚ РѕС‚ Р·РЅР°С‡РµРЅРёСЏ $f(x)$ РЅР° РјРЅРѕР¶РµСЃС‚РІРµ РјРµСЂС‹
 0.
 
-Определим интеграл Лебега для функций любого знака $f = f^+ + f^-$
+РћРїСЂРµРґРµР»РёРј РёРЅС‚РµРіСЂР°Р» Р›РµР±РµРіР° РґР»СЏ С„СѓРЅРєС†РёР№ Р»СЋР±РѕРіРѕ Р·РЅР°РєР° $f = f^+ + f^-$
 
 $f^+ = max \{f(x); 0\}, \quad f^- = max\{f(x); 0\}$
 
@@ -174,7 +174,7 @@ $f^+ = max \{f(x); 0\}, \quad f^- = max\{f(x); 0\}$
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%          стр 9.1    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%          СЃС‚СЂ 9.1    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -183,44 +183,44 @@ $f^+ = max \{f(x); 0\}, \quad f^- = max\{f(x); 0\}$
 %
 %
 
-Если $f$ --- изм. $\Rightarrow f^+, f^-$ --- измер.
+Р•СЃР»Рё $f$ --- РёР·Рј. $\Rightarrow f^+, f^-$ --- РёР·РјРµСЂ.
 
-$ (L) \int_E f d\mu =  (\text{по определению}) (L) \int_E f^+ d
+$ (L) \int_E f d\mu =  (\text{РїРѕ РѕРїСЂРµРґРµР»РµРЅРёСЋ}) (L) \int_E f^+ d
 \mu - (L) \int_E f^- d\mu$
 
-Говорим, что интеграл существует, если хотя бы один из этих двух
-интегралов (от $f^+$ и $f^-$) конечен.
+Р“РѕРІРѕСЂРёРј, С‡С‚Рѕ РёРЅС‚РµРіСЂР°Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚, РµСЃР»Рё С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РёР· СЌС‚РёС… РґРІСѓС…
+РёРЅС‚РµРіСЂР°Р»РѕРІ (РѕС‚ $f^+$ Рё $f^-$) РєРѕРЅРµС‡РµРЅ.
 
-$f$ называют интегрируемой, если оба интеграла, входящие в
-определение, конечны.
+$f$ РЅР°Р·С‹РІР°СЋС‚ РёРЅС‚РµРіСЂРёСЂСѓРµРјРѕР№, РµСЃР»Рё РѕР±Р° РёРЅС‚РµРіСЂР°Р»Р°, РІС…РѕРґСЏС‰РёРµ РІ
+РѕРїСЂРµРґРµР»РµРЅРёРµ, РєРѕРЅРµС‡РЅС‹.
 
 
-\begin{center} \textbf{Свойства интеграла Лебега.} \end{center}
+\begin{center} \textbf{РЎРІРѕР№СЃС‚РІР° РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР°.} \end{center}
 
 $1. \quad \mu E = 0 \Leftrightarrow \int_E f d\mu = 0$
 
-$2. \quad f \thicksim g \; (f \text{ и } g \text{ совпадают п.в.})
- \Rightarrow \text{ существует} (L) \int_E f d\mu$
+$2. \quad f \thicksim g \; (f \text{ Рё } g \text{ СЃРѕРІРїР°РґР°СЋС‚ Рї.РІ.})
+ \Rightarrow \text{ СЃСѓС‰РµСЃС‚РІСѓРµС‚} (L) \int_E f d\mu$
 
-$ \Leftrightarrow \text{ существует } (L) \int_E g d \mu \text{ и
+$ \Leftrightarrow \text{ СЃСѓС‰РµСЃС‚РІСѓРµС‚ } (L) \int_E g d \mu \text{ Рё
 } (L) \int_E f d \mu = (L) \int_{E} g d \mu$
 
 $3. \quad f(x) \leqslant g(x) \Rightarrow \int_E f d \mu \leqslant
 \int_E g d \mu$
 
-$4. \quad f(x) - \text{ интегрируемая } \Rightarrow f(x) \text{
-конечна п.в. } (f(x) \in L(E)))$
+$4. \quad f(x) - \text{ РёРЅС‚РµРіСЂРёСЂСѓРµРјР°СЏ } \Rightarrow f(x) \text{
+РєРѕРЅРµС‡РЅР° Рї.РІ. } (f(x) \in L(E)))$
 
-$5. \quad E_1 \subset E, \int_E f d \mu \text{ существует}
-\Rightarrow \int_{E_1} f d \mu \text{ существует } (f \text{
-суммир. на } E \Rightarrow f \text{ суммир. на } E_1)$
+$5. \quad E_1 \subset E, \int_E f d \mu \text{ СЃСѓС‰РµСЃС‚РІСѓРµС‚}
+\Rightarrow \int_{E_1} f d \mu \text{ СЃСѓС‰РµСЃС‚РІСѓРµС‚ } (f \text{
+СЃСѓРјРјРёСЂ. РЅР° } E \Rightarrow f \text{ СЃСѓРјРјРёСЂ. РЅР° } E_1)$
 
-$6. \quad f \text{ измерима на } E, \; f \in L(X) \Leftrightarrow
+$6. \quad f \text{ РёР·РјРµСЂРёРјР° РЅР° } E, \; f \in L(X) \Leftrightarrow
 |f| \in L(E)$\\$|f| = f^+ + f^-$\\$|\int_E f d \mu| \leqslant
 \int_E f^+ + \int_E f^- d\mu = \int_E |f| d \mu$
 
-$7. \quad f, g - \text{ измеримы на } E \; |f(x)| \leqslant |g(x)|
-\text{ п.в. } \Rightarrow \int_E |f| d \mu \leqslant \int_E |g| d
+$7. \quad f, g - \text{ РёР·РјРµСЂРёРјС‹ РЅР° } E \; |f(x)| \leqslant |g(x)|
+\text{ Рї.РІ. } \Rightarrow \int_E |f| d \mu \leqslant \int_E |g| d
 \mu $
 
 $8. \quad \int_E (cf) d\mu = c \int_E f d \mu$
@@ -229,11 +229,11 @@ $9. \quad \int_{E_1} f d \mu + \int_{E_2} f d \mu = \int_{E_1
 \bigcup E2} f d \mu \; (E_1 \bigcap E_2 = \varnothing)$
 
 $10. \quad \int_E (f + g)d\mu = \int_E f d \mu + \int_E g d \mu$\\
-Если $f$ и $g$ суммир. $\Rightarrow f + g$ суммируемы \\ $|f + g|
+Р•СЃР»Рё $f$ Рё $g$ СЃСѓРјРјРёСЂ. $\Rightarrow f + g$ СЃСѓРјРјРёСЂСѓРµРјС‹ \\ $|f + g|
 \leqslant |f| + |g|$
 
-$11. \quad f(x) \geqslant 0 \text{ на } E, \; m \leqslant g(x)
-\leqslant M \text{ п.в. на } E, \text{ тогда } m\int_E f d \mu
+$11. \quad f(x) \geqslant 0 \text{ РЅР° } E, \; m \leqslant g(x)
+\leqslant M \text{ Рї.РІ. РЅР° } E, \text{ С‚РѕРіРґР° } m\int_E f d \mu
 \leqslant M \int_E f d \mu$
 
 
@@ -246,7 +246,7 @@ $11. \quad f(x) \geqslant 0 \text{ на } E, \; m \leqslant g(x)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%          стр 10.0    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%          СЃС‚СЂ 10.0    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -254,11 +254,11 @@ $11. \quad f(x) \geqslant 0 \text{ на } E, \; m \leqslant g(x)
 %
 %
 %
-\begin{center} \textbf{Предельный переход под знаком интеграла} \end{center}
+\begin{center} \textbf{РџСЂРµРґРµР»СЊРЅС‹Р№ РїРµСЂРµС…РѕРґ РїРѕРґ Р·РЅР°РєРѕРј РёРЅС‚РµРіСЂР°Р»Р°} \end{center}
 
 $f(x) = \sum_{k = 1}^{\infty} f_k(x), \; f_k(x) \geqslant 0$
 
-Тогда $(L) \int_E f  \mu = \sum_{k = 1}^{\infty} (L) \int_E f_k d
+РўРѕРіРґР° $(L) \int_E f  \mu = \sum_{k = 1}^{\infty} (L) \int_E f_k d
 \mu$
 
 $\blacklozenge \sum_{k = 1}^N f_k(x) \leqslant f(x)$
@@ -268,39 +268,39 @@ $\sum_{k=1}^N (L) \int f_k (x) d \mu \leqslant (L) \int_E f d \mu$
 $\sum_{k = 1}^{\infty} (L) \int f_k d \mu \leqslant (L) \int_E f d
 \mu$
 
-Докажем неравенство в другую сторону:
+Р”РѕРєР°Р¶РµРј РЅРµСЂР°РІРµРЅСЃС‚РІРѕ РІ РґСЂСѓРіСѓСЋ СЃС‚РѕСЂРѕРЅСѓ:
 
 $f_{k_j} \nearrow_{j \rightarrow \infty} f_k, \; f_{k_j}$ ---
-простые функции
+РїСЂРѕСЃС‚С‹Рµ С„СѓРЅРєС†РёРё
 
 $(*) \; S_j = \sum_{k = 1}^j f_{k_j} \leqslant \sum_{k=1}^j f_k
 \leqslant \sum_{k=1}^{\infty} f_k = f$
 
 $lim_{j \rightarrow \infty} S_j(x) \leqslant f(x)$
 
-Фиксируем $n$. Пусть $j > n$
+Р¤РёРєСЃРёСЂСѓРµРј $n$. РџСѓСЃС‚СЊ $j > n$
 
 $S_j \geqslant \sum_{k=1}^n f_{k_j}; lim_{j \rightarrow \infty}
-S_j (x) \geqslant \sum_{k=1}^n f_k(x) \; \forall$ фиксированных
+S_j (x) \geqslant \sum_{k=1}^n f_k(x) \; \forall$ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹С…
 $n$
 
 $\lim_{j \rightarrow \infty} S_j (x) \geqslant \sum_{k=1}^{\infty}
 f_k(x) = f(x)$
 
-Значит, $\lim_{j \rightarrow \infty} S_j (x) = f(x)$
+Р—РЅР°С‡РёС‚, $\lim_{j \rightarrow \infty} S_j (x) = f(x)$
 
-Тогда $(L) \int f d\mu = \lim_{j \rightarrow \infty} \int_E S_j d
+РўРѕРіРґР° $(L) \int f d\mu = \lim_{j \rightarrow \infty} \int_E S_j d
 \mu \leqslant \sum_{k=1}^{\infty} \int_E f_k d \mu$
 
 $\int_E S_j d \mu < \sum_{k=1}^j \int_E f_k d \mu $
 $\blacklozenge$
 
-\textbf{Следствие.} \quad  $f(x) = \sum_{k=1}^{\infty} f_k(x), \;
-f_k \geqslant 0$, и сходится $\sum_{k=1}^{\infty} \int_E f_k d \mu
-\Rightarrow \sum_{k=1}^{\infty} f_k(x)$ сходится п.в.
+\textbf{РЎР»РµРґСЃС‚РІРёРµ.} \quad  $f(x) = \sum_{k=1}^{\infty} f_k(x), \;
+f_k \geqslant 0$, Рё СЃС…РѕРґРёС‚СЃСЏ $\sum_{k=1}^{\infty} \int_E f_k d \mu
+\Rightarrow \sum_{k=1}^{\infty} f_k(x)$ СЃС…РѕРґРёС‚СЃСЏ Рї.РІ.
 
-Верно, т.к. если $\int_E f d \mu$ конечен, то  $f$ конечен п.в.
+Р’РµСЂРЅРѕ, С‚.Рє. РµСЃР»Рё $\int_E f d \mu$ РєРѕРЅРµС‡РµРЅ, С‚Рѕ  $f$ РєРѕРЅРµС‡РµРЅ Рї.РІ.
 
-\textbf{Задача.} \quad Пусть $\mathbf{R} = \{r_n\}$, доказать, что
-$\sum_{k=1}^{\infty} \frac{1}{k^2\sqrt{x - r_k}}$ сходится п.в.
+\textbf{Р—Р°РґР°С‡Р°.} \quad РџСѓСЃС‚СЊ $\mathbf{R} = \{r_n\}$, РґРѕРєР°Р·Р°С‚СЊ, С‡С‚Рѕ
+$\sum_{k=1}^{\infty} \frac{1}{k^2\sqrt{x - r_k}}$ СЃС…РѕРґРёС‚СЃСЏ Рї.РІ.
 

@@ -7,7 +7,7 @@
 \newcounter{lec}
 \renewcommand{\thelec}{\arabic{lec}}
 \newcommand*{\lecture}{\refstepcounter{lec}\vspace{20pt}
-\begin{center}{\rmfamily\textsc{Лекция \thelec.}}
+\begin{center}{\rmfamily\textsc{Р›РµРєС†РёСЏ \thelec.}}
 \end{center}}
 
 \newcounter{tema}
@@ -17,24 +17,24 @@
 \textsc{\thetema. #1.}}}\vspace{7pt}
 \end{center}}
 
-\newcommand{\prim}{\vspace{5pt}\noindent\textbf{Примеры.}}
-\newcommand{\svoy}{\vspace{5pt}\noindent\textbf{Свойства.}}
+\newcommand{\prim}{\vspace{5pt}\noindent\textbf{РџСЂРёРјРµСЂС‹.}}
+\newcommand{\svoy}{\vspace{5pt}\noindent\textbf{РЎРІРѕР№СЃС‚РІР°.}}
 
-\newtheorem{theorem}{Теорема}[tema]
+\newtheorem{theorem}{РўРµРѕСЂРµРјР°}[tema]
 \renewcommand{\thetheorem}{\thetema.\arabic{theorem}}
 
-\newtheorem{sled}{Следствие}[tema]
+\newtheorem{sled}{РЎР»РµРґСЃС‚РІРёРµ}[tema]
 \renewcommand{\thesled}{\thetema.\arabic{sled}}
 
-\newtheorem{lemm}{Лемма}[tema]
+\newtheorem{lemm}{Р›РµРјРјР°}[tema]
 \renewcommand{\thelemm}{\thetema.\arabic{lemm}}
 
-\newtheorem{predl}{Предложение}[tema]
+\newtheorem{predl}{РџСЂРµРґР»РѕР¶РµРЅРёРµ}[tema]
 \renewcommand{\thepredl}{\thetema.\arabic{predl}}
 
 \theoremstyle{definition}
-\newtheorem{defen}{Определение}[tema]
-\newtheorem*{zam}{Замечание}
+\newtheorem{defen}{РћРїСЂРµРґРµР»РµРЅРёРµ}[tema]
+\newtheorem*{zam}{Р—Р°РјРµС‡Р°РЅРёРµ}
 
 \newcommand*{\p}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
 
@@ -43,25 +43,25 @@
 \begin{center}
 \vspace*{-20pt}
 \textsf{%
-{\Large МОСКОВСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ \\%
+{\Large РњРћРЎРљРћР’РЎРљРР™ Р“РћРЎРЈР”РђР РЎРўР’Р•РќРќР«Р™ РЈРќРР’Р•Р РЎРРўР•Рў \\%
 \vspace{5pt}%
-имени М.В.ЛОМОНОСОВА}\\%
+РёРјРµРЅРё Рњ.Р’.Р›РћРњРћРќРћРЎРћР’Рђ}\\%
 \vspace{25pt} %
-{\Large Механико--математический факультет}\\%
+{\Large РњРµС…Р°РЅРёРєРѕ--РјР°С‚РµРјР°С‚РёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚}\\%
 \vspace{15pt} %
-{\large Кафедра Теории функций и функционального анализа\\}%
+{\large РљР°С„РµРґСЂР° РўРµРѕСЂРёРё С„СѓРЅРєС†РёР№ Рё С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕРіРѕ Р°РЅР°Р»РёР·Р°\\}%
 \vspace{40pt}%
 \includegraphics{mmlogo.2}\\ %
 \vspace{40pt}%
-{\LARGE\textbf{Курс лекций по действительному анализу\\} }%
+{\LARGE\textbf{РљСѓСЂСЃ Р»РµРєС†РёР№ РїРѕ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРјСѓ Р°РЅР°Р»РёР·Сѓ\\} }%
 \vspace{25pt} %
-Лектор --- Олег Георгиевич Смолянов\\ %
+Р›РµРєС‚РѕСЂ --- РћР»РµРі Р“РµРѕСЂРіРёРµРІРёС‡ РЎРјРѕР»СЏРЅРѕРІ\\ %
 \vspace{20pt}%
-Летописец --- Бибиков Павел Витальевич (группа 212)\\
-телефон: 137-45-97\\
+Р›РµС‚РѕРїРёСЃРµС† --- Р‘РёР±РёРєРѕРІ РџР°РІРµР» Р’РёС‚Р°Р»СЊРµРІРёС‡ (РіСЂСѓРїРїР° 212)\\
+С‚РµР»РµС„РѕРЅ: 137-45-97\\
 e-mail: {\normalfont \verb"tsdtp4u@proc.ru"}\\
 \vspace{40pt}}%
-II курс, 3 семестр, 2 поток (2006 -- 2007 гг.)
+II РєСѓСЂСЃ, 3 СЃРµРјРµСЃС‚СЂ, 2 РїРѕС‚РѕРє (2006 -- 2007 РіРі.)
 \end{center}
 \end{titlepage}
 %---------------------------Lecture 1-----------------------------------------------%
@@ -69,23 +69,23 @@ II курс, 3 семестр, 2 поток (2006 -- 2007 гг.)
 
 \vspace{-25pt}
 
-\tema{Кольца и полукольца}
+\tema{РљРѕР»СЊС†Р° Рё РїРѕР»СѓРєРѕР»СЊС†Р°}
 
 \begin{defen}
-Пусть $\Omega$ --- фиксированное множество, тогда \emph{кольцом $S$
-подмножеств $\Omega$} называется всякая непустая совокупность
-подмножеств $\Omega$ со следующими свойствами:
+РџСѓСЃС‚СЊ $\Omega$ --- С„РёРєСЃРёСЂРѕРІР°РЅРЅРѕРµ РјРЅРѕР¶РµСЃС‚РІРѕ, С‚РѕРіРґР° \emph{РєРѕР»СЊС†РѕРј $S$
+РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\Omega$} РЅР°Р·С‹РІР°РµС‚СЃСЏ РІСЃСЏРєР°СЏ РЅРµРїСѓСЃС‚Р°СЏ СЃРѕРІРѕРєСѓРїРЅРѕСЃС‚СЊ
+РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\Omega$ СЃРѕ СЃР»РµРґСѓСЋС‰РёРјРё СЃРІРѕР№СЃС‚РІР°РјРё:
 
 (1) $A, B\in S\Rightarrow A\cap B\in S$,
 
 (2) $A, B\in S\Rightarrow A\bigtriangleup B\in S$.
 \end{defen}
 
-Если положить $A\bigtriangleup B=A+B$, $A\cap B=A\cdot B$, то будут
-выполнены все аксиомы кольца. Такие кольца называются
-\emph{булевыми}.
+Р•СЃР»Рё РїРѕР»РѕР¶РёС‚СЊ $A\bigtriangleup B=A+B$, $A\cap B=A\cdot B$, С‚Рѕ Р±СѓРґСѓС‚
+РІС‹РїРѕР»РЅРµРЅС‹ РІСЃРµ Р°РєСЃРёРѕРјС‹ РєРѕР»СЊС†Р°. РўР°РєРёРµ РєРѕР»СЊС†Р° РЅР°Р·С‹РІР°СЋС‚СЃСЏ
+\emph{Р±СѓР»РµРІС‹РјРё}.
 
-Есть другие эквивалентные условия:
+Р•СЃС‚СЊ РґСЂСѓРіРёРµ СЌРєРІРёРІР°Р»РµРЅС‚РЅС‹Рµ СѓСЃР»РѕРІРёСЏ:
 
 (3) $A, B\in S\Rightarrow A\cup B\in S$,
 
@@ -109,7 +109,7 @@ A\cap B&=(A\cup B)\bigtriangleup (A\bigtriangleup B).
 \end{align*}
 \end{proof}
 
-Можно ослабить условие $(3)$:
+РњРѕР¶РЅРѕ РѕСЃР»Р°Р±РёС‚СЊ СѓСЃР»РѕРІРёРµ $(3)$:
 
 $(3')$ $A, B\in S, A\cap B=\varnothing \Rightarrow A\cup B\in S$.
 
@@ -118,15 +118,15 @@ $\{(3), (4)\}\Leftrightarrow \{(3'), (4)\}$.
 \end{predl}
 
 \begin{proof}
-$\{(3), (4)\}\Rightarrow \{(3'), (4)\}$ --- очевидно.
+$\{(3), (4)\}\Rightarrow \{(3'), (4)\}$ --- РѕС‡РµРІРёРґРЅРѕ.
 
 $\{(3'), (4)\}\Rightarrow \{(3), (4)\}$: $A\cup B=(A\setminus B)\cup
 B$.
 \end{proof}
 
 \begin{defen}
-\emph{Полукольцо $\mathcal{P}$ в $\Omega$} --- это совокупность
-подмножеств $\Omega$ со следующими свойствами:
+\emph{РџРѕР»СѓРєРѕР»СЊС†Рѕ $\mathcal{P}$ РІ $\Omega$} --- СЌС‚Рѕ СЃРѕРІРѕРєСѓРїРЅРѕСЃС‚СЊ
+РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\Omega$ СЃРѕ СЃР»РµРґСѓСЋС‰РёРјРё СЃРІРѕР№СЃС‚РІР°РјРё:
 
 (1) $\varnothing\in \mathcal{P}$,
 
@@ -137,86 +137,86 @@ n\in\mathbb{N}, \; A_1,\ldots,A_n\in\mathcal{P}: A\setminus
 B=\bigsqcup\limits_{j=1}^n A_j$.
 \end{defen}
 
-1. Если $S$ --- кольцо, то $S$ --- полукольцо.
+1. Р•СЃР»Рё $S$ --- РєРѕР»СЊС†Рѕ, С‚Рѕ $S$ --- РїРѕР»СѓРєРѕР»СЊС†Рѕ.
 
-2. Пусть $S$ --- кольцо, тогда $\varnothing\in S$: $\exists\, A\in
+2. РџСѓСЃС‚СЊ $S$ --- РєРѕР»СЊС†Рѕ, С‚РѕРіРґР° $\varnothing\in S$: $\exists\, A\in
 S\Rightarrow \varnothing=A\setminus A\in S$.
 
-Если $\Omega\in S$, то $\Omega$ играет роль 1 в том смысле, что
+Р•СЃР»Рё $\Omega\in S$, С‚Рѕ $\Omega$ РёРіСЂР°РµС‚ СЂРѕР»СЊ 1 РІ С‚РѕРј СЃРјС‹СЃР»Рµ, С‡С‚Рѕ
 $\forall\, A\in S\; A\cap \Omega=A$.
 
 \begin{defen}
-Полукольцо с единицей называется \emph{полуалгеброй по\-дмножеств},
-а кольцо с единицей --- \emph{алгеброй}.
+РџРѕР»СѓРєРѕР»СЊС†Рѕ СЃ РµРґРёРЅРёС†РµР№ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РїРѕР»СѓР°Р»РіРµР±СЂРѕР№ РїРѕ\-РґРјРЅРѕР¶РµСЃС‚РІ},
+Р° РєРѕР»СЊС†Рѕ СЃ РµРґРёРЅРёС†РµР№ --- \emph{Р°Р»РіРµР±СЂРѕР№}.
 
-\emph{$\sigma$-кольцо} --- это кольцо $S$, обладающее свойством:
+\emph{$\sigma$-РєРѕР»СЊС†Рѕ} --- СЌС‚Рѕ РєРѕР»СЊС†Рѕ $S$, РѕР±Р»Р°РґР°СЋС‰РµРµ СЃРІРѕР№СЃС‚РІРѕРј:
 $A_1,A_2,\ldots\in S\p\Rightarrow \bigcup\limits_{j=1} A_j\in S$.
 
-Алгебра, которая является $\sigma$-кольцом, называется
-\emph{$\sigma$-алгеброй подмножеств}.
+РђР»РіРµР±СЂР°, РєРѕС‚РѕСЂР°СЏ СЏРІР»СЏРµС‚СЃСЏ $\sigma$-РєРѕР»СЊС†РѕРј, РЅР°Р·С‹РІР°РµС‚СЃСЏ
+\emph{$\sigma$-Р°Р»РіРµР±СЂРѕР№ РїРѕРґРјРЅРѕР¶РµСЃС‚РІ}.
 
-\emph{$\delta$-кольцо} --- это кольцо $S$, обладающее свойством:
+\emph{$\delta$-РєРѕР»СЊС†Рѕ} --- СЌС‚Рѕ РєРѕР»СЊС†Рѕ $S$, РѕР±Р»Р°РґР°СЋС‰РµРµ СЃРІРѕР№СЃС‚РІРѕРј:
 $A_1,A_2,\ldots\in S\p\Rightarrow \bigcap\limits_{j=1} A_j\in S$.
 \end{defen}
 
 \prim
 
 1. $\Omega=\mathbb{R}^1$, $\mathcal{P}=\{(a;b), [a;b), (a;b],
-[a;b]\mid a\leqslant b\in\mathbb{R}^1\}$ --- полукольцо, но не
-кольцо и не полуалгебра.
+[a;b]\mid a\leqslant b\in\mathbb{R}^1\}$ --- РїРѕР»СѓРєРѕР»СЊС†Рѕ, РЅРѕ РЅРµ
+РєРѕР»СЊС†Рѕ Рё РЅРµ РїРѕР»СѓР°Р»РіРµР±СЂР°.
 
-2. $\Omega=\mathbb{R}^1$, $S$ --- множество конечных объединений
-элементов из $\mathcal{P}$, где $\mathcal{P}$ --- полукольцо.
+2. $\Omega=\mathbb{R}^1$, $S$ --- РјРЅРѕР¶РµСЃС‚РІРѕ РєРѕРЅРµС‡РЅС‹С… РѕР±СЉРµРґРёРЅРµРЅРёР№
+СЌР»РµРјРµРЅС‚РѕРІ РёР· $\mathcal{P}$, РіРґРµ $\mathcal{P}$ --- РїРѕР»СѓРєРѕР»СЊС†Рѕ.
 
-3. Если $\mathfrak{a}$ --- алгебра, являющаяся $\sigma$-кольцом, то
-$\mathfrak{a}$ --- $\sigma$-алгебра.
+3. Р•СЃР»Рё $\mathfrak{a}$ --- Р°Р»РіРµР±СЂР°, СЏРІР»СЏСЋС‰Р°СЏСЃСЏ $\sigma$-РєРѕР»СЊС†РѕРј, С‚Рѕ
+$\mathfrak{a}$ --- $\sigma$-Р°Р»РіРµР±СЂР°.
 
-4. Всякое $\sigma$-кольцо является $\delta$-кольцом. Обратное
-неверно: пусть $\Omega\p=\mathbb{R}^1$, $S$ --- множество всех
-ограниченных подмножеств из $\Omega$. Тогда $S$ --- $\delta$-кольцо,
-но не $\sigma$-кольцо.
+4. Р’СЃСЏРєРѕРµ $\sigma$-РєРѕР»СЊС†Рѕ СЏРІР»СЏРµС‚СЃСЏ $\delta$-РєРѕР»СЊС†РѕРј. РћР±СЂР°С‚РЅРѕРµ
+РЅРµРІРµСЂРЅРѕ: РїСѓСЃС‚СЊ $\Omega\p=\mathbb{R}^1$, $S$ --- РјРЅРѕР¶РµСЃС‚РІРѕ РІСЃРµС…
+РѕРіСЂР°РЅРёС‡РµРЅРЅС‹С… РїРѕРґРјРЅРѕР¶РµСЃС‚РІ РёР· $\Omega$. РўРѕРіРґР° $S$ --- $\delta$-РєРѕР»СЊС†Рѕ,
+РЅРѕ РЅРµ $\sigma$-РєРѕР»СЊС†Рѕ.
 
-5. Не всякое $\sigma$-кольцо является алгеброй: пусть $S$ ---
-множество всех не более чем счетных подмножеств из $\Omega$. Тогда
-$S$ --- $\sigma$-кольцо, но не алгебра.
+5. РќРµ РІСЃСЏРєРѕРµ $\sigma$-РєРѕР»СЊС†Рѕ СЏРІР»СЏРµС‚СЃСЏ Р°Р»РіРµР±СЂРѕР№: РїСѓСЃС‚СЊ $S$ ---
+РјРЅРѕР¶РµСЃС‚РІРѕ РІСЃРµС… РЅРµ Р±РѕР»РµРµ С‡РµРј СЃС‡РµС‚РЅС‹С… РїРѕРґРјРЅРѕР¶РµСЃС‚РІ РёР· $\Omega$. РўРѕРіРґР°
+$S$ --- $\sigma$-РєРѕР»СЊС†Рѕ, РЅРѕ РЅРµ Р°Р»РіРµР±СЂР°.
 
-\tema{Мера и ее счетно аддитивность}
+\tema{РњРµСЂР° Рё РµРµ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕСЃС‚СЊ}
 
 \begin{defen}
-\emph{Мерой $\nu$} называется функция, область определения которой
-является полукольцом $\mathcal{P}$ подмножеств некоторого множества,
-принимающая числовые значения и обладающая свойством: $\forall\,
-A_j\p\in\mathcal{P}, j=1,\ldots,n$, если $A_i\cap A_k=\varnothing$
-при $i\neq k$ и $\bigsqcup\limits_{j=1}^n A_j\in\mathcal{P}$, то
+\emph{РњРµСЂРѕР№ $\nu$} РЅР°Р·С‹РІР°РµС‚СЃСЏ С„СѓРЅРєС†РёСЏ, РѕР±Р»Р°СЃС‚СЊ РѕРїСЂРµРґРµР»РµРЅРёСЏ РєРѕС‚РѕСЂРѕР№
+СЏРІР»СЏРµС‚СЃСЏ РїРѕР»СѓРєРѕР»СЊС†РѕРј $\mathcal{P}$ РїРѕРґРјРЅРѕР¶РµСЃС‚РІ РЅРµРєРѕС‚РѕСЂРѕРіРѕ РјРЅРѕР¶РµСЃС‚РІР°,
+РїСЂРёРЅРёРјР°СЋС‰Р°СЏ С‡РёСЃР»РѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ Рё РѕР±Р»Р°РґР°СЋС‰Р°СЏ СЃРІРѕР№СЃС‚РІРѕРј: $\forall\,
+A_j\p\in\mathcal{P}, j=1,\ldots,n$, РµСЃР»Рё $A_i\cap A_k=\varnothing$
+РїСЂРё $i\neq k$ Рё $\bigsqcup\limits_{j=1}^n A_j\in\mathcal{P}$, С‚Рѕ
 $$\nu\Big(\bigsqcup\limits_{j=1}^n A_j\Big)=\sum\limits_{j=1}^n \nu
-A_j.$$ Это свойство меры называется \emph{аддитивным}.
+A_j.$$ Р­С‚Рѕ СЃРІРѕР№СЃС‚РІРѕ РјРµСЂС‹ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{Р°РґРґРёС‚РёРІРЅС‹Рј}.
 \end{defen}
 
 \begin{zam}
-1. $n$ --- произвольное число (его нельзя заменить на 2).
+1. $n$ --- РїСЂРѕРёР·РІРѕР»СЊРЅРѕРµ С‡РёСЃР»Рѕ (РµРіРѕ РЅРµР»СЊР·СЏ Р·Р°РјРµРЅРёС‚СЊ РЅР° 2).
 
-2. Если $\mathcal{P}$ --- кольцо, то достаточно потребовать, чтобы
-$\forall\, A_1, A_2\in\mathcal{P}: A_1\cap A_2=\varnothing$ имеем
+2. Р•СЃР»Рё $\mathcal{P}$ --- РєРѕР»СЊС†Рѕ, С‚Рѕ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїРѕС‚СЂРµР±РѕРІР°С‚СЊ, С‡С‚РѕР±С‹
+$\forall\, A_1, A_2\in\mathcal{P}: A_1\cap A_2=\varnothing$ РёРјРµРµРј
 $\nu(A_1\sqcup A_2)=\nu A_1+\nu A_2$.
 \end{zam}
 
 \begin{defen}
-Мера $\nu$ называется \emph{счетно аддитивной}, если $$\forall\,
+РњРµСЂР° $\nu$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕР№}, РµСЃР»Рё $$\forall\,
 A_1,A_2,\ldots\in\mathcal{P} : \bigsqcup\limits_{j=1}^\infty
 A_j\in\mathcal{P} \Rightarrow \nu\Big(\bigsqcup\limits_{j=1}^\infty
 A_j\Big)=\sum\limits_{j=1}^\infty\nu A_j.$$
 
-Мера \emph{неотрицательна}, если ее значения неотрицательны.
+РњРµСЂР° \emph{РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅР°}, РµСЃР»Рё РµРµ Р·РЅР°С‡РµРЅРёСЏ РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹.
 \end{defen}
 
 \prim
 
-1. Пусть $\mathcal{P}$ --- полукольцо подмножеств $\mathbb{R}^1$
-(см. выше) и $\nu((a;b))\p=\nu([a;b))=\nu((a;b])=\nu([a;b])=b-a$,
-если $b\geqslant a$. Такая мера называется \emph{мерой Лебега}.
+1. РџСѓСЃС‚СЊ $\mathcal{P}$ --- РїРѕР»СѓРєРѕР»СЊС†Рѕ РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\mathbb{R}^1$
+(СЃРј. РІС‹С€Рµ) Рё $\nu((a;b))\p=\nu([a;b))=\nu((a;b])=\nu([a;b])=b-a$,
+РµСЃР»Рё $b\geqslant a$. РўР°РєР°СЏ РјРµСЂР° РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РјРµСЂРѕР№ Р›РµР±РµРіР°}.
 
-2. \emph{Мера Лебега-Стильтьеса}: пусть $f$ --- неубывающая на
-$\mathbb{R}^1$ функция, тогда
+2. \emph{РњРµСЂР° Р›РµР±РµРіР°-РЎС‚РёР»СЊС‚СЊРµСЃР°}: РїСѓСЃС‚СЊ $f$ --- РЅРµСѓР±С‹РІР°СЋС‰Р°СЏ РЅР°
+$\mathbb{R}^1$ С„СѓРЅРєС†РёСЏ, С‚РѕРіРґР°
 \begin{align*}
 \nu_{LS}^f([a;b))&=f(b-0)-f(a-0),\\
 \nu_{LS}^f((a;b])&=f(b+0)-f(a+0),\\
@@ -229,22 +229,22 @@ $\mathbb{R}^1$ функция, тогда
 \lecture
 
 \begin{defen}
-\emph{Кольцо, порожденное полукольцом $\mathcal{P}$} --- это
-минимальное кольцо, содержащее $\mathcal{P}$:
+\emph{РљРѕР»СЊС†Рѕ, РїРѕСЂРѕР¶РґРµРЅРЅРѕРµ РїРѕР»СѓРєРѕР»СЊС†РѕРј $\mathcal{P}$} --- СЌС‚Рѕ
+РјРёРЅРёРјР°Р»СЊРЅРѕРµ РєРѕР»СЊС†Рѕ, СЃРѕРґРµСЂР¶Р°С‰РµРµ $\mathcal{P}$:
 $S(\mathcal{P})=\bigcap\limits_{S\supset\mathcal{P}}S$.
 \end{defen}
 
 \begin{predl}
-Пусть $\mathcal{P}$ --- полукольцо. Тогда порожденное им кольцо
-$S(\mathcal{P})$ --- это множество всевозможных множеств вида
-$\bigsqcup\limits_{j=1}^n A_j$, где $n\in\mathbb{N}$,
+РџСѓСЃС‚СЊ $\mathcal{P}$ --- РїРѕР»СѓРєРѕР»СЊС†Рѕ. РўРѕРіРґР° РїРѕСЂРѕР¶РґРµРЅРЅРѕРµ РёРј РєРѕР»СЊС†Рѕ
+$S(\mathcal{P})$ --- СЌС‚Рѕ РјРЅРѕР¶РµСЃС‚РІРѕ РІСЃРµРІРѕР·РјРѕР¶РЅС‹С… РјРЅРѕР¶РµСЃС‚РІ РІРёРґР°
+$\bigsqcup\limits_{j=1}^n A_j$, РіРґРµ $n\in\mathbb{N}$,
 $A_j\in\mathcal{P}$.
 \end{predl}
 
 \begin{proof}
-1. Докажем, что семейство множеств $\Big\{\bigsqcup\limits_{j=1}^n
-A_j\mid n\p\in\mathbb{N}, j=1,\ldots,n \Big\}$ --- это кольцо.
-Имеем:
+1. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ СЃРµРјРµР№СЃС‚РІРѕ РјРЅРѕР¶РµСЃС‚РІ $\Big\{\bigsqcup\limits_{j=1}^n
+A_j\mid n\p\in\mathbb{N}, j=1,\ldots,n \Big\}$ --- СЌС‚Рѕ РєРѕР»СЊС†Рѕ.
+РРјРµРµРј:
 \begin{align*}
 \Big(\bigsqcup\limits_{j=1}^n
 A_j\Big)\sqcup\Big(\bigsqcup\limits_{k=1}^r
@@ -260,39 +260,39 @@ B_r)=\\
 E_p\Big),\quad E_s\in\mathcal{P}.
 \end{align*}
 
-2. Докажем минимальность: пусть $S_0\supset \mathcal{P}$, тогда
+2. Р”РѕРєР°Р¶РµРј РјРёРЅРёРјР°Р»СЊРЅРѕСЃС‚СЊ: РїСѓСЃС‚СЊ $S_0\supset \mathcal{P}$, С‚РѕРіРґР°
 $\forall\, n, \forall \,A_j\in\mathcal{P}, j\p=1,\ldots,n$ \;
 $\bigcup\limits_{j=1}^n A_j\in S_0\Rightarrow S_0\supset
 S(\mathcal{P})$.
 \end{proof}
 
 \begin{predl}
-Пусть $\nu\colon \mathcal{P}\to\mathbb{R}^+$ --- мера на
-$\mathcal{P}$. Тогда $\exists !\, \bar{\nu}\colon
-S(\mathcal{P})\p\to\mathbb{R}^+$ --- мера на $S(\mathcal{P})$,
-такая, что $\bar{\nu}\mid_\mathcal{P}=\nu$.
+РџСѓСЃС‚СЊ $\nu\colon \mathcal{P}\to\mathbb{R}^+$ --- РјРµСЂР° РЅР°
+$\mathcal{P}$. РўРѕРіРґР° $\exists !\, \bar{\nu}\colon
+S(\mathcal{P})\p\to\mathbb{R}^+$ --- РјРµСЂР° РЅР° $S(\mathcal{P})$,
+С‚Р°РєР°СЏ, С‡С‚Рѕ $\bar{\nu}\mid_\mathcal{P}=\nu$.
 \end{predl}
 
 \begin{proof}
-Вначале докажем, что существует не более чем одно продолжение. Пусть
-$A\in S(\mathcal{P})$, тогда $A=\bigsqcup\limits_{j=1}^n P_j$,
-$P_j\in\mathcal{P}$. Отсюда
+Р’РЅР°С‡Р°Р»Рµ РґРѕРєР°Р¶РµРј, С‡С‚Рѕ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РЅРµ Р±РѕР»РµРµ С‡РµРј РѕРґРЅРѕ РїСЂРѕРґРѕР»Р¶РµРЅРёРµ. РџСѓСЃС‚СЊ
+$A\in S(\mathcal{P})$, С‚РѕРіРґР° $A=\bigsqcup\limits_{j=1}^n P_j$,
+$P_j\in\mathcal{P}$. РћС‚СЃСЋРґР°
 $\bar{\nu}A\p=\sum\limits_{j=1}^n\bar{\nu}P_j=\sum\limits_{j=1}^n
 \nu P_j$.
 
-Теперь проверим, что введенная выше функция $\bar{\nu}$ является
-мерой. Во-первых, докажем, что значение $\bar{\nu}A$ не зависит от
-множеств, на которые раскладывается $A$. Пусть
-$A=\bigsqcup\limits_{j=1}^n P_j=\bigsqcup\limits_{k=1}^m B_k$, тогда
-$A=\bigsqcup\limits_{j,k}^{n,m}P_j\cap B_k$ и поскольку
-$P_j=\bigsqcup\limits_{k=1}^n (P_j\cap B_k)$, то
+РўРµРїРµСЂСЊ РїСЂРѕРІРµСЂРёРј, С‡С‚Рѕ РІРІРµРґРµРЅРЅР°СЏ РІС‹С€Рµ С„СѓРЅРєС†РёСЏ $\bar{\nu}$ СЏРІР»СЏРµС‚СЃСЏ
+РјРµСЂРѕР№. Р’Рѕ-РїРµСЂРІС‹С…, РґРѕРєР°Р¶РµРј, С‡С‚Рѕ Р·РЅР°С‡РµРЅРёРµ $\bar{\nu}A$ РЅРµ Р·Р°РІРёСЃРёС‚ РѕС‚
+РјРЅРѕР¶РµСЃС‚РІ, РЅР° РєРѕС‚РѕСЂС‹Рµ СЂР°СЃРєР»Р°РґС‹РІР°РµС‚СЃСЏ $A$. РџСѓСЃС‚СЊ
+$A=\bigsqcup\limits_{j=1}^n P_j=\bigsqcup\limits_{k=1}^m B_k$, С‚РѕРіРґР°
+$A=\bigsqcup\limits_{j,k}^{n,m}P_j\cap B_k$ Рё РїРѕСЃРєРѕР»СЊРєСѓ
+$P_j=\bigsqcup\limits_{k=1}^n (P_j\cap B_k)$, С‚Рѕ
 $\sum\limits_{j=1}^n \nu
 P_j=\sum\limits_{j=1}^n\sum\limits_{k=1}^m\nu(P_j\cap B_k)$.
-Аналогично, $\sum\limits_{k=1}^m \nu
-B_k=\sum\limits_{j=1}^n\sum\limits_{k=1}^m\nu(P_j\cap B_k)$. Поэтому
+РђРЅР°Р»РѕРіРёС‡РЅРѕ, $\sum\limits_{k=1}^m \nu
+B_k=\sum\limits_{j=1}^n\sum\limits_{k=1}^m\nu(P_j\cap B_k)$. РџРѕСЌС‚РѕРјСѓ
 $\sum\limits_{j=1}^n\nu P_j=\sum\limits_{k=1}^m\nu B_k$.
 
-Во-вторых, докажем аддитивность. По определению,
+Р’Рѕ-РІС‚РѕСЂС‹С…, РґРѕРєР°Р¶РµРј Р°РґРґРёС‚РёРІРЅРѕСЃС‚СЊ. РџРѕ РѕРїСЂРµРґРµР»РµРЅРёСЋ,
 \begin{align*}
 \bar{\nu}\Big(\Big(\bigsqcup\limits_{j=1}^n A_j\Big)\sqcup
 \Big(\bigsqcup\limits_{k=1}^r B_k\Big)\Big)&=\sum\limits_{j=1}^n\nu
@@ -305,33 +305,33 @@ A_j\Big)+\bar{\nu}\Big(\bigsqcup\limits_{k=1}^r B_k\Big).
 \end{proof}
 
 \begin{theorem}
-Если исходная мера счетно аддитивна, то ее продолжение тоже счетно
-аддитивно.
+Р•СЃР»Рё РёСЃС…РѕРґРЅР°СЏ РјРµСЂР° СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°, С‚Рѕ РµРµ РїСЂРѕРґРѕР»Р¶РµРЅРёРµ С‚РѕР¶Рµ СЃС‡РµС‚РЅРѕ
+Р°РґРґРёС‚РёРІРЅРѕ.
 \end{theorem}
 
 \begin{proof}
-Пусть $A\in S(\mathcal{P})$, $A=\bigsqcup\limits_{j=1}^\infty A_j$,
-$A_j\in S(\mathcal{P})$. Тогда $\forall\, j$
+РџСѓСЃС‚СЊ $A\in S(\mathcal{P})$, $A=\bigsqcup\limits_{j=1}^\infty A_j$,
+$A_j\in S(\mathcal{P})$. РўРѕРіРґР° $\forall\, j$
 $A_j=\bigsqcup\limits_{k=1}^{k(j)}A_{jk}$, $A_{jk}\in\mathcal{P}$.
-Значит,
+Р—РЅР°С‡РёС‚,
 $\bar{\nu}A=\bar{\nu}\Big(\bigsqcup\limits_{j,k}A_{jk}\Big)$,
-поэтому $$\bar{\nu}A=\sum\limits_{j,k}\nu
+РїРѕСЌС‚РѕРјСѓ $$\bar{\nu}A=\sum\limits_{j,k}\nu
 A_{jk}=\sum\limits_{j=1}^\infty \sum\limits_{k=1}^{k(j)}\nu
 A_{jk}=\sum\limits_{j=1}^\infty\bar{\nu}A_j.$$
 \end{proof}
 
 \begin{predl}
-Пусть $\nu$ --- мера на кольце $S$. Тогда $\nu$ счетно аддитивна
-$\Leftrightarrow$ для всех $A, A_j\in S$ выполняется следующее
-свойство: если $\bigcup\limits_{j=1}^\infty A_j\supset A$, то
+РџСѓСЃС‚СЊ $\nu$ --- РјРµСЂР° РЅР° РєРѕР»СЊС†Рµ $S$. РўРѕРіРґР° $\nu$ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°
+$\Leftrightarrow$ РґР»СЏ РІСЃРµС… $A, A_j\in S$ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ СЃР»РµРґСѓСЋС‰РµРµ
+СЃРІРѕР№СЃС‚РІРѕ: РµСЃР»Рё $\bigcup\limits_{j=1}^\infty A_j\supset A$, С‚Рѕ
 $\sum\limits_{j=1}^\infty \nu A_j\geqslant \nu A$.
 \end{predl}
 
 \begin{proof}
-Пусть $\nu$ счетно аддитивна и $\bigcup\limits_{j=1}^\infty
-A_j\supset A$, где $A, A_j\in S$. Тогда $$A=(A\cap
+РџСѓСЃС‚СЊ $\nu$ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР° Рё $\bigcup\limits_{j=1}^\infty
+A_j\supset A$, РіРґРµ $A, A_j\in S$. РўРѕРіРґР° $$A=(A\cap
 A_1)\sqcup(A\cap(A_2\setminus A_1))\sqcup(A\cap(A_3\setminus(A_1\cup
-A_2)))\sqcup\ldots,$$ поэтому
+A_2)))\sqcup\ldots,$$ РїРѕСЌС‚РѕРјСѓ
 \begin{multline*}
 \nu A=\nu(A\cap A_1)+\nu(A\cap(A_2\setminus
 A_1))+\nu(A\cap(A_3\setminus(A_1\cup
@@ -340,57 +340,57 @@ A_2)))+\ldots\leqslant\\
 \nu A_j.
 \end{multline*}
 
-Обратно, пусть $B=\bigsqcup\limits_{k=1}^\infty B_k$, где $B, B_k\in
-S$. Докажем, что $\nu B\p=\sum\limits_{k=1}^\infty \nu B_k$.
-Заметим, что для любого $n$ выполняется равенство
+РћР±СЂР°С‚РЅРѕ, РїСѓСЃС‚СЊ $B=\bigsqcup\limits_{k=1}^\infty B_k$, РіРґРµ $B, B_k\in
+S$. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ $\nu B\p=\sum\limits_{k=1}^\infty \nu B_k$.
+Р—Р°РјРµС‚РёРј, С‡С‚Рѕ РґР»СЏ Р»СЋР±РѕРіРѕ $n$ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ СЂР°РІРµРЅСЃС‚РІРѕ
 $$B=\Big(\bigsqcup\limits_{k=1}^n
 B_k\Big)\sqcup\Big(B\setminus\Big(\bigsqcup\limits_{k=1}^n
-B_k\Big)\Big),$$ поэтому в силу аддитивности меры $$\nu
+B_k\Big)\Big),$$ РїРѕСЌС‚РѕРјСѓ РІ СЃРёР»Сѓ Р°РґРґРёС‚РёРІРЅРѕСЃС‚Рё РјРµСЂС‹ $$\nu
 B=\sum\limits_{k=1}^n \nu
 B_k+\nu\Big(B\setminus\Big(\bigsqcup\limits_{k=1}^n
-B_k\Big)\Big)\geqslant \sum\limits_{k=1}^\infty \nu B_k.$$ В то же
-время $\nu B\leqslant\sum\limits_{k=1}^\infty \nu B_k$. Отсюда
-получаем, что $\nu B=\sum\limits_{k=1}^\infty \nu B_k$ и мера $\nu$
-счетно аддитивна.
+B_k\Big)\Big)\geqslant \sum\limits_{k=1}^\infty \nu B_k.$$ Р’ С‚Рѕ Р¶Рµ
+РІСЂРµРјСЏ $\nu B\leqslant\sum\limits_{k=1}^\infty \nu B_k$. РћС‚СЃСЋРґР°
+РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ $\nu B=\sum\limits_{k=1}^\infty \nu B_k$ Рё РјРµСЂР° $\nu$
+СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°.
 \end{proof}
 
-Рассмотрим полукольцо $\mathcal{P}$ подмножеств $\mathbb{R}^1$ с
-мерой Лебега $\nu$. Тогда верна следующая
+Р Р°СЃСЃРјРѕС‚СЂРёРј РїРѕР»СѓРєРѕР»СЊС†Рѕ $\mathcal{P}$ РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\mathbb{R}^1$ СЃ
+РјРµСЂРѕР№ Р›РµР±РµРіР° $\nu$. РўРѕРіРґР° РІРµСЂРЅР° СЃР»РµРґСѓСЋС‰Р°СЏ
 
 \begin{theorem}
-Мера Лебега счетно аддитивна.
+РњРµСЂР° Р›РµР±РµРіР° СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°.
 \end{theorem}
 
 \begin{proof}
-Вначале заметим, что если $(a;b)=(a;c]\cup(c;b)$, то
-$\nu((a;b))=b-a=(c-a)+(b-c)=\nu((a;c])+\nu((c;b))$. Аналогичное
-равенство можно записать и для произвольного конечного количества
-интервалов разбиения отрезка $(a;b)$.
+Р’РЅР°С‡Р°Р»Рµ Р·Р°РјРµС‚РёРј, С‡С‚Рѕ РµСЃР»Рё $(a;b)=(a;c]\cup(c;b)$, С‚Рѕ
+$\nu((a;b))=b-a=(c-a)+(b-c)=\nu((a;c])+\nu((c;b))$. РђРЅР°Р»РѕРіРёС‡РЅРѕРµ
+СЂР°РІРµРЅСЃС‚РІРѕ РјРѕР¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊ Рё РґР»СЏ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ РєРѕРЅРµС‡РЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР°
+РёРЅС‚РµСЂРІР°Р»РѕРІ СЂР°Р·Р±РёРµРЅРёСЏ РѕС‚СЂРµР·РєР° $(a;b)$.
 
-Пусть теперь $\mathcal{P}\ni A=\bigsqcup\limits_{j=1}^\infty A_j$,
-где $A_j\in\mathcal{P}$. Зафиксируем произвольное число
-$\varepsilon>0$. Будем считать, что $A=(a;b]$ --- полуинтервал. В
-таком случае $\exists\, [\alpha;\beta]\subset A:
-\nu([\alpha;\beta])>\nu A-\varepsilon$ и $\exists\,
+РџСѓСЃС‚СЊ С‚РµРїРµСЂСЊ $\mathcal{P}\ni A=\bigsqcup\limits_{j=1}^\infty A_j$,
+РіРґРµ $A_j\in\mathcal{P}$. Р—Р°С„РёРєСЃРёСЂСѓРµРј РїСЂРѕРёР·РІРѕР»СЊРЅРѕРµ С‡РёСЃР»Рѕ
+$\varepsilon>0$. Р‘СѓРґРµРј СЃС‡РёС‚Р°С‚СЊ, С‡С‚Рѕ $A=(a;b]$ --- РїРѕР»СѓРёРЅС‚РµСЂРІР°Р». Р’
+С‚Р°РєРѕРј СЃР»СѓС‡Р°Рµ $\exists\, [\alpha;\beta]\subset A:
+\nu([\alpha;\beta])>\nu A-\varepsilon$ Рё $\exists\,
 (\alpha_j;\beta_j)\supset A_j: \nu((\alpha_j;\beta_j))\p<\nu
-A_j+\frac{\varepsilon}{2^j}$. Отсюда $[\alpha;\beta]\subset A\subset
-\bigcup\limits_{j=1}^\infty(\alpha_j;\beta_j)$. Значит, $\exists\,
+A_j+\frac{\varepsilon}{2^j}$. РћС‚СЃСЋРґР° $[\alpha;\beta]\subset A\subset
+\bigcup\limits_{j=1}^\infty(\alpha_j;\beta_j)$. Р—РЅР°С‡РёС‚, $\exists\,
 n: [\alpha;\beta]\subset\bigcup\limits_{j=1}^n (\alpha_j;\beta_j)$,
-поэтому $\nu([\alpha;\beta])\leqslant \sum\limits_{j=1}^n
+РїРѕСЌС‚РѕРјСѓ $\nu([\alpha;\beta])\leqslant \sum\limits_{j=1}^n
 \nu((\alpha_j;\beta_j))<\sum\limits_{j=1}^n\big(\nu
 A_j+\frac{\varepsilon}{2^j}\big)<\sum\limits_{j=1}^\infty \nu A_j +
-2\varepsilon$ и $\nu A\leqslant \sum\limits_{j=1}^\infty \nu A_j$.
+2\varepsilon$ Рё $\nu A\leqslant \sum\limits_{j=1}^\infty \nu A_j$.
 \end{proof}
 
 \begin{defen}
-Рассмотрим алгебру $S$ со счетно аддитивной мерой $\nu$. $T(\Omega)$
---- это множество всех подмножеств $\Omega$. Легко видеть, что
-$T(\Omega)$ является $\sigma$-алгеброй. Определим \emph{внешнюю меру
+Р Р°СЃСЃРјРѕС‚СЂРёРј Р°Р»РіРµР±СЂСѓ $S$ СЃРѕ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕР№ РјРµСЂРѕР№ $\nu$. $T(\Omega)$
+--- СЌС‚Рѕ РјРЅРѕР¶РµСЃС‚РІРѕ РІСЃРµС… РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\Omega$. Р›РµРіРєРѕ РІРёРґРµС‚СЊ, С‡С‚Рѕ
+$T(\Omega)$ СЏРІР»СЏРµС‚СЃСЏ $\sigma$-Р°Р»РіРµР±СЂРѕР№. РћРїСЂРµРґРµР»РёРј \emph{РІРЅРµС€РЅСЋСЋ РјРµСЂСѓ
 $\nu^*\colon T(\Omega)\to \mathbb{R}^1$}, $\nu^*
 A\p=\inf\limits_{A\subset\bigcup\limits_j
-A_j}\sum\limits_{j=1}^\infty \nu A_j$, где $A\in T(\Omega)$.
+A_j}\sum\limits_{j=1}^\infty \nu A_j$, РіРґРµ $A\in T(\Omega)$.
 
-Множество $A\subset \Omega$ называется \emph{$\nu$-измеримым}, если
+РњРЅРѕР¶РµСЃС‚РІРѕ $A\subset \Omega$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{$\nu$-РёР·РјРµСЂРёРјС‹Рј}, РµСЃР»Рё
 $\forall\, \varepsilon>0 \quad\exists\, B\in S:
 \nu^*(A\bigtriangleup B)<\varepsilon$.
 \end{defen}
@@ -401,174 +401,174 @@ $\forall\, \varepsilon>0 \quad\exists\, B\in S:
 
 \vspace{-30pt}
 
-\tema{Теорема Каратеодори}
+\tema{РўРµРѕСЂРµРјР° РљР°СЂР°С‚РµРѕРґРѕСЂРё}
 
-\begin{theorem}[Каратеодори]
-Пусть $\nu$ --- счетно аддитивная неотрицательная мера на алгебре
-$S$ подмножеств $\Omega$, $\sigma(S)$ --- $\sigma$-алгебра,
-порожденная $S$. Тогда $\exists !\,
+\begin{theorem}[РљР°СЂР°С‚РµРѕРґРѕСЂРё]
+РџСѓСЃС‚СЊ $\nu$ --- СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°СЏ РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅР°СЏ РјРµСЂР° РЅР° Р°Р»РіРµР±СЂРµ
+$S$ РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\Omega$, $\sigma(S)$ --- $\sigma$-Р°Р»РіРµР±СЂР°,
+РїРѕСЂРѕР¶РґРµРЅРЅР°СЏ $S$. РўРѕРіРґР° $\exists !\,
 \bar{\nu}\colon\sigma(S)\to\mathbb{R}^1$
---- счетно аддитивная мера на $\sigma(S)$, такая, что
+--- СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°СЏ РјРµСЂР° РЅР° $\sigma(S)$, С‚Р°РєР°СЏ, С‡С‚Рѕ
 $\bar{\nu}\mid_S=\nu$.
 \end{theorem}
 
 \begin{proof}
-Пусть $\mathfrak{a}$ --- множество $\nu$-измеримых подмножеств
-$\Omega$. Докажем, что на самом деле $\bar{\nu}=\nu^*$, где $\nu^*$
---- внешняя мера. Для этого мы докажем следующие утверждения:
+РџСѓСЃС‚СЊ $\mathfrak{a}$ --- РјРЅРѕР¶РµСЃС‚РІРѕ $\nu$-РёР·РјРµСЂРёРјС‹С… РїРѕРґРјРЅРѕР¶РµСЃС‚РІ
+$\Omega$. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ РЅР° СЃР°РјРѕРј РґРµР»Рµ $\bar{\nu}=\nu^*$, РіРґРµ $\nu^*$
+--- РІРЅРµС€РЅСЏСЏ РјРµСЂР°. Р”Р»СЏ СЌС‚РѕРіРѕ РјС‹ РґРѕРєР°Р¶РµРј СЃР»РµРґСѓСЋС‰РёРµ СѓС‚РІРµСЂР¶РґРµРЅРёСЏ:
 
 \begin{itemize}
   \item $S\subset\mathfrak{a}$;
-  \item $\mathfrak{a}$ --- $\sigma$-алгебра;
-  \item сужение $\nu^*$ на $\mathfrak{a}$ счетно аддитивно;
+  \item $\mathfrak{a}$ --- $\sigma$-Р°Р»РіРµР±СЂР°;
+  \item СЃСѓР¶РµРЅРёРµ $\nu^*$ РЅР° $\mathfrak{a}$ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕ;
   \item $\nu^*\mid_S=\nu$;
-  \item $\nu^*$ --- единственное продолжение, удовлетворяющее
-  условиям теоремы.
+  \item $\nu^*$ --- РµРґРёРЅСЃС‚РІРµРЅРЅРѕРµ РїСЂРѕРґРѕР»Р¶РµРЅРёРµ, СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‰РµРµ
+  СѓСЃР»РѕРІРёСЏРј С‚РµРѕСЂРµРјС‹.
 \end{itemize}
 
-Введем на множестве $T(\Omega)$ \emph{полуметрику}:
-$\rho(A,B)=\nu^*(A\bigtriangleup B)$. Функция $\rho$ удовлетворяет
-следующим свойствам:
+Р’РІРµРґРµРј РЅР° РјРЅРѕР¶РµСЃС‚РІРµ $T(\Omega)$ \emph{РїРѕР»СѓРјРµС‚СЂРёРєСѓ}:
+$\rho(A,B)=\nu^*(A\bigtriangleup B)$. Р¤СѓРЅРєС†РёСЏ $\rho$ СѓРґРѕРІР»РµС‚РІРѕСЂСЏРµС‚
+СЃР»РµРґСѓСЋС‰РёРј СЃРІРѕР№СЃС‚РІР°Рј:
 
-1) $\rho(A,B)=\rho(B,A)$ (очевидно).
+1) $\rho(A,B)=\rho(B,A)$ (РѕС‡РµРІРёРґРЅРѕ).
 
-2) $\rho(A, B)\geqslant 0$, причем $\rho(A,B)=0\nLeftrightarrow
+2) $\rho(A, B)\geqslant 0$, РїСЂРёС‡РµРј $\rho(A,B)=0\nLeftrightarrow
 A=B$.
 
-3) $\rho(A,C)\leqslant\rho(A,B)+\rho(B,C)$ (неравенство
-треугольника): действительно, из определения внешней меры следует,
-что если $A\subset\bigcup\limits_{j=1}^\infty A_j$, то
-$\nu^*A\leqslant\sum\limits_{j=1}^\infty \nu^*A_j$, а т.к.
+3) $\rho(A,C)\leqslant\rho(A,B)+\rho(B,C)$ (РЅРµСЂР°РІРµРЅСЃС‚РІРѕ
+С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°): РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ, РёР· РѕРїСЂРµРґРµР»РµРЅРёСЏ РІРЅРµС€РЅРµР№ РјРµСЂС‹ СЃР»РµРґСѓРµС‚,
+С‡С‚Рѕ РµСЃР»Рё $A\subset\bigcup\limits_{j=1}^\infty A_j$, С‚Рѕ
+$\nu^*A\leqslant\sum\limits_{j=1}^\infty \nu^*A_j$, Р° С‚.Рє.
 $A\bigtriangleup C\subset(A\bigtriangleup B)\cup(B\bigtriangleup
-C)$, то $$\rho(A,C)=\nu^*(A\bigtriangleup
+C)$, С‚Рѕ $$\rho(A,C)=\nu^*(A\bigtriangleup
 C)\leqslant\nu^*(A\bigtriangleup B)+\nu^*(B\bigtriangleup
 C)=\rho(A,B)+\rho(B,C).$$
 
-Заметим, что из свойства 3) следует, что
-$$|\rho(A,C)-\rho(A,B)|\leqslant\rho(C,B).$$ В самом деле, положим
-$A=\varnothing$, тогда $$|\rho(\varnothing,C)-\rho(\varnothing,
+Р—Р°РјРµС‚РёРј, С‡С‚Рѕ РёР· СЃРІРѕР№СЃС‚РІР° 3) СЃР»РµРґСѓРµС‚, С‡С‚Рѕ
+$$|\rho(A,C)-\rho(A,B)|\leqslant\rho(C,B).$$ Р’ СЃР°РјРѕРј РґРµР»Рµ, РїРѕР»РѕР¶РёРј
+$A=\varnothing$, С‚РѕРіРґР° $$|\rho(\varnothing,C)-\rho(\varnothing,
 B)|\leqslant\rho(C,B)\Leftrightarrow
 |\nu^*C-\nu^*B|\leqslant\nu^*(C\bigtriangleup B).$$
 
-1. Докажем, что $S\subset\mathfrak{a}$. Действительно,
+1. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ $S\subset\mathfrak{a}$. Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ,
 $A\in\mathfrak{a}\Leftrightarrow\forall\,\varepsilon>0\quad\exists\,
-C\in S:\rho(A,C)<\varepsilon$. Если $A\in S$, то положим $C=A$,
-тогда $\rho(A,C)=0<\varepsilon$ и $S\subset\mathfrak{a}$.
+C\in S:\rho(A,C)<\varepsilon$. Р•СЃР»Рё $A\in S$, С‚Рѕ РїРѕР»РѕР¶РёРј $C=A$,
+С‚РѕРіРґР° $\rho(A,C)=0<\varepsilon$ Рё $S\subset\mathfrak{a}$.
 
-2. Докажем, что $\mathfrak{a}$ --- алгебра. Понятно, что
-$\Omega\in\mathfrak{a}$, т.к. $\Omega\in S$. Необходимо проверить,
-что если $A,B\in\mathfrak{a}$, то $A\setminus B\in\mathfrak{a}$ и
-$A\cup B\in\mathfrak{a}$. Проверим только первую импликацию (вторая
-проверятся аналогично). Т.к. $A,B\in\mathfrak{a}$, то
+2. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ $\mathfrak{a}$ --- Р°Р»РіРµР±СЂР°. РџРѕРЅСЏС‚РЅРѕ, С‡С‚Рѕ
+$\Omega\in\mathfrak{a}$, С‚.Рє. $\Omega\in S$. РќРµРѕР±С…РѕРґРёРјРѕ РїСЂРѕРІРµСЂРёС‚СЊ,
+С‡С‚Рѕ РµСЃР»Рё $A,B\in\mathfrak{a}$, С‚Рѕ $A\setminus B\in\mathfrak{a}$ Рё
+$A\cup B\in\mathfrak{a}$. РџСЂРѕРІРµСЂРёРј С‚РѕР»СЊРєРѕ РїРµСЂРІСѓСЋ РёРјРїР»РёРєР°С†РёСЋ (РІС‚РѕСЂР°СЏ
+РїСЂРѕРІРµСЂСЏС‚СЃСЏ Р°РЅР°Р»РѕРіРёС‡РЅРѕ). Рў.Рє. $A,B\in\mathfrak{a}$, С‚Рѕ
 $\forall\,\varepsilon>0\quad\exists\, A_S,B_S\in S:
-\nu^*(A\bigtriangleup A_S)<\varepsilon/2$ и $\nu^*(B\bigtriangleup
-B_S)<\varepsilon/2$. Поскольку $(A\setminus
+\nu^*(A\bigtriangleup A_S)<\varepsilon/2$ Рё $\nu^*(B\bigtriangleup
+B_S)<\varepsilon/2$. РџРѕСЃРєРѕР»СЊРєСѓ $(A\setminus
 B)\bigtriangleup(A_S\setminus B_S)\subset(A\bigtriangleup
-A_S)\cup(B\bigtriangleup B_S)$, то $$\nu^*((A\setminus
+A_S)\cup(B\bigtriangleup B_S)$, С‚Рѕ $$\nu^*((A\setminus
 B)\bigtriangleup(A_S\setminus B_S))\leqslant\nu^*(A\bigtriangleup
 A_S)+\nu^*(B\bigtriangleup B_S)<\varepsilon.$$
 
-3. Докажем\footnote{Счетно аддитивность меры $\nu$ используется
-только в этом пункте.}, что $\nu^*\mid_S=\nu$. Очевидно, что если
-$A\in S$, то $\nu^*A\p\leqslant\nu A$. Докажем обратное неравенство.
-Если $A\subset\bigcup\limits_{j=1}^\infty C_j$, то $\nu
-A\leqslant\sum\limits_{j=1}^\infty\nu C_j$, поэтому $\nu
+3. Р”РѕРєР°Р¶РµРј\footnote{РЎС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕСЃС‚СЊ РјРµСЂС‹ $\nu$ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+С‚РѕР»СЊРєРѕ РІ СЌС‚РѕРј РїСѓРЅРєС‚Рµ.}, С‡С‚Рѕ $\nu^*\mid_S=\nu$. РћС‡РµРІРёРґРЅРѕ, С‡С‚Рѕ РµСЃР»Рё
+$A\in S$, С‚Рѕ $\nu^*A\p\leqslant\nu A$. Р”РѕРєР°Р¶РµРј РѕР±СЂР°С‚РЅРѕРµ РЅРµСЂР°РІРµРЅСЃС‚РІРѕ.
+Р•СЃР»Рё $A\subset\bigcup\limits_{j=1}^\infty C_j$, С‚Рѕ $\nu
+A\leqslant\sum\limits_{j=1}^\infty\nu C_j$, РїРѕСЌС‚РѕРјСѓ $\nu
 A\leqslant\inf\limits_{A\subset\bigcup\limits_{j=1}^\infty
-C_j}\sum\limits_{j=1}^\infty\nu C_j=\nu^*A$. Отсюда получаем, что
+C_j}\sum\limits_{j=1}^\infty\nu C_j=\nu^*A$. РћС‚СЃСЋРґР° РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ
 $\nu A=\nu^*A$.
 
-Прежде чем двигаться дальше, докажем следующую лемму.
+РџСЂРµР¶РґРµ С‡РµРј РґРІРёРіР°С‚СЊСЃСЏ РґР°Р»СЊС€Рµ, РґРѕРєР°Р¶РµРј СЃР»РµРґСѓСЋС‰СѓСЋ Р»РµРјРјСѓ.
 
 \begin{lemm}
-Функция $\mu\colon S\to\mathbb{R}^+$ является мерой тогда и только
-тогда, когда $\forall\,A_1,A_2\in S\quad \mu(A_1\cup
-A_2)+\mu(A_1\cap A_2)=\mu A_1+\mu A_2$ и $\mu(\varnothing)=0$.
+Р¤СѓРЅРєС†РёСЏ $\mu\colon S\to\mathbb{R}^+$ СЏРІР»СЏРµС‚СЃСЏ РјРµСЂРѕР№ С‚РѕРіРґР° Рё С‚РѕР»СЊРєРѕ
+С‚РѕРіРґР°, РєРѕРіРґР° $\forall\,A_1,A_2\in S\quad \mu(A_1\cup
+A_2)+\mu(A_1\cap A_2)=\mu A_1+\mu A_2$ Рё $\mu(\varnothing)=0$.
 \end{lemm}
 
 \begin{proof}
-Сначала установим, что функция $\mu$, удовлетворяющая условию леммы,
-будет мерой. Действительно, если $A_1\cap A_2=\varnothing$, то
+РЎРЅР°С‡Р°Р»Р° СѓСЃС‚Р°РЅРѕРІРёРј, С‡С‚Рѕ С„СѓРЅРєС†РёСЏ $\mu$, СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‰Р°СЏ СѓСЃР»РѕРІРёСЋ Р»РµРјРјС‹,
+Р±СѓРґРµС‚ РјРµСЂРѕР№. Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ, РµСЃР»Рё $A_1\cap A_2=\varnothing$, С‚Рѕ
 $\mu(A_1\p\cup A_2)=\mu A_1+\mu A_2$.
 
-Обратно, поскольку $\mu(A_1\cup A_2)=\mu(A_1\setminus A_2)+\mu A_2$,
-то $$\mu(A_1\cup A_2)+\mu(A_1\cap A_2)=\mu(A_1\setminus A_2)+\mu
+РћР±СЂР°С‚РЅРѕ, РїРѕСЃРєРѕР»СЊРєСѓ $\mu(A_1\cup A_2)=\mu(A_1\setminus A_2)+\mu A_2$,
+С‚Рѕ $$\mu(A_1\cup A_2)+\mu(A_1\cap A_2)=\mu(A_1\setminus A_2)+\mu
 A_2+\mu(A_1\cap A_2)=\mu A_1+\mu A_2.$$
 \end{proof}
 
-4. Докажем, что $\nu^*$ является мерой на $\mathfrak{a}$. Согласно
-лемме 3.1, достаточно доказать, что
+4. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ $\nu^*$ СЏРІР»СЏРµС‚СЃСЏ РјРµСЂРѕР№ РЅР° $\mathfrak{a}$. РЎРѕРіР»Р°СЃРЅРѕ
+Р»РµРјРјРµ 3.1, РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕРєР°Р·Р°С‚СЊ, С‡С‚Рѕ
 $\forall\,A,C\in\mathfrak{a}\quad \nu^*(A\cup C)+\nu^*(A\cap
-C)=\nu^* A+\nu^* C$. По определению, $\forall\,
+C)=\nu^* A+\nu^* C$. РџРѕ РѕРїСЂРµРґРµР»РµРЅРёСЋ, $\forall\,
 \varepsilon>0\quad\exists\,A_S,C_S\in S: \nu^*(A\bigtriangleup
-A_S)<\varepsilon$ и $\nu^*(C\bigtriangleup C_S)<\varepsilon$. Т.к.
+A_S)<\varepsilon$ Рё $\nu^*(C\bigtriangleup C_S)<\varepsilon$. Рў.Рє.
 $(A\cup C)\bigtriangleup(A_S\cup C_S)\subset (A\bigtriangleup
-A_S)\cup(C\bigtriangleup C_S)$, то $$\nu^*((A\cup
+A_S)\cup(C\bigtriangleup C_S)$, С‚Рѕ $$\nu^*((A\cup
 C)\bigtriangleup(A_S\cup C_S))\leqslant\nu^*(A\bigtriangleup
-A_S)+\nu^*(C\bigtriangleup C_S)<2\varepsilon.$$ Аналогично,
+A_S)+\nu^*(C\bigtriangleup C_S)<2\varepsilon.$$ РђРЅР°Р»РѕРіРёС‡РЅРѕ,
 $$\nu^*((A\cap C)\bigtriangleup(A_S\cap
 C_S))\leqslant\nu^*(A\bigtriangleup A_S)+\nu^*(C\bigtriangleup
-C_S)<2\varepsilon.$$ По неравенству треугольника
-$$\text{$|\nu^*(A\cup C)-\nu^*(A_S\cup C_S)|<2\varepsilon$ и $|\nu^*
+C_S)<2\varepsilon.$$ РџРѕ РЅРµСЂР°РІРµРЅСЃС‚РІСѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
+$$\text{$|\nu^*(A\cup C)-\nu^*(A_S\cup C_S)|<2\varepsilon$ Рё $|\nu^*
 (A\cap C)-\nu^*(A_S\cap C_S)|<2\varepsilon$},$$
-$$\text{$|\nu^*A-\nu^*A_S|<\varepsilon$ и
-$|\nu^*C-\nu^*C_S|<\varepsilon$}.$$ Кроме того, поскольку
-$\nu^*A_S=\nu A_S$ и $\nu^*C_S=\nu C_S$, а также $$\nu(A_S\cup
-C_S)+\nu(A_S\cap C_S)=\nu A_S+\nu C_S,$$ то $$|\nu^*(A\cup
-C)+\nu^*(A\cap C)-\nu^*A-\nu^*C|<6\varepsilon,$$ откуда $\nu^*(A\cup
+$$\text{$|\nu^*A-\nu^*A_S|<\varepsilon$ Рё
+$|\nu^*C-\nu^*C_S|<\varepsilon$}.$$ РљСЂРѕРјРµ С‚РѕРіРѕ, РїРѕСЃРєРѕР»СЊРєСѓ
+$\nu^*A_S=\nu A_S$ Рё $\nu^*C_S=\nu C_S$, Р° С‚Р°РєР¶Рµ $$\nu(A_S\cup
+C_S)+\nu(A_S\cap C_S)=\nu A_S+\nu C_S,$$ С‚Рѕ $$|\nu^*(A\cup
+C)+\nu^*(A\cap C)-\nu^*A-\nu^*C|<6\varepsilon,$$ РѕС‚РєСѓРґР° $\nu^*(A\cup
 C)+\nu^*(A\cap C)=\nu^*A+\nu^*C$.
 
-Теперь докажем счетно аддитивность. Очевидно, что если $\mu$ ---
-мера на кольце $S$ и при $A,A_j\in S$ из того, что
-$A\subset\bigcup\limits_{j=1}^\infty A_j$ следует, что $\mu
-A\p\leqslant\sum\limits_{j=1}^\infty\mu A_j$, то мера $\mu$ счетно
-аддитивна. При $\mu=\nu^*$ получаем требуемое.
+РўРµРїРµСЂСЊ РґРѕРєР°Р¶РµРј СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕСЃС‚СЊ. РћС‡РµРІРёРґРЅРѕ, С‡С‚Рѕ РµСЃР»Рё $\mu$ ---
+РјРµСЂР° РЅР° РєРѕР»СЊС†Рµ $S$ Рё РїСЂРё $A,A_j\in S$ РёР· С‚РѕРіРѕ, С‡С‚Рѕ
+$A\subset\bigcup\limits_{j=1}^\infty A_j$ СЃР»РµРґСѓРµС‚, С‡С‚Рѕ $\mu
+A\p\leqslant\sum\limits_{j=1}^\infty\mu A_j$, С‚Рѕ РјРµСЂР° $\mu$ СЃС‡РµС‚РЅРѕ
+Р°РґРґРёС‚РёРІРЅР°. РџСЂРё $\mu=\nu^*$ РїРѕР»СѓС‡Р°РµРј С‚СЂРµР±СѓРµРјРѕРµ.
 
-5. Докажем, что $\mathfrak{a}$ --- $\sigma$-алгебра. Для этого
-достаточно проверить, что если $A_j\in\mathfrak{a}$, то
-$\bigsqcup\limits_{j=1}^\infty A_j\in\mathfrak{a}$. Поскольку
-$\forall\, j\quad A_j\subset\Omega\in S\subset\mathfrak{a}$ и
+5. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ $\mathfrak{a}$ --- $\sigma$-Р°Р»РіРµР±СЂР°. Р”Р»СЏ СЌС‚РѕРіРѕ
+РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РµСЃР»Рё $A_j\in\mathfrak{a}$, С‚Рѕ
+$\bigsqcup\limits_{j=1}^\infty A_j\in\mathfrak{a}$. РџРѕСЃРєРѕР»СЊРєСѓ
+$\forall\, j\quad A_j\subset\Omega\in S\subset\mathfrak{a}$ Рё
 $$\forall\, n\quad\Omega=\Big(\bigsqcup\limits_{j=1}^n
 A_j\Big)\sqcup\Big(\Omega\setminus\bigsqcup\limits_{j=1}^n
-A_j\Big),$$ то в силу аддитивности получаем, что
+A_j\Big),$$ С‚Рѕ РІ СЃРёР»Сѓ Р°РґРґРёС‚РёРІРЅРѕСЃС‚Рё РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ
 $$\nu^*\Omega=\nu^*\Big(\bigsqcup\limits_{j=1}^n A_j\Big)+\nu^*\Big
 (\Omega\setminus\bigsqcup\limits_{j=1}^n
-A_j\Big)\geqslant\sum\limits_{j=1}^n\nu^* A_j,$$ откуда
+A_j\Big)\geqslant\sum\limits_{j=1}^n\nu^* A_j,$$ РѕС‚РєСѓРґР°
 $\sum\limits_{j=1}^\infty \nu^*A_j<\infty$.
 
-Зафиксируем произвольное $\varepsilon>0$. Тогда $$\exists\,
+Р—Р°С„РёРєСЃРёСЂСѓРµРј РїСЂРѕРёР·РІРѕР»СЊРЅРѕРµ $\varepsilon>0$. РўРѕРіРґР° $$\exists\,
 n:\nu^*\Big(\bigsqcup\limits_{j=n}^\infty
 A_j\Big)\leqslant\sum\limits_{j=n}^\infty\nu^*A_j<\varepsilon.$$
-Т.к. $\bigsqcup\limits_{j=1}^n A_j\in\mathfrak{a}$, то $\exists\,
+Рў.Рє. $\bigsqcup\limits_{j=1}^n A_j\in\mathfrak{a}$, С‚Рѕ $\exists\,
 C\in S:\nu^*\Big(\Big(\bigsqcup\limits_{j=1}^n
-A_j\Big)\bigtriangleup C\Big)<\varepsilon$. По неравенству
-треугольника получаем, что
+A_j\Big)\bigtriangleup C\Big)<\varepsilon$. РџРѕ РЅРµСЂР°РІРµРЅСЃС‚РІСѓ
+С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ
 $$\rho\Big(\bigsqcup\limits_{j=1}^\infty A_j,C\Big)\leqslant
 \rho\Big(\bigsqcup\limits_{j=1}^\infty A_j,\bigsqcup\limits_{j=1}^n
 A_j\Big)+\rho\Big(\bigsqcup\limits_{j=1}^n A_j,
-C\Big)<2\varepsilon,$$ поэтому $\bigsqcup\limits_{j=1}^\infty
+C\Big)<2\varepsilon,$$ РїРѕСЌС‚РѕРјСѓ $\bigsqcup\limits_{j=1}^\infty
 A_j\in\mathfrak{a}$.
 
-6. Докажем единственность. Пусть $\mu$ --- другое продолжение меры
-$\nu$ с $S$ на $\mathfrak{a}$, удовлетворяющее условиям теоремы.
-Введем <<расстояние>>\footnote{На самом деле, это никакое не
-расстояние.} на $\mathfrak{a}$: $\rho_\mu(A,B)=\mu(A\bigtriangleup
-B)$. Тогда $|\mu A-\mu B|<\mu(A\bigtriangleup B)$.
+6. Р”РѕРєР°Р¶РµРј РµРґРёРЅСЃС‚РІРµРЅРЅРѕСЃС‚СЊ. РџСѓСЃС‚СЊ $\mu$ --- РґСЂСѓРіРѕРµ РїСЂРѕРґРѕР»Р¶РµРЅРёРµ РјРµСЂС‹
+$\nu$ СЃ $S$ РЅР° $\mathfrak{a}$, СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‰РµРµ СѓСЃР»РѕРІРёСЏРј С‚РµРѕСЂРµРјС‹.
+Р’РІРµРґРµРј <<СЂР°СЃСЃС‚РѕСЏРЅРёРµ>>\footnote{РќР° СЃР°РјРѕРј РґРµР»Рµ, СЌС‚Рѕ РЅРёРєР°РєРѕРµ РЅРµ
+СЂР°СЃСЃС‚РѕСЏРЅРёРµ.} РЅР° $\mathfrak{a}$: $\rho_\mu(A,B)=\mu(A\bigtriangleup
+B)$. РўРѕРіРґР° $|\mu A-\mu B|<\mu(A\bigtriangleup B)$.
 
-Пусть $A\in\mathfrak{a}$, тогда
+РџСѓСЃС‚СЊ $A\in\mathfrak{a}$, С‚РѕРіРґР°
 $\forall\,\varepsilon>0\quad\exists\, C\in S:
-|\nu^*A-\nu^*C|<\rho(A,C)<\varepsilon$. Поскольку
-$\rho_\mu(A,C)\leqslant\rho(A,C)$, то $$|\mu A-\mu
-C|<\rho_\mu(A,C)\leqslant\rho(A,C)<\varepsilon.$$ Т.к. $\mu C=\nu
-C$, то по неравенству треугольника $|\nu^* A-\mu A|<2\varepsilon$,
-поэтому $\mu A=\nu^*A$.
+|\nu^*A-\nu^*C|<\rho(A,C)<\varepsilon$. РџРѕСЃРєРѕР»СЊРєСѓ
+$\rho_\mu(A,C)\leqslant\rho(A,C)$, С‚Рѕ $$|\mu A-\mu
+C|<\rho_\mu(A,C)\leqslant\rho(A,C)<\varepsilon.$$ Рў.Рє. $\mu C=\nu
+C$, С‚Рѕ РїРѕ РЅРµСЂР°РІРµРЅСЃС‚РІСѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° $|\nu^* A-\mu A|<2\varepsilon$,
+РїРѕСЌС‚РѕРјСѓ $\mu A=\nu^*A$.
 
-Осталось доказать неравенство
-$\rho_\mu(A_1,A_2)\leqslant\rho_\nu(A_1,A_2)$. В самом деле,
+РћСЃС‚Р°Р»РѕСЃСЊ РґРѕРєР°Р·Р°С‚СЊ РЅРµСЂР°РІРµРЅСЃС‚РІРѕ
+$\rho_\mu(A_1,A_2)\leqslant\rho_\nu(A_1,A_2)$. Р’ СЃР°РјРѕРј РґРµР»Рµ,
 $$\rho_\nu(A_1,A_2)=\inf\limits_{\bigcup\limits_j C_j\supset A_1
-\bigtriangleup A_2} \sum\nu C_j,$$ но
-$\rho_\nu(A_1,A_2)=\sum\limits_{j=1}^\infty \nu C_j$, поэтому
+\bigtriangleup A_2} \sum\nu C_j,$$ РЅРѕ
+$\rho_\nu(A_1,A_2)=\sum\limits_{j=1}^\infty \nu C_j$, РїРѕСЌС‚РѕРјСѓ
 $\mu(A_1\bigtriangleup A_2)\leqslant\sum\limits_{j=1}^\infty \mu
-C_j$ и $$\rho_\mu(A_1,A_2)=\mu(A_1\bigtriangleup
+C_j$ Рё $$\rho_\mu(A_1,A_2)=\mu(A_1\bigtriangleup
 A_2)\leqslant\inf\sum\limits_j \nu C_j=\nu^*(A_1\bigtriangleup
 A_2)=\rho_\nu(A_1,A_2).$$
 \end{proof}
@@ -581,109 +581,109 @@ A_2)=\rho_\nu(A_1,A_2).$$
 
 \vspace{-30pt}
 
-\tema{Измеримые пространства и пространства с мерой}
+\tema{РР·РјРµСЂРёРјС‹Рµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° Рё РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° СЃ РјРµСЂРѕР№}
 
 \begin{defen}
-Пара $(\Omega,\mathfrak{a})$ называется \emph{измеримым
-пространством}, если $\mathfrak{a}$ --- это $\sigma$-алгебра
-подмножеств $\Omega$. Элементы $\mathfrak{a}$ называются
-\emph{измеримыми множествами}.
+РџР°СЂР° $(\Omega,\mathfrak{a})$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РёР·РјРµСЂРёРјС‹Рј
+РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕРј}, РµСЃР»Рё $\mathfrak{a}$ --- СЌС‚Рѕ $\sigma$-Р°Р»РіРµР±СЂР°
+РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\Omega$. Р­Р»РµРјРµРЅС‚С‹ $\mathfrak{a}$ РЅР°Р·С‹РІР°СЋС‚СЃСЏ
+\emph{РёР·РјРµСЂРёРјС‹РјРё РјРЅРѕР¶РµСЃС‚РІР°РјРё}.
 
-Тройка $(\Omega,\mathfrak{a},\nu)$ называется \emph{пространством с
-мерой}, если $\nu$ --- это счетно аддитивная мера на
-$\sigma$-алгебре $\mathfrak{a}$.
+РўСЂРѕР№РєР° $(\Omega,\mathfrak{a},\nu)$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕРј СЃ
+РјРµСЂРѕР№}, РµСЃР»Рё $\nu$ --- СЌС‚Рѕ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°СЏ РјРµСЂР° РЅР°
+$\sigma$-Р°Р»РіРµР±СЂРµ $\mathfrak{a}$.
 \end{defen}
 
 \begin{zam}
-Далее \emph{все} меры мы будем считать счетно аддитивными и
-неотрицательными.
+Р”Р°Р»РµРµ \emph{РІСЃРµ} РјРµСЂС‹ РјС‹ Р±СѓРґРµРј СЃС‡РёС‚Р°С‚СЊ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅС‹РјРё Рё
+РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹РјРё.
 \end{zam}
 
 \begin{defen}
-Пусть $(\Omega,\mathfrak{a},\nu)$ --- пространство с мерой. Мера
-$\nu$ называется \emph{$\sigma$-конечной}, если $\exists\, \Omega_j:
-\Omega=\bigcup\limits_{j=1}^n \Omega_j$, причем
-$\Omega_j\in\mathfrak{a}$ и $\nu\Omega_j<\infty$.
+РџСѓСЃС‚СЊ $(\Omega,\mathfrak{a},\nu)$ --- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РјРµСЂРѕР№. РњРµСЂР°
+$\nu$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{$\sigma$-РєРѕРЅРµС‡РЅРѕР№}, РµСЃР»Рё $\exists\, \Omega_j:
+\Omega=\bigcup\limits_{j=1}^n \Omega_j$, РїСЂРёС‡РµРј
+$\Omega_j\in\mathfrak{a}$ Рё $\nu\Omega_j<\infty$.
 \end{defen}
 
 \begin{defen}
-Мера $\nu$  на $\sigma$-алгебре $\mathfrak{a}$ называется
-\emph{полной}, если выполнено следующее условие: $\forall\,
-A\in\mathfrak{a}$ если $\nu A=0$, то всякое подмножество $A$ само
-измеримо (и тогда его мера также равна 0).
+РњРµСЂР° $\nu$  РЅР° $\sigma$-Р°Р»РіРµР±СЂРµ $\mathfrak{a}$ РЅР°Р·С‹РІР°РµС‚СЃСЏ
+\emph{РїРѕР»РЅРѕР№}, РµСЃР»Рё РІС‹РїРѕР»РЅРµРЅРѕ СЃР»РµРґСѓСЋС‰РµРµ СѓСЃР»РѕРІРёРµ: $\forall\,
+A\in\mathfrak{a}$ РµСЃР»Рё $\nu A=0$, С‚Рѕ РІСЃСЏРєРѕРµ РїРѕРґРјРЅРѕР¶РµСЃС‚РІРѕ $A$ СЃР°РјРѕ
+РёР·РјРµСЂРёРјРѕ (Рё С‚РѕРіРґР° РµРіРѕ РјРµСЂР° С‚Р°РєР¶Рµ СЂР°РІРЅР° 0).
 \end{defen}
 
 \begin{predl}
-Продолженная мера $\bar{\nu}$ в теореме Каратеодори полна.
+РџСЂРѕРґРѕР»Р¶РµРЅРЅР°СЏ РјРµСЂР° $\bar{\nu}$ РІ С‚РµРѕСЂРµРјРµ РљР°СЂР°С‚РµРѕРґРѕСЂРё РїРѕР»РЅР°.
 \end{predl}
 
 \begin{proof}
-Пусть $A\in\mathfrak{a}$ и $\bar{\nu}A=0$, тогда
+РџСѓСЃС‚СЊ $A\in\mathfrak{a}$ Рё $\bar{\nu}A=0$, С‚РѕРіРґР°
 $\forall\,\varepsilon>0\quad\exists\, B\in S:
-\rho_\nu(A,B)<\varepsilon$ и $\nu^*A=0$. Проверим, что если
-$C\subset A$, то $C\in\mathfrak{a}$ и $\nu^*C=0$. Заметим, что если
-$C$ измеримо, то $\nu^*C=\bar{\nu}C=0$, т.к.
+\rho_\nu(A,B)<\varepsilon$ Рё $\nu^*A=0$. РџСЂРѕРІРµСЂРёРј, С‡С‚Рѕ РµСЃР»Рё
+$C\subset A$, С‚Рѕ $C\in\mathfrak{a}$ Рё $\nu^*C=0$. Р—Р°РјРµС‚РёРј, С‡С‚Рѕ РµСЃР»Рё
+$C$ РёР·РјРµСЂРёРјРѕ, С‚Рѕ $\nu^*C=\bar{\nu}C=0$, С‚.Рє.
 $$\forall\,\varepsilon>0\quad \nu^*C=\nu^*(C\bigtriangleup\varnothing)
 =\rho(C,\varnothing)<\varepsilon.$$
 \end{proof}
 
 \begin{predl}
-Если $(\Omega,\mathfrak{a},\nu)$ --- пространство с мерой, то
-существует такое пространство с мерой
-$(\Omega,\bar{\mathfrak{a}},\bar{\nu})$, что
-$\mathfrak{a}\subset\bar{\mathfrak{a}}$ и $\bar{\nu}$ ---
-продолжение $\nu$ на $\bar{\mathfrak{a}}$, причем $\bar{\nu}$ ---
-полная мера.
+Р•СЃР»Рё $(\Omega,\mathfrak{a},\nu)$ --- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РјРµСЂРѕР№, С‚Рѕ
+СЃСѓС‰РµСЃС‚РІСѓРµС‚ С‚Р°РєРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РјРµСЂРѕР№
+$(\Omega,\bar{\mathfrak{a}},\bar{\nu})$, С‡С‚Рѕ
+$\mathfrak{a}\subset\bar{\mathfrak{a}}$ Рё $\bar{\nu}$ ---
+РїСЂРѕРґРѕР»Р¶РµРЅРёРµ $\nu$ РЅР° $\bar{\mathfrak{a}}$, РїСЂРёС‡РµРј $\bar{\nu}$ ---
+РїРѕР»РЅР°СЏ РјРµСЂР°.
 \end{predl}
 
 \begin{proof}
-В самом деле, $$A\in\bar{\mathfrak{a}}\Leftrightarrow \exists\,
+Р’ СЃР°РјРѕРј РґРµР»Рµ, $$A\in\bar{\mathfrak{a}}\Leftrightarrow \exists\,
 C\in\mathfrak{a}: \nu^*(A\bigtriangleup C)=0,\quad \nu
 C=\bar{\nu}A.$$
 \end{proof}
 
 \begin{defen}
-В таком случае $\bar{\nu}$ называется \emph{пополнением} $\nu$.
+Р’ С‚Р°РєРѕРј СЃР»СѓС‡Р°Рµ $\bar{\nu}$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РїРѕРїРѕР»РЅРµРЅРёРµРј} $\nu$.
 \end{defen}
 
-Пусть $(\Omega,\mathfrak{b},\mu)$ --- пространство с полной мерой,
-причем $\mathfrak{b}\supset\mathfrak{a}$, $\mu$ --- продолжение
-$\nu$ на $\mathfrak{b}$, тогда
-$\mathfrak{b}\supset\bar{\mathfrak{a}}$ и $\mu$ --- это продолжение
-меры $\bar{\nu}$. Т.е. пополнение меры является \emph{минимальным}
-продолжением.
+РџСѓСЃС‚СЊ $(\Omega,\mathfrak{b},\mu)$ --- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РїРѕР»РЅРѕР№ РјРµСЂРѕР№,
+РїСЂРёС‡РµРј $\mathfrak{b}\supset\mathfrak{a}$, $\mu$ --- РїСЂРѕРґРѕР»Р¶РµРЅРёРµ
+$\nu$ РЅР° $\mathfrak{b}$, С‚РѕРіРґР°
+$\mathfrak{b}\supset\bar{\mathfrak{a}}$ Рё $\mu$ --- СЌС‚Рѕ РїСЂРѕРґРѕР»Р¶РµРЅРёРµ
+РјРµСЂС‹ $\bar{\nu}$. Рў.Рµ. РїРѕРїРѕР»РЅРµРЅРёРµ РјРµСЂС‹ СЏРІР»СЏРµС‚СЃСЏ \emph{РјРёРЅРёРјР°Р»СЊРЅС‹Рј}
+РїСЂРѕРґРѕР»Р¶РµРЅРёРµРј.
 
-Пусть $\Omega$ --- метрическое пространство.
+РџСѓСЃС‚СЊ $\Omega$ --- РјРµС‚СЂРёС‡РµСЃРєРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ.
 
 \begin{defen}
-\emph{$\sigma$-алгеброй $\mathfrak{B}$ борелевских подмножеств
-метрического пространства} называется $\sigma$-алгебра, порожденная
-всеми открытыми множествами (или, что то же самое, $\sigma$-алгебра,
-порожденная замкнутыми множествами).
+\emph{$\sigma$-Р°Р»РіРµР±СЂРѕР№ $\mathfrak{B}$ Р±РѕСЂРµР»РµРІСЃРєРёС… РїРѕРґРјРЅРѕР¶РµСЃС‚РІ
+РјРµС‚СЂРёС‡РµСЃРєРѕРіРѕ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР°} РЅР°Р·С‹РІР°РµС‚СЃСЏ $\sigma$-Р°Р»РіРµР±СЂР°, РїРѕСЂРѕР¶РґРµРЅРЅР°СЏ
+РІСЃРµРјРё РѕС‚РєСЂС‹С‚С‹РјРё РјРЅРѕР¶РµСЃС‚РІР°РјРё (РёР»Рё, С‡С‚Рѕ С‚Рѕ Р¶Рµ СЃР°РјРѕРµ, $\sigma$-Р°Р»РіРµР±СЂР°,
+РїРѕСЂРѕР¶РґРµРЅРЅР°СЏ Р·Р°РјРєРЅСѓС‚С‹РјРё РјРЅРѕР¶РµСЃС‚РІР°РјРё).
 \end{defen}
 
 \begin{predl}
-$\sigma$-алгебра борелевских подмножеств $\mathbb{R}^1$
+$\sigma$-Р°Р»РіРµР±СЂР° Р±РѕСЂРµР»РµРІСЃРєРёС… РїРѕРґРјРЅРѕР¶РµСЃС‚РІ $\mathbb{R}^1$
 
-1) совпадает с $\sigma$-алгеброй, порожденной всеми интервалами
+1) СЃРѕРІРїР°РґР°РµС‚ СЃ $\sigma$-Р°Р»РіРµР±СЂРѕР№, РїРѕСЂРѕР¶РґРµРЅРЅРѕР№ РІСЃРµРјРё РёРЅС‚РµСЂРІР°Р»Р°РјРё
 $(\alpha;\beta)$;
 
-2) совпадает с $\sigma$-алгеброй, порожденной всеми отрезками
+2) СЃРѕРІРїР°РґР°РµС‚ СЃ $\sigma$-Р°Р»РіРµР±СЂРѕР№, РїРѕСЂРѕР¶РґРµРЅРЅРѕР№ РІСЃРµРјРё РѕС‚СЂРµР·РєР°РјРё
 $[\alpha;\beta]$;
 
-3) совпадает с $\sigma$-алгеброй, порожденной всеми полуинтервалами
-вида $(\alpha;\beta]$ или $[\alpha;\beta)$;
+3) СЃРѕРІРїР°РґР°РµС‚ СЃ $\sigma$-Р°Р»РіРµР±СЂРѕР№, РїРѕСЂРѕР¶РґРµРЅРЅРѕР№ РІСЃРµРјРё РїРѕР»СѓРёРЅС‚РµСЂРІР°Р»Р°РјРё
+РІРёРґР° $(\alpha;\beta]$ РёР»Рё $[\alpha;\beta)$;
 
-4) совпадает с $\sigma$-алгеброй, порожденной всеми лучами
-$(-\infty;\alpha)$ или $(\alpha;+\infty)$;
+4) СЃРѕРІРїР°РґР°РµС‚ СЃ $\sigma$-Р°Р»РіРµР±СЂРѕР№, РїРѕСЂРѕР¶РґРµРЅРЅРѕР№ РІСЃРµРјРё Р»СѓС‡Р°РјРё
+$(-\infty;\alpha)$ РёР»Рё $(\alpha;+\infty)$;
 
-5) совпадает с $\sigma$-алгеброй, порожденной всеми лучами
-$(-\infty;\alpha]$ или $[\alpha;+\infty)$.
+5) СЃРѕРІРїР°РґР°РµС‚ СЃ $\sigma$-Р°Р»РіРµР±СЂРѕР№, РїРѕСЂРѕР¶РґРµРЅРЅРѕР№ РІСЃРµРјРё Р»СѓС‡Р°РјРё
+$(-\infty;\alpha]$ РёР»Рё $[\alpha;+\infty)$.
 \end{predl}
 
 \begin{proof}
-Достаточно доказать, что $\sigma$-алгебра, порожденная одним из
-указанных пяти способов, содержит все открытые интервалы.
+Р”РѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕРєР°Р·Р°С‚СЊ, С‡С‚Рѕ $\sigma$-Р°Р»РіРµР±СЂР°, РїРѕСЂРѕР¶РґРµРЅРЅР°СЏ РѕРґРЅРёРј РёР·
+СѓРєР°Р·Р°РЅРЅС‹С… РїСЏС‚Рё СЃРїРѕСЃРѕР±РѕРІ, СЃРѕРґРµСЂР¶РёС‚ РІСЃРµ РѕС‚РєСЂС‹С‚С‹Рµ РёРЅС‚РµСЂРІР°Р»С‹.
 
 1) $(\alpha;+\infty)=\bigcup\limits_{n=1}^\infty\left[\alpha+\frac 1
 n;+\infty\right)$;
@@ -692,40 +692,40 @@ n;+\infty\right)$;
 
 3) $(\alpha;\beta)=(-\infty;\beta)\cap(\alpha;+\infty)$;
 
-4) $V\subset\mathbb{R}^1$, $V$ открыто.
+4) $V\subset\mathbb{R}^1$, $V$ РѕС‚РєСЂС‹С‚Рѕ.
 
 $\forall\, x\in V\quad\exists\, (\alpha;\beta)\subset V,
-x\in(\alpha;\beta)$. Немного уменьшив этот интервал, можно считать,
-что $\alpha,\beta\in\mathbb{Q}$, поэтому $V$ есть объединение
-(счетных) интервалов, т.е. $\sigma$-алгебра, порожденная множествами
-вида $[\beta;+\infty)$, совпадает с $\sigma$-алгеброй борелевский
-подмножеств.
+x\in(\alpha;\beta)$. РќРµРјРЅРѕРіРѕ СѓРјРµРЅСЊС€РёРІ СЌС‚РѕС‚ РёРЅС‚РµСЂРІР°Р», РјРѕР¶РЅРѕ СЃС‡РёС‚Р°С‚СЊ,
+С‡С‚Рѕ $\alpha,\beta\in\mathbb{Q}$, РїРѕСЌС‚РѕРјСѓ $V$ РµСЃС‚СЊ РѕР±СЉРµРґРёРЅРµРЅРёРµ
+(СЃС‡РµС‚РЅС‹С…) РёРЅС‚РµСЂРІР°Р»РѕРІ, С‚.Рµ. $\sigma$-Р°Р»РіРµР±СЂР°, РїРѕСЂРѕР¶РґРµРЅРЅР°СЏ РјРЅРѕР¶РµСЃС‚РІР°РјРё
+РІРёРґР° $[\beta;+\infty)$, СЃРѕРІРїР°РґР°РµС‚ СЃ $\sigma$-Р°Р»РіРµР±СЂРѕР№ Р±РѕСЂРµР»РµРІСЃРєРёР№
+РїРѕРґРјРЅРѕР¶РµСЃС‚РІ.
 \end{proof}
 
-Пусть мера $\nu$ задана на кольце $S$. Пусть $\mathfrak{a}$ --- это
-совокупность $\nu^*$-измеримых подмножеств. Можно проверить, что
-$\mathfrak{a}$ --- это $\delta$-кольцо. Построим
+РџСѓСЃС‚СЊ РјРµСЂР° $\nu$ Р·Р°РґР°РЅР° РЅР° РєРѕР»СЊС†Рµ $S$. РџСѓСЃС‚СЊ $\mathfrak{a}$ --- СЌС‚Рѕ
+СЃРѕРІРѕРєСѓРїРЅРѕСЃС‚СЊ $\nu^*$-РёР·РјРµСЂРёРјС‹С… РїРѕРґРјРЅРѕР¶РµСЃС‚РІ. РњРѕР¶РЅРѕ РїСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ
+$\mathfrak{a}$ --- СЌС‚Рѕ $\delta$-РєРѕР»СЊС†Рѕ. РџРѕСЃС‚СЂРѕРёРј
 $\bar{\mathfrak{a}}$: $A\in\bar{\mathfrak{a}}\Leftrightarrow
 \forall\, C\in\mathfrak{a}\quad C\cap A\in\mathfrak{a}$.
 
 \begin{defen}
-Введем следующую функцию:
+Р’РІРµРґРµРј СЃР»РµРґСѓСЋС‰СѓСЋ С„СѓРЅРєС†РёСЋ:
 $\bar{\bar{\nu}}A=\sup\limits_{C\in\mathfrak{a}}\bar{\nu}(A\cap C)$.
-Правда, $\bar{\bar{\nu}}\colon S\to [0;+\infty]$, т.е.
-$\bar{\bar{\nu}}$ может равняться бесконечности.
+РџСЂР°РІРґР°, $\bar{\bar{\nu}}\colon S\to [0;+\infty]$, С‚.Рµ.
+$\bar{\bar{\nu}}$ РјРѕР¶РµС‚ СЂР°РІРЅСЏС‚СЊСЃСЏ Р±РµСЃРєРѕРЅРµС‡РЅРѕСЃС‚Рё.
 \end{defen}
 
 \prim
 
-$\Omega=\mathbb{R}^1$, $\mathcal{P}$ --- полукольцо промежутков.
-Тогда
+$\Omega=\mathbb{R}^1$, $\mathcal{P}$ --- РїРѕР»СѓРєРѕР»СЊС†Рѕ РїСЂРѕРјРµР¶СѓС‚РєРѕРІ.
+РўРѕРіРґР°
 $\bar{\bar{\nu}}\mathbb{R}^1=\bar{\bar{\nu}}(\alpha;+\infty)=+\infty$.
 
 \vspace{5pt}
 
-Введем следующие обозначения: $\mathfrak{a}_L$ --- это
-$\sigma$-алгебра измеримых по Лебегу множеств, $\nu_L$ --- мера
-Лебега.
+Р’РІРµРґРµРј СЃР»РµРґСѓСЋС‰РёРµ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ: $\mathfrak{a}_L$ --- СЌС‚Рѕ
+$\sigma$-Р°Р»РіРµР±СЂР° РёР·РјРµСЂРёРјС‹С… РїРѕ Р›РµР±РµРіСѓ РјРЅРѕР¶РµСЃС‚РІ, $\nu_L$ --- РјРµСЂР°
+Р›РµР±РµРіР°.
 
 \begin{predl}
 $\forall\, A\in\mathfrak{a}_L$ $\nu_L A>0$. $\exists\, B\subset A:
@@ -734,14 +734,14 @@ B\not \in \mathfrak{a}_L$.
 
 \begin{predl}
 $\forall\, A\in\mathfrak{a}_L, \nu_L>0$ $\exists\, B\subset
-A:\nu^*B=\nu_L A$ и $\nu^*(A\setminus B)\p=\nu_L A$.
+A:\nu^*B=\nu_L A$ Рё $\nu^*(A\setminus B)\p=\nu_L A$.
 \end{predl}
 %-----------------------------------------------------------------------------------%
 
 %---------------------------Lecture 5-----------------------------------------------%
 \lecture
 
-Рассмотрим пространство с мерой $(\mathbb{R}^1, \mathfrak{a}, \nu)$.
+Р Р°СЃСЃРјРѕС‚СЂРёРј РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РјРµСЂРѕР№ $(\mathbb{R}^1, \mathfrak{a}, \nu)$.
 
 \begin{lemm}
 \label{rashional.points}$\forall\, A\in\mathfrak{a}$, $\nu A>0\quad
@@ -749,22 +749,22 @@ A:\nu^*B=\nu_L A$ и $\nu^*(A\setminus B)\p=\nu_L A$.
 \end{lemm}
 
 \begin{proof}
-Поскольку $\mathbb{R}^1=\bigcup\limits_{n=1}^\infty [-n;n]$, то
-$A=\bigcup\limits_{n=1}^\infty A\cap[-n;n]$ и $$0<\nu
-A\leqslant\sum\limits_{n=1}^\infty \nu(A\cap[-n;n]).$$ Значит,
-найдется такое $n\in\mathbb{N}$, что $\nu(A\cap[-n;n])>0$. Положим
+РџРѕСЃРєРѕР»СЊРєСѓ $\mathbb{R}^1=\bigcup\limits_{n=1}^\infty [-n;n]$, С‚Рѕ
+$A=\bigcup\limits_{n=1}^\infty A\cap[-n;n]$ Рё $$0<\nu
+A\leqslant\sum\limits_{n=1}^\infty \nu(A\cap[-n;n]).$$ Р—РЅР°С‡РёС‚,
+РЅР°Р№РґРµС‚СЃСЏ С‚Р°РєРѕРµ $n\in\mathbb{N}$, С‡С‚Рѕ $\nu(A\cap[-n;n])>0$. РџРѕР»РѕР¶РёРј
 $A_n\p=A\cap[-n;n]$.
 
-Допустим, что в $A_n$ нет точек с рациональным расстоянием. Тогда
-верно следующее утверждение: $\forall\, a\neq b\in \mathbb{Q}\quad
-(A_n+a)\cap(A_n+b)=\varnothing$. В самом деле, если $\exists\,
-c\in(A_n+a)\cap(A_n+b)$, то $\exists\, r_1,r_2\in A_n: r_1=c-a$ и
-$r_2=c-b$, откуда $r_1-r_2=b-a\in\mathbb{Q}$ --- противоречие.
+Р”РѕРїСѓСЃС‚РёРј, С‡С‚Рѕ РІ $A_n$ РЅРµС‚ С‚РѕС‡РµРє СЃ СЂР°С†РёРѕРЅР°Р»СЊРЅС‹Рј СЂР°СЃСЃС‚РѕСЏРЅРёРµРј. РўРѕРіРґР°
+РІРµСЂРЅРѕ СЃР»РµРґСѓСЋС‰РµРµ СѓС‚РІРµСЂР¶РґРµРЅРёРµ: $\forall\, a\neq b\in \mathbb{Q}\quad
+(A_n+a)\cap(A_n+b)=\varnothing$. Р’ СЃР°РјРѕРј РґРµР»Рµ, РµСЃР»Рё $\exists\,
+c\in(A_n+a)\cap(A_n+b)$, С‚Рѕ $\exists\, r_1,r_2\in A_n: r_1=c-a$ Рё
+$r_2=c-b$, РѕС‚РєСѓРґР° $r_1-r_2=b-a\in\mathbb{Q}$ --- РїСЂРѕС‚РёРІРѕСЂРµС‡РёРµ.
 
-Поскольку $\bigsqcup\limits_{r\in\mathbb{Q}\cap[0;n]}(A_n+r)\subset
-[-n;2n]$, то $$\infty=\sum\nu
+РџРѕСЃРєРѕР»СЊРєСѓ $\bigsqcup\limits_{r\in\mathbb{Q}\cap[0;n]}(A_n+r)\subset
+[-n;2n]$, С‚Рѕ $$\infty=\sum\nu
 A_n=\sum\limits_{r\in\mathbb{Q}\cap[0;n]}\nu(A_n+r)\leqslant
-\nu([-n;2n])=3n$$ --- противоречие.
+\nu([-n;2n])=3n$$ --- РїСЂРѕС‚РёРІРѕСЂРµС‡РёРµ.
 \end{proof}
 
 \begin{predl}
@@ -773,109 +773,109 @@ C:D\not \in \mathfrak{a}$.
 \end{predl}
 
 \begin{proof}
-Введем на множестве $C$ отношение эквивалентности: $a_1\sim
-a_2\Leftrightarrow |a_1-a_2|\in\mathbb{Q}$. Тогда множество $C$
-разбивается на классы эквивалентности: $C=\bigcup\limits_\alpha
-C_\alpha$. Выберем в каждом $C_\alpha$ по одной точке и обозначим
-это множество точек через $D$, т.е. $\forall\,\alpha\quad D\cap
+Р’РІРµРґРµРј РЅР° РјРЅРѕР¶РµСЃС‚РІРµ $C$ РѕС‚РЅРѕС€РµРЅРёРµ СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕСЃС‚Рё: $a_1\sim
+a_2\Leftrightarrow |a_1-a_2|\in\mathbb{Q}$. РўРѕРіРґР° РјРЅРѕР¶РµСЃС‚РІРѕ $C$
+СЂР°Р·Р±РёРІР°РµС‚СЃСЏ РЅР° РєР»Р°СЃСЃС‹ СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕСЃС‚Рё: $C=\bigcup\limits_\alpha
+C_\alpha$. Р’С‹Р±РµСЂРµРј РІ РєР°Р¶РґРѕРј $C_\alpha$ РїРѕ РѕРґРЅРѕР№ С‚РѕС‡РєРµ Рё РѕР±РѕР·РЅР°С‡РёРј
+СЌС‚Рѕ РјРЅРѕР¶РµСЃС‚РІРѕ С‚РѕС‡РµРє С‡РµСЂРµР· $D$, С‚.Рµ. $\forall\,\alpha\quad D\cap
 C_\alpha=\{a_\alpha\}$.
 
-Докажем, что множество $D$ неизмеримо. Предположим противное: пусть
-$D\in\mathfrak{a}$. Ясно, что расстояние между любыми его точками
-иррационально, поэтому по лемме~\ref{rashional.points} $\nu D=0$.
+Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ РјРЅРѕР¶РµСЃС‚РІРѕ $D$ РЅРµРёР·РјРµСЂРёРјРѕ. РџСЂРµРґРїРѕР»РѕР¶РёРј РїСЂРѕС‚РёРІРЅРѕРµ: РїСѓСЃС‚СЊ
+$D\in\mathfrak{a}$. РЇСЃРЅРѕ, С‡С‚Рѕ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ Р»СЋР±С‹РјРё РµРіРѕ С‚РѕС‡РєР°РјРё
+РёСЂСЂР°С†РёРѕРЅР°Р»СЊРЅРѕ, РїРѕСЌС‚РѕРјСѓ РїРѕ Р»РµРјРјРµ~\ref{rashional.points} $\nu D=0$.
 
-Поскольку $\forall\, a\neq b\in \mathbb{Q}\quad
-(D+a)\cap(D+b)=\varnothing$, то $C\subset
-\bigsqcup\limits_{r\in\mathbb{Q}}(D+r)$, поэтому $\nu C\leqslant
-\sum\limits_{r\in\mathbb{Q}}\nu(D+r)=0$, т.к. $\forall\,
-r\in\mathbb{Q}\quad \nu(D+r)=\nu D=0$. Но $\nu C>0$ по условию ---
-противоречие.
+РџРѕСЃРєРѕР»СЊРєСѓ $\forall\, a\neq b\in \mathbb{Q}\quad
+(D+a)\cap(D+b)=\varnothing$, С‚Рѕ $C\subset
+\bigsqcup\limits_{r\in\mathbb{Q}}(D+r)$, РїРѕСЌС‚РѕРјСѓ $\nu C\leqslant
+\sum\limits_{r\in\mathbb{Q}}\nu(D+r)=0$, С‚.Рє. $\forall\,
+r\in\mathbb{Q}\quad \nu(D+r)=\nu D=0$. РќРѕ $\nu C>0$ РїРѕ СѓСЃР»РѕРІРёСЋ ---
+РїСЂРѕС‚РёРІРѕСЂРµС‡РёРµ.
 \end{proof}
 
-\tema{Измеримые функции}
+\tema{РР·РјРµСЂРёРјС‹Рµ С„СѓРЅРєС†РёРё}
 
 %\vspace{10pt}
 
 %\begin{center}
-%\textsc{Измеримые функции}
+%\textsc{РР·РјРµСЂРёРјС‹Рµ С„СѓРЅРєС†РёРё}
 %\end{center}
 
 %\vspace{7pt}
 
 \begin{defen}
-Пусть $(\Omega_1, \mathfrak{a}_1)$ и $(\Omega_2, \mathfrak{a}_2)$
---- измеримые пространства. Функция $f\colon \Omega_1\to\Omega_2$
-называется \emph{измеримой}, если $\forall\,A\in\mathfrak{a}_2\quad
+РџСѓСЃС‚СЊ $(\Omega_1, \mathfrak{a}_1)$ Рё $(\Omega_2, \mathfrak{a}_2)$
+--- РёР·РјРµСЂРёРјС‹Рµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР°. Р¤СѓРЅРєС†РёСЏ $f\colon \Omega_1\to\Omega_2$
+РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РёР·РјРµСЂРёРјРѕР№}, РµСЃР»Рё $\forall\,A\in\mathfrak{a}_2\quad
 f^{-1}A\in\mathfrak{a}_1$.
 
-Возьмем в качестве $(\Omega_2,\mathfrak{a}_2)$ пару
-$(\mathbb{R}^1,\mathfrak{B})$. Функция $f\colon
-\Omega\to\mathbb{R}^1$ называется \emph{измеримой}, если $\forall\,
+Р’РѕР·СЊРјРµРј РІ РєР°С‡РµСЃС‚РІРµ $(\Omega_2,\mathfrak{a}_2)$ РїР°СЂСѓ
+$(\mathbb{R}^1,\mathfrak{B})$. Р¤СѓРЅРєС†РёСЏ $f\colon
+\Omega\to\mathbb{R}^1$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РёР·РјРµСЂРёРјРѕР№}, РµСЃР»Рё $\forall\,
 B\in\mathfrak{B}\quad f^{-1}B\in\mathfrak{a}$.
 \end{defen}
 
 \begin{zam}
-В последнем определении множество $\mathfrak{B}$ нельзя заменить на
+Р’ РїРѕСЃР»РµРґРЅРµРј РѕРїСЂРµРґРµР»РµРЅРёРё РјРЅРѕР¶РµСЃС‚РІРѕ $\mathfrak{B}$ РЅРµР»СЊР·СЏ Р·Р°РјРµРЅРёС‚СЊ РЅР°
 $\mathfrak{a}_L$.
 \end{zam}
 
-\begin{predl}[Критерий измеримости]
-Функция $f\colon \Omega\to\mathbb{R}^1$ измерима $\Leftrightarrow$
+\begin{predl}[РљСЂРёС‚РµСЂРёР№ РёР·РјРµСЂРёРјРѕСЃС‚Рё]
+Р¤СѓРЅРєС†РёСЏ $f\colon \Omega\to\mathbb{R}^1$ РёР·РјРµСЂРёРјР° $\Leftrightarrow$
 $\forall\, a\in\mathbb{R}^1\quad
-\{x:f(x)<a\}\in\mathfrak{a}$.\footnote{В условии этой теоремы можно
-заменить знак <<$<$>> на знаки <<$\leqslant$>>, <<$>$>>,
-<<$\geqslant$>>, но НЕ на знак <<$=$>>.}
+\{x:f(x)<a\}\in\mathfrak{a}$.\footnote{Р’ СѓСЃР»РѕРІРёРё СЌС‚РѕР№ С‚РµРѕСЂРµРјС‹ РјРѕР¶РЅРѕ
+Р·Р°РјРµРЅРёС‚СЊ Р·РЅР°Рє <<$<$>> РЅР° Р·РЅР°РєРё <<$\leqslant$>>, <<$>$>>,
+<<$\geqslant$>>, РЅРѕ РќР• РЅР° Р·РЅР°Рє <<$=$>>.}
 \end{predl}
 
 \begin{proof}
-Пусть функция $f$ измерима. Тогда $\{x:
-f(x)<a\}\p=f^{-1}((-\infty;a))$. Поскольку $\forall\, a\quad
-(-\infty;a)\in\mathfrak{B}$, то $\{x:f(x)<a\}\in\mathfrak{a}$.
+РџСѓСЃС‚СЊ С„СѓРЅРєС†РёСЏ $f$ РёР·РјРµСЂРёРјР°. РўРѕРіРґР° $\{x:
+f(x)<a\}\p=f^{-1}((-\infty;a))$. РџРѕСЃРєРѕР»СЊРєСѓ $\forall\, a\quad
+(-\infty;a)\in\mathfrak{B}$, С‚Рѕ $\{x:f(x)<a\}\in\mathfrak{a}$.
 
-Обратно, рассмотрим множество
-$\sigma=\{B\subset\mathbb{R}^1:f^{-1}B\in\mathfrak{a}\}$. Легко
-видеть, что $\sigma$ --- это $\sigma$-алгебра: если
+РћР±СЂР°С‚РЅРѕ, СЂР°СЃСЃРјРѕС‚СЂРёРј РјРЅРѕР¶РµСЃС‚РІРѕ
+$\sigma=\{B\subset\mathbb{R}^1:f^{-1}B\in\mathfrak{a}\}$. Р›РµРіРєРѕ
+РІРёРґРµС‚СЊ, С‡С‚Рѕ $\sigma$ --- СЌС‚Рѕ $\sigma$-Р°Р»РіРµР±СЂР°: РµСЃР»Рё
 $B_1,B_2\in\sigma\Rightarrow f^{-1}(B_1\cup B_2)=f^{-1}B_1\p\cup
 f^{-1}B_2\in\mathfrak{a}\Rightarrow B_1\cup B_2\in\sigma$;
 $f^{-1}(\mathbb{R}^1)=\Omega\in\mathfrak{a}\Rightarrow
 \mathbb{R}^1\in\sigma$.
 
 $\forall\, a\quad f^{-1}((-\infty;a))\in\mathfrak{a}\Rightarrow
-\forall\, a\quad (-\infty;a)\in\sigma$. Поскольку
+\forall\, a\quad (-\infty;a)\in\sigma$. РџРѕСЃРєРѕР»СЊРєСѓ
 $\sigma(\{(-\infty;a):a\in\mathbb{R}^1\})=\mathfrak{B}=\sigma(\mathbb{R}^1)$,
-то $\sigma\supset \mathfrak{B}$, а значит, $\forall\,
+С‚Рѕ $\sigma\supset \mathfrak{B}$, Р° Р·РЅР°С‡РёС‚, $\forall\,
 B\in\mathfrak{B}\quad f^{-1}B\in\mathfrak{a}$.
 \end{proof}
 
 \begin{defen}
-Если $\Omega=\mathbb{R}^1$, то удобно взять
-$\mathfrak{a}=\mathfrak{a}_L$. Тогда функция $f\colon
-\mathbb{R}^1\to\mathbb{R}^1$ называется \emph{измеримой по Лебегу},
-если $\forall\, a\in\mathbb{R}^1\quad
-\{x\in\mathbb{R}^1:f(x)<a\}\in\mathfrak{a}_L$.\footnote{Множество
-$\mathfrak{a}_L$ нельзя заменить на $\mathfrak{B}$.}
+Р•СЃР»Рё $\Omega=\mathbb{R}^1$, С‚Рѕ СѓРґРѕР±РЅРѕ РІР·СЏС‚СЊ
+$\mathfrak{a}=\mathfrak{a}_L$. РўРѕРіРґР° С„СѓРЅРєС†РёСЏ $f\colon
+\mathbb{R}^1\to\mathbb{R}^1$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РёР·РјРµСЂРёРјРѕР№ РїРѕ Р›РµР±РµРіСѓ},
+РµСЃР»Рё $\forall\, a\in\mathbb{R}^1\quad
+\{x\in\mathbb{R}^1:f(x)<a\}\in\mathfrak{a}_L$.\footnote{РњРЅРѕР¶РµСЃС‚РІРѕ
+$\mathfrak{a}_L$ РЅРµР»СЊР·СЏ Р·Р°РјРµРЅРёС‚СЊ РЅР° $\mathfrak{B}$.}
 \end{defen}
 
-Пусть теперь $f\colon
+РџСѓСЃС‚СЊ С‚РµРїРµСЂСЊ $f\colon
 (\Omega,\mathfrak{a})\to(\mathbb{R}^1,\mathfrak{B})$.
 
 \begin{predl}
-Пусть $\forall\, \omega\in\Omega\quad\exists\,
-\lim\limits_{n\to\infty}f_n(\omega)=f(\omega)$, где $f_n$ ---
-измеримые функции. Тогда функция $f$ тоже измерима.
+РџСѓСЃС‚СЊ $\forall\, \omega\in\Omega\quad\exists\,
+\lim\limits_{n\to\infty}f_n(\omega)=f(\omega)$, РіРґРµ $f_n$ ---
+РёР·РјРµСЂРёРјС‹Рµ С„СѓРЅРєС†РёРё. РўРѕРіРґР° С„СѓРЅРєС†РёСЏ $f$ С‚РѕР¶Рµ РёР·РјРµСЂРёРјР°.
 \end{predl}
 
 \begin{proof}
-Положим $\varphi_k(\omega)=\sup\limits_{n\geqslant k}f_n(\omega)$,
-тогда $f(\omega)=\inf\limits_k\varphi_k(\omega)$. Докажем, что
+РџРѕР»РѕР¶РёРј $\varphi_k(\omega)=\sup\limits_{n\geqslant k}f_n(\omega)$,
+С‚РѕРіРґР° $f(\omega)=\inf\limits_k\varphi_k(\omega)$. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ
 $\forall\, a\in\mathbb{R}^1\quad
-\{\omega\in\Omega:\varphi_k(\omega)<a\}\in\mathfrak{a}$. В самом
-деле, $$\{\omega:\varphi_k(\omega)<a\}=\bigcap\limits_{n\geqslant
-k}\{\omega:f_n(\omega)<a\}\in\mathfrak{a},$$ поэтому все $\varphi_k$
-измеримы. Поскольку $f(\omega)=\inf\limits_k \varphi_k(\omega)$ и
+\{\omega\in\Omega:\varphi_k(\omega)<a\}\in\mathfrak{a}$. Р’ СЃР°РјРѕРј
+РґРµР»Рµ, $$\{\omega:\varphi_k(\omega)<a\}=\bigcap\limits_{n\geqslant
+k}\{\omega:f_n(\omega)<a\}\in\mathfrak{a},$$ РїРѕСЌС‚РѕРјСѓ РІСЃРµ $\varphi_k$
+РёР·РјРµСЂРёРјС‹. РџРѕСЃРєРѕР»СЊРєСѓ $f(\omega)=\inf\limits_k \varphi_k(\omega)$ Рё
 $\{\omega: \inf\limits_k
 \varphi_k(\omega)\p>a\}=\bigcap\limits_k\{\omega:\varphi_k(\omega)\p
->a\}\in\mathfrak{a}$, то $f(\omega)$ измерима.
+>a\}\in\mathfrak{a}$, С‚Рѕ $f(\omega)$ РёР·РјРµСЂРёРјР°.
 \end{proof}
 %-----------------------------------------------------------------------------------%
 
@@ -883,69 +883,69 @@ $\{\omega: \inf\limits_k
 \lecture
 
 \begin{defen}
-Пусть фиксировано измеримое пространство $(\Omega,\mathfrak{a})$.
-Функция на измеримом пространстве называется \emph{простой}, если
-она принимает конечное число значений.
+РџСѓСЃС‚СЊ С„РёРєСЃРёСЂРѕРІР°РЅРѕ РёР·РјРµСЂРёРјРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ $(\Omega,\mathfrak{a})$.
+Р¤СѓРЅРєС†РёСЏ РЅР° РёР·РјРµСЂРёРјРѕРј РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РїСЂРѕСЃС‚РѕР№}, РµСЃР»Рё
+РѕРЅР° РїСЂРёРЅРёРјР°РµС‚ РєРѕРЅРµС‡РЅРѕРµ С‡РёСЃР»Рѕ Р·РЅР°С‡РµРЅРёР№.
 
-Если простая функция определена на пространстве с мерой, то
+Р•СЃР»Рё РїСЂРѕСЃС‚Р°СЏ С„СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅР° РЅР° РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ СЃ РјРµСЂРѕР№, С‚Рѕ
 $\nu\{\omega\p\in\Omega\mid f(\omega)\neq 0\}<\infty$.
 \end{defen}
 
 \begin{predl}
-Функция $f$ является простой $\Leftrightarrow$ $$\exists\,\Omega_j:
-\Omega=\bigsqcup\limits_{j=1}^n \Omega_j \quad\text{и}\quad
+Р¤СѓРЅРєС†РёСЏ $f$ СЏРІР»СЏРµС‚СЃСЏ РїСЂРѕСЃС‚РѕР№ $\Leftrightarrow$ $$\exists\,\Omega_j:
+\Omega=\bigsqcup\limits_{j=1}^n \Omega_j \quad\text{Рё}\quad
 \forall\,\omega \quad f(\omega)=\sum\limits_{j=1}^n
-a_j\gamma_{\Omega_j}(\omega),$$ где
-$$\gamma_{\Omega_j}(\omega)=\begin{cases}1,&\text{если $\omega\in\Omega_j$};\\ 0,&\text{иначе}
-\end{cases}$$ --- \emph{индикаторная функция множества} $\Omega_j$.
+a_j\gamma_{\Omega_j}(\omega),$$ РіРґРµ
+$$\gamma_{\Omega_j}(\omega)=\begin{cases}1,&\text{РµСЃР»Рё $\omega\in\Omega_j$};\\ 0,&\text{РёРЅР°С‡Рµ}
+\end{cases}$$ --- \emph{РёРЅРґРёРєР°С‚РѕСЂРЅР°СЏ С„СѓРЅРєС†РёСЏ РјРЅРѕР¶РµСЃС‚РІР°} $\Omega_j$.
 \end{predl}
 
 \begin{proof}
-В самом деле, обратная ипмликация очевидна. Пусть теперь функция $f$
-проста и $a_1$, \ldots, $a_n$ --- различные ненулевые значения $f$.
-Тогда множества $\Omega_j=\{\omega\in\Omega\mid f(\omega)=a_j\}$
-удовлетворяют условию.
+Р’ СЃР°РјРѕРј РґРµР»Рµ, РѕР±СЂР°С‚РЅР°СЏ РёРїРјР»РёРєР°С†РёСЏ РѕС‡РµРІРёРґРЅР°. РџСѓСЃС‚СЊ С‚РµРїРµСЂСЊ С„СѓРЅРєС†РёСЏ $f$
+РїСЂРѕСЃС‚Р° Рё $a_1$, \ldots, $a_n$ --- СЂР°Р·Р»РёС‡РЅС‹Рµ РЅРµРЅСѓР»РµРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ $f$.
+РўРѕРіРґР° РјРЅРѕР¶РµСЃС‚РІР° $\Omega_j=\{\omega\in\Omega\mid f(\omega)=a_j\}$
+СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‚ СѓСЃР»РѕРІРёСЋ.
 \end{proof}
 
 \begin{zam}
-Условие <<$\Omega=\bigsqcup\limits_{j=1}^n \Omega_j$>> можно
-заменить на условие <<$\forall\, j\p\neq k\quad
+РЈСЃР»РѕРІРёРµ <<$\Omega=\bigsqcup\limits_{j=1}^n \Omega_j$>> РјРѕР¶РЅРѕ
+Р·Р°РјРµРЅРёС‚СЊ РЅР° СѓСЃР»РѕРІРёРµ <<$\forall\, j\p\neq k\quad
 \Omega_j\cap\Omega_k=\varnothing$>>.
 \end{zam}
 
-Очевидно, что если $f_1$ и $f_2$ --- простые функции, то их линейная
-комбинация $\alpha f_1+\beta f_2$ и произведение $f_1f_2$ также
-будут простыми функциями.
+РћС‡РµРІРёРґРЅРѕ, С‡С‚Рѕ РµСЃР»Рё $f_1$ Рё $f_2$ --- РїСЂРѕСЃС‚С‹Рµ С„СѓРЅРєС†РёРё, С‚Рѕ РёС… Р»РёРЅРµР№РЅР°СЏ
+РєРѕРјР±РёРЅР°С†РёСЏ $\alpha f_1+\beta f_2$ Рё РїСЂРѕРёР·РІРµРґРµРЅРёРµ $f_1f_2$ С‚Р°РєР¶Рµ
+Р±СѓРґСѓС‚ РїСЂРѕСЃС‚С‹РјРё С„СѓРЅРєС†РёСЏРјРё.
 
 \begin{predl}
-Если функция $f(\omega)=\sum\limits_{j=1}^n
-a_j\gamma_{\Omega_j}(\omega)$, причем $\forall\, j\p\neq k\quad
-\Omega_j\cap \Omega_k=\varnothing$ и $a_j\neq a_k$, то $f$ измерима
-$\Leftrightarrow$ все $\Omega_j$ измеримы.
+Р•СЃР»Рё С„СѓРЅРєС†РёСЏ $f(\omega)=\sum\limits_{j=1}^n
+a_j\gamma_{\Omega_j}(\omega)$, РїСЂРёС‡РµРј $\forall\, j\p\neq k\quad
+\Omega_j\cap \Omega_k=\varnothing$ Рё $a_j\neq a_k$, С‚Рѕ $f$ РёР·РјРµСЂРёРјР°
+$\Leftrightarrow$ РІСЃРµ $\Omega_j$ РёР·РјРµСЂРёРјС‹.
 \end{predl}
 
 \begin{proof}
-Достаточно провести доказательство для простейшей функции
-$f(\omega)=\gamma_{\Omega_1}(\omega)$. Имеем:
-$\Omega_1=\{\omega\in\Omega \mid f(\omega)>0\}$, поэтому
+Р”РѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂРѕРІРµСЃС‚Рё РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ РґР»СЏ РїСЂРѕСЃС‚РµР№С€РµР№ С„СѓРЅРєС†РёРё
+$f(\omega)=\gamma_{\Omega_1}(\omega)$. РРјРµРµРј:
+$\Omega_1=\{\omega\in\Omega \mid f(\omega)>0\}$, РїРѕСЌС‚РѕРјСѓ
 $$\forall\, a\in\mathbb{R}^1\quad \{\omega\in\Omega\mid f(\omega)>a\}
-=\begin{cases}\Omega_1,&\text{если $a\geqslant 0$};\\
-\Omega,& \text{если $a<0$},\end{cases}$$ а значит, $f$ измерима
-$\Leftrightarrow$ $\Omega_1$ измеримо.
+=\begin{cases}\Omega_1,&\text{РµСЃР»Рё $a\geqslant 0$};\\
+\Omega,& \text{РµСЃР»Рё $a<0$},\end{cases}$$ Р° Р·РЅР°С‡РёС‚, $f$ РёР·РјРµСЂРёРјР°
+$\Leftrightarrow$ $\Omega_1$ РёР·РјРµСЂРёРјРѕ.
 \end{proof}
 
 \begin{theorem}
-\label{fun.approx}Для каждой измеримой функции $f\colon \Omega\to
-\bar{\mathbb{R}}$ найдутся простые и измеримые функции $f_n\colon
-\Omega\to\mathbb{R}^1$, $n=1,2,\ldots,$ такие, что $\forall\,
-\omega\in\Omega\quad f_n(\omega)\to f(\omega)$ при $n\to\infty$.
-Если при этом $f\geqslant 0$, то можно добиться того, что
-$f_n\geqslant0$ и $f_n\nearrow f$, а если $f$ ограничена, то
+\label{fun.approx}Р”Р»СЏ РєР°Р¶РґРѕР№ РёР·РјРµСЂРёРјРѕР№ С„СѓРЅРєС†РёРё $f\colon \Omega\to
+\bar{\mathbb{R}}$ РЅР°Р№РґСѓС‚СЃСЏ РїСЂРѕСЃС‚С‹Рµ Рё РёР·РјРµСЂРёРјС‹Рµ С„СѓРЅРєС†РёРё $f_n\colon
+\Omega\to\mathbb{R}^1$, $n=1,2,\ldots,$ С‚Р°РєРёРµ, С‡С‚Рѕ $\forall\,
+\omega\in\Omega\quad f_n(\omega)\to f(\omega)$ РїСЂРё $n\to\infty$.
+Р•СЃР»Рё РїСЂРё СЌС‚РѕРј $f\geqslant 0$, С‚Рѕ РјРѕР¶РЅРѕ РґРѕР±РёС‚СЊСЃСЏ С‚РѕРіРѕ, С‡С‚Рѕ
+$f_n\geqslant0$ Рё $f_n\nearrow f$, Р° РµСЃР»Рё $f$ РѕРіСЂР°РЅРёС‡РµРЅР°, С‚Рѕ
 $f_n\rightrightarrows f$.
 \end{theorem}
 
 \begin{proof}
-Нетрудно убедиться, что функции
+РќРµС‚СЂСѓРґРЅРѕ СѓР±РµРґРёС‚СЊСЃСЏ, С‡С‚Рѕ С„СѓРЅРєС†РёРё
 \begin{multline*}
 f_n(x)=n\cdot\gamma_{\{\omega\mid f(\omega)\geqslant n\}}(x)+(-n)
 \cdot \gamma_{\{\omega\mid f(\omega)\leqslant
@@ -954,106 +954,106 @@ f_n(x)=n\cdot\gamma_{\{\omega\mid f(\omega)\geqslant n\}}(x)+(-n)
 \sum\limits_{k=-n2^n+1}^{n2^n}(k-1)\gamma_{\{\omega\mid
 \frac{k-1}{2^n}\leqslant f(\omega)<\frac{k}{2^n}\}}(x)
 \end{multline*}
-удовлетворяют условию теоремы.
+СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‚ СѓСЃР»РѕРІРёСЋ С‚РµРѕСЂРµРјС‹.
 \end{proof}
 
 \begin{predl}
-Если функции $f$ и $g$ измеримы, то их линейная комбинация $\alpha
-f+\beta g$ измерима.
+Р•СЃР»Рё С„СѓРЅРєС†РёРё $f$ Рё $g$ РёР·РјРµСЂРёРјС‹, С‚Рѕ РёС… Р»РёРЅРµР№РЅР°СЏ РєРѕРјР±РёРЅР°С†РёСЏ $\alpha
+f+\beta g$ РёР·РјРµСЂРёРјР°.
 \end{predl}
 
 \begin{proof}
-В самом деле, если функции $h_1$ и $h_2$ просты и измеримы, то и
-функция $h=h_1+h_2$ тоже проста и измерима. Выберем теперь функции
-$f_n$ и $g_n$, удовлетворяющие условиям теоремы~\ref{fun.approx},
-тогда $f_n\to f$ и $g_n\to g$, поэтому $\alpha f_n+\beta g_n\to
-\alpha f+\beta g$ при $n\to\infty$, что и требовалось.
+Р’ СЃР°РјРѕРј РґРµР»Рµ, РµСЃР»Рё С„СѓРЅРєС†РёРё $h_1$ Рё $h_2$ РїСЂРѕСЃС‚С‹ Рё РёР·РјРµСЂРёРјС‹, С‚Рѕ Рё
+С„СѓРЅРєС†РёСЏ $h=h_1+h_2$ С‚РѕР¶Рµ РїСЂРѕСЃС‚Р° Рё РёР·РјРµСЂРёРјР°. Р’С‹Р±РµСЂРµРј С‚РµРїРµСЂСЊ С„СѓРЅРєС†РёРё
+$f_n$ Рё $g_n$, СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‰РёРµ СѓСЃР»РѕРІРёСЏРј С‚РµРѕСЂРµРјС‹~\ref{fun.approx},
+С‚РѕРіРґР° $f_n\to f$ Рё $g_n\to g$, РїРѕСЌС‚РѕРјСѓ $\alpha f_n+\beta g_n\to
+\alpha f+\beta g$ РїСЂРё $n\to\infty$, С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
-\tema{Интегрируемые функции}
+\tema{РРЅС‚РµРіСЂРёСЂСѓРµРјС‹Рµ С„СѓРЅРєС†РёРё}
 
 %\vspace{10pt}
 
 %\begin{center}
-%\textsc{Интегрируемые функции}
+%\textsc{РРЅС‚РµРіСЂРёСЂСѓРµРјС‹Рµ С„СѓРЅРєС†РёРё}
 %\end{center}
 
 %\vspace{7pt}
 
 \begin{defen}
-Пусть $(\Omega,\mathfrak{a},\nu)$ --- пространство с
-$\sigma$-конечной мерой и $f$ --- простая измеримая функция. Тогда
-$f(\omega)=\sum\limits_{j=1}^n a_j\gamma_{\Omega_j}(\omega)$, причем
-$\forall\, j\quad \nu\Omega_j<\infty$ и $a_j\in\mathbb{R}^1$.
-\emph{Интегралом Лебега функции $f$ по пространству $\Omega$}
-называется величина $$\int\limits_\Omega
+РџСѓСЃС‚СЊ $(\Omega,\mathfrak{a},\nu)$ --- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ
+$\sigma$-РєРѕРЅРµС‡РЅРѕР№ РјРµСЂРѕР№ Рё $f$ --- РїСЂРѕСЃС‚Р°СЏ РёР·РјРµСЂРёРјР°СЏ С„СѓРЅРєС†РёСЏ. РўРѕРіРґР°
+$f(\omega)=\sum\limits_{j=1}^n a_j\gamma_{\Omega_j}(\omega)$, РїСЂРёС‡РµРј
+$\forall\, j\quad \nu\Omega_j<\infty$ Рё $a_j\in\mathbb{R}^1$.
+\emph{РРЅС‚РµРіСЂР°Р»РѕРј Р›РµР±РµРіР° С„СѓРЅРєС†РёРё $f$ РїРѕ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІСѓ $\Omega$}
+РЅР°Р·С‹РІР°РµС‚СЃСЏ РІРµР»РёС‡РёРЅР° $$\int\limits_\Omega
 \!f(\omega)\,\nu(d\omega)=\int\limits_\Omega
 \!f(\omega)\,d\nu=\sum\limits_{j=1}^na_j\nu\Omega_j.$$
 \end{defen}
 
 \begin{defen}
-Пусть теперь функция $f\geqslant 0$ --- измерима. Тогда найдутся
-такие простые измеримые функции $f_n$, что $f_n\nearrow f$. Положим
+РџСѓСЃС‚СЊ С‚РµРїРµСЂСЊ С„СѓРЅРєС†РёСЏ $f\geqslant 0$ --- РёР·РјРµСЂРёРјР°. РўРѕРіРґР° РЅР°Р№РґСѓС‚СЃСЏ
+С‚Р°РєРёРµ РїСЂРѕСЃС‚С‹Рµ РёР·РјРµСЂРёРјС‹Рµ С„СѓРЅРєС†РёРё $f_n$, С‡С‚Рѕ $f_n\nearrow f$. РџРѕР»РѕР¶РёРј
 $$\int\limits_\Omega\! f(\omega)\,\nu(d\omega)=\lim\limits_{n\to\infty}
 \int\limits_\Omega f_n(\omega)\,\nu(d\omega).$$
 \end{defen}
 
 \begin{defen}
-Если $f$ --- произвольная измеримая функция, то верно равенство
-$f(\omega)=f_+(\omega)-f_-(\omega)$, где
-$$f_+(\omega)=\begin{cases}f(\omega),&\text{если $f(\omega)\geqslant 0$};\\
-0,& \text{иначе},\end{cases}\quad\text{и}\quad
-f_-(\omega)=\begin{cases}-f(\omega),&\text{если $f(\omega)\leqslant 0$};\\
-0,& \text{иначе}.\end{cases}$$
+Р•СЃР»Рё $f$ --- РїСЂРѕРёР·РІРѕР»СЊРЅР°СЏ РёР·РјРµСЂРёРјР°СЏ С„СѓРЅРєС†РёСЏ, С‚Рѕ РІРµСЂРЅРѕ СЂР°РІРµРЅСЃС‚РІРѕ
+$f(\omega)=f_+(\omega)-f_-(\omega)$, РіРґРµ
+$$f_+(\omega)=\begin{cases}f(\omega),&\text{РµСЃР»Рё $f(\omega)\geqslant 0$};\\
+0,& \text{РёРЅР°С‡Рµ},\end{cases}\quad\text{Рё}\quad
+f_-(\omega)=\begin{cases}-f(\omega),&\text{РµСЃР»Рё $f(\omega)\leqslant 0$};\\
+0,& \text{РёРЅР°С‡Рµ}.\end{cases}$$
 
-Легко проверить, что функции $f_\pm$ измеримы. Положим
+Р›РµРіРєРѕ РїСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ С„СѓРЅРєС†РёРё $f_\pm$ РёР·РјРµСЂРёРјС‹. РџРѕР»РѕР¶РёРј
 $$\int\limits_\Omega \! f(\omega)\,\nu(d\omega)=\int\limits_\Omega \!
 f_+(\omega)\,\nu(d\omega)-\int\limits_\Omega \!
-f_-(\omega)\,\nu(d\omega),$$ если хотя бы один из интегралов
-конечен.
+f_-(\omega)\,\nu(d\omega),$$ РµСЃР»Рё С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РёР· РёРЅС‚РµРіСЂР°Р»РѕРІ
+РєРѕРЅРµС‡РµРЅ.
 
-Если интеграл конечен, то функция $f$ называется
-\emph{интегрируемой}, а если равен $\infty$, то
-\emph{квазиинтегрируемой}.
+Р•СЃР»Рё РёРЅС‚РµРіСЂР°Р» РєРѕРЅРµС‡РµРЅ, С‚Рѕ С„СѓРЅРєС†РёСЏ $f$ РЅР°Р·С‹РІР°РµС‚СЃСЏ
+\emph{РёРЅС‚РµРіСЂРёСЂСѓРµРјРѕР№}, Р° РµСЃР»Рё СЂР°РІРµРЅ $\infty$, С‚Рѕ
+\emph{РєРІР°Р·РёРёРЅС‚РµРіСЂРёСЂСѓРµРјРѕР№}.
 \end{defen}
 
 \begin{defen}
-Если $A\in\mathfrak{a}$, то $$\int\limits_A \!
+Р•СЃР»Рё $A\in\mathfrak{a}$, С‚Рѕ $$\int\limits_A \!
 f(\omega)\,\nu(d\omega)=\int\limits_\Omega \!
 \gamma_A(\omega)f(\omega)\,\nu(d\omega).$$
 \end{defen}
 
 \begin{lemm}
-\label{chetno.add}Пусть $S$ --- кольцо, $(\Omega,S,\nu)$ --
-пространство с конечной мерой. Тогда мера $\nu$ счетно аддитивна
+\label{chetno.add}РџСѓСЃС‚СЊ $S$ --- РєРѕР»СЊС†Рѕ, $(\Omega,S,\nu)$ --
+РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РєРѕРЅРµС‡РЅРѕР№ РјРµСЂРѕР№. РўРѕРіРґР° РјРµСЂР° $\nu$ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°
 $\Leftrightarrow$
 $$\forall\, A_1\supset A_2\supset\ldots \in S: \bigcap\limits_{j=1}
-^\infty A_j=\varnothing\Rightarrow \nu A_j\to 0\quad\text{при
+^\infty A_j=\varnothing\Rightarrow \nu A_j\to 0\quad\text{РїСЂРё
 $j\to\infty$}.$$
 \end{lemm}
 
 \begin{proof}
-Пусть $S\ni B=\bigsqcup\limits_{j=1}^\infty B_j$, где $B_j\in S$.
-Докажем, что $\nu B\p=\sum\limits_{j=1}^\infty \nu B_j$. Положим
-$A_k=\bigsqcup\limits_{j=k}^\infty B_j$, тогда
-$\bigcap\limits_{k=1}^\infty A_k=\varnothing$. Значит $\nu A_k\to 0$
-при $k\to\infty$, и т.к. $$\nu B=\sum\limits_{j=1}^{k-1}\nu B_j+\nu
-A_k,$$ то $$\sum\limits_{j=1}^{k-1} \nu B_j\to\nu B\quad\text{при
+РџСѓСЃС‚СЊ $S\ni B=\bigsqcup\limits_{j=1}^\infty B_j$, РіРґРµ $B_j\in S$.
+Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ $\nu B\p=\sum\limits_{j=1}^\infty \nu B_j$. РџРѕР»РѕР¶РёРј
+$A_k=\bigsqcup\limits_{j=k}^\infty B_j$, С‚РѕРіРґР°
+$\bigcap\limits_{k=1}^\infty A_k=\varnothing$. Р—РЅР°С‡РёС‚ $\nu A_k\to 0$
+РїСЂРё $k\to\infty$, Рё С‚.Рє. $$\nu B=\sum\limits_{j=1}^{k-1}\nu B_j+\nu
+A_k,$$ С‚Рѕ $$\sum\limits_{j=1}^{k-1} \nu B_j\to\nu B\quad\text{РїСЂРё
 $k\to\infty$}.$$
 
-Обратно, пусть мера $\nu$ счетно аддитивна. Тогда
+РћР±СЂР°С‚РЅРѕ, РїСѓСЃС‚СЊ РјРµСЂР° $\nu$ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅР°. РўРѕРіРґР°
 $$\bigsqcup\limits_{j=1}^\infty (A_j\setminus
-A_{j+1})=A\setminus\bigcap\limits_{j=1}^\infty A_j=A_1,$$ поэтому
+A_{j+1})=A\setminus\bigcap\limits_{j=1}^\infty A_j=A_1,$$ РїРѕСЌС‚РѕРјСѓ
 $$\nu A_1=\sum\limits_{j=1}^\infty \nu(A_j\setminus A_{j+1})=\sum
 \limits_{j=1}^{k-1}\nu(A_j\setminus
-A_{j+1})+\sum\limits_{j=k}^\infty\nu(A_j\setminus A_{j+1}),$$ а
-значит,
-$$\sum\limits_{j=k}^\infty\nu(A_j\setminus A_{j+1})\to 0\quad\text{при $k\to\infty$}.$$
-Поскольку
+A_{j+1})+\sum\limits_{j=k}^\infty\nu(A_j\setminus A_{j+1}),$$ Р°
+Р·РЅР°С‡РёС‚,
+$$\sum\limits_{j=k}^\infty\nu(A_j\setminus A_{j+1})\to 0\quad\text{РїСЂРё $k\to\infty$}.$$
+РџРѕСЃРєРѕР»СЊРєСѓ
 $$\forall\,k\in\mathbb{N}\quad \bigsqcup\limits_{j=k}^\infty (A_j\setminus
-A_{j+1})=A_k,$$ то $$\nu
+A_{j+1})=A_k,$$ С‚Рѕ $$\nu
 A_k=\sum\limits_{j=k}^\infty\nu(A_j\setminus A_{j+1})\to
-0\quad\text{при $k\to\infty$},$$ что и требовалось.
+0\quad\text{РїСЂРё $k\to\infty$},$$ С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 %-----------------------------------------------------------------------------------%
 
@@ -1061,48 +1061,48 @@ A_k=\sum\limits_{j=k}^\infty\nu(A_j\setminus A_{j+1})\to
 \lecture
 
 \begin{zam}
-Далее, всюду, где мы будем писать $\int\limits_\Omega\!
-f(\omega)\,\nu(d\omega)$, мы будем предполагать функцию $f$
-измеримой.
+Р”Р°Р»РµРµ, РІСЃСЋРґСѓ, РіРґРµ РјС‹ Р±СѓРґРµРј РїРёСЃР°С‚СЊ $\int\limits_\Omega\!
+f(\omega)\,\nu(d\omega)$, РјС‹ Р±СѓРґРµРј РїСЂРµРґРїРѕР»Р°РіР°С‚СЊ С„СѓРЅРєС†РёСЋ $f$
+РёР·РјРµСЂРёРјРѕР№.
 \end{zam}
 
-Пусть фиксировано пространство с мерой $(\Omega, \mathfrak{a},\nu)$.
-Сейчас мы будем рассматривать только те простые функции $f$, для
-которых $\nu\{\omega\in\Omega\mid f(\omega)\neq 0\}<\infty$.
+РџСѓСЃС‚СЊ С„РёРєСЃРёСЂРѕРІР°РЅРѕ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РјРµСЂРѕР№ $(\Omega, \mathfrak{a},\nu)$.
+РЎРµР№С‡Р°СЃ РјС‹ Р±СѓРґРµРј СЂР°СЃСЃРјР°С‚СЂРёРІР°С‚СЊ С‚РѕР»СЊРєРѕ С‚Рµ РїСЂРѕСЃС‚С‹Рµ С„СѓРЅРєС†РёРё $f$, РґР»СЏ
+РєРѕС‚РѕСЂС‹С… $\nu\{\omega\in\Omega\mid f(\omega)\neq 0\}<\infty$.
 
-После того, как мы ввели понятие интеграла Лебега, необходимо
-доказать корректность этого определения.
+РџРѕСЃР»Рµ С‚РѕРіРѕ, РєР°Рє РјС‹ РІРІРµР»Рё РїРѕРЅСЏС‚РёРµ РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР°, РЅРµРѕР±С…РѕРґРёРјРѕ
+РґРѕРєР°Р·Р°С‚СЊ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ СЌС‚РѕРіРѕ РѕРїСЂРµРґРµР»РµРЅРёСЏ.
 
-Вначале докажем корректность определения интеграла Лебега для
-простых функций. А именно, пусть $f(\omega)=\sum\limits_{j=1}^n
-a_j\gamma_{A_j}(\omega)$ --- простая функция, причем $A_i\cap
-A_j=\varnothing$. Возьмем другое представление функции $f$:
-$f(\omega)=\sum\limits_{k=1}^m b_k\gamma_{B_k}(\omega)$. Если
-$A_j\cap B_k\neq\varnothing$, то $a_j=b_k$, поэтому
+Р’РЅР°С‡Р°Р»Рµ РґРѕРєР°Р¶РµРј РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РѕРїСЂРµРґРµР»РµРЅРёСЏ РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР° РґР»СЏ
+РїСЂРѕСЃС‚С‹С… С„СѓРЅРєС†РёР№. Рђ РёРјРµРЅРЅРѕ, РїСѓСЃС‚СЊ $f(\omega)=\sum\limits_{j=1}^n
+a_j\gamma_{A_j}(\omega)$ --- РїСЂРѕСЃС‚Р°СЏ С„СѓРЅРєС†РёСЏ, РїСЂРёС‡РµРј $A_i\cap
+A_j=\varnothing$. Р’РѕР·СЊРјРµРј РґСЂСѓРіРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ С„СѓРЅРєС†РёРё $f$:
+$f(\omega)=\sum\limits_{k=1}^m b_k\gamma_{B_k}(\omega)$. Р•СЃР»Рё
+$A_j\cap B_k\neq\varnothing$, С‚Рѕ $a_j=b_k$, РїРѕСЌС‚РѕРјСѓ
 $$\sum\limits_{j=1}^n a_j
 \nu A_j=\sum\limits_{j=1}^n a_j\sum\limits_{k=1}^m \nu(A_j\cap
 B_k)=\sum\limits_{k=1}^m\sum\limits_{j=1}^n b_k\nu(A_j\cap
 B_k)=\sum\limits_{k=1}^m b_k\nu B_k.$$
 
-\svoy\footnote{В свойствах 1--3 функции $f$ и $g$ считаются
-неотрицательными и простыми.}
+\svoy\footnote{Р’ СЃРІРѕР№СЃС‚РІР°С… 1--3 С„СѓРЅРєС†РёРё $f$ Рё $g$ СЃС‡РёС‚Р°СЋС‚СЃСЏ
+РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹РјРё Рё РїСЂРѕСЃС‚С‹РјРё.}
 
 1. $\int\limits_\Omega\! (f(\omega)+g(\omega))\,\nu(d\omega)=
 \int\limits_\Omega\! f(\omega)\,\nu(d\omega)+ \int\limits_\Omega\!
-g(\omega)\,\nu(d\omega)$. Действительно, пусть
-$f(\omega)=\sum\limits_{j=1}^n a_j\gamma_{A_j}(\omega)$ и
-$g(\omega)=\sum\limits_{k=1}^m b_k\gamma_{B_k}(\omega)$. Тогда,
-поскольку $A_j\p=\bigsqcup\limits_{k=1}^m A_j\cap B_k$ и
+g(\omega)\,\nu(d\omega)$. Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ, РїСѓСЃС‚СЊ
+$f(\omega)=\sum\limits_{j=1}^n a_j\gamma_{A_j}(\omega)$ Рё
+$g(\omega)=\sum\limits_{k=1}^m b_k\gamma_{B_k}(\omega)$. РўРѕРіРґР°,
+РїРѕСЃРєРѕР»СЊРєСѓ $A_j\p=\bigsqcup\limits_{k=1}^m A_j\cap B_k$ Рё
 $\gamma_{A_j}(\omega)=\sum\limits_{k=1}^m \gamma_{A_j\cap
-B_k}(\omega)$, то
+B_k}(\omega)$, С‚Рѕ
 $$f(\omega)=\sum\limits_{j=1}^n\sum\limits_{k=1}^m a_j\gamma_{A_j
-\cap B_k}(\omega)\quad\text{и}\quad
+\cap B_k}(\omega)\quad\text{Рё}\quad
 g(\omega)=\sum\limits_{k=1}^m\sum\limits_{j=1}^n b_k\gamma_{A_j \cap
-B_k}(\omega).$$ Отсюда $$\int\limits_\Omega\!
+B_k}(\omega).$$ РћС‚СЃСЋРґР° $$\int\limits_\Omega\!
 f(\omega)\,\nu(d\omega)=\sum\limits_{j=1}^n\sum\limits_{k=1}^m
 a_j\nu(A_j\cap B_k),\quad \int\limits_\Omega\!
 g(\omega)\,\nu(d\omega)=\sum\limits_{j=1}^n\sum\limits_{k=1}^m
-b_k\nu(A_j\cap B_k),$$ поэтому
+b_k\nu(A_j\cap B_k),$$ РїРѕСЌС‚РѕРјСѓ
 \begin{multline*}
 \int\limits_\Omega\!
 (f(\omega)+g(\omega))\,\nu(d\omega)=\sum\limits_{j=1}^n\sum\limits_{k=1}^m
@@ -1115,30 +1115,30 @@ g(\omega)\,\nu(d\omega).
 f(\omega)\,\nu(d\omega)=\alpha\int\limits_\Omega\!
 f(\omega)\,\nu(d\omega)$.
 
-3. Если $\nu A=0$, то $\int\limits_A\! f(\omega)\,\nu(d\omega)=0$.
-Действительно, $\int\limits_A\!
+3. Р•СЃР»Рё $\nu A=0$, С‚Рѕ $\int\limits_A\! f(\omega)\,\nu(d\omega)=0$.
+Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ, $\int\limits_A\!
 f(\omega)\,\nu(d\omega)\p=\int\limits_\Omega\!
-f(\omega)\gamma_A(\omega)\,\nu(d\omega)$. Если
-$f(\omega)\p=\sum\limits_{j=1}^n a_j\gamma_{A_j}(\omega)$, то тогда
+f(\omega)\gamma_A(\omega)\,\nu(d\omega)$. Р•СЃР»Рё
+$f(\omega)\p=\sum\limits_{j=1}^n a_j\gamma_{A_j}(\omega)$, С‚Рѕ С‚РѕРіРґР°
 $f(\omega)\gamma_A(\omega)\p=\sum\limits_{j=1}^n a_j\gamma_{A\cap
-A_j}(\omega)$ и $\int\limits_A\!
+A_j}(\omega)$ Рё $\int\limits_A\!
 f(\omega)\,\nu(d\omega)=\sum\limits_{j=1}^n a_j\nu(A\cap A_j)=0$.
 
-4. Если $f(\omega)\geqslant 0$, то $\int\limits_\Omega\!
-f(\omega)\,\nu(d\omega)\geqslant 0$. Отсюда следует, что если
-$g_1\leqslant g_2$, то $\int\limits_\Omega\!
+4. Р•СЃР»Рё $f(\omega)\geqslant 0$, С‚Рѕ $\int\limits_\Omega\!
+f(\omega)\,\nu(d\omega)\geqslant 0$. РћС‚СЃСЋРґР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ РµСЃР»Рё
+$g_1\leqslant g_2$, С‚Рѕ $\int\limits_\Omega\!
 g_1(\omega)\,\nu(d\omega)\leqslant\int\limits_\Omega\!
-g_2(\omega)\,\nu(d\omega)$. Действительно. $g_2=(g_2-g_1)+g_1$,
-поэтому $$\int\limits_\Omega\!
+g_2(\omega)\,\nu(d\omega)$. Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ. $g_2=(g_2-g_1)+g_1$,
+РїРѕСЌС‚РѕРјСѓ $$\int\limits_\Omega\!
 g_2(\omega)\,\nu(d\omega)=\int\limits_\Omega\!
 (g_2-g_1)(\omega)\,\nu(d\omega)+\int\limits_\Omega\!
 g_1(\omega)\,\nu(d\omega)\geqslant \int\limits_\Omega\!
 g_1(\omega)\,\nu(d\omega).$$
 
-5. Если $\mathfrak{a}\ni B=B_1\sqcup B_2$, то $\int\limits_B\!
+5. Р•СЃР»Рё $\mathfrak{a}\ni B=B_1\sqcup B_2$, С‚Рѕ $\int\limits_B\!
 f(\omega)\,\nu(d\omega)=\int\limits_{B_1}\!
 f(\omega)\,\nu(d\omega)+\int\limits_{B_2}\!
-f(\omega)\,\nu(d\omega)$. Действительно, это следует из того, что
+f(\omega)\,\nu(d\omega)$. Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ, СЌС‚Рѕ СЃР»РµРґСѓРµС‚ РёР· С‚РѕРіРѕ, С‡С‚Рѕ
 \begin{align*}
 \int\limits_B\! f(\omega)\,\nu(d\omega)&=\int\limits_\Omega\!
 f(\omega)\gamma_B(\omega)\,\nu(d\omega), \\
@@ -1147,41 +1147,41 @@ f(\omega)\gamma_{B_1}(\omega)\,\nu(d\omega), \\
 \int\limits_{B_2}\! f(\omega)\,\nu(d\omega)&=\int\limits_\Omega\!
 f(\omega)\gamma_{B_2}(\omega)\,\nu(d\omega),
 \end{align*}
-а также из того, что $\gamma_{B_1\sqcup
+Р° С‚Р°РєР¶Рµ РёР· С‚РѕРіРѕ, С‡С‚Рѕ $\gamma_{B_1\sqcup
 B_2}=\gamma_{B_1}+\gamma_{B_2}$.
 
-6. Если $g_n(\omega)\nearrow \varphi(\omega)$ и
-$\lim\limits_{n\to\infty}g_n(\omega)\geqslant \varphi(\omega)$, где
-функция $\varphi\geqslant 0$ проста, а функции $g_n$ являются
-простыми и измеримыми, то
+6. Р•СЃР»Рё $g_n(\omega)\nearrow \varphi(\omega)$ Рё
+$\lim\limits_{n\to\infty}g_n(\omega)\geqslant \varphi(\omega)$, РіРґРµ
+С„СѓРЅРєС†РёСЏ $\varphi\geqslant 0$ РїСЂРѕСЃС‚Р°, Р° С„СѓРЅРєС†РёРё $g_n$ СЏРІР»СЏСЋС‚СЃСЏ
+РїСЂРѕСЃС‚С‹РјРё Рё РёР·РјРµСЂРёРјС‹РјРё, С‚Рѕ
 $\lim\limits_{n\to\infty}\int\limits_\Omega\!
 g_n(\omega)\,\nu(d\omega)\p\geqslant \int\limits_\Omega\!
 \varphi(\omega)\,\nu(d\omega)$.
 
 \begin{proof}
-Пусть $\Omega_\varphi=\{\omega\in\Omega\mid \varphi(\omega)>0\}$,
-тогда $\nu\Omega_\varphi<\infty$. Пусть
+РџСѓСЃС‚СЊ $\Omega_\varphi=\{\omega\in\Omega\mid \varphi(\omega)>0\}$,
+С‚РѕРіРґР° $\nu\Omega_\varphi<\infty$. РџСѓСЃС‚СЊ
 $0<\varepsilon<\min\limits_{\omega\in\Omega_\varphi}\{\varphi(\omega)\}$.
-Тогда положим
+РўРѕРіРґР° РїРѕР»РѕР¶РёРј
 $$F_\varphi(\omega)=\begin{cases}\varphi(\omega)-\varepsilon,&
-\text{если $\omega\in\Omega_\varphi$,}\\ 0,& \text{если
+\text{РµСЃР»Рё $\omega\in\Omega_\varphi$,}\\ 0,& \text{РµСЃР»Рё
 $\varphi(\omega)=0$}.
 \end{cases}$$
-Введем также обозначение
+Р’РІРµРґРµРј С‚Р°РєР¶Рµ РѕР±РѕР·РЅР°С‡РµРЅРёРµ
 $A_n^\varepsilon=\{\omega\in\Omega_\varphi\mid
-g_n(\omega)>F_\varphi(\omega)\}$. Тогда понятно, что
+g_n(\omega)>F_\varphi(\omega)\}$. РўРѕРіРґР° РїРѕРЅСЏС‚РЅРѕ, С‡С‚Рѕ
 $\Omega_\varphi\setminus
 A_n^\varepsilon=\{\omega\in\Omega_\varphi\mid g_n(\omega)\leqslant
-F_\varphi(\omega)\}$. Легко видеть, что $A_1^\varepsilon\subset
-A_2^\varepsilon\subset\ldots$, поэтому $(\Omega_\varphi\setminus
+F_\varphi(\omega)\}$. Р›РµРіРєРѕ РІРёРґРµС‚СЊ, С‡С‚Рѕ $A_1^\varepsilon\subset
+A_2^\varepsilon\subset\ldots$, РїРѕСЌС‚РѕРјСѓ $(\Omega_\varphi\setminus
 A_1^\varepsilon)\supset (\Omega_\varphi\setminus
-A_2^\varepsilon)\supset\ldots$ и $\bigcap\limits_{n=1}^\infty
-(\Omega_\varphi\setminus A_n^\varepsilon)=\varnothing$. Отсюда в
-силу счетной аддитивности и леммы~\ref{chetno.add}
-$\nu(\Omega_\varphi\setminus A_n^\varepsilon)\to 0$ при
+A_2^\varepsilon)\supset\ldots$ Рё $\bigcap\limits_{n=1}^\infty
+(\Omega_\varphi\setminus A_n^\varepsilon)=\varnothing$. РћС‚СЃСЋРґР° РІ
+СЃРёР»Сѓ СЃС‡РµС‚РЅРѕР№ Р°РґРґРёС‚РёРІРЅРѕСЃС‚Рё Рё Р»РµРјРјС‹~\ref{chetno.add}
+$\nu(\Omega_\varphi\setminus A_n^\varepsilon)\to 0$ РїСЂРё
 $n\to\infty$.
 
-Теперь выпишем следующую цепочку неравенств:
+РўРµРїРµСЂСЊ РІС‹РїРёС€РµРј СЃР»РµРґСѓСЋС‰СѓСЋ С†РµРїРѕС‡РєСѓ РЅРµСЂР°РІРµРЅСЃС‚РІ:
 
 \begin{align*}
 \int\limits_\Omega\! g_n(\omega)\,\nu(d\omega)&\geqslant
@@ -1209,206 +1209,206 @@ F_\varphi(\omega)\,\nu(d\omega)\geqslant\\
 -\nu(\Omega_\varphi\setminus A_n^\varepsilon)\cdot \max
 \varphi(\omega).
 \end{align*}
-Но $\nu(\Omega_\varphi\setminus A_n^\varepsilon)\cdot\max
-\varphi(\omega)\to 0$ при $n\to\infty$, поэтому
+РќРѕ $\nu(\Omega_\varphi\setminus A_n^\varepsilon)\cdot\max
+\varphi(\omega)\to 0$ РїСЂРё $n\to\infty$, РїРѕСЌС‚РѕРјСѓ
 $\lim\limits_{n\to\infty}\int\limits_\Omega\!
 g_n(\omega)\,\nu(d\omega)\p\geqslant \int\limits_\Omega\!
-\varphi(\omega)\,\nu(d\omega)-\varepsilon\nu\Omega_\varphi$, откуда
-следует требуемое неравенство.
+\varphi(\omega)\,\nu(d\omega)-\varepsilon\nu\Omega_\varphi$, РѕС‚РєСѓРґР°
+СЃР»РµРґСѓРµС‚ С‚СЂРµР±СѓРµРјРѕРµ РЅРµСЂР°РІРµРЅСЃС‚РІРѕ.
 \end{proof}
 
-Теперь докажем корректность определения интеграла для произвольных
-неотрицательных измеримых функций. Пусть $f\geqslant 0$ --- данная
-функция, $g_n^1(\omega)\nearrow f(\omega)$ и $g_n^2(\omega)\nearrow
-f(\omega)$. Покажем, что
+РўРµРїРµСЂСЊ РґРѕРєР°Р¶РµРј РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РѕРїСЂРµРґРµР»РµРЅРёСЏ РёРЅС‚РµРіСЂР°Р»Р° РґР»СЏ РїСЂРѕРёР·РІРѕР»СЊРЅС‹С…
+РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№. РџСѓСЃС‚СЊ $f\geqslant 0$ --- РґР°РЅРЅР°СЏ
+С„СѓРЅРєС†РёСЏ, $g_n^1(\omega)\nearrow f(\omega)$ Рё $g_n^2(\omega)\nearrow
+f(\omega)$. РџРѕРєР°Р¶РµРј, С‡С‚Рѕ
 $\lim\limits_{n\to\infty}\int\limits_\Omega\!
 g_n^1(\omega)\,\nu(d\omega)\p=\lim\limits_{k\to\infty}\int\limits_\Omega\!
-g_k^2(\omega)\,\nu(d\omega)$. Действительно, при каждом $n$ по
-свойству 6 имеем: $\int\limits_\Omega\!
+g_k^2(\omega)\,\nu(d\omega)$. Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ, РїСЂРё РєР°Р¶РґРѕРј $n$ РїРѕ
+СЃРІРѕР№СЃС‚РІСѓ 6 РёРјРµРµРј: $\int\limits_\Omega\!
 g_n^1(\omega)\,\nu(d\omega)\leqslant
 \lim\limits_{k\to\infty}\int\limits_\Omega\!
-g_k^2(\omega)\,\nu(d\omega)$, откуда получаем
+g_k^2(\omega)\,\nu(d\omega)$, РѕС‚РєСѓРґР° РїРѕР»СѓС‡Р°РµРј
 $\lim\limits_{n\to\infty}\int\limits_\Omega\!
 g_n^1(\omega)\,\nu(d\omega)\p\leqslant\lim\limits_{k\to\infty}\int\limits_\Omega\!
-g_k^2(\omega)\,\nu(d\omega)$. Аналогично можно получить обратное
-неравенство, поэтому оба предела совпадают.
+g_k^2(\omega)\,\nu(d\omega)$. РђРЅР°Р»РѕРіРёС‡РЅРѕ РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ РѕР±СЂР°С‚РЅРѕРµ
+РЅРµСЂР°РІРµРЅСЃС‚РІРѕ, РїРѕСЌС‚РѕРјСѓ РѕР±Р° РїСЂРµРґРµР»Р° СЃРѕРІРїР°РґР°СЋС‚.
 
-Отсюда легко получить корректность определения интеграла Лебега для
-произвольных измеримых функций.
+РћС‚СЃСЋРґР° Р»РµРіРєРѕ РїРѕР»СѓС‡РёС‚СЊ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РѕРїСЂРµРґРµР»РµРЅРёСЏ РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР° РґР»СЏ
+РїСЂРѕРёР·РІРѕР»СЊРЅС‹С… РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№.
 
 \begin{defen}
-Две измеримые функции $f$ и $g$ на пространстве с мерой называются
-\emph{эквивалентными}, если $\nu\{\omega\in\Omega\mid f(\omega)\neq
+Р”РІРµ РёР·РјРµСЂРёРјС‹Рµ С„СѓРЅРєС†РёРё $f$ Рё $g$ РЅР° РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ СЃ РјРµСЂРѕР№ РЅР°Р·С‹РІР°СЋС‚СЃСЏ
+\emph{СЌРєРІРёРІР°Р»РµРЅС‚РЅС‹РјРё}, РµСЃР»Рё $\nu\{\omega\in\Omega\mid f(\omega)\neq
 g(\omega)\}=0$.
 \end{defen}
 
 \begin{defen}
-Говорят, что какое-то свойство \emph{имеет место почти всюду}, если
-оно верно всюду, кроме множества меры 0. Например, если $f=g$ почти
-всюду, то $\int\limits_\Omega\!
+Р“РѕРІРѕСЂСЏС‚, С‡С‚Рѕ РєР°РєРѕРµ-С‚Рѕ СЃРІРѕР№СЃС‚РІРѕ \emph{РёРјРµРµС‚ РјРµСЃС‚Рѕ РїРѕС‡С‚Рё РІСЃСЋРґСѓ}, РµСЃР»Рё
+РѕРЅРѕ РІРµСЂРЅРѕ РІСЃСЋРґСѓ, РєСЂРѕРјРµ РјРЅРѕР¶РµСЃС‚РІР° РјРµСЂС‹ 0. РќР°РїСЂРёРјРµСЂ, РµСЃР»Рё $f=g$ РїРѕС‡С‚Рё
+РІСЃСЋРґСѓ, С‚Рѕ $\int\limits_\Omega\!
 f(\omega)\,\nu(d\omega)=\int\limits_\Omega\!
 g(\omega)\,\nu(d\omega)$.
 \end{defen}
 
 \begin{zam}
-В дальнейшем мы обычно будем опускать слова <<почти всюду>>, но
-принципиально от этого ничего не изменится.
+Р’ РґР°Р»СЊРЅРµР№С€РµРј РјС‹ РѕР±С‹С‡РЅРѕ Р±СѓРґРµРј РѕРїСѓСЃРєР°С‚СЊ СЃР»РѕРІР° <<РїРѕС‡С‚Рё РІСЃСЋРґСѓ>>, РЅРѕ
+РїСЂРёРЅС†РёРїРёР°Р»СЊРЅРѕ РѕС‚ СЌС‚РѕРіРѕ РЅРёС‡РµРіРѕ РЅРµ РёР·РјРµРЅРёС‚СЃСЏ.
 \end{zam}
 
-\begin{theorem}[Леви]
-Пусть $g_n\geqslant 0$ и $g_n\nearrow f$ почти всюду. Тогда
+\begin{theorem}[Р›РµРІРё]
+РџСѓСЃС‚СЊ $g_n\geqslant 0$ Рё $g_n\nearrow f$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ. РўРѕРіРґР°
 $\exists\,\lim\limits_{n\to\infty}\int\limits_\Omega\!
 g_n(\omega)\,\nu(d\omega)=\int\limits_\Omega\!
 f(\omega)\,\nu(d\omega)$.
 \end{theorem}
 
 \begin{zam}
-В условии теоремы можно считать, что $g_n\geqslant g$, где функция
-$g$ интегрируема.
+Р’ СѓСЃР»РѕРІРёРё С‚РµРѕСЂРµРјС‹ РјРѕР¶РЅРѕ СЃС‡РёС‚Р°С‚СЊ, С‡С‚Рѕ $g_n\geqslant g$, РіРґРµ С„СѓРЅРєС†РёСЏ
+$g$ РёРЅС‚РµРіСЂРёСЂСѓРµРјР°.
 \end{zam}
 
 \begin{proof}
-По теореме~\ref{fun.approx} $\forall\, g_i\quad \exists\,
-g_{ij}\nearrow g_i$ при $j\to\infty$, причем функции
-$g_{ij}\geqslant 0$ просты и измеримы. Пусть
+РџРѕ С‚РµРѕСЂРµРјРµ~\ref{fun.approx} $\forall\, g_i\quad \exists\,
+g_{ij}\nearrow g_i$ РїСЂРё $j\to\infty$, РїСЂРёС‡РµРј С„СѓРЅРєС†РёРё
+$g_{ij}\geqslant 0$ РїСЂРѕСЃС‚С‹ Рё РёР·РјРµСЂРёРјС‹. РџСѓСЃС‚СЊ
 $\psi_n(\omega)=\max\{g_{ij}(\omega)\mid 1\leqslant i\p\leqslant
-n,1\leqslant j\leqslant n\}$. Докажем. что $\psi_n(\omega)\nearrow
+n,1\leqslant j\leqslant n\}$. Р”РѕРєР°Р¶РµРј. С‡С‚Рѕ $\psi_n(\omega)\nearrow
 f(\omega)$.
 
-Ясно, что $\psi_n(\omega)\leqslant g_n(\omega)\leqslant g_k(\omega)$
-при $k>n$. Отсюда получаем, что $\psi_n(\omega)\leqslant
-\lim\limits_{k\to\infty} g_k(\omega)=f(\omega)$, а значит,
+РЇСЃРЅРѕ, С‡С‚Рѕ $\psi_n(\omega)\leqslant g_n(\omega)\leqslant g_k(\omega)$
+РїСЂРё $k>n$. РћС‚СЃСЋРґР° РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ $\psi_n(\omega)\leqslant
+\lim\limits_{k\to\infty} g_k(\omega)=f(\omega)$, Р° Р·РЅР°С‡РёС‚,
 $\lim\limits_{n\to\infty} \psi_n(\omega)\leqslant f(\omega)$.
 
-Обратно, $\forall\, n\geqslant k\quad \psi_n(\omega)\geqslant
-g_{kn}(\omega)$, поэтому
+РћР±СЂР°С‚РЅРѕ, $\forall\, n\geqslant k\quad \psi_n(\omega)\geqslant
+g_{kn}(\omega)$, РїРѕСЌС‚РѕРјСѓ
 $\lim\limits_{n\to\infty}\psi_n(\omega)\geqslant\lim\limits_{n\to\infty}
-g_{kn}(\omega)\p=g_k(\omega)$. Значит,
+g_{kn}(\omega)\p=g_k(\omega)$. Р—РЅР°С‡РёС‚,
 $\lim\limits_{n\to\infty}\psi_n(\omega)\geqslant\lim\limits_{k\to\infty}
 g_k(\omega)=f(\omega)$.
 
-Теперь, т.к. $\psi_n(\omega)\leqslant g_n(\omega)$, то
+РўРµРїРµСЂСЊ, С‚.Рє. $\psi_n(\omega)\leqslant g_n(\omega)$, С‚Рѕ
 $\int\limits_\Omega\! \psi_n(\omega)\,\nu(d\omega)\leqslant
-\int\limits_\Omega\! g_n(\omega)\,\nu(d\omega)$ и $\psi_n(\omega)
-\p\nearrow f(\omega)$, то по определению интеграла Лебега получаем
+\int\limits_\Omega\! g_n(\omega)\,\nu(d\omega)$ Рё $\psi_n(\omega)
+\p\nearrow f(\omega)$, С‚Рѕ РїРѕ РѕРїСЂРµРґРµР»РµРЅРёСЋ РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР° РїРѕР»СѓС‡Р°РµРј
 $\int\limits_\Omega\!
 f(\omega)\,\nu(d\omega)\p=\lim\limits_{n\to\infty}
-\int\limits_\Omega\! \psi_n(\omega)\,\nu(d\omega)$. Но
+\int\limits_\Omega\! \psi_n(\omega)\,\nu(d\omega)$. РќРѕ
 $$\int\limits_\Omega\! f(\omega)\,\nu(d\omega)\geqslant
 \int\limits_\Omega\! g_n(\omega)\,\nu(d\omega)\geqslant
-\int\limits_\Omega\! \psi_n(\omega)\,\nu(d\omega),$$ откуда по
-теореме о двух милиционерах следует требуемое.
+\int\limits_\Omega\! \psi_n(\omega)\,\nu(d\omega),$$ РѕС‚РєСѓРґР° РїРѕ
+С‚РµРѕСЂРµРјРµ Рѕ РґРІСѓС… РјРёР»РёС†РёРѕРЅРµСЂР°С… СЃР»РµРґСѓРµС‚ С‚СЂРµР±СѓРµРјРѕРµ.
 \end{proof}
 %-----------------------------------------------------------------------------------%
 
 %---------------------------Lecture 8-----------------------------------------------%
 \lecture
 
-Прежде чем двигаться дальше, введем следующие важные обозначения:
+РџСЂРµР¶РґРµ С‡РµРј РґРІРёРіР°С‚СЊСЃСЏ РґР°Р»СЊС€Рµ, РІРІРµРґРµРј СЃР»РµРґСѓСЋС‰РёРµ РІР°Р¶РЅС‹Рµ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ:
 
-1) $\mathcal{\bar{L}}_0(\Omega,\mathfrak{a},\nu)$  --- множество
-почти всюду определенных измеримых функций;
+1) $\mathcal{\bar{L}}_0(\Omega,\mathfrak{a},\nu)$  --- РјРЅРѕР¶РµСЃС‚РІРѕ
+РїРѕС‡С‚Рё РІСЃСЋРґСѓ РѕРїСЂРµРґРµР»РµРЅРЅС‹С… РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№;
 
-2) $\mathcal{L}_0(\Omega,\mathfrak{a},\nu)$  --- множество классов
-почти всюду определенных измеримых функций;
+2) $\mathcal{L}_0(\Omega,\mathfrak{a},\nu)$  --- РјРЅРѕР¶РµСЃС‚РІРѕ РєР»Р°СЃСЃРѕРІ
+РїРѕС‡С‚Рё РІСЃСЋРґСѓ РѕРїСЂРµРґРµР»РµРЅРЅС‹С… РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№;
 
-3) $\mathcal{\bar{L}}_1(\Omega,\mathfrak{a},\nu)$  --- множество
-почти всюду оп\-ределенных интегрируемых функций;
+3) $\mathcal{\bar{L}}_1(\Omega,\mathfrak{a},\nu)$  --- РјРЅРѕР¶РµСЃС‚РІРѕ
+РїРѕС‡С‚Рё РІСЃСЋРґСѓ РѕРї\-СЂРµРґРµР»РµРЅРЅС‹С… РёРЅС‚РµРіСЂРёСЂСѓРµРјС‹С… С„СѓРЅРєС†РёР№;
 
-4) $\mathcal{L}_1(\Omega,\mathfrak{a},\nu)$  --- множество классов
-почти всюду определенных интегрируемых функций.
+4) $\mathcal{L}_1(\Omega,\mathfrak{a},\nu)$  --- РјРЅРѕР¶РµСЃС‚РІРѕ РєР»Р°СЃСЃРѕРІ
+РїРѕС‡С‚Рё РІСЃСЋРґСѓ РѕРїСЂРµРґРµР»РµРЅРЅС‹С… РёРЅС‚РµРіСЂРёСЂСѓРµРјС‹С… С„СѓРЅРєС†РёР№.
 
-Здесь необходимо дать несколько новых определений.
+Р—РґРµСЃСЊ РЅРµРѕР±С…РѕРґРёРјРѕ РґР°С‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ РЅРѕРІС‹С… РѕРїСЂРµРґРµР»РµРЅРёР№.
 
 \begin{defen}
-Пусть $A\in\mathfrak{a}$ и $\nu A>0$. Рассмотрим пространство с
-мерой $(A,\mathfrak{a}\cap A=\{C\cap A\mid
-C\in\mathfrak{a}\},\nu\mid_{\mathfrak{a}\cap A})$. Оно называется
-\emph{подпространством с мерой} пространства с мерой $(\Omega,
+РџСѓСЃС‚СЊ $A\in\mathfrak{a}$ Рё $\nu A>0$. Р Р°СЃСЃРјРѕС‚СЂРёРј РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ
+РјРµСЂРѕР№ $(A,\mathfrak{a}\cap A=\{C\cap A\mid
+C\in\mathfrak{a}\},\nu\mid_{\mathfrak{a}\cap A})$. РћРЅРѕ РЅР°Р·С‹РІР°РµС‚СЃСЏ
+\emph{РїРѕРґРїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕРј СЃ РјРµСЂРѕР№} РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° СЃ РјРµСЂРѕР№ $(\Omega,
 \mathfrak{a}, \nu)$.
 
-Пусть теперь функция $f$ определена почти всюду, $f\colon A\to
-\mathbb{R}^1$, где $A\p\in\mathfrak{a}$ и $\nu(\Omega\setminus
-A)=0$. Функция $f$ называется \emph{измеримой}, если она измерима на
+РџСѓСЃС‚СЊ С‚РµРїРµСЂСЊ С„СѓРЅРєС†РёСЏ $f$ РѕРїСЂРµРґРµР»РµРЅР° РїРѕС‡С‚Рё РІСЃСЋРґСѓ, $f\colon A\to
+\mathbb{R}^1$, РіРґРµ $A\p\in\mathfrak{a}$ Рё $\nu(\Omega\setminus
+A)=0$. Р¤СѓРЅРєС†РёСЏ $f$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РёР·РјРµСЂРёРјРѕР№}, РµСЃР»Рё РѕРЅР° РёР·РјРµСЂРёРјР° РЅР°
 $(A, \mathfrak{a}\cap A, \nu\mid_{\mathfrak{a}\cap A})$.
 
-Функции $f$ и $g$ называются \emph{эквивалентными} (обозначение:
-$f\sim g$), если $$\nu\{\omega\mid \text{$f(\omega)$ и $g(\omega)$
-существуют и $f(\omega)\neq g(\omega)$}\}=0.$$
+Р¤СѓРЅРєС†РёРё $f$ Рё $g$ РЅР°Р·С‹РІР°СЋС‚СЃСЏ \emph{СЌРєРІРёРІР°Р»РµРЅС‚РЅС‹РјРё} (РѕР±РѕР·РЅР°С‡РµРЅРёРµ:
+$f\sim g$), РµСЃР»Рё $$\nu\{\omega\mid \text{$f(\omega)$ Рё $g(\omega)$
+СЃСѓС‰РµСЃС‚РІСѓСЋС‚ Рё $f(\omega)\neq g(\omega)$}\}=0.$$
 \end{defen}
 
 \begin{zam}
-В дальнейшем мы будем писать просто $\mathcal{L}$, без указания
-аргументов. Кроме того, когда мы будем писать $f\in\mathcal{L}_1$,
-то чаще всего под этим мы будем подразумевать не класс
-эквивалентности, а конкретный представитель этого класса.
+Р’ РґР°Р»СЊРЅРµР№С€РµРј РјС‹ Р±СѓРґРµРј РїРёСЃР°С‚СЊ РїСЂРѕСЃС‚Рѕ $\mathcal{L}$, Р±РµР· СѓРєР°Р·Р°РЅРёСЏ
+Р°СЂРіСѓРјРµРЅС‚РѕРІ. РљСЂРѕРјРµ С‚РѕРіРѕ, РєРѕРіРґР° РјС‹ Р±СѓРґРµРј РїРёСЃР°С‚СЊ $f\in\mathcal{L}_1$,
+С‚Рѕ С‡Р°С‰Рµ РІСЃРµРіРѕ РїРѕРґ СЌС‚РёРј РјС‹ Р±СѓРґРµРј РїРѕРґСЂР°Р·СѓРјРµРІР°С‚СЊ РЅРµ РєР»Р°СЃСЃ
+СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕСЃС‚Рё, Р° РєРѕРЅРєСЂРµС‚РЅС‹Р№ РїСЂРµРґСЃС‚Р°РІРёС‚РµР»СЊ СЌС‚РѕРіРѕ РєР»Р°СЃСЃР°.
 \end{zam}
 
-\begin{theorem}[Фату--Лебег]
-1. Пусть $\varphi\in\mathcal{\bar{L}}_1$ и $\varphi(\omega)\leqslant
-f_n(\omega)$. Тогда
+\begin{theorem}[Р¤Р°С‚Сѓ--Р›РµР±РµРі]
+1. РџСѓСЃС‚СЊ $\varphi\in\mathcal{\bar{L}}_1$ Рё $\varphi(\omega)\leqslant
+f_n(\omega)$. РўРѕРіРґР°
 $\int\limits_\Omega\!\underline{\lim}f_n(\omega)\,\nu(d\omega)
 \leqslant\underline{\lim} \int\limits_\Omega\!
 f_n(\omega)\,\nu(d\omega)$.
 
-2. Пусть $\psi\in\mathcal{\bar{L}}_1$ и $\psi(\omega)\geqslant
-f_n(\omega)$ при всех $n$. Тогда
+2. РџСѓСЃС‚СЊ $\psi\in\mathcal{\bar{L}}_1$ Рё $\psi(\omega)\geqslant
+f_n(\omega)$ РїСЂРё РІСЃРµС… $n$. РўРѕРіРґР°
 $\int\limits_\Omega\!\overline{\lim}f_n(\omega)\,\nu(d\omega)
 \p\geqslant\overline{\lim} \int\limits_\Omega\!
 f_n(\omega)\,\nu(d\omega)$.
 \end{theorem}
 
 \begin{proof}
-1. Положим $g_n(\omega)=\inf\limits_{k\geqslant n}f_k(\omega)$.
-Тогда $\varphi(\omega)\leqslant g_1(\omega)\p\leqslant
-g_2(\omega)\leqslant\ldots$ и $\lim\limits_{n\to\infty}
-g_n(\omega)=\underline{\lim}f_n(\omega)$, откуда по теореме Леви
-получаем, что
+1. РџРѕР»РѕР¶РёРј $g_n(\omega)=\inf\limits_{k\geqslant n}f_k(\omega)$.
+РўРѕРіРґР° $\varphi(\omega)\leqslant g_1(\omega)\p\leqslant
+g_2(\omega)\leqslant\ldots$ Рё $\lim\limits_{n\to\infty}
+g_n(\omega)=\underline{\lim}f_n(\omega)$, РѕС‚РєСѓРґР° РїРѕ С‚РµРѕСЂРµРјРµ Р›РµРІРё
+РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ
 $\int\limits_\Omega\!\underline{\lim}f_n(\omega)\,\nu(d\omega)=
 \lim\limits_{n\to\infty}\int\limits_\Omega\!
 g_n(\omega)\,\nu(d\omega)$.
 
-Проверим, что
+РџСЂРѕРІРµСЂРёРј, С‡С‚Рѕ
 $\lim\limits_{n\to\infty}\int\limits_\Omega\!g_n(\omega)\,\nu(d\omega)
 \leqslant \underline{\lim} \int\limits_\Omega\!
 f_n(\omega)\,\nu(d\omega)$. $\forall\,n\leqslant k\quad g_n(\omega)
-\p\leqslant f_k(\omega)$, откуда $\int\limits_\Omega\! g_n(\omega)\,
+\p\leqslant f_k(\omega)$, РѕС‚РєСѓРґР° $\int\limits_\Omega\! g_n(\omega)\,
 \nu(d\omega)\leqslant \int\limits_\Omega\!
-f_k(\omega)\,\nu(d\omega)$. Значит, $\int\limits_\Omega\!
+f_k(\omega)\,\nu(d\omega)$. Р—РЅР°С‡РёС‚, $\int\limits_\Omega\!
 g_n(\omega)\, \nu(d\omega)\p\leqslant \inf\limits_{k\geqslant
-n}\int\limits_\Omega\! f_k(\omega)\,\nu(d\omega)$ и
+n}\int\limits_\Omega\! f_k(\omega)\,\nu(d\omega)$ Рё
 $$\lim\limits_{n\to\infty}\int\limits_\Omega\! g_n(\omega)\,\nu(d\omega)
 \leqslant\lim\limits_{n\to\infty}\inf\limits_{k\geqslant n}
 \int\limits_\Omega \! f_k(\omega)\,\nu(d\omega)= \underline{\lim}
 \int\limits_\Omega\! f_n(\omega)\,\nu(d\omega).$$
 
-2. Положим $f_n^1(\omega)=-f_n(\omega)$ и
-$\varphi(\omega)=-\psi(\omega)$. Тогда утверждение легко следует из
-п.1.
+2. РџРѕР»РѕР¶РёРј $f_n^1(\omega)=-f_n(\omega)$ Рё
+$\varphi(\omega)=-\psi(\omega)$. РўРѕРіРґР° СѓС‚РІРµСЂР¶РґРµРЅРёРµ Р»РµРіРєРѕ СЃР»РµРґСѓРµС‚ РёР·
+Рї.1.
 \end{proof}
 
-\begin{theorem}[Лебег]
-Пусть $f_n(\omega)\to f(\omega)$ и $|f_n(\omega)|\leqslant
-\varphi(\omega)$, где $\varphi\in\mathcal{L}_1$. Тогда
-$f\in\mathcal{L}_1$ и $\int\limits_\Omega\! f(\omega)\,\nu(d\omega)
+\begin{theorem}[Р›РµР±РµРі]
+РџСѓСЃС‚СЊ $f_n(\omega)\to f(\omega)$ Рё $|f_n(\omega)|\leqslant
+\varphi(\omega)$, РіРґРµ $\varphi\in\mathcal{L}_1$. РўРѕРіРґР°
+$f\in\mathcal{L}_1$ Рё $\int\limits_\Omega\! f(\omega)\,\nu(d\omega)
 =\lim\limits_{n\to\infty}\int\limits_\Omega\!
 f_n(\omega)\,\nu(d\omega)$.
 \end{theorem}
 
 \begin{zam}
-Условие теоремы можно ослабить, а именно достаточно потребовать
-только сходимость функций $f_n$ по мере.
+РЈСЃР»РѕРІРёРµ С‚РµРѕСЂРµРјС‹ РјРѕР¶РЅРѕ РѕСЃР»Р°Р±РёС‚СЊ, Р° РёРјРµРЅРЅРѕ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїРѕС‚СЂРµР±РѕРІР°С‚СЊ
+С‚РѕР»СЊРєРѕ СЃС…РѕРґРёРјРѕСЃС‚СЊ С„СѓРЅРєС†РёР№ $f_n$ РїРѕ РјРµСЂРµ.
 \end{zam}
 
 \begin{proof}
-Очевидно, что $|f(\omega)|\leqslant \varphi(\omega)$, поэтому
-$f\in\mathcal{L}_1$. Поскольку
+РћС‡РµРІРёРґРЅРѕ, С‡С‚Рѕ $|f(\omega)|\leqslant \varphi(\omega)$, РїРѕСЌС‚РѕРјСѓ
+$f\in\mathcal{L}_1$. РџРѕСЃРєРѕР»СЊРєСѓ
 $\underline{\lim}f_n(\omega)=\overline{\lim}f_n(\omega)=f(\omega)$,
-то $$\int\limits_\Omega\!
+С‚Рѕ $$\int\limits_\Omega\!
 \underline{\lim}f_n(\omega)\,\nu(d\omega)=\int\limits_\Omega\!
 \overline{\lim}f_n(\omega) \,\nu(d\omega)=
-\int\limits_\Omega\!f(\omega)\,\nu(d\omega),$$ и по теореме
-Фату--Лебега
+\int\limits_\Omega\!f(\omega)\,\nu(d\omega),$$ Рё РїРѕ С‚РµРѕСЂРµРјРµ
+Р¤Р°С‚Сѓ--Р›РµР±РµРіР°
 \begin{align*}
 \overline{\lim}\int\limits_\Omega\!f_n(\omega)\,\nu(d\omega)&\leqslant
 \int\limits_\Omega\! \overline{\lim}f_n(\omega)\,\nu(d\omega)=
@@ -1417,208 +1417,208 @@ $\underline{\lim}f_n(\omega)=\overline{\lim}f_n(\omega)=f(\omega)$,
 \underline{\lim}f_n(\omega)\,\nu(d\omega)\leqslant
 \underline{\lim}\int\limits_\Omega\!f_n(\omega)\,\nu(d\omega),
 \end{align*}
-откуда и получаем требуемое.
+РѕС‚РєСѓРґР° Рё РїРѕР»СѓС‡Р°РµРј С‚СЂРµР±СѓРµРјРѕРµ.
 \end{proof}
 
-\begin{theorem}[Фату]
-Пусть $0\leqslant f_n(\omega)\to f(\omega)$ и $\int\limits_\Omega \!
-f_n(\omega)\, \nu(d\omega)\leqslant C$, где $C>0$. Тогда
-$f\in\mathcal{L}_1$ и $\int\limits_\Omega \! f(\omega)\,
+\begin{theorem}[Р¤Р°С‚Сѓ]
+РџСѓСЃС‚СЊ $0\leqslant f_n(\omega)\to f(\omega)$ Рё $\int\limits_\Omega \!
+f_n(\omega)\, \nu(d\omega)\leqslant C$, РіРґРµ $C>0$. РўРѕРіРґР°
+$f\in\mathcal{L}_1$ Рё $\int\limits_\Omega \! f(\omega)\,
 \nu(d\omega)\leqslant C$.
 \end{theorem}
 
 \begin{proof}
-По теореме Фату--Лебега получаем $\int\limits_\Omega \!
+РџРѕ С‚РµРѕСЂРµРјРµ Р¤Р°С‚Сѓ--Р›РµР±РµРіР° РїРѕР»СѓС‡Р°РµРј $\int\limits_\Omega \!
 \underline{\lim}f_n(\omega)\, \nu(d\omega)\p\leqslant
 \underline{\lim}\int\limits_\Omega \! f_n(\omega)\, \nu(d\omega)$,
-поэтому $$\int\limits_\Omega \! f(\omega)\, \nu(d\omega)=
+РїРѕСЌС‚РѕРјСѓ $$\int\limits_\Omega \! f(\omega)\, \nu(d\omega)=
 \int\limits_\Omega \! \underline{\lim}f_n(\omega)\,
 \nu(d\omega)\leqslant \underline{\lim}\int\limits_\Omega \!
-f_n(\omega)\, \nu(d\omega) \leqslant C,$$ что и требовалось.
+f_n(\omega)\, \nu(d\omega) \leqslant C,$$ С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{zam}
-В теореме Фату нельзя переходить к пределу так же, как и в теореме
-Лебега: например, можно взять $\Omega=[0;1]$ и
-$$f_n(x)=\begin{cases}2n-4n^2|x-\frac{1}{2n}|,& \text{если $x\in[0;1/n]$},
-\\ 0,& \text{если $x\in[1/n;1]$}.\end{cases}$$
+Р’ С‚РµРѕСЂРµРјРµ Р¤Р°С‚Сѓ РЅРµР»СЊР·СЏ РїРµСЂРµС…РѕРґРёС‚СЊ Рє РїСЂРµРґРµР»Сѓ С‚Р°Рє Р¶Рµ, РєР°Рє Рё РІ С‚РµРѕСЂРµРјРµ
+Р›РµР±РµРіР°: РЅР°РїСЂРёРјРµСЂ, РјРѕР¶РЅРѕ РІР·СЏС‚СЊ $\Omega=[0;1]$ Рё
+$$f_n(x)=\begin{cases}2n-4n^2|x-\frac{1}{2n}|,& \text{РµСЃР»Рё $x\in[0;1/n]$},
+\\ 0,& \text{РµСЃР»Рё $x\in[1/n;1]$}.\end{cases}$$
 
-Кроме того, ограничение <<$f_n\geqslant 0$>> существенно: опять
-можно взять $\Omega=[0;1]$ и <<перевернуть>> функции $f_n$, сдвинув
-их немного вверх.
+РљСЂРѕРјРµ С‚РѕРіРѕ, РѕРіСЂР°РЅРёС‡РµРЅРёРµ <<$f_n\geqslant 0$>> СЃСѓС‰РµСЃС‚РІРµРЅРЅРѕ: РѕРїСЏС‚СЊ
+РјРѕР¶РЅРѕ РІР·СЏС‚СЊ $\Omega=[0;1]$ Рё <<РїРµСЂРµРІРµСЂРЅСѓС‚СЊ>> С„СѓРЅРєС†РёРё $f_n$, СЃРґРІРёРЅСѓРІ
+РёС… РЅРµРјРЅРѕРіРѕ РІРІРµСЂС….
 \end{zam}
 %-----------------------------------------------------------------------------------%
 
 %---------------------------Lecture 9-----------------------------------------------%
 \lecture
 
-\begin{theorem}[неравенство Чебышева]
-Пусть функция $f(\omega)\geqslant 0$, тогда $\nu\{\omega\mid
+\begin{theorem}[РЅРµСЂР°РІРµРЅСЃС‚РІРѕ Р§РµР±С‹С€РµРІР°]
+РџСѓСЃС‚СЊ С„СѓРЅРєС†РёСЏ $f(\omega)\geqslant 0$, С‚РѕРіРґР° $\nu\{\omega\mid
 f(\omega)\geqslant c\}\leqslant\frac 1 c\int\limits_\Omega\!
 f(\omega)\,\nu(d\omega)$.
 \end{theorem}
 
 \begin{proof}
-Имеем следующую цепочку неравенств: $$\int\limits_\Omega\!
+РРјРµРµРј СЃР»РµРґСѓСЋС‰СѓСЋ С†РµРїРѕС‡РєСѓ РЅРµСЂР°РІРµРЅСЃС‚РІ: $$\int\limits_\Omega\!
 f(\omega)\,\nu(d\omega)\geqslant \int\limits_{\{\omega\mid
 f(\omega)\geqslant c\}}\! f(\omega)\,\nu(d\omega)\geqslant
 \int\limits_{\{\omega\mid f(\omega)\geqslant c\}}\!
-c\,\nu(d\omega)=c\nu\{\omega\mid f(\omega)\geqslant c\},$$ что и
-требовалось.
+c\,\nu(d\omega)=c\nu\{\omega\mid f(\omega)\geqslant c\},$$ С‡С‚Рѕ Рё
+С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{sled}
-Пусть $f_n(\omega)\geqslant 0$ и $\exists\,
-f(\omega)=\sum\limits_{n=1}^\infty f_n(\omega)$. Тогда
+РџСѓСЃС‚СЊ $f_n(\omega)\geqslant 0$ Рё $\exists\,
+f(\omega)=\sum\limits_{n=1}^\infty f_n(\omega)$. РўРѕРіРґР°
 $$\exists\,\int\limits_\Omega\!
 f(\omega)\,\nu(d\omega)=\sum\limits_{n=1}^\infty
-\int\limits_\Omega\! f_n(\omega)\,\nu(d\omega).$$ В частности, если
+\int\limits_\Omega\! f_n(\omega)\,\nu(d\omega).$$ Р’ С‡Р°СЃС‚РЅРѕСЃС‚Рё, РµСЃР»Рё
 $\sum\limits_{n=1}^\infty \int\limits_\Omega\!
-f_n(\omega)\,\nu(d\omega)<\infty$, то сумма ряда
-$\sum\limits_{n=1}^\infty f_n(\omega)$ почти всюду конечна.
+f_n(\omega)\,\nu(d\omega)<\infty$, С‚Рѕ СЃСѓРјРјР° СЂСЏРґР°
+$\sum\limits_{n=1}^\infty f_n(\omega)$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ РєРѕРЅРµС‡РЅР°.
 \end{sled}
 
 \begin{proof}
-Первое утверждение следует из теоремы Леви. Докажем второе
-утверждение. Для этого достаточно доказать, что если
-$g(\omega)\geqslant 0$ и $C_g=\int\limits_\Omega\!
-g(\omega)\,\nu(d\omega)<\infty$, то функция $g$ конечна почти всюду.
-Поскольку $\{\omega\mid
+РџРµСЂРІРѕРµ СѓС‚РІРµСЂР¶РґРµРЅРёРµ СЃР»РµРґСѓРµС‚ РёР· С‚РµРѕСЂРµРјС‹ Р›РµРІРё. Р”РѕРєР°Р¶РµРј РІС‚РѕСЂРѕРµ
+СѓС‚РІРµСЂР¶РґРµРЅРёРµ. Р”Р»СЏ СЌС‚РѕРіРѕ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕРєР°Р·Р°С‚СЊ, С‡С‚Рѕ РµСЃР»Рё
+$g(\omega)\geqslant 0$ Рё $C_g=\int\limits_\Omega\!
+g(\omega)\,\nu(d\omega)<\infty$, С‚Рѕ С„СѓРЅРєС†РёСЏ $g$ РєРѕРЅРµС‡РЅР° РїРѕС‡С‚Рё РІСЃСЋРґСѓ.
+РџРѕСЃРєРѕР»СЊРєСѓ $\{\omega\mid
 g(\omega)=\infty\}=\bigcap\limits_{n=1}^\infty \{\omega\mid
-g(\omega)\geqslant n\}$ и $\nu\{\omega\mid g(\omega)\geqslant
+g(\omega)\geqslant n\}$ Рё $\nu\{\omega\mid g(\omega)\geqslant
 n\}\p\leqslant\frac 1 n\int\limits_\Omega\!
-g(\omega)\,\nu(d\omega)=\frac{C_g}{n}\to 0$ при $n\to\infty$ (по
-неравенству Чебышева), то
+g(\omega)\,\nu(d\omega)=\frac{C_g}{n}\to 0$ РїСЂРё $n\to\infty$ (РїРѕ
+РЅРµСЂР°РІРµРЅСЃС‚РІСѓ Р§РµР±С‹С€РµРІР°), С‚Рѕ
 $$\nu\{\omega\mid g(\omega)=\infty\}=\nu\Big(\bigcap\limits_{n=1}^\infty
-\{\omega\mid g(\omega)\geqslant n\}\Big)=0,$$ что и требовалось.
+\{\omega\mid g(\omega)\geqslant n\}\Big)=0,$$ С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \prim
 
-Пусть $\Omega=[0;1]$ и $r_n\in\mathbb{Q}\cap[0;1]$ --- $n$-е
-рациональное число из $\Omega$. Возьмем функции
-$f_n(x)=\frac{1}{\sqrt{|x-r_n|}}$ и рассмотрим ряд
-$\sum\limits_{n=1}^\infty \frac{1}{2^n} f_n(x)$. Очевидно, что
+РџСѓСЃС‚СЊ $\Omega=[0;1]$ Рё $r_n\in\mathbb{Q}\cap[0;1]$ --- $n$-Рµ
+СЂР°С†РёРѕРЅР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РёР· $\Omega$. Р’РѕР·СЊРјРµРј С„СѓРЅРєС†РёРё
+$f_n(x)=\frac{1}{\sqrt{|x-r_n|}}$ Рё СЂР°СЃСЃРјРѕС‚СЂРёРј СЂСЏРґ
+$\sum\limits_{n=1}^\infty \frac{1}{2^n} f_n(x)$. РћС‡РµРІРёРґРЅРѕ, С‡С‚Рѕ
 $\exists\, C>0: \int\limits_\Omega\! f_n(\omega)\,\nu(d\omega)<C$,
-поэтому $\sum\limits_{n=1}^\infty \int\limits_\Omega\!
-\frac{1}{2^n}f_n(\omega)\,\nu(d\omega)<C<\infty$ и ряд
-$\sum\limits_{n=1}^\infty \frac{1}{2^n} f_n(x)$ сходится почти
-всюду.
+РїРѕСЌС‚РѕРјСѓ $\sum\limits_{n=1}^\infty \int\limits_\Omega\!
+\frac{1}{2^n}f_n(\omega)\,\nu(d\omega)<C<\infty$ Рё СЂСЏРґ
+$\sum\limits_{n=1}^\infty \frac{1}{2^n} f_n(x)$ СЃС…РѕРґРёС‚СЃСЏ РїРѕС‡С‚Рё
+РІСЃСЋРґСѓ.
 
-\tema{Сходимость по мере}
+\tema{РЎС…РѕРґРёРјРѕСЃС‚СЊ РїРѕ РјРµСЂРµ}
 
 \begin{defen}
-Пусть фиксировано пространство с мерой $(\Omega, \mathfrak{a},\nu)$
-и функции $f_n$ измеримы. Тогда $f_n$ \emph{сходится к функции $f$
-по мере}, если $\forall\, \varepsilon>0\quad \nu\{\omega\mid
-|f_n(\omega)-f(\omega)|>\varepsilon\}\to 0$ при $n\to\infty$.
-Обозначение: $f_n\mathop{\to}\limits_\nu f$.
+РџСѓСЃС‚СЊ С„РёРєСЃРёСЂРѕРІР°РЅРѕ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РјРµСЂРѕР№ $(\Omega, \mathfrak{a},\nu)$
+Рё С„СѓРЅРєС†РёРё $f_n$ РёР·РјРµСЂРёРјС‹. РўРѕРіРґР° $f_n$ \emph{СЃС…РѕРґРёС‚СЃСЏ Рє С„СѓРЅРєС†РёРё $f$
+РїРѕ РјРµСЂРµ}, РµСЃР»Рё $\forall\, \varepsilon>0\quad \nu\{\omega\mid
+|f_n(\omega)-f(\omega)|>\varepsilon\}\to 0$ РїСЂРё $n\to\infty$.
+РћР±РѕР·РЅР°С‡РµРЅРёРµ: $f_n\mathop{\to}\limits_\nu f$.
 \end{defen}
 
 \begin{theorem}
-Если $f_n\mathop{\to}\limits_\nu f$, то $\exists\, f_{n_k}:
-f_{n_k}\to f$ почти всюду. Если мера $\nu$ конечна, то всякая почти
-всюду сходящаяся последовательность сходится по мере.
+Р•СЃР»Рё $f_n\mathop{\to}\limits_\nu f$, С‚Рѕ $\exists\, f_{n_k}:
+f_{n_k}\to f$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ. Р•СЃР»Рё РјРµСЂР° $\nu$ РєРѕРЅРµС‡РЅР°, С‚Рѕ РІСЃСЏРєР°СЏ РїРѕС‡С‚Рё
+РІСЃСЋРґСѓ СЃС…РѕРґСЏС‰Р°СЏСЃСЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ СЃС…РѕРґРёС‚СЃСЏ РїРѕ РјРµСЂРµ.
 \end{theorem}
 
 \begin{proof}
-Если $f_j(\omega)\to f(\omega)$, то $$\forall\, n\;\exists\, k:
-\forall\, r>k\quad |f_r(\omega)-f(\omega)|<\frac 1 n,$$ поэтому
+Р•СЃР»Рё $f_j(\omega)\to f(\omega)$, С‚Рѕ $$\forall\, n\;\exists\, k:
+\forall\, r>k\quad |f_r(\omega)-f(\omega)|<\frac 1 n,$$ РїРѕСЌС‚РѕРјСѓ
 $$A=\{\omega\mid f_j(\omega)\to f(\omega)\}=\bigcap\limits_n
 \bigcup\limits_k \bigcap\limits_{r>k} \{\omega\mid
-|f_r(\omega)-f(\omega)|<\frac 1 n\}$$ и
+|f_r(\omega)-f(\omega)|<\frac 1 n\}$$ Рё
 $$B=\Omega\setminus A=\{\omega\mid f_j(\omega)\nrightarrow
 f(\omega)\}=\bigcup\limits_n \bigcap\limits_k
 \bigcup\limits_{r\geqslant k} \{\omega\mid
-|f_r(\omega)-f(\omega)|\geqslant\frac 1 n\}.$$ Необходимо выбрать
-такие $f_{r_j}$, чтобы $\nu B=0$. Но если $\nu B=0$, то
+|f_r(\omega)-f(\omega)|\geqslant\frac 1 n\}.$$ РќРµРѕР±С…РѕРґРёРјРѕ РІС‹Р±СЂР°С‚СЊ
+С‚Р°РєРёРµ $f_{r_j}$, С‡С‚РѕР±С‹ $\nu B=0$. РќРѕ РµСЃР»Рё $\nu B=0$, С‚Рѕ
 $$\forall\, n\quad \nu\Big(\bigcap\limits_{k=1}^\infty \bigcup\limits_
 {j\geqslant k}\{\omega\mid |f_{r_j}(\omega)-f(\omega)|\geqslant
-\frac 1 n\}\Big)=0,$$ т.е. $$\nu\Big(\bigcup\limits_ {j\geqslant
+\frac 1 n\}\Big)=0,$$ С‚.Рµ. $$\nu\Big(\bigcup\limits_ {j\geqslant
 k}\{\omega\mid |f_{r_j}(\omega)-f(\omega)|\geqslant \frac 1
-n\}\Big)\to 0\quad \text{при $k\to\infty$}.$$
+n\}\Big)\to 0\quad \text{РїСЂРё $k\to\infty$}.$$
 
-Пусть теперь $$\forall\, n\quad \nu\{\omega\mid
-|f_r(\omega)-f(\omega)|\geqslant\frac 1 n\}\to 0\quad\text{при
-$r\to\infty$}.$$ Выберем $\varepsilon_j$ так, чтобы
-$\sum\limits_{j=1}^\infty \varepsilon_j<\infty$ (например, можно
-взять $\varepsilon_j=2^{-j}$). Для каждого $j$ выберем $r_j$ так,
-чтобы $\nu\{\omega\mid |f_{r_j}(\omega)-f(\omega)|\geqslant\frac 1
-n\}<\varepsilon_j$, тогда
+РџСѓСЃС‚СЊ С‚РµРїРµСЂСЊ $$\forall\, n\quad \nu\{\omega\mid
+|f_r(\omega)-f(\omega)|\geqslant\frac 1 n\}\to 0\quad\text{РїСЂРё
+$r\to\infty$}.$$ Р’С‹Р±РµСЂРµРј $\varepsilon_j$ С‚Р°Рє, С‡С‚РѕР±С‹
+$\sum\limits_{j=1}^\infty \varepsilon_j<\infty$ (РЅР°РїСЂРёРјРµСЂ, РјРѕР¶РЅРѕ
+РІР·СЏС‚СЊ $\varepsilon_j=2^{-j}$). Р”Р»СЏ РєР°Р¶РґРѕРіРѕ $j$ РІС‹Р±РµСЂРµРј $r_j$ С‚Р°Рє,
+С‡С‚РѕР±С‹ $\nu\{\omega\mid |f_{r_j}(\omega)-f(\omega)|\geqslant\frac 1
+n\}<\varepsilon_j$, С‚РѕРіРґР°
 \begin{align*}
 \nu\Big(\bigcup\limits_{j\geqslant k}\{\omega\mid |f_{r_j}(\omega)-
 f(\omega)|\geqslant\frac 1 n\}\Big)&\leqslant\sum\limits_{j\geqslant
 k}\nu\{\omega\mid |f_{r_j}(\omega)-f(\omega)|\geqslant\frac 1
 n\}<\\
-&<\sum\limits_{j\geqslant k}\varepsilon_j\to 0 \quad\text{при
+&<\sum\limits_{j\geqslant k}\varepsilon_j\to 0 \quad\text{РїСЂРё
 $k\to\infty$},
 \end{align*}
-т.к. ряд $\sum\limits_{j=1}^\infty \varepsilon_j$ сходится. Поэтому
-если $\nu\Big(\bigcup\limits_{j\geqslant k}\{\omega\mid
-|f_{r_j}(\omega)- f(\omega)|\geqslant\frac 1 n\}\Big)\to 0$, то
+С‚.Рє. СЂСЏРґ $\sum\limits_{j=1}^\infty \varepsilon_j$ СЃС…РѕРґРёС‚СЃСЏ. РџРѕСЌС‚РѕРјСѓ
+РµСЃР»Рё $\nu\Big(\bigcup\limits_{j\geqslant k}\{\omega\mid
+|f_{r_j}(\omega)- f(\omega)|\geqslant\frac 1 n\}\Big)\to 0$, С‚Рѕ
 $\nu\{\omega\mid |f_k(\omega)-f(\omega)|\geqslant\frac 1 n\}\to 0$
-при $k\to\infty$, откуда следует сходимость по мере.
+РїСЂРё $k\to\infty$, РѕС‚РєСѓРґР° СЃР»РµРґСѓРµС‚ СЃС…РѕРґРёРјРѕСЃС‚СЊ РїРѕ РјРµСЂРµ.
 \end{proof}
 
 \prim
 
-1. Пусть $\Omega=\mathbb{R}^1$, а функции $f_n$ таковы, что
-$$f_n(x)=\begin{cases}0,& \text{если $x\leqslant n$}; \\ 1,&
-\text{если $x> n$}\end{cases}.$$ Тогда $f_n(x)\to 0$, но $\nu\{x\mid
-|f_n(x)-0|>\frac 1 2\}=\nu[n;\infty)=\infty$, поэтому сходимости по
-мере нет.
+1. РџСѓСЃС‚СЊ $\Omega=\mathbb{R}^1$, Р° С„СѓРЅРєС†РёРё $f_n$ С‚Р°РєРѕРІС‹, С‡С‚Рѕ
+$$f_n(x)=\begin{cases}0,& \text{РµСЃР»Рё $x\leqslant n$}; \\ 1,&
+\text{РµСЃР»Рё $x> n$}\end{cases}.$$ РўРѕРіРґР° $f_n(x)\to 0$, РЅРѕ $\nu\{x\mid
+|f_n(x)-0|>\frac 1 2\}=\nu[n;\infty)=\infty$, РїРѕСЌС‚РѕРјСѓ СЃС…РѕРґРёРјРѕСЃС‚Рё РїРѕ
+РјРµСЂРµ РЅРµС‚.
 
-2. Пусть $\Omega=\mathbb{T}$ и $\varepsilon_j>0$, причем
-$\sum\limits_{j=1}^\infty \varepsilon_j=\infty$ и $\varepsilon_j\to
-0$ (например, можно взять $\varepsilon_j=j^{-1}$). Положим
-$$f_n(x)=\begin{cases}1,& \text{если $x\in[\varepsilon_1+\ldots+\varepsilon_
+2. РџСѓСЃС‚СЊ $\Omega=\mathbb{T}$ Рё $\varepsilon_j>0$, РїСЂРёС‡РµРј
+$\sum\limits_{j=1}^\infty \varepsilon_j=\infty$ Рё $\varepsilon_j\to
+0$ (РЅР°РїСЂРёРјРµСЂ, РјРѕР¶РЅРѕ РІР·СЏС‚СЊ $\varepsilon_j=j^{-1}$). РџРѕР»РѕР¶РёРј
+$$f_n(x)=\begin{cases}1,& \text{РµСЃР»Рё $x\in[\varepsilon_1+\ldots+\varepsilon_
 {n-1};\varepsilon_1+\ldots+\varepsilon_n]$},\\
-0,&\text{иначе}.\end{cases}$$ Тогда $f_n(x)$ сходится по мере, но
-нигде не сходится.
+0,&\text{РёРЅР°С‡Рµ}.\end{cases}$$ РўРѕРіРґР° $f_n(x)$ СЃС…РѕРґРёС‚СЃСЏ РїРѕ РјРµСЂРµ, РЅРѕ
+РЅРёРіРґРµ РЅРµ СЃС…РѕРґРёС‚СЃСЏ.
 
 \vspace{5pt}
 
 \begin{theorem}
-Если функция $f$ интегрируема по Риману на множестве $\Omega=[0;1]$,
-то она интегрируема и по Лебегу, причем значения интегралов
-совпадают.
+Р•СЃР»Рё С„СѓРЅРєС†РёСЏ $f$ РёРЅС‚РµРіСЂРёСЂСѓРµРјР° РїРѕ Р РёРјР°РЅСѓ РЅР° РјРЅРѕР¶РµСЃС‚РІРµ $\Omega=[0;1]$,
+С‚Рѕ РѕРЅР° РёРЅС‚РµРіСЂРёСЂСѓРµРјР° Рё РїРѕ Р›РµР±РµРіСѓ, РїСЂРёС‡РµРј Р·РЅР°С‡РµРЅРёСЏ РёРЅС‚РµРіСЂР°Р»РѕРІ
+СЃРѕРІРїР°РґР°СЋС‚.
 \end{theorem}
 
 \begin{proof}
-Введем следующие обозначения:
+Р’РІРµРґРµРј СЃР»РµРґСѓСЋС‰РёРµ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ:
 $$f_n^s=\sum\limits_{j=1}^{2^n}\frac{s_j}{2^n}, \quad
-f_n^i=\sum\limits_{j=1}^{2^n}\frac{i_j}{2^n},$$ где
+f_n^i=\sum\limits_{j=1}^{2^n}\frac{i_j}{2^n},$$ РіРґРµ
 $$s_j=\sup\limits_{t\in\left[\frac{j-1}{2^n};\frac{j}{2^n}\right)}f(t), \quad
 i_j=\inf\limits_{t\in\left[\frac{j-1}{2^n};\frac{j}{2^n}\right)}f(t).$$
-Положим также
+РџРѕР»РѕР¶РёРј С‚Р°РєР¶Рµ
 $$\bar{f}_n(t)=\sum\limits_{j=1}^{2^n}s_j\gamma_{\left[\frac{j-1}{2^n};
 \frac{j}{2^n}\right)}(t), \quad
 \underline{f}_n(t)=\sum\limits_{j=1}^{2^n}i_j\gamma_{\left[\frac{j-1}{2^n};
-\frac{j}{2^n}\right)}(t).$$ Легко видеть, что
+\frac{j}{2^n}\right)}(t).$$ Р›РµРіРєРѕ РІРёРґРµС‚СЊ, С‡С‚Рѕ
 $$\sup\limits_{t\in[0;1]} f(t)\geqslant
 \bar{f}_1\geqslant\bar{f}_2\geqslant\ldots\geqslant
 f\geqslant\ldots\geqslant\underline{f}_2\geqslant\underline{f}_1\geqslant\inf
-\limits_{t\in[0;1]}f(t).$$ Значит,
-$\exists\,\lim\limits_{j\to\infty} \bar{f}_j=\bar{f}$ и
+\limits_{t\in[0;1]}f(t).$$ Р—РЅР°С‡РёС‚,
+$\exists\,\lim\limits_{j\to\infty} \bar{f}_j=\bar{f}$ Рё
 $\exists\,\lim\limits_{j\to\infty} \underline{f}_j=\underline{f}$,
-причем $\sup\limits_{t\in[0;1]}f(t)\geqslant \bar{f}\geqslant
+РїСЂРёС‡РµРј $\sup\limits_{t\in[0;1]}f(t)\geqslant \bar{f}\geqslant
 f\geqslant\underline{f}\p\geqslant \inf\limits_{t\in[0;1]}f(t)$.
-Поэтому по теореме Лебега можно перейти к пределу под интегралами
-$\int\limits_{[0;1]}\!\bar{f}_n(t)\,dt=f_n^s$ и
+РџРѕСЌС‚РѕРјСѓ РїРѕ С‚РµРѕСЂРµРјРµ Р›РµР±РµРіР° РјРѕР¶РЅРѕ РїРµСЂРµР№С‚Рё Рє РїСЂРµРґРµР»Сѓ РїРѕРґ РёРЅС‚РµРіСЂР°Р»Р°РјРё
+$\int\limits_{[0;1]}\!\bar{f}_n(t)\,dt=f_n^s$ Рё
 $\int\limits_{[0;1]}\!\underline{f}_n(t)\,dt=f_n^i$:
 $$(R)\int\limits_{[0;1]}\!f(t)\,dt=\int\limits_{[0;1]}\!\bar{f}_n(t)\,dt\to
 \int\limits_{[0;1]}\!f(t)\,dt\leftarrow\int\limits_{[0;1]}\!\underline{f}_n(t)\,dt
-=(R)\int\limits_{[0;1]}\!f(t)\,dt,$$ откуда
+=(R)\int\limits_{[0;1]}\!f(t)\,dt,$$ РѕС‚РєСѓРґР°
 $$\int\limits_{[0;1]}\!\bar{f}_n(t)\,dt=(R)\int\limits_{[0;1]}\!f(t)\,dt=
-\int\limits_{[0;1]}\!\underline{f}_n(t)\,dt.$$ Поскольку
-$\bar{f}(t)-\underline{f}(t)\geqslant 0$ почти всюду и
-$\int\limits_{[0;1]}\!(\bar{f}(t)-\underline{f}(t))\,dt=0$, то
-$\bar{f}\p=\underline{f}$ почти всюду. Значит,
-$f=\bar{f}=\underline{f}$ почти всюду. Поэтому функция $f$ измерима
-(как предел простых измеримых функций), $f\in\mathcal{\bar{L}}_1$ и
+\int\limits_{[0;1]}\!\underline{f}_n(t)\,dt.$$ РџРѕСЃРєРѕР»СЊРєСѓ
+$\bar{f}(t)-\underline{f}(t)\geqslant 0$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ Рё
+$\int\limits_{[0;1]}\!(\bar{f}(t)-\underline{f}(t))\,dt=0$, С‚Рѕ
+$\bar{f}\p=\underline{f}$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ. Р—РЅР°С‡РёС‚,
+$f=\bar{f}=\underline{f}$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ. РџРѕСЌС‚РѕРјСѓ С„СѓРЅРєС†РёСЏ $f$ РёР·РјРµСЂРёРјР°
+(РєР°Рє РїСЂРµРґРµР» РїСЂРѕСЃС‚С‹С… РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№), $f\in\mathcal{\bar{L}}_1$ Рё
 $$\int\limits_{[0;1]}\!f(t)\,dt=\int\limits_{[0;1]}\!\bar{f}(t)\,dt=
 \int\limits_{[0;1]}\!\underline{f}(t)\,dt=(R)\int\limits_{[0;1]}\!f(t)\,dt,$$
-что и требовалось.
+С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 %-----------------------------------------------------------------------------------%
 
@@ -1626,74 +1626,74 @@ $$\int\limits_{[0;1]}\!f(t)\,dt=\int\limits_{[0;1]}\!\bar{f}(t)\,dt=
 \lecture
 
 \begin{defen}
-Пусть $(E, \mathfrak{a}, \nu)$ --- пространство с полной мерой.
-Тогда функции\footnote{Не обязательно измеримые!} $f_1$ и $f_2$
-\emph{равны почти всюду}, если множество точек, где они не равны,
-есть подмножество измеримого множества меры 0.
+РџСѓСЃС‚СЊ $(E, \mathfrak{a}, \nu)$ --- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РїРѕР»РЅРѕР№ РјРµСЂРѕР№.
+РўРѕРіРґР° С„СѓРЅРєС†РёРё\footnote{РќРµ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РёР·РјРµСЂРёРјС‹Рµ!} $f_1$ Рё $f_2$
+\emph{СЂР°РІРЅС‹ РїРѕС‡С‚Рё РІСЃСЋРґСѓ}, РµСЃР»Рё РјРЅРѕР¶РµСЃС‚РІРѕ С‚РѕС‡РµРє, РіРґРµ РѕРЅРё РЅРµ СЂР°РІРЅС‹,
+РµСЃС‚СЊ РїРѕРґРјРЅРѕР¶РµСЃС‚РІРѕ РёР·РјРµСЂРёРјРѕРіРѕ РјРЅРѕР¶РµСЃС‚РІР° РјРµСЂС‹ 0.
 
-Например, если $f$ --- $\mathfrak{a}$-измеримая функция, то
-$\exists\, \bar{f}$ --- $\bar{\mathfrak{a}}$-измеримая функция,
-совпадающая с $f$ почти всюду.
+РќР°РїСЂРёРјРµСЂ, РµСЃР»Рё $f$ --- $\mathfrak{a}$-РёР·РјРµСЂРёРјР°СЏ С„СѓРЅРєС†РёСЏ, С‚Рѕ
+$\exists\, \bar{f}$ --- $\bar{\mathfrak{a}}$-РёР·РјРµСЂРёРјР°СЏ С„СѓРЅРєС†РёСЏ,
+СЃРѕРІРїР°РґР°СЋС‰Р°СЏ СЃ $f$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ.
 \end{defen}
 
 \begin{theorem}
-Пусть функция $f$ интегрируема на отрезке $[0;1]$ в несобственном
-смысле (с особенностью в точке 0) и абсолютно. Тогда
-$f\in\mathcal{\bar{L}}_1$ и
+РџСѓСЃС‚СЊ С„СѓРЅРєС†РёСЏ $f$ РёРЅС‚РµРіСЂРёСЂСѓРµРјР° РЅР° РѕС‚СЂРµР·РєРµ $[0;1]$ РІ РЅРµСЃРѕР±СЃС‚РІРµРЅРЅРѕРј
+СЃРјС‹СЃР»Рµ (СЃ РѕСЃРѕР±РµРЅРЅРѕСЃС‚СЊСЋ РІ С‚РѕС‡РєРµ 0) Рё Р°Р±СЃРѕР»СЋС‚РЅРѕ. РўРѕРіРґР°
+$f\in\mathcal{\bar{L}}_1$ Рё
 $\exists\,\int\limits_{[0;1]}\!f(t)\,dt=(R)\int\limits_0^1\!f(t)\,dt$.
 \end{theorem}
 
 \begin{proof}
-По определению несобственного интеграла Римана,
+РџРѕ РѕРїСЂРµРґРµР»РµРЅРёСЋ РЅРµСЃРѕР±СЃС‚РІРµРЅРЅРѕРіРѕ РёРЅС‚РµРіСЂР°Р»Р° Р РёРјР°РЅР°,
 $$(R)\int\limits_0^1\!f(t)\,dt=\lim\limits_{\varepsilon\to 0}\;(R)\int
 \limits_\varepsilon^1\!f(t)\,dt
 =\lim\limits_{\varepsilon\to
-0}\int\limits_{[\varepsilon;1]}\!f(t)\,dt.$$ Пусть
+0}\int\limits_{[\varepsilon;1]}\!f(t)\,dt.$$ РџСѓСЃС‚СЊ
 $$f_n(t)=\begin{cases}
-f(t),&\text{при $t\geqslant\frac 1 n$;}\\
-0,&\text{при $t<\frac 1 n$},
-\end{cases}$$ тогда $\lim\limits_{n\to\infty} f_n(t)=f(t)$ при $t\neq
-0$ и $|f_1(t)|\leqslant|f_2(t)|\leqslant\ldots$. Отсюда
+f(t),&\text{РїСЂРё $t\geqslant\frac 1 n$;}\\
+0,&\text{РїСЂРё $t<\frac 1 n$},
+\end{cases}$$ С‚РѕРіРґР° $\lim\limits_{n\to\infty} f_n(t)=f(t)$ РїСЂРё $t\neq
+0$ Рё $|f_1(t)|\leqslant|f_2(t)|\leqslant\ldots$. РћС‚СЃСЋРґР°
 $$\int\limits_{[0;1]}\!|f_n(t)|\,dt=\int\limits_{[1/n;1]}\!|f(t)|\,dt=(R)\int
 \limits_{1/n}^1\!|f(t)|\,dt\leqslant(R)\int\limits_0^1\!|f(t)|\,dt<\infty,$$
-поэтому по теореме Леви
+РїРѕСЌС‚РѕРјСѓ РїРѕ С‚РµРѕСЂРµРјРµ Р›РµРІРё
 $$\int\limits_{[0;1]}\!|f(t)|\,dt=\inf\limits_{[0;1]}\int\!|f(t)|\,dt=\lim
 \limits_{n\to\infty}\;
 (R)\int\limits_{1/n}^1\!|f(t)|\,dt=(R)\int\limits_0^1\!|f(t)|\,dt<\infty.$$
-По теореме Лебега получаем $$\exists\,
+РџРѕ С‚РµРѕСЂРµРјРµ Р›РµР±РµРіР° РїРѕР»СѓС‡Р°РµРј $$\exists\,
 \lim\limits_{n\to\infty}\int\limits_{[0;1]}\!f_n(t)\,dt=\int\limits_{[0;1]}\!
 f(t)\,dt=\lim\limits_{n\to\infty}\; (R)\int\limits_0^1\!f_n(t)\,dt=
-(R)\int\limits_0^1\!f(t)\,dt,$$ что и требовалось.
+(R)\int\limits_0^1\!f(t)\,dt,$$ С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{zam}
-Условие абсолютной сходимости нельзя отбросить: рассмо\-трим,
-например, функцию $g(x)=(-1)^n\frac{2^n}{n}$ при
-$x\in[2^{-n};2^{1-n})$. Тогда $g\in\mathcal{R}[0;1]$ и
+РЈСЃР»РѕРІРёРµ Р°Р±СЃРѕР»СЋС‚РЅРѕР№ СЃС…РѕРґРёРјРѕСЃС‚Рё РЅРµР»СЊР·СЏ РѕС‚Р±СЂРѕСЃРёС‚СЊ: СЂР°СЃСЃРјРѕ\-С‚СЂРёРј,
+РЅР°РїСЂРёРјРµСЂ, С„СѓРЅРєС†РёСЋ $g(x)=(-1)^n\frac{2^n}{n}$ РїСЂРё
+$x\in[2^{-n};2^{1-n})$. РўРѕРіРґР° $g\in\mathcal{R}[0;1]$ Рё
 $\int\limits_0^1\!g(x)\,dx=\sum\limits_{n=1}^\infty
-\frac{(-1)^n}{n}<\infty$, но $g\not\in\mathcal{\bar{L}}_1$.
+\frac{(-1)^n}{n}<\infty$, РЅРѕ $g\not\in\mathcal{\bar{L}}_1$.
 \end{zam}
 
-\tema{Формула замены переменных}
+\tema{Р¤РѕСЂРјСѓР»Р° Р·Р°РјРµРЅС‹ РїРµСЂРµРјРµРЅРЅС‹С…}
 
 \begin{defen}
-Пусть $(\Omega_1,\mathfrak{a}_1, \nu_1)$ --- пространство с мерой,
-$(\Omega_2, \mathfrak{a_2})$ --- измеримое пространство и $f\colon
+РџСѓСЃС‚СЊ $(\Omega_1,\mathfrak{a}_1, \nu_1)$ --- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РјРµСЂРѕР№,
+$(\Omega_2, \mathfrak{a_2})$ --- РёР·РјРµСЂРёРјРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ Рё $f\colon
 (\Omega_1, \mathfrak{a_1},\nu_1)\to(\Omega_2, \mathfrak{a}_2)$ ---
-измеримое отображение, т.е. $\forall\, A\in\mathfrak{a}_2\quad
-f^{-1}A\in\mathfrak{a}_1$. Тогда \emph{образ меры $\nu_1$
-относительно $f$} есть мера $\nu_2$ на измеримом пространстве
-$(\Omega_2, \mathfrak{a_2})$, обозначаемая $f_*\nu_1$ или
-$\nu_1f^{-1}$ и определяемая по формуле
+РёР·РјРµСЂРёРјРѕРµ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ, С‚.Рµ. $\forall\, A\in\mathfrak{a}_2\quad
+f^{-1}A\in\mathfrak{a}_1$. РўРѕРіРґР° \emph{РѕР±СЂР°Р· РјРµСЂС‹ $\nu_1$
+РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ $f$} РµСЃС‚СЊ РјРµСЂР° $\nu_2$ РЅР° РёР·РјРµСЂРёРјРѕРј РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ
+$(\Omega_2, \mathfrak{a_2})$, РѕР±РѕР·РЅР°С‡Р°РµРјР°СЏ $f_*\nu_1$ РёР»Рё
+$\nu_1f^{-1}$ Рё РѕРїСЂРµРґРµР»СЏРµРјР°СЏ РїРѕ С„РѕСЂРјСѓР»Рµ
 $(f_*\nu_1)A=\nu_1(f^{-1}A)$.
 \end{defen}
 
 \begin{predl}
-Образ счетно аддитивной меры счетно аддитивен.
+РћР±СЂР°Р· СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕР№ РјРµСЂС‹ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРµРЅ.
 \end{predl}
 
 \begin{proof}
-Пусть $A_j\in\mathfrak{a}_2$, тогда
+РџСѓСЃС‚СЊ $A_j\in\mathfrak{a}_2$, С‚РѕРіРґР°
 \begin{multline*}
 (\nu_1f^{-1})\Big(\bigsqcup\limits_{j=1}^\infty
 A_j\Big)=\nu_1\Big(f^{-1}\bigsqcup\limits_{j=1}^\infty A_j\Big)=
@@ -1701,25 +1701,25 @@ A_j\Big)=\nu_1\Big(f^{-1}\bigsqcup\limits_{j=1}^\infty A_j\Big)=
 f^{-1}A_j\Big)=\\
 =\sum\limits_{j=1}^\infty \nu_1(f^{-1}A_j)= \sum\limits_{j=1}^\infty
 (\nu_1f^{-1})A_j,
-\end{multline*} что и требовалось.
+\end{multline*} С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{theorem}
-Пусть $G\colon \Omega_2\to\mathbb{R}^1$ --- измеримая функция. Тогда
+РџСѓСЃС‚СЊ $G\colon \Omega_2\to\mathbb{R}^1$ --- РёР·РјРµСЂРёРјР°СЏ С„СѓРЅРєС†РёСЏ. РўРѕРіРґР°
 $$\int\limits_{\Omega_1}\!G(f(\omega_1))\,\nu_1(d\omega_1)=\int\limits_
 {\Omega_2}\!G(\omega_2)(\nu_1f^{-1})(d\omega_2).$$
 \end{theorem}
 
 \begin{proof}
-Легко видеть, что достаточно проверить утверждение теоремы для
-индикаторной функции $G(\omega_2)=\gamma_A(\omega_2)$, где
-$A\in\mathfrak{a}_2$. Тогда по определению образа меры
+Р›РµРіРєРѕ РІРёРґРµС‚СЊ, С‡С‚Рѕ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂРѕРІРµСЂРёС‚СЊ СѓС‚РІРµСЂР¶РґРµРЅРёРµ С‚РµРѕСЂРµРјС‹ РґР»СЏ
+РёРЅРґРёРєР°С‚РѕСЂРЅРѕР№ С„СѓРЅРєС†РёРё $G(\omega_2)=\gamma_A(\omega_2)$, РіРґРµ
+$A\in\mathfrak{a}_2$. РўРѕРіРґР° РїРѕ РѕРїСЂРµРґРµР»РµРЅРёСЋ РѕР±СЂР°Р·Р° РјРµСЂС‹
 \begin{multline*}
 \int\limits_{\Omega_2}\!\gamma_A(\omega_2)\,(\nu_1f^{-1})(d\omega_2)=
 (\nu_1f^{-1})(A)=\nu_1(f^{-1}A)=\\
 =\int\limits_{\Omega_1}\!\gamma_{f^{-1}A}(\omega_1)
 \,\nu_1(d\omega_1)=\int\limits_{\Omega_1}\!\gamma_A(f(\omega_1))\,\nu_1(d\omega_1),
-\end{multline*} что и требовалось.
+\end{multline*} С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 %-----------------------------------------------------------------------------------%
 
@@ -1728,72 +1728,72 @@ $A\in\mathfrak{a}_2$. Тогда по определению образа меры
 
 \vspace{-25pt}
 
-\tema{Абсолютная непрерывность}
+\tema{РђР±СЃРѕР»СЋС‚РЅР°СЏ РЅРµРїСЂРµСЂС‹РІРЅРѕСЃС‚СЊ}
 
 \begin{defen}
-Рассмотрим меры $\nu$ и $\mu$ на $\sigma$-алгебре $\mathfrak{a}$.
-Мера $\nu$ называется \emph{абсолютно непрерывной относительно меры
-$\mu$}, если $\forall\, A\p\in\mathfrak{a}\quad \mu A=0\Rightarrow
-\nu A=0$. Обозначение: $\nu\ll \mu$.
+Р Р°СЃСЃРјРѕС‚СЂРёРј РјРµСЂС‹ $\nu$ Рё $\mu$ РЅР° $\sigma$-Р°Р»РіРµР±СЂРµ $\mathfrak{a}$.
+РњРµСЂР° $\nu$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{Р°Р±СЃРѕР»СЋС‚РЅРѕ РЅРµРїСЂРµСЂС‹РІРЅРѕР№ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РјРµСЂС‹
+$\mu$}, РµСЃР»Рё $\forall\, A\p\in\mathfrak{a}\quad \mu A=0\Rightarrow
+\nu A=0$. РћР±РѕР·РЅР°С‡РµРЅРёРµ: $\nu\ll \mu$.
 
-Если $\nu\ll \mu$ и $\nu \ll \nu$, то меры $\nu$ и $\mu$ называются
-\emph{эквивалентными}. Обозначение: $\nu\sim\mu$.
+Р•СЃР»Рё $\nu\ll \mu$ Рё $\nu \ll \nu$, С‚Рѕ РјРµСЂС‹ $\nu$ Рё $\mu$ РЅР°Р·С‹РІР°СЋС‚СЃСЏ
+\emph{СЌРєРІРёРІР°Р»РµРЅС‚РЅС‹РјРё}. РћР±РѕР·РЅР°С‡РµРЅРёРµ: $\nu\sim\mu$.
 \end{defen}
 
-\begin{predl}[критерий абсолютной непрерывности]
+\begin{predl}[РєСЂРёС‚РµСЂРёР№ Р°Р±СЃРѕР»СЋС‚РЅРѕР№ РЅРµРїСЂРµСЂС‹РІРЅРѕСЃС‚Рё]
 $\nu\ll\mu$ $\p\Leftrightarrow$
 $\forall\,\varepsilon>0\quad\exists\, \delta>0: \forall\,
 A\in\mathfrak{a} \quad \mu A<\delta\p\Rightarrow \nu A<\varepsilon$.
 \end{predl}
 
 \begin{zam}
-В этом критерии существенна неотрицательность меры!
+Р’ СЌС‚РѕРј РєСЂРёС‚РµСЂРёРё СЃСѓС‰РµСЃС‚РІРµРЅРЅР° РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕСЃС‚СЊ РјРµСЂС‹!
 \end{zam}
 
 \begin{proof}
-Достаточность очевидна: если $\mu A=0$, то $\forall\,\delta\quad \mu
-A<\delta$ поэтому $\forall\,\varepsilon\quad \nu A<\varepsilon$, а
-значит, $\nu A=0$.
+Р”РѕСЃС‚Р°С‚РѕС‡РЅРѕСЃС‚СЊ РѕС‡РµРІРёРґРЅР°: РµСЃР»Рё $\mu A=0$, С‚Рѕ $\forall\,\delta\quad \mu
+A<\delta$ РїРѕСЌС‚РѕРјСѓ $\forall\,\varepsilon\quad \nu A<\varepsilon$, Р°
+Р·РЅР°С‡РёС‚, $\nu A=0$.
 
-Докажем необходимость. Для этого предположим противное:
+Р”РѕРєР°Р¶РµРј РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ. Р”Р»СЏ СЌС‚РѕРіРѕ РїСЂРµРґРїРѕР»РѕР¶РёРј РїСЂРѕС‚РёРІРЅРѕРµ:
 $\exists\,\varepsilon_0\p>0: \forall\,\delta>0\quad\exists\,
-A_\delta\in\mathfrak{a}:\mu A<\delta$ и $\nu A\geqslant
-\varepsilon_0$. Возьмем такую последовательность $\{\delta_n\}$,
-чтобы $\delta_n>0$ и $\sum\limits_{n=1}^\infty \delta_n<\infty$.
-Тогда для каждого $\delta_n$ найдется такое
-$A_n=A_{\delta_n}\in\mathfrak{a}$, что $\mu A_n<\delta_n$ и $\nu
-A_n\geqslant\varepsilon_0$. Положим $C_k=\bigcup\limits_{n=k}^\infty
-A_n$, тогда $C_1\supset C_2\supset\ldots$ и в силу счетной
-аддитивности меры $\mu$ имеем: $$\mu
+A_\delta\in\mathfrak{a}:\mu A<\delta$ Рё $\nu A\geqslant
+\varepsilon_0$. Р’РѕР·СЊРјРµРј С‚Р°РєСѓСЋ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ $\{\delta_n\}$,
+С‡С‚РѕР±С‹ $\delta_n>0$ Рё $\sum\limits_{n=1}^\infty \delta_n<\infty$.
+РўРѕРіРґР° РґР»СЏ РєР°Р¶РґРѕРіРѕ $\delta_n$ РЅР°Р№РґРµС‚СЃСЏ С‚Р°РєРѕРµ
+$A_n=A_{\delta_n}\in\mathfrak{a}$, С‡С‚Рѕ $\mu A_n<\delta_n$ Рё $\nu
+A_n\geqslant\varepsilon_0$. РџРѕР»РѕР¶РёРј $C_k=\bigcup\limits_{n=k}^\infty
+A_n$, С‚РѕРіРґР° $C_1\supset C_2\supset\ldots$ Рё РІ СЃРёР»Сѓ СЃС‡РµС‚РЅРѕР№
+Р°РґРґРёС‚РёРІРЅРѕСЃС‚Рё РјРµСЂС‹ $\mu$ РёРјРµРµРј: $$\mu
 C_k\leqslant\sum\limits_{n=k}^\infty \mu
-A_n<\sum\limits_{n=k}^\infty \delta_n\to 0\quad\text{при
-$k\to\infty$},$$ поэтому $\mu C_k\to 0$ при $k\to\infty$, а значит,
-$\mu\bigcap\limits_{k=1}^\infty C_k=0$, откуда
-$\nu\bigcap\limits_{k=1}^\infty C_k=0$. Но $\forall\, k\quad \nu
-C_k\geqslant\varepsilon_0$, поэтому $\nu\bigcap\limits_{k=1}^\infty
-C_k\geqslant\varepsilon_0$ --- противоречие.
+A_n<\sum\limits_{n=k}^\infty \delta_n\to 0\quad\text{РїСЂРё
+$k\to\infty$},$$ РїРѕСЌС‚РѕРјСѓ $\mu C_k\to 0$ РїСЂРё $k\to\infty$, Р° Р·РЅР°С‡РёС‚,
+$\mu\bigcap\limits_{k=1}^\infty C_k=0$, РѕС‚РєСѓРґР°
+$\nu\bigcap\limits_{k=1}^\infty C_k=0$. РќРѕ $\forall\, k\quad \nu
+C_k\geqslant\varepsilon_0$, РїРѕСЌС‚РѕРјСѓ $\nu\bigcap\limits_{k=1}^\infty
+C_k\geqslant\varepsilon_0$ --- РїСЂРѕС‚РёРІРѕСЂРµС‡РёРµ.
 \end{proof}
 
 \begin{defen}
-Пусть $(\Omega, \mathfrak{a},\mu)$ --- пространство с мерой,
-$f\in\mathcal{L}_1$. Функция $\nu$ называется \emph{произведением
-функции $f$ и меры $\mu$}, если $\nu
+РџСѓСЃС‚СЊ $(\Omega, \mathfrak{a},\mu)$ --- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ СЃ РјРµСЂРѕР№,
+$f\in\mathcal{L}_1$. Р¤СѓРЅРєС†РёСЏ $\nu$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РїСЂРѕРёР·РІРµРґРµРЅРёРµРј
+С„СѓРЅРєС†РёРё $f$ Рё РјРµСЂС‹ $\mu$}, РµСЃР»Рё $\nu
 A\p=\int\limits_A\!f(x)\,\mu(dx)$.
 \end{defen}
 
 \begin{predl}
-Функция $\nu$ является счетно аддитивной мерой.
+Р¤СѓРЅРєС†РёСЏ $\nu$ СЏРІР»СЏРµС‚СЃСЏ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕР№ РјРµСЂРѕР№.
 \end{predl}
 
 \begin{proof}
-Из свойств интеграла Лебега следует, что функция $\nu$ является
-мерой. Проверим счетно аддитивность. Пусть
-$A=\bigsqcup\limits_{k=1}^\infty A_k$, тогда
-$\gamma_A(\omega)=\sum\limits_{k=1}^\infty\gamma_{A_k}(\omega)$ и
+РР· СЃРІРѕР№СЃС‚РІ РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ С„СѓРЅРєС†РёСЏ $\nu$ СЏРІР»СЏРµС‚СЃСЏ
+РјРµСЂРѕР№. РџСЂРѕРІРµСЂРёРј СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕСЃС‚СЊ. РџСѓСЃС‚СЊ
+$A=\bigsqcup\limits_{k=1}^\infty A_k$, С‚РѕРіРґР°
+$\gamma_A(\omega)=\sum\limits_{k=1}^\infty\gamma_{A_k}(\omega)$ Рё
 $f(x)\gamma_A(x)=\lim\limits_{n\to\infty}\sum\limits_{k=1}^n\gamma_{A_k}(x)f(x)$.
-Отсюда $$\Big|\sum\limits_{k=1}^n\gamma_{A_k}(x)f(x)\Big|\leqslant
+РћС‚СЃСЋРґР° $$\Big|\sum\limits_{k=1}^n\gamma_{A_k}(x)f(x)\Big|\leqslant
 \sum\limits_{k=1}^n\gamma_{A_k}(x)|f(x)|\leqslant|f(x)|\in\mathcal{L}_1,$$
-и по теореме Лебега
+Рё РїРѕ С‚РµРѕСЂРµРјРµ Р›РµР±РµРіР°
 \begin{multline*}
 \nu
 A=\int\limits_A\!f(x)\,\mu(dx)=\int\limits_\Omega\!\gamma_A(x)f(x)\,\mu(dx)=\\
@@ -1801,13 +1801,13 @@ A=\int\limits_A\!f(x)\,\mu(dx)=\int\limits_\Omega\!\gamma_A(x)f(x)\,\mu(dx)=\\
 f(\omega)\,\mu(d\omega)=\lim\limits_{n\to\infty}\sum\limits_{k=1}^n\nu
 A_k=\sum\limits_{k=1}^\infty \nu A_k,
 \end{multline*}
-что и требовалось.
+С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
-Отсюда следует, что $\nu\ll \mu$: если $\mu A=0$, то $\nu
+РћС‚СЃСЋРґР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ $\nu\ll \mu$: РµСЃР»Рё $\mu A=0$, С‚Рѕ $\nu
 A=\int\limits_A\!f(x)\,\mu(dx)=0$.
 
-\begin{theorem}[свойство абсолютной непрерывности интеграла Лебега]
+\begin{theorem}[СЃРІРѕР№СЃС‚РІРѕ Р°Р±СЃРѕР»СЋС‚РЅРѕР№ РЅРµРїСЂРµСЂС‹РІРЅРѕСЃС‚Рё РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР°]
 $\forall\,\varepsilon>0\quad\exists\,\delta>0:\forall\,A\in\mathfrak{a}\quad
 \mu
 A<\delta\Rightarrow\big|\int\limits_A\!f(x)\,\mu(dx)\big|<\varepsilon$.
@@ -1815,130 +1815,130 @@ A<\delta\Rightarrow\big|\int\limits_A\!f(x)\,\mu(dx)\big|<\varepsilon$.
 
 \begin{proof}
 $\big|\int\limits_A\!f(x)\,\mu(dx)\big|\leqslant\int\limits_A\!|f(x)|\,\mu(dx)$.
-Рассмотрим \emph{вариацию меры $\nu$}:
-$\|\nu\|A=\int\limits_A\!|f(x)|\,\mu(dx)$, тогда по критерию
-абсолютной непрерывности получаем
+Р Р°СЃСЃРјРѕС‚СЂРёРј \emph{РІР°СЂРёР°С†РёСЋ РјРµСЂС‹ $\nu$}:
+$\|\nu\|A=\int\limits_A\!|f(x)|\,\mu(dx)$, С‚РѕРіРґР° РїРѕ РєСЂРёС‚РµСЂРёСЋ
+Р°Р±СЃРѕР»СЋС‚РЅРѕР№ РЅРµРїСЂРµСЂС‹РІРЅРѕСЃС‚Рё РїРѕР»СѓС‡Р°РµРј
 $$\Big|\int\limits_A\!f(x)\,\mu(dx)\Big|\leqslant\int\limits_A\!|f(x)|\,\mu(dx)<\varepsilon,$$
-что и требовалось.
+С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{predl}
-Пусть $f\geqslant 0$, тогда
+РџСѓСЃС‚СЊ $f\geqslant 0$, С‚РѕРіРґР°
 $g\in\mathcal{L}_1(\Omega,\mathfrak{a},\nu)$ $\Leftrightarrow$
-$g-f\p\in\mathcal{L}_1(\Omega,\mathfrak{a},\mu)$ и тогда
+$g-f\p\in\mathcal{L}_1(\Omega,\mathfrak{a},\mu)$ Рё С‚РѕРіРґР°
 $\int\limits_\Omega\!g(\omega)\,\nu(d\omega)=\int\limits_\Omega\!g(\omega)f(\omega)\,\mu(d\omega)$.
 \end{predl}
 
 \begin{proof}
-Достаточно доказать это утверждение для случая, когда $g=\gamma_C$
---- индикатор некоторого множества $C$. Но тогда по определению
-произведения функции и меры
+Р”РѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕРєР°Р·Р°С‚СЊ СЌС‚Рѕ СѓС‚РІРµСЂР¶РґРµРЅРёРµ РґР»СЏ СЃР»СѓС‡Р°СЏ, РєРѕРіРґР° $g=\gamma_C$
+--- РёРЅРґРёРєР°С‚РѕСЂ РЅРµРєРѕС‚РѕСЂРѕРіРѕ РјРЅРѕР¶РµСЃС‚РІР° $C$. РќРѕ С‚РѕРіРґР° РїРѕ РѕРїСЂРµРґРµР»РµРЅРёСЋ
+РїСЂРѕРёР·РІРµРґРµРЅРёСЏ С„СѓРЅРєС†РёРё Рё РјРµСЂС‹
 $$\int\limits_\Omega\!g(\omega)\,\nu(d\omega)=\nu C=\int\limits_C\!f(\omega)\,\mu(d\omega)=
-\int\limits_\Omega\!g(\omega)f(\omega)\mu(d\omega),$$ что и
-требовалось.
+\int\limits_\Omega\!g(\omega)f(\omega)\mu(d\omega),$$ С‡С‚Рѕ Рё
+С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
-Рассмотрим теперь важный пример. Пусть $F\colon [a;b]\to [c;d]$ ---
-произвольная монотонно возрастающая непрерывная функция, такая, что
-$F(a)=c$ и $F(b)=d$. Тогда на $\sigma$-алгебре $\mathfrak{B}$
-борелевских множеств отрезка $[a;b]$ есть мера $\nu_F$, такая, что
-$\nu_F(\alpha;\beta)=F(\beta)-F(\alpha)$. Можно рассмотреть образ
-меры $\nu_F$ на отрезке $[c;d]$, а именно меру
-$F_*\nu_F=\nu_FF^{-1}$. Это
---- стандартная мера Лебега на $[c;d]$: $$(\nu_FF^{-1})(\gamma;\delta)=\nu_F(F^{-1}
+Р Р°СЃСЃРјРѕС‚СЂРёРј С‚РµРїРµСЂСЊ РІР°Р¶РЅС‹Р№ РїСЂРёРјРµСЂ. РџСѓСЃС‚СЊ $F\colon [a;b]\to [c;d]$ ---
+РїСЂРѕРёР·РІРѕР»СЊРЅР°СЏ РјРѕРЅРѕС‚РѕРЅРЅРѕ РІРѕР·СЂР°СЃС‚Р°СЋС‰Р°СЏ РЅРµРїСЂРµСЂС‹РІРЅР°СЏ С„СѓРЅРєС†РёСЏ, С‚Р°РєР°СЏ, С‡С‚Рѕ
+$F(a)=c$ Рё $F(b)=d$. РўРѕРіРґР° РЅР° $\sigma$-Р°Р»РіРµР±СЂРµ $\mathfrak{B}$
+Р±РѕСЂРµР»РµРІСЃРєРёС… РјРЅРѕР¶РµСЃС‚РІ РѕС‚СЂРµР·РєР° $[a;b]$ РµСЃС‚СЊ РјРµСЂР° $\nu_F$, С‚Р°РєР°СЏ, С‡С‚Рѕ
+$\nu_F(\alpha;\beta)=F(\beta)-F(\alpha)$. РњРѕР¶РЅРѕ СЂР°СЃСЃРјРѕС‚СЂРµС‚СЊ РѕР±СЂР°Р·
+РјРµСЂС‹ $\nu_F$ РЅР° РѕС‚СЂРµР·РєРµ $[c;d]$, Р° РёРјРµРЅРЅРѕ РјРµСЂСѓ
+$F_*\nu_F=\nu_FF^{-1}$. Р­С‚Рѕ
+--- СЃС‚Р°РЅРґР°СЂС‚РЅР°СЏ РјРµСЂР° Р›РµР±РµРіР° РЅР° $[c;d]$: $$(\nu_FF^{-1})(\gamma;\delta)=\nu_F(F^{-1}
 (\gamma;\delta))=F(F^{-1}(\delta))-F(F^{-1}(\gamma))=\delta-\gamma.$$
 
-Пусть теперь $g\in\mathcal{L}_1([c;d],\mathfrak{a},\nu_L)$, тогда
+РџСѓСЃС‚СЊ С‚РµРїРµСЂСЊ $g\in\mathcal{L}_1([c;d],\mathfrak{a},\nu_L)$, С‚РѕРіРґР°
 $$\int\limits_{[c;d]}\!g(x)\,\nu_L(dx)=\int\limits_{[c;d]}\!g(x)(\nu_FF^{-1})(dx)=\int\limits
-_{[a;b]}\!g(F(x))\,\nu_F(dx).$$ Но
+_{[a;b]}\!g(F(x))\,\nu_F(dx).$$ РќРѕ
 $\nu_F(\alpha;\beta)=\int\limits_{[\alpha;\beta]}\!F'(x)\,dx$,
-поэтому $\nu_F(A)=\int\limits_A\!F'(x)\,dx$, и поскольку
-$\nu_F\p=F'\nu_L$, то
+РїРѕСЌС‚РѕРјСѓ $\nu_F(A)=\int\limits_A\!F'(x)\,dx$, Рё РїРѕСЃРєРѕР»СЊРєСѓ
+$\nu_F\p=F'\nu_L$, С‚Рѕ
 $$\int\limits_{[c;d]}\!g(x)\,\nu_L(dx)=\int\limits_{[a;b]}\!g(F(x))F'(x)\,dx$$
---- стандартная формула замены переменной.
+--- СЃС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„РѕСЂРјСѓР»Р° Р·Р°РјРµРЅС‹ РїРµСЂРµРјРµРЅРЅРѕР№.
 
- \tema{Пространство $\mathcal{L}_p$}
+ \tema{РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ $\mathcal{L}_p$}
 
 \begin{defen}
-\emph{Пространство $\mathcal{\bar{L}}_p$} --- это пространство всех
-измеримых функций $f$, таких, что $|f|^p\in\mathcal{L}_1$. При этом
+\emph{РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ $\mathcal{\bar{L}}_p$} --- СЌС‚Рѕ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ РІСЃРµС…
+РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№ $f$, С‚Р°РєРёС…, С‡С‚Рѕ $|f|^p\in\mathcal{L}_1$. РџСЂРё СЌС‚РѕРј
 $1\leqslant p<\infty$.
 \end{defen}
 
 \begin{predl}
-Пространство $\mathcal{\bar{L}}_p$ является линейным.
+РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ $\mathcal{\bar{L}}_p$ СЏРІР»СЏРµС‚СЃСЏ Р»РёРЅРµР№РЅС‹Рј.
 \end{predl}
 
 \begin{proof}
-Достаточно доказать, что если $f,g\in\mathcal{\bar{L}}_p$, то
-$|f+g|^p\p\in\mathcal{L}_1$. Для этого докажем следующее
-неравенство:
-$$|f+g|^p\leqslant C_p(|f|^p+|g|^p),$$ где $C_p$ --- некоторая
-константа.
+Р”РѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕРєР°Р·Р°С‚СЊ, С‡С‚Рѕ РµСЃР»Рё $f,g\in\mathcal{\bar{L}}_p$, С‚Рѕ
+$|f+g|^p\p\in\mathcal{L}_1$. Р”Р»СЏ СЌС‚РѕРіРѕ РґРѕРєР°Р¶РµРј СЃР»РµРґСѓСЋС‰РµРµ
+РЅРµСЂР°РІРµРЅСЃС‚РІРѕ:
+$$|f+g|^p\leqslant C_p(|f|^p+|g|^p),$$ РіРґРµ $C_p$ --- РЅРµРєРѕС‚РѕСЂР°СЏ
+РєРѕРЅСЃС‚Р°РЅС‚Р°.
 
-Рассмотрим функцию $\psi(t)=\frac{(1+t)^p}{1+t^p}$. Эта функция
-непрерывна на луче $[0;\infty)$, $\psi(0)=1$,
-$\lim\limits_{t\to\infty} \psi(t)=1$. Отсюда следует, что функция
-$\psi(t)$ ограничена: $\exists\, C_p: |\psi(t)|\leqslant C_p$.
-Подставим $t=\frac a b$: $(a+b)^p\leqslant C_p(a^p+b^p)$, откуда
-$|f+g|^p\leqslant(|f|+|g|)^p\leqslant C_p(|f|^p+|g|^p)$, что и
-требовалось.
+Р Р°СЃСЃРјРѕС‚СЂРёРј С„СѓРЅРєС†РёСЋ $\psi(t)=\frac{(1+t)^p}{1+t^p}$. Р­С‚Р° С„СѓРЅРєС†РёСЏ
+РЅРµРїСЂРµСЂС‹РІРЅР° РЅР° Р»СѓС‡Рµ $[0;\infty)$, $\psi(0)=1$,
+$\lim\limits_{t\to\infty} \psi(t)=1$. РћС‚СЃСЋРґР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ С„СѓРЅРєС†РёСЏ
+$\psi(t)$ РѕРіСЂР°РЅРёС‡РµРЅР°: $\exists\, C_p: |\psi(t)|\leqslant C_p$.
+РџРѕРґСЃС‚Р°РІРёРј $t=\frac a b$: $(a+b)^p\leqslant C_p(a^p+b^p)$, РѕС‚РєСѓРґР°
+$|f+g|^p\leqslant(|f|+|g|)^p\leqslant C_p(|f|^p+|g|^p)$, С‡С‚Рѕ Рё
+С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{defen}
-\emph{Пространство
-$\mathcal{L}_p=\mathcal{\bar{L}}_p/\mathcal{\bar{L}}_p^0$}, где
+\emph{РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ
+$\mathcal{L}_p=\mathcal{\bar{L}}_p/\mathcal{\bar{L}}_p^0$}, РіРґРµ
 $\mathcal{\bar{L}}_p^0=\{f\in\mathcal{\bar{L}}_p\mid
 \int\limits_\Omega\!|f(\omega)|^p\,\nu(d\omega)=0\}$.
 
-Величина
+Р’РµР»РёС‡РёРЅР°
 $\|f\|_p=\big(\int\limits_\Omega\!|f(\omega)|^p\,\nu(d\omega)\big)^{1/p}$
-является \emph{нормой} в $\mathcal{L}_p$.
+СЏРІР»СЏРµС‚СЃСЏ \emph{РЅРѕСЂРјРѕР№} РІ $\mathcal{L}_p$.
 \end{defen}
 
-\begin{theorem}[неравенство Гельдера]
+\begin{theorem}[РЅРµСЂР°РІРµРЅСЃС‚РІРѕ Р“РµР»СЊРґРµСЂР°]
 $\int\limits_\Omega\!|f(\omega)||g(\omega)|\,\nu(d\omega)\leqslant\|f\|_p\|g\|_q$,
-где $f\in\mathcal{L}_p$, $g\in\mathcal{L}_q$ и $\frac 1 p+\frac 1
+РіРґРµ $f\in\mathcal{L}_p$, $g\in\mathcal{L}_q$ Рё $\frac 1 p+\frac 1
 q=1$.
 \end{theorem}
 
 \begin{proof}
-Воспользуемся неравенством Гельдера в виде
-$ab\p\leqslant\frac{a^p}{p}\p+\frac{b^q}{q}$ при $\frac 1 p+\frac 1
-q=1$, доказанному в курсе математического анализа. Подставим в него
-$a=\frac{|f|}{\|f\|_p}$ и $b=\frac{|g|}{\|g\|_q}$. Имеем:
+Р’РѕСЃРїРѕР»СЊР·СѓРµРјСЃСЏ РЅРµСЂР°РІРµРЅСЃС‚РІРѕРј Р“РµР»СЊРґРµСЂР° РІ РІРёРґРµ
+$ab\p\leqslant\frac{a^p}{p}\p+\frac{b^q}{q}$ РїСЂРё $\frac 1 p+\frac 1
+q=1$, РґРѕРєР°Р·Р°РЅРЅРѕРјСѓ РІ РєСѓСЂСЃРµ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕРіРѕ Р°РЅР°Р»РёР·Р°. РџРѕРґСЃС‚Р°РІРёРј РІ РЅРµРіРѕ
+$a=\frac{|f|}{\|f\|_p}$ Рё $b=\frac{|g|}{\|g\|_q}$. РРјРµРµРј:
 $\frac{|f|}{\|f\|_p}\cdot
 \frac{|g|}{\|g\|_q}\leqslant\frac{|f|^p}{p\|f\|_p^p}+\frac{|g|^q}{q\|g\|_q^q}$,
-откуда $$\int\limits_\Omega\!\frac{|f|\cdot|g|}{\|f\|_p\cdot
+РѕС‚РєСѓРґР° $$\int\limits_\Omega\!\frac{|f|\cdot|g|}{\|f\|_p\cdot
 \|g\|_q}\,\nu(dx)\leqslant\frac 1
 p\int\limits_\Omega\!\frac{|f|^p}{\|f\|_p^p}\,\nu(dx)+\frac 1
 q\int\limits_\Omega\!\frac{|g|^q}{\|g\|_q^q}\,\nu(dx)=\frac 1
-p+\frac 1 q=1,$$ что и требовалось.
+p+\frac 1 q=1,$$ С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
-\begin{theorem}[неравенство Минковского]
-$\|f+g\|_p\leqslant\|f\|_p+\|g\|_p$, где $f,g\in\mathcal{L}_p$.
+\begin{theorem}[РЅРµСЂР°РІРµРЅСЃС‚РІРѕ РњРёРЅРєРѕРІСЃРєРѕРіРѕ]
+$\|f+g\|_p\leqslant\|f\|_p+\|g\|_p$, РіРґРµ $f,g\in\mathcal{L}_p$.
 \end{theorem}
 
 \begin{proof}
-Пусть $q=\frac{p}{p-1}$. Воспользуемся неравенством Гельдера, тогда
+РџСѓСЃС‚СЊ $q=\frac{p}{p-1}$. Р’РѕСЃРїРѕР»СЊР·СѓРµРјСЃСЏ РЅРµСЂР°РІРµРЅСЃС‚РІРѕРј Р“РµР»СЊРґРµСЂР°, С‚РѕРіРґР°
 \begin{multline*}
 \int\limits_\Omega\!|f+g|^p\,\nu(dx)\leqslant\int\limits_\Omega\!(|f|+|g|)^p\,\nu(dx)
 =\int\limits_\Omega\!(|f|+|g|)^{p-1}|f|\,\nu(dx)+\\+\int\limits_\Omega\!(|f|+|g|)^{p-1}|g|
 \,\nu(dx)\leqslant\|f\|_p\|(|f|+|g|)^{p/q}\|_q+\|g\|_p\|(|f|+|g|)^{p/q}\|_q.
 \end{multline*}
-Поскольку
+РџРѕСЃРєРѕР»СЊРєСѓ
 $$\|(|f|+|g|)^{p/q}\|_q=\Big(\int\limits_\Omega\!(|f|+|g|)^{p}\,\nu(dx)\Big)^{1/q}=\|(|f|+|g|)\|_p^{p/q},$$
-то, поделив обе части предыдущего неравенства на
-$\|(|f|+|g|)\|_p^{p/q}$, получаем
-$$\|f+g\|_p^{p-1/q}=\|f+g\|_p\leqslant\|f\|_p+\|g\|_p,$$ что и
-требовалось.
+С‚Рѕ, РїРѕРґРµР»РёРІ РѕР±Рµ С‡Р°СЃС‚Рё РїСЂРµРґС‹РґСѓС‰РµРіРѕ РЅРµСЂР°РІРµРЅСЃС‚РІР° РЅР°
+$\|(|f|+|g|)\|_p^{p/q}$, РїРѕР»СѓС‡Р°РµРј
+$$\|f+g\|_p^{p-1/q}=\|f+g\|_p\leqslant\|f\|_p+\|g\|_p,$$ С‡С‚Рѕ Рё
+С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{sled}
-Величина
+Р’РµР»РёС‡РёРЅР°
 $\|f\|_p=\big(\int\limits_\Omega\!|f(\omega)|^p\,\nu(d\omega)\big)^{1/p}$
-является нормой в $\mathcal{L}_p$.\hfill{$\square$}
+СЏРІР»СЏРµС‚СЃСЏ РЅРѕСЂРјРѕР№ РІ $\mathcal{L}_p$.\hfill{$\square$}
 \end{sled}
 %-----------------------------------------------------------------------------------%
 
@@ -1946,138 +1946,138 @@ $\|f\|_p=\big(\int\limits_\Omega\!|f(\omega)|^p\,\nu(d\omega)\big)^{1/p}$
 \lecture
 
 \begin{theorem}
-Пространство $\mathcal{L}_p$ полно.
+РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ $\mathcal{L}_p$ РїРѕР»РЅРѕ.
 \end{theorem}
 
 \begin{proof}
-Пусть $\varphi_n\in\mathcal{L}_p$ --- фундаментальная
-последовательность, т.е. $\forall\,\varepsilon>0\quad\exists\,
+РџСѓСЃС‚СЊ $\varphi_n\in\mathcal{L}_p$ --- С„СѓРЅРґР°РјРµРЅС‚Р°Р»СЊРЅР°СЏ
+РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ, С‚.Рµ. $\forall\,\varepsilon>0\quad\exists\,
 n_0:\forall\,k,m> n_0\quad \|\varphi_k-\varphi_m\|_p<\varepsilon$.
-Необходимо доказать, что $\exists\,\varphi\in\mathcal{L}_p:
-\|\varphi_n-\varphi\|_p\to 0$ при $n\to\infty$.
+РќРµРѕР±С…РѕРґРёРјРѕ РґРѕРєР°Р·Р°С‚СЊ, С‡С‚Рѕ $\exists\,\varphi\in\mathcal{L}_p:
+\|\varphi_n-\varphi\|_p\to 0$ РїСЂРё $n\to\infty$.
 
-Мы будем считать, что $\nu\Omega<\infty$. Тогда если
-$\psi\in\mathcal{L}_p$, то $\psi\in\mathcal{L}_1$:
+РњС‹ Р±СѓРґРµРј СЃС‡РёС‚Р°С‚СЊ, С‡С‚Рѕ $\nu\Omega<\infty$. РўРѕРіРґР° РµСЃР»Рё
+$\psi\in\mathcal{L}_p$, С‚Рѕ $\psi\in\mathcal{L}_1$:
 $$\int\limits_\Omega\!|\psi(\omega)|\,\nu(d\omega)\leqslant \int\limits_\Omega
 \!|\psi(\omega)|\cdot \mathbf{1}\,\nu(d\omega)\leqslant
-C\|\psi\|_p<\infty$$ согласно неравенству Гельдера\footnote{Здесь и
-далее считается, что $\frac 1 p+\frac 1 q=1$.} (здесь $\mathbf{1}$
---- это единичная функция, а $C\p=\|\mathbf{1}\|_q$).
+C\|\psi\|_p<\infty$$ СЃРѕРіР»Р°СЃРЅРѕ РЅРµСЂР°РІРµРЅСЃС‚РІСѓ Р“РµР»СЊРґРµСЂР°\footnote{Р—РґРµСЃСЊ Рё
+РґР°Р»РµРµ СЃС‡РёС‚Р°РµС‚СЃСЏ, С‡С‚Рѕ $\frac 1 p+\frac 1 q=1$.} (Р·РґРµСЃСЊ $\mathbf{1}$
+--- СЌС‚Рѕ РµРґРёРЅРёС‡РЅР°СЏ С„СѓРЅРєС†РёСЏ, Р° $C\p=\|\mathbf{1}\|_q$).
 
-Выберем последовательность $\{\varepsilon_n\}$, такую, что
-$\varepsilon_n>0$ и $\sum\limits_{n=1}^\infty \varepsilon_n<\infty$.
-Тогда $\forall\,\varepsilon_j\quad\exists\,n_j=n(\varepsilon_j):
+Р’С‹Р±РµСЂРµРј РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ $\{\varepsilon_n\}$, С‚Р°РєСѓСЋ, С‡С‚Рѕ
+$\varepsilon_n>0$ Рё $\sum\limits_{n=1}^\infty \varepsilon_n<\infty$.
+РўРѕРіРґР° $\forall\,\varepsilon_j\quad\exists\,n_j=n(\varepsilon_j):
 \forall\,k,m\geqslant n_j\quad
 \|\varphi_k-\varphi_m\|_p<\varepsilon_j$.
 
-Рассмотрим ряд
+Р Р°СЃСЃРјРѕС‚СЂРёРј СЂСЏРґ
 $\varphi_{n_1}+(\varphi_{n_2}-\varphi_{n_1})+(\varphi_{n_3}-\varphi_{n_2})+
-(\varphi_{n_4}-\varphi_{n_3})+\ldots$. Поскольку
-$\|\varphi_{n_{j+1}}-\varphi_{n_j}\|_p<\varepsilon_j$, то
+(\varphi_{n_4}-\varphi_{n_3})+\ldots$. РџРѕСЃРєРѕР»СЊРєСѓ
+$\|\varphi_{n_{j+1}}-\varphi_{n_j}\|_p<\varepsilon_j$, С‚Рѕ
 $$\int\limits_\Omega\!|\varphi_{n_1}|\,d\nu+\int\limits_\Omega\!|\varphi_{n_2}-
 \varphi_{n_1}|\,d\nu+\ldots\leqslant C\sum\limits_{n=1}^\infty
-\varepsilon_n+\int\limits_\Omega\!|\varphi_{n_1}|\,d\nu<\infty,$$ и
-по теореме Леви
+\varepsilon_n+\int\limits_\Omega\!|\varphi_{n_1}|\,d\nu<\infty,$$ Рё
+РїРѕ С‚РµРѕСЂРµРјРµ Р›РµРІРё
 $$\int\limits_\Omega\!\Big(|\varphi_{n_1}+\sum\limits_{j=1}^\infty
-|\varphi_{n_{j+1}}-\varphi_{n_j}||\Big)\,d\nu<\infty,$$ откуда
-получаем, что ряд
-$\varphi_{n_1}+(\varphi_{n_2}-\varphi_{n_1})+\ldots$ сходится
-абсолютно почти всюду. Значит,
+|\varphi_{n_{j+1}}-\varphi_{n_j}||\Big)\,d\nu<\infty,$$ РѕС‚РєСѓРґР°
+РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ СЂСЏРґ
+$\varphi_{n_1}+(\varphi_{n_2}-\varphi_{n_1})+\ldots$ СЃС…РѕРґРёС‚СЃСЏ
+Р°Р±СЃРѕР»СЋС‚РЅРѕ РїРѕС‡С‚Рё РІСЃСЋРґСѓ. Р—РЅР°С‡РёС‚,
 $\varphi_{n_1}+\sum\limits_{j=1}^k(\varphi_{n_{j+1}}-\varphi_{n_j})=\varphi_{n_{k+1}}$
-и $\varphi_{n_k}(\omega)\to\varphi(\omega)$ почти всюду при
-$k\to\infty$. Докажем, что $\varphi\in\mathcal{L}_p$ и
-$\|\varphi-\varphi_{n_j}\|_p\to 0$ при $j\to\infty$.
+Рё $\varphi_{n_k}(\omega)\to\varphi(\omega)$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ РїСЂРё
+$k\to\infty$. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ $\varphi\in\mathcal{L}_p$ Рё
+$\|\varphi-\varphi_{n_j}\|_p\to 0$ РїСЂРё $j\to\infty$.
 
-Поскольку
+РџРѕСЃРєРѕР»СЊРєСѓ
 $$\|\varphi_{n_{j+k}}-\varphi_{n_j}\|_p^p=\int\limits_\Omega\! |\varphi_{n_{j+k}} -
-\varphi_{n_j}|^p\,d\nu<\varepsilon_j^p,$$ то по теореме Фату
+\varphi_{n_j}|^p\,d\nu<\varepsilon_j^p,$$ С‚Рѕ РїРѕ С‚РµРѕСЂРµРјРµ Р¤Р°С‚Сѓ
 $\|\varphi_{n_j}-\varphi\|_p^p=\int\limits_\Omega\!
-|\varphi_{n_j}-\varphi|^p\,d\nu<\varepsilon_j^p$, откуда
-$\|\varphi-\varphi_{n_j}\|_p\p<\varepsilon_j$. Значит,
-$\varphi-\varphi_{n_j}\in\mathcal{L}_p$ и в силу линейности
-$\varphi\in\mathcal{L}_p$. Кроме того, $\varepsilon_j\to 0$ при
-$j\to\infty$, откуда следует, что $\|\varphi-\varphi_{n_j}\|_p\to 0$
-при $j\to\infty$.
+|\varphi_{n_j}-\varphi|^p\,d\nu<\varepsilon_j^p$, РѕС‚РєСѓРґР°
+$\|\varphi-\varphi_{n_j}\|_p\p<\varepsilon_j$. Р—РЅР°С‡РёС‚,
+$\varphi-\varphi_{n_j}\in\mathcal{L}_p$ Рё РІ СЃРёР»Сѓ Р»РёРЅРµР№РЅРѕСЃС‚Рё
+$\varphi\in\mathcal{L}_p$. РљСЂРѕРјРµ С‚РѕРіРѕ, $\varepsilon_j\to 0$ РїСЂРё
+$j\to\infty$, РѕС‚РєСѓРґР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ $\|\varphi-\varphi_{n_j}\|_p\to 0$
+РїСЂРё $j\to\infty$.
 
-Из неравенства треугольника немедленно следует, что
-$\varphi_n\to\varphi$ в пространстве $\mathcal{L}_p$, что и
-требовалось.
+РР· РЅРµСЂР°РІРµРЅСЃС‚РІР° С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РЅРµРјРµРґР»РµРЅРЅРѕ СЃР»РµРґСѓРµС‚, С‡С‚Рѕ
+$\varphi_n\to\varphi$ РІ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ $\mathcal{L}_p$, С‡С‚Рѕ Рё
+С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{zam}
-Приведенное доказательство справедливо при $p>1$, однако легко
-видеть, что при $p=1$ теорема также верна.
+РџСЂРёРІРµРґРµРЅРЅРѕРµ РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ СЃРїСЂР°РІРµРґР»РёРІРѕ РїСЂРё $p>1$, РѕРґРЅР°РєРѕ Р»РµРіРєРѕ
+РІРёРґРµС‚СЊ, С‡С‚Рѕ РїСЂРё $p=1$ С‚РµРѕСЂРµРјР° С‚Р°РєР¶Рµ РІРµСЂРЅР°.
 \end{zam}
 
-Пусть теперь $\varphi\in\mathcal{L}_p$ и $\psi\in\mathcal{L}_q$.
-Тогда в силу неравенства Гельдера
+РџСѓСЃС‚СЊ С‚РµРїРµСЂСЊ $\varphi\in\mathcal{L}_p$ Рё $\psi\in\mathcal{L}_q$.
+РўРѕРіРґР° РІ СЃРёР»Сѓ РЅРµСЂР°РІРµРЅСЃС‚РІР° Р“РµР»СЊРґРµСЂР°
 $$\Big|\int\limits_\Omega\! \varphi\psi\,d\nu\Big|\leqslant \int\limits_
 \Omega \!|\varphi\psi|\,d\nu\leqslant
-\|\varphi\|_p\cdot\|\psi\|_q.$$ Отсюда следует, что линейный
-функционал $F_\psi\colon \varphi\mapsto
-\int\limits_\Omega\!\varphi\psi\,d\nu$ на пространстве
-$\mathcal{L}_p$ непрерывен в 0: в самом деле, если
-$\|\varphi_n\|_p\to 0$, то
+\|\varphi\|_p\cdot\|\psi\|_q.$$ РћС‚СЃСЋРґР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ Р»РёРЅРµР№РЅС‹Р№
+С„СѓРЅРєС†РёРѕРЅР°Р» $F_\psi\colon \varphi\mapsto
+\int\limits_\Omega\!\varphi\psi\,d\nu$ РЅР° РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ
+$\mathcal{L}_p$ РЅРµРїСЂРµСЂС‹РІРµРЅ РІ 0: РІ СЃР°РјРѕРј РґРµР»Рµ, РµСЃР»Рё
+$\|\varphi_n\|_p\to 0$, С‚Рѕ
 $|F_\psi(\varphi_n)|\p\leqslant\|\varphi_n\|_p\cdot\|\psi\|_q\to 0$.
-В силу линейности этот функционал непрерывен на всем пространстве
+Р’ СЃРёР»Сѓ Р»РёРЅРµР№РЅРѕСЃС‚Рё СЌС‚РѕС‚ С„СѓРЅРєС†РёРѕРЅР°Р» РЅРµРїСЂРµСЂС‹РІРµРЅ РЅР° РІСЃРµРј РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ
 $\mathcal{L}_p$.
 
-\begin{theorem}[Рис]
-Пусть $F$ --- непрерывный линейный функционал на пространстве
-$\mathcal{L}_p$. Тогда $\exists\, \psi_F\in\mathcal{L}_q:
+\begin{theorem}[Р РёСЃ]
+РџСѓСЃС‚СЊ $F$ --- РЅРµРїСЂРµСЂС‹РІРЅС‹Р№ Р»РёРЅРµР№РЅС‹Р№ С„СѓРЅРєС†РёРѕРЅР°Р» РЅР° РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ
+$\mathcal{L}_p$. РўРѕРіРґР° $\exists\, \psi_F\in\mathcal{L}_q:
 \forall\,\varphi\in\mathcal{L}_p\quad
-F(\varphi)=\int\limits_\Omega\!\varphi\psi_F\,d\nu$.\footnote{Доказательство
-этой теоремы будет дано в курсе функционального анализа независимо
-от теоремы Радона-Никодима.}
+F(\varphi)=\int\limits_\Omega\!\varphi\psi_F\,d\nu$.\footnote{Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ
+СЌС‚РѕР№ С‚РµРѕСЂРµРјС‹ Р±СѓРґРµС‚ РґР°РЅРѕ РІ РєСѓСЂСЃРµ С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕРіРѕ Р°РЅР°Р»РёР·Р° РЅРµР·Р°РІРёСЃРёРјРѕ
+РѕС‚ С‚РµРѕСЂРµРјС‹ Р Р°РґРѕРЅР°-РќРёРєРѕРґРёРјР°.}
 \end{theorem}
 
-\begin{theorem}[Радон-Никодим]
-Пусть $(\Omega,\mathfrak{a})$ --- измеримое пространство, $\nu$ и
-$\mu$ --- меры на $\mathfrak{a}$, причем $\mu\ll \nu$. Тогда
+\begin{theorem}[Р Р°РґРѕРЅ-РќРёРєРѕРґРёРј]
+РџСѓСЃС‚СЊ $(\Omega,\mathfrak{a})$ --- РёР·РјРµСЂРёРјРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ, $\nu$ Рё
+$\mu$ --- РјРµСЂС‹ РЅР° $\mathfrak{a}$, РїСЂРёС‡РµРј $\mu\ll \nu$. РўРѕРіРґР°
 $\exists\,\psi\in\mathcal{L}_1(\Omega,\mathfrak{a},\nu):
 \mu=\psi\cdot\nu$.
 \end{theorem}
 
 \begin{proof}
-Рассмотрим меру $\eta=\mu+\nu$ (т.е.
-$\forall\,A\in\mathfrak{a}\quad\eta A=\mu A\p+\nu A$) и линейный
-функционал $F$ на пространстве
-$\mathcal{L}_2(\Omega,\mathfrak{a},\eta)$, такой, что
-$F(\varphi)=\int\limits_\Omega\!\varphi(\omega)\,\mu(d\omega)$. По
-неравенству Гельдера при $p=q=2$
+Р Р°СЃСЃРјРѕС‚СЂРёРј РјРµСЂСѓ $\eta=\mu+\nu$ (С‚.Рµ.
+$\forall\,A\in\mathfrak{a}\quad\eta A=\mu A\p+\nu A$) Рё Р»РёРЅРµР№РЅС‹Р№
+С„СѓРЅРєС†РёРѕРЅР°Р» $F$ РЅР° РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ
+$\mathcal{L}_2(\Omega,\mathfrak{a},\eta)$, С‚Р°РєРѕР№, С‡С‚Рѕ
+$F(\varphi)=\int\limits_\Omega\!\varphi(\omega)\,\mu(d\omega)$. РџРѕ
+РЅРµСЂР°РІРµРЅСЃС‚РІСѓ Р“РµР»СЊРґРµСЂР° РїСЂРё $p=q=2$
 $$\|\varphi\|_1=\int\limits_\Omega\!|\varphi(\omega)|\,\eta(d\omega)\leqslant
-\|\varphi\|_2\cdot\|\mathbf{1}\|_2,$$ откуда
-$|\varphi|\in\mathcal{L}_1(\Omega,\mathfrak{a},\eta)$. Поскольку
+\|\varphi\|_2\cdot\|\mathbf{1}\|_2,$$ РѕС‚РєСѓРґР°
+$|\varphi|\in\mathcal{L}_1(\Omega,\mathfrak{a},\eta)$. РџРѕСЃРєРѕР»СЊРєСѓ
 $$\infty>\int\limits_\Omega\!|\varphi(\omega)|\,\eta(d\omega)=
 \int\limits_\Omega\!|\varphi(\omega)|\,\mu(d\omega)+\int\limits_\Omega\!|\varphi(\omega)|\,\nu(d\omega),$$
-то $\int\limits_\Omega\!|\varphi(\omega)|\,\mu(d\omega)<\infty$ и
+С‚Рѕ $\int\limits_\Omega\!|\varphi(\omega)|\,\mu(d\omega)<\infty$ Рё
 $$\int\limits_\Omega\!|\varphi(\omega)|\,\eta(d\omega)\geqslant
 \int\limits_\Omega\!|\varphi(\omega)|\,\mu(d\omega)\geqslant
 \Big|\int\limits_\Omega\!\varphi(\omega)\,\mu(d\omega)\Big|=|F(\varphi)|,$$
-а значит, $|F(\varphi)|\leqslant\|\varphi\|_2\cdot\|\mathbf{1}\|_2$,
-откуда следует, что функционал $F$ непрерывен на пространстве
-$\mathcal{L}_2(\Omega,\mathfrak{a},\eta)$. Поэтому по теореме Риса
-получаем, что $\exists\,g\in\mathcal{L}_2(\Omega,\mathfrak{a},\eta):
+Р° Р·РЅР°С‡РёС‚, $|F(\varphi)|\leqslant\|\varphi\|_2\cdot\|\mathbf{1}\|_2$,
+РѕС‚РєСѓРґР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ С„СѓРЅРєС†РёРѕРЅР°Р» $F$ РЅРµРїСЂРµСЂС‹РІРµРЅ РЅР° РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ
+$\mathcal{L}_2(\Omega,\mathfrak{a},\eta)$. РџРѕСЌС‚РѕРјСѓ РїРѕ С‚РµРѕСЂРµРјРµ Р РёСЃР°
+РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ $\exists\,g\in\mathcal{L}_2(\Omega,\mathfrak{a},\eta):
 \forall\,\varphi\in\mathcal{L}_2(\Omega,\mathfrak{a},\eta)\quad
 F(\varphi)=\int\limits_\Omega\!|\varphi(\omega)|\,\mu(d\omega)\p=
 \int\limits_\Omega\!|\varphi(\omega)|g(\omega)\,\eta(d\omega)=
 \int\limits_\Omega\!|\varphi(\omega)|g(\omega)\,\mu(d\omega)+
 \int\limits_\Omega\!|\varphi(\omega)|g(\omega)\,\nu(d\omega)$.
 
-Проверим, что $\eta A_0=\eta\{\omega\mid g(\omega)\geqslant 1\}=0$.
-Пусть $\varphi=\gamma_{A_0}$ --- индикатор множества $A_0$. Тогда
+РџСЂРѕРІРµСЂРёРј, С‡С‚Рѕ $\eta A_0=\eta\{\omega\mid g(\omega)\geqslant 1\}=0$.
+РџСѓСЃС‚СЊ $\varphi=\gamma_{A_0}$ --- РёРЅРґРёРєР°С‚РѕСЂ РјРЅРѕР¶РµСЃС‚РІР° $A_0$. РўРѕРіРґР°
 $$\int\limits_\Omega\!\gamma_{A_0}(\omega)\,\mu(d\omega)=\mu A_0=
 \int\limits_{A_0}\!g(\omega)\,\mu(d\omega)+\int\limits_{A_0}\!g(\omega)\,\nu(d\omega)
-\geqslant \mu A_0+\nu A_0,$$ откуда следует, что $\nu A_0=0$.
-Поскольку $\mu\ll\nu$, то $\mu A_0=0$, а значит, и $\eta A_0=0$.
+\geqslant \mu A_0+\nu A_0,$$ РѕС‚РєСѓРґР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ $\nu A_0=0$.
+РџРѕСЃРєРѕР»СЊРєСѓ $\mu\ll\nu$, С‚Рѕ $\mu A_0=0$, Р° Р·РЅР°С‡РёС‚, Рё $\eta A_0=0$.
 
-Проверим теперь, что $\eta A_1=\eta\{\omega\mid g(\omega)<0\}$.
-Аналогично,
+РџСЂРѕРІРµСЂРёРј С‚РµРїРµСЂСЊ, С‡С‚Рѕ $\eta A_1=\eta\{\omega\mid g(\omega)<0\}$.
+РђРЅР°Р»РѕРіРёС‡РЅРѕ,
 $$0\leqslant\int\limits_\Omega\!\gamma_{A_1}(\omega)\,\mu(d\omega)=\mu A_1=
-\int\limits_{A_1}\!g(\omega)\,\eta(d\omega)\leqslant 0,$$ откуда
+\int\limits_{A_1}\!g(\omega)\,\eta(d\omega)\leqslant 0,$$ РѕС‚РєСѓРґР°
 $\eta A_1=0$.
 
-Таким образом,
+РўР°РєРёРј РѕР±СЂР°Р·РѕРј,
 \begin{multline*}
 F(\varphi)=\int\limits_{\Omega\setminus
 A_0}\!\varphi(\omega)\,\mu(d\omega)=\int\limits_{\Omega\setminus
@@ -2085,57 +2085,57 @@ A_0}\!\varphi(\omega)g(\omega)\,\eta(d\omega)=\\=\int\limits_{\Omega\setminus
 A_0}\!\varphi(\omega)g(\omega)\,\mu(d\omega)+\int\limits_{\Omega\setminus
 A_0}\!\varphi(\omega)g(\omega)\,\nu(d\omega).
 \end{multline*}
-По теореме Леви получаем, что это равенство верно при всех
-$\varphi\geqslant 0$. Отсюда $\int\limits_{\Omega\setminus
+РџРѕ С‚РµРѕСЂРµРјРµ Р›РµРІРё РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ СЌС‚Рѕ СЂР°РІРµРЅСЃС‚РІРѕ РІРµСЂРЅРѕ РїСЂРё РІСЃРµС…
+$\varphi\geqslant 0$. РћС‚СЃСЋРґР° $\int\limits_{\Omega\setminus
 A_0}\!(\mathbf{1}-g(\omega))\varphi(\omega)\,\mu(d\omega)=\int\limits_{\Omega\setminus
 A_0}\!\varphi(\omega)g(\omega)\,\nu(d\omega)$.
 
-Пусть $A\in\mathfrak{a}$. Положим
-$\varphi=\frac{\gamma_A}{\mathbf{1}-g}$ и
-$\psi=\frac{g}{\mathbf{1}-g}\geqslant 0$, тогда
+РџСѓСЃС‚СЊ $A\in\mathfrak{a}$. РџРѕР»РѕР¶РёРј
+$\varphi=\frac{\gamma_A}{\mathbf{1}-g}$ Рё
+$\psi=\frac{g}{\mathbf{1}-g}\geqslant 0$, С‚РѕРіРґР°
 $\int\limits_\Omega\!\gamma_A(\omega)\,\mu(d\omega)\p=\int\limits_\Omega\!\gamma_A(\omega)
-\psi(\omega)\,\nu(d\omega)$, т.е. $\mu
+\psi(\omega)\,\nu(d\omega)$, С‚.Рµ. $\mu
 A=\int\limits_A\!\psi(\omega)\,\nu(d\omega)$.
 
-Осталось доказать, что
-$\psi\in\mathcal{L}_1(\Omega,\mathfrak{a},\nu)$. Для этого положим
-$A=\Omega$. Получаем, что
+РћСЃС‚Р°Р»РѕСЃСЊ РґРѕРєР°Р·Р°С‚СЊ, С‡С‚Рѕ
+$\psi\in\mathcal{L}_1(\Omega,\mathfrak{a},\nu)$. Р”Р»СЏ СЌС‚РѕРіРѕ РїРѕР»РѕР¶РёРј
+$A=\Omega$. РџРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ
 $\infty>\mu\Omega=\int\limits_\Omega\!\psi(\omega)\,\nu(d\omega)$,
-откуда все и следует.
+РѕС‚РєСѓРґР° РІСЃРµ Рё СЃР»РµРґСѓРµС‚.
 \end{proof}
 
-\tema{Теоремы Фубини, Хана-Жордана и Лебега}
+\tema{РўРµРѕСЂРµРјС‹ Р¤СѓР±РёРЅРё, РҐР°РЅР°-Р–РѕСЂРґР°РЅР° Рё Р›РµР±РµРіР°}
 
-Пусть $(\Omega_1,\mathfrak{a}_1,\nu_1)$ и
-$(\Omega_2,\mathfrak{a}_2,\nu_2)$ --- пространства с мерой.
+РџСѓСЃС‚СЊ $(\Omega_1,\mathfrak{a}_1,\nu_1)$ Рё
+$(\Omega_2,\mathfrak{a}_2,\nu_2)$ --- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° СЃ РјРµСЂРѕР№.
 
 \begin{defen}
-\emph{Произведением измеримых пространств} называется измеримое
-пространство $(\Omega_1\times\Omega_2,
-\mathfrak{a}_1\otimes\mathfrak{a}_2)$, где $\Omega_1\times
-\Omega_2=\{(\omega_1,\omega_2)\mid \omega_j\in\Omega_j;j=1,2\}$ и
-$\mathfrak{a}_1\otimes\mathfrak{a}_2$ --- $\sigma$-алгебра,
-определяемая следующим образом. Возьмем полукольцо
+\emph{РџСЂРѕРёР·РІРµРґРµРЅРёРµРј РёР·РјРµСЂРёРјС‹С… РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІ} РЅР°Р·С‹РІР°РµС‚СЃСЏ РёР·РјРµСЂРёРјРѕРµ
+РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ $(\Omega_1\times\Omega_2,
+\mathfrak{a}_1\otimes\mathfrak{a}_2)$, РіРґРµ $\Omega_1\times
+\Omega_2=\{(\omega_1,\omega_2)\mid \omega_j\in\Omega_j;j=1,2\}$ Рё
+$\mathfrak{a}_1\otimes\mathfrak{a}_2$ --- $\sigma$-Р°Р»РіРµР±СЂР°,
+РѕРїСЂРµРґРµР»СЏРµРјР°СЏ СЃР»РµРґСѓСЋС‰РёРј РѕР±СЂР°Р·РѕРј. Р’РѕР·СЊРјРµРј РїРѕР»СѓРєРѕР»СЊС†Рѕ
 $\mathcal{P}=\{A_1\times A_2\mid A_j\in\mathfrak{a}_j;j=1,2\}$
-(элементы которого называются \emph{прямоугольниками}), тогда
+(СЌР»РµРјРµРЅС‚С‹ РєРѕС‚РѕСЂРѕРіРѕ РЅР°Р·С‹РІР°СЋС‚СЃСЏ \emph{РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°РјРё}), С‚РѕРіРґР°
 $\mathfrak{a}_1\otimes \mathfrak{a}_2=\sigma(\mathcal{P})$.
 
-\emph{Произведение пространств с мерой} --- это произведение
-измеримых пространств, на котором задана мера $\nu_1\otimes\nu_2$
-(называющаяся \emph{произведением мер $\nu_1$ и $\nu_2$}),
-определяемая следующим образом. Если $A_1,A_2\in\mathcal{P}$, то
+\emph{РџСЂРѕРёР·РІРµРґРµРЅРёРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІ СЃ РјРµСЂРѕР№} --- СЌС‚Рѕ РїСЂРѕРёР·РІРµРґРµРЅРёРµ
+РёР·РјРµСЂРёРјС‹С… РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІ, РЅР° РєРѕС‚РѕСЂРѕРј Р·Р°РґР°РЅР° РјРµСЂР° $\nu_1\otimes\nu_2$
+(РЅР°Р·С‹РІР°СЋС‰Р°СЏСЃСЏ \emph{РїСЂРѕРёР·РІРµРґРµРЅРёРµРј РјРµСЂ $\nu_1$ Рё $\nu_2$}),
+РѕРїСЂРµРґРµР»СЏРµРјР°СЏ СЃР»РµРґСѓСЋС‰РёРј РѕР±СЂР°Р·РѕРј. Р•СЃР»Рё $A_1,A_2\in\mathcal{P}$, С‚Рѕ
 $(\nu_1\otimes \nu_2)(A_1\times A_2)=\nu_1 A_1\cdot\nu_2 A_2$.
 
 \begin{predl}
-Произведение мер $\nu_1\otimes\nu_2$ счетно аддитивно.
+РџСЂРѕРёР·РІРµРґРµРЅРёРµ РјРµСЂ $\nu_1\otimes\nu_2$ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕ.
 \end{predl}
 
 \begin{proof}
-Пусть $A_1\times A_2=\bigsqcup\limits_{k=1}^\infty A_1^k\times
-A_2^k$ и $f_{A_1A_2}(\omega_1)=\nu_2
-A_2\p\cdot\gamma_{A_1}(\omega_1)$, тогда в силу счетной аддитивности
-меры $\nu_2$ имеем: $f_{A_1A_2}(\omega_1)\p=\sum\limits_{k=1}^\infty
-f_{A_1^kA_2^k}(\omega_1)$. Поэтому по теореме Леви получаем, что
+РџСѓСЃС‚СЊ $A_1\times A_2=\bigsqcup\limits_{k=1}^\infty A_1^k\times
+A_2^k$ Рё $f_{A_1A_2}(\omega_1)=\nu_2
+A_2\p\cdot\gamma_{A_1}(\omega_1)$, С‚РѕРіРґР° РІ СЃРёР»Сѓ СЃС‡РµС‚РЅРѕР№ Р°РґРґРёС‚РёРІРЅРѕСЃС‚Рё
+РјРµСЂС‹ $\nu_2$ РёРјРµРµРј: $f_{A_1A_2}(\omega_1)\p=\sum\limits_{k=1}^\infty
+f_{A_1^kA_2^k}(\omega_1)$. РџРѕСЌС‚РѕРјСѓ РїРѕ С‚РµРѕСЂРµРјРµ Р›РµРІРё РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ
 \begin{multline*}
 (\nu_1\otimes\nu_2)(A_1\times A_2)=\int\limits_{\Omega_1}\!f_{A_1
 A_2}(\omega_1)\,\nu_1(d\omega_1)=\\
@@ -2143,45 +2143,45 @@ A_2}(\omega_1)\,\nu_1(d\omega_1)=\\
 \!f_{A_1^kA_2^k}(\omega_1)\,\nu_1(d\omega_1)=\sum\limits_{k=1}^\infty
 (\nu_1\otimes\nu_2)(A_1^k\times A_2^k),
 \end{multline*}
-что и требовалось.
+С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
-Отсюда следует, что полученную счетно аддитивную функцию можно
-продолжить на всю $\sigma$-алгебру
-$\mathfrak{a}_1\otimes\mathfrak{a}_2$. Полученная мера и называется
-\emph{произведением мер $\nu_1$ и $\nu_2$}.
+РћС‚СЃСЋРґР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ РїРѕР»СѓС‡РµРЅРЅСѓСЋ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅСѓСЋ С„СѓРЅРєС†РёСЋ РјРѕР¶РЅРѕ
+РїСЂРѕРґРѕР»Р¶РёС‚СЊ РЅР° РІСЃСЋ $\sigma$-Р°Р»РіРµР±СЂСѓ
+$\mathfrak{a}_1\otimes\mathfrak{a}_2$. РџРѕР»СѓС‡РµРЅРЅР°СЏ РјРµСЂР° Рё РЅР°Р·С‹РІР°РµС‚СЃСЏ
+\emph{РїСЂРѕРёР·РІРµРґРµРЅРёРµРј РјРµСЂ $\nu_1$ Рё $\nu_2$}.
 \end{defen}
 
 \begin{zam}
-Если меры $\nu_1$ и $\nu_2$ полны, то мера $\nu_1\otimes\nu_2$ может
-не быть полной, поэтому иногда бывает удобно рассматривать
-пополнение произведения пространств с мерой:
+Р•СЃР»Рё РјРµСЂС‹ $\nu_1$ Рё $\nu_2$ РїРѕР»РЅС‹, С‚Рѕ РјРµСЂР° $\nu_1\otimes\nu_2$ РјРѕР¶РµС‚
+РЅРµ Р±С‹С‚СЊ РїРѕР»РЅРѕР№, РїРѕСЌС‚РѕРјСѓ РёРЅРѕРіРґР° Р±С‹РІР°РµС‚ СѓРґРѕР±РЅРѕ СЂР°СЃСЃРјР°С‚СЂРёРІР°С‚СЊ
+РїРѕРїРѕР»РЅРµРЅРёРµ РїСЂРѕРёР·РІРµРґРµРЅРёСЏ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІ СЃ РјРµСЂРѕР№:
 $(\Omega_1\times\Omega_2,\overline{\mathfrak{a}_1\otimes\mathfrak{a}_2},
 \overline{\nu_1\otimes\nu_2})$.
 \end{zam}
 
 \begin{zam}
-Если функция $f$ измерима на
+Р•СЃР»Рё С„СѓРЅРєС†РёСЏ $f$ РёР·РјРµСЂРёРјР° РЅР°
 $(\Omega_1\times\Omega_2,\mathfrak{a}_1\otimes\mathfrak{a}_2,\nu_1\otimes\nu_2)$,
-то $\forall\,\omega_1\in\Omega_1$ функция $\omega\mapsto
-f(\omega_1,\omega)$ измерима на $(\Omega_2,\mathfrak{a}_2,\nu_2)$. В
-случае, когда рассматриваются пополненное пространство, необходимо
-заменить выражение <<$\forall\,\omega_1\in\Omega_1$>> на <<для почти
-всех $\omega_1\in\Omega_1$>>.
+С‚Рѕ $\forall\,\omega_1\in\Omega_1$ С„СѓРЅРєС†РёСЏ $\omega\mapsto
+f(\omega_1,\omega)$ РёР·РјРµСЂРёРјР° РЅР° $(\Omega_2,\mathfrak{a}_2,\nu_2)$. Р’
+СЃР»СѓС‡Р°Рµ, РєРѕРіРґР° СЂР°СЃСЃРјР°С‚СЂРёРІР°СЋС‚СЃСЏ РїРѕРїРѕР»РЅРµРЅРЅРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ, РЅРµРѕР±С…РѕРґРёРјРѕ
+Р·Р°РјРµРЅРёС‚СЊ РІС‹СЂР°Р¶РµРЅРёРµ <<$\forall\,\omega_1\in\Omega_1$>> РЅР° <<РґР»СЏ РїРѕС‡С‚Рё
+РІСЃРµС… $\omega_1\in\Omega_1$>>.
 \end{zam}
 %-----------------------------------------------------------------------------------%
 
 %---------------------------Lecture 13-----------------------------------------------%
 \lecture
 
-\begin{theorem}[Фубини]
-Пусть
+\begin{theorem}[Р¤СѓР±РёРЅРё]
+РџСѓСЃС‚СЊ
 $f\in\mathcal{L}_1(\Omega_1\times\Omega_2,\mathfrak{a}_1\otimes\mathfrak{a}_2,\nu_1\otimes\nu_2)$,
-тогда для $\nu_1$-почти всех $\omega_1\in\Omega_1$ функция
-$\omega\mapsto f(\omega_1,\omega)$ интегрируема на
-$(\Omega_2,\mathfrak{a}_2,\nu_2)$, причем функция
+С‚РѕРіРґР° РґР»СЏ $\nu_1$-РїРѕС‡С‚Рё РІСЃРµС… $\omega_1\in\Omega_1$ С„СѓРЅРєС†РёСЏ
+$\omega\mapsto f(\omega_1,\omega)$ РёРЅС‚РµРіСЂРёСЂСѓРµРјР° РЅР°
+$(\Omega_2,\mathfrak{a}_2,\nu_2)$, РїСЂРёС‡РµРј С„СѓРЅРєС†РёСЏ
 $\omega_1\mapsto\int\limits_{\Omega_2}\!f(\omega_1,\omega_2)\,\nu_2(d\omega_2)$
-является $\nu_1$-интегрируемой на $\Omega_1$ и
+СЏРІР»СЏРµС‚СЃСЏ $\nu_1$-РёРЅС‚РµРіСЂРёСЂСѓРµРјРѕР№ РЅР° $\Omega_1$ Рё
 $$\int\limits_{\Omega_1\times\Omega_2}\!f(\omega_1,\omega_2)\,(\nu_1\otimes\nu_2)
 (d\omega_1\times
 d\omega_2)=\int\limits_{\Omega_1}\!\Big(\int\limits_{\Omega_2}\!f(\omega_1,\omega_2)
@@ -2189,15 +2189,15 @@ d\omega_2)=\int\limits_{\Omega_1}\!\Big(\int\limits_{\Omega_2}\!f(\omega_1,\omeg
 \end{theorem}
 
 \begin{proof}
-Как обычно, достаточно доказать теорему для индикаторов: пусть
-$f=\gamma_{A}$, где $A\in\mathfrak{a}_1\otimes\mathfrak{a}_2$. Пусть
+РљР°Рє РѕР±С‹С‡РЅРѕ, РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕРєР°Р·Р°С‚СЊ С‚РµРѕСЂРµРјСѓ РґР»СЏ РёРЅРґРёРєР°С‚РѕСЂРѕРІ: РїСѓСЃС‚СЊ
+$f=\gamma_{A}$, РіРґРµ $A\in\mathfrak{a}_1\otimes\mathfrak{a}_2$. РџСѓСЃС‚СЊ
 $$g(\omega_2)=
 \begin{cases}
-\nu_1A_1,&\text{если $\omega_2\in A_2$;}\\
-0,&\text{иначе},
+\nu_1A_1,&\text{РµСЃР»Рё $\omega_2\in A_2$;}\\
+0,&\text{РёРЅР°С‡Рµ},
 \end{cases}$$
-тогда, если $A=A_1\times A_2$, где $A_1\in\mathfrak{a_1}$ и
-$A_2\in\mathfrak{a_2}$, то
+С‚РѕРіРґР°, РµСЃР»Рё $A=A_1\times A_2$, РіРґРµ $A_1\in\mathfrak{a_1}$ Рё
+$A_2\in\mathfrak{a_2}$, С‚Рѕ
 \begin{multline*}
 \int\limits_{\Omega_1\times\Omega_2}\!\gamma_A(\omega_1,\omega_2) \,
 (\nu_1\otimes\nu_2)(d\omega_1\times
@@ -2207,45 +2207,45 @@ d\omega_2)=(\nu_1\otimes\nu_2)(A_1\times A_2)=\\
 g(\omega_2)\,\nu_2(d\omega_2)=\nu_1A_1\cdot\nu_2A_2.
 \end{multline*}
 
-Назовем множество \emph{допустимым}, если для его индикатора верна
-теорема Фубини. Обозначим множество всех допустимых множеств через
-$\mathcal{Q}$. Нам необходимо доказать, что
-$\mathcal{Q}=\mathfrak{a}_1\otimes\mathfrak{a}_2$. Укажем некоторые
-свойства множества $\mathcal{Q}$.
+РќР°Р·РѕРІРµРј РјРЅРѕР¶РµСЃС‚РІРѕ \emph{РґРѕРїСѓСЃС‚РёРјС‹Рј}, РµСЃР»Рё РґР»СЏ РµРіРѕ РёРЅРґРёРєР°С‚РѕСЂР° РІРµСЂРЅР°
+С‚РµРѕСЂРµРјР° Р¤СѓР±РёРЅРё. РћР±РѕР·РЅР°С‡РёРј РјРЅРѕР¶РµСЃС‚РІРѕ РІСЃРµС… РґРѕРїСѓСЃС‚РёРјС‹С… РјРЅРѕР¶РµСЃС‚РІ С‡РµСЂРµР·
+$\mathcal{Q}$. РќР°Рј РЅРµРѕР±С…РѕРґРёРјРѕ РґРѕРєР°Р·Р°С‚СЊ, С‡С‚Рѕ
+$\mathcal{Q}=\mathfrak{a}_1\otimes\mathfrak{a}_2$. РЈРєР°Р¶РµРј РЅРµРєРѕС‚РѕСЂС‹Рµ
+СЃРІРѕР№СЃС‚РІР° РјРЅРѕР¶РµСЃС‚РІР° $\mathcal{Q}$.
 
 \svoy
 
-1. $\Omega=\Omega_1\times\Omega_2\in\mathcal{Q}$ (очевидно).
+1. $\Omega=\Omega_1\times\Omega_2\in\mathcal{Q}$ (РѕС‡РµРІРёРґРЅРѕ).
 
 2. $\forall\,B_j\in\mathcal{Q}:B_1\subset B_2\ldots\Rightarrow
-\bigcup\limits_{j=1}^\infty B_j\in\mathcal{Q}$ (следует из теоремы
-Леви).
+\bigcup\limits_{j=1}^\infty B_j\in\mathcal{Q}$ (СЃР»РµРґСѓРµС‚ РёР· С‚РµРѕСЂРµРјС‹
+Р›РµРІРё).
 
 3. $B_1\subset B_2\in\mathcal{Q}\Rightarrow B_2\setminus
-B_1\in\mathcal{Q}$ (следует из линейности).
+B_1\in\mathcal{Q}$ (СЃР»РµРґСѓРµС‚ РёР· Р»РёРЅРµР№РЅРѕСЃС‚Рё).
 
-4. $\mathcal{P}\subset\mathcal{Q}$ (см. предыдущее равенство).
+4. $\mathcal{P}\subset\mathcal{Q}$ (СЃРј. РїСЂРµРґС‹РґСѓС‰РµРµ СЂР°РІРµРЅСЃС‚РІРѕ).
 
 \begin{defen}
-Совокупность множеств, удовлетворяющая свойствам 1, 2, 3 называется
-\emph{$D$-системой множеств}.
+РЎРѕРІРѕРєСѓРїРЅРѕСЃС‚СЊ РјРЅРѕР¶РµСЃС‚РІ, СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‰Р°СЏ СЃРІРѕР№СЃС‚РІР°Рј 1, 2, 3 РЅР°Р·С‹РІР°РµС‚СЃСЏ
+\emph{$D$-СЃРёСЃС‚РµРјРѕР№ РјРЅРѕР¶РµСЃС‚РІ}.
 \end{defen}
 
-Докажем, что $D(\mathcal{P})=\mathfrak{a}_1\otimes\mathfrak{a}_2$
-(легко видеть, что этого будет достаточно для завершения
-доказательства). Это утверждение эквивалентно тому, что
-$D(\mathcal{P})$ --- это $\sigma$-алгебра. Для этого нужно доказать,
-что если $B_1,B_2\in \mathcal{Q}$, то $B_1\cap B_2\in\mathcal{Q}$.
+Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ $D(\mathcal{P})=\mathfrak{a}_1\otimes\mathfrak{a}_2$
+(Р»РµРіРєРѕ РІРёРґРµС‚СЊ, С‡С‚Рѕ СЌС‚РѕРіРѕ Р±СѓРґРµС‚ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґР»СЏ Р·Р°РІРµСЂС€РµРЅРёСЏ
+РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІР°). Р­С‚Рѕ СѓС‚РІРµСЂР¶РґРµРЅРёРµ СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕ С‚РѕРјСѓ, С‡С‚Рѕ
+$D(\mathcal{P})$ --- СЌС‚Рѕ $\sigma$-Р°Р»РіРµР±СЂР°. Р”Р»СЏ СЌС‚РѕРіРѕ РЅСѓР¶РЅРѕ РґРѕРєР°Р·Р°С‚СЊ,
+С‡С‚Рѕ РµСЃР»Рё $B_1,B_2\in \mathcal{Q}$, С‚Рѕ $B_1\cap B_2\in\mathcal{Q}$.
 
-Пусть $\mathcal{Q}_1=\{A\in D(\mathcal{P})\mid \forall\,B\in
-\mathcal{P}\quad A\cap B\in D(\mathcal{P})\}$ и
+РџСѓСЃС‚СЊ $\mathcal{Q}_1=\{A\in D(\mathcal{P})\mid \forall\,B\in
+\mathcal{P}\quad A\cap B\in D(\mathcal{P})\}$ Рё
 $\mathcal{Q}_2=\{A\in D(\mathcal{P})\mid \forall\,B\in
-D(\mathcal{P})\quad A\cap B\in D(\mathcal{P})\}$. Легко видеть, что
-$\mathcal{Q}_1$ и $\mathcal{Q}_2$ --- $D$-системы, причем
-$\mathcal{P}\subset\mathcal{Q}_1,\mathcal{Q}_2$. Но
-$\mathcal{Q}_1\subset D(\mathcal{P})$, поэтому
-$\mathcal{Q}_1=D(\mathcal{P})$ и $\mathcal{Q}_2=D(\mathcal{P})$.
-Отсюда получаем, что $D(\mathcal{P})$ --- это $\sigma$-алгебра и
+D(\mathcal{P})\quad A\cap B\in D(\mathcal{P})\}$. Р›РµРіРєРѕ РІРёРґРµС‚СЊ, С‡С‚Рѕ
+$\mathcal{Q}_1$ Рё $\mathcal{Q}_2$ --- $D$-СЃРёСЃС‚РµРјС‹, РїСЂРёС‡РµРј
+$\mathcal{P}\subset\mathcal{Q}_1,\mathcal{Q}_2$. РќРѕ
+$\mathcal{Q}_1\subset D(\mathcal{P})$, РїРѕСЌС‚РѕРјСѓ
+$\mathcal{Q}_1=D(\mathcal{P})$ Рё $\mathcal{Q}_2=D(\mathcal{P})$.
+РћС‚СЃСЋРґР° РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ $D(\mathcal{P})$ --- СЌС‚Рѕ $\sigma$-Р°Р»РіРµР±СЂР° Рё
 $D(\mathcal{P})=\mathfrak{a}_1\otimes\mathfrak{a}_2$.
 \end{proof}
 
@@ -2254,243 +2254,243 @@ $D(\mathcal{P})=\mathfrak{a}_1\otimes\mathfrak{a}_2$.
 %---------------------------Lecture 14-----------------------------------------------%
 \lecture
 
-\begin{theorem}[Хан-Жордан]
-Пусть $(\Omega,\mathfrak{a})$ --- измеримое пространство, $\nu$ ---
-возможно знакопеременная\footnote{Обратите внимание!} мера.
+\begin{theorem}[РҐР°РЅ-Р–РѕСЂРґР°РЅ]
+РџСѓСЃС‚СЊ $(\Omega,\mathfrak{a})$ --- РёР·РјРµСЂРёРјРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ, $\nu$ ---
+РІРѕР·РјРѕР¶РЅРѕ Р·РЅР°РєРѕРїРµСЂРµРјРµРЅРЅР°СЏ\footnote{РћР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ!} РјРµСЂР°.
 
 1. $\exists\,\Omega_+,\Omega_-: \Omega_+\sqcup \Omega_-=\Omega$,
-причем $\forall\, A\subset \Omega_+:A\in\mathfrak{a}\quad \nu
-A\geqslant 0$ и $\forall\, A\subset \Omega_-:A\in\mathfrak{a}\quad
+РїСЂРёС‡РµРј $\forall\, A\subset \Omega_+:A\in\mathfrak{a}\quad \nu
+A\geqslant 0$ Рё $\forall\, A\subset \Omega_-:A\in\mathfrak{a}\quad
 \nu A\leqslant 0$.
 
-2. $\nu=\nu^+-\nu^-$, где меры $\nu^+$ и $\nu^-$ неотрицательны.
+2. $\nu=\nu^+-\nu^-$, РіРґРµ РјРµСЂС‹ $\nu^+$ Рё $\nu^-$ РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹.
 \end{theorem}
 
 \begin{defen}
-Разложение пространства $\Omega$, указанное в п.1, называется
-\emph{разложением Хана}.
+Р Р°Р·Р»РѕР¶РµРЅРёРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° $\Omega$, СѓРєР°Р·Р°РЅРЅРѕРµ РІ Рї.1, РЅР°Р·С‹РІР°РµС‚СЃСЏ
+\emph{СЂР°Р·Р»РѕР¶РµРЅРёРµРј РҐР°РЅР°}.
 \end{defen}
 
 \begin{defen}
-Мера $\nu^+$ называется \emph{положительной}, а мера $\nu^-$ ---
-\emph{отрицательной} вариацией меры $\nu$. Величина
-$\|\nu\|=\nu^++\nu^-$ называется \emph{вариацией меры
-$\nu$}\footnote{Иногда \emph{вариацией} называется величина
-$\|\nu\|\Omega$. В таком случае отображение
-$\nu\p\mapsto\|\nu\|\Omega$ является нормой.}.
+РњРµСЂР° $\nu^+$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕР№}, Р° РјРµСЂР° $\nu^-$ ---
+\emph{РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕР№} РІР°СЂРёР°С†РёРµР№ РјРµСЂС‹ $\nu$. Р’РµР»РёС‡РёРЅР°
+$\|\nu\|=\nu^++\nu^-$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{РІР°СЂРёР°С†РёРµР№ РјРµСЂС‹
+$\nu$}\footnote{РРЅРѕРіРґР° \emph{РІР°СЂРёР°С†РёРµР№} РЅР°Р·С‹РІР°РµС‚СЃСЏ РІРµР»РёС‡РёРЅР°
+$\|\nu\|\Omega$. Р’ С‚Р°РєРѕРј СЃР»СѓС‡Р°Рµ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ
+$\nu\p\mapsto\|\nu\|\Omega$ СЏРІР»СЏРµС‚СЃСЏ РЅРѕСЂРјРѕР№.}.
 \end{defen}
 
 \begin{proof}
-Вначале докажем п.2, исходя из п.1. Положим $\nu^+A\p=\nu(A\cap
-\Omega_+)$ и $\nu^-A=-\nu(A\cap \Omega_-)$. Как легко видеть, что
-$\nu^+$ и $\nu^-$, определенные таким образом, дают искомое
-разложение.
+Р’РЅР°С‡Р°Р»Рµ РґРѕРєР°Р¶РµРј Рї.2, РёСЃС…РѕРґСЏ РёР· Рї.1. РџРѕР»РѕР¶РёРј $\nu^+A\p=\nu(A\cap
+\Omega_+)$ Рё $\nu^-A=-\nu(A\cap \Omega_-)$. РљР°Рє Р»РµРіРєРѕ РІРёРґРµС‚СЊ, С‡С‚Рѕ
+$\nu^+$ Рё $\nu^-$, РѕРїСЂРµРґРµР»РµРЅРЅС‹Рµ С‚Р°РєРёРј РѕР±СЂР°Р·РѕРј, РґР°СЋС‚ РёСЃРєРѕРјРѕРµ
+СЂР°Р·Р»РѕР¶РµРЅРёРµ.
 
 \begin{zam}
-Разложение меры в п.2 не является единственным. Однако, если
-$\nu=\mu^+-\mu^-$, то $\mu^+A\geqslant\nu^+A$ и
+Р Р°Р·Р»РѕР¶РµРЅРёРµ РјРµСЂС‹ РІ Рї.2 РЅРµ СЏРІР»СЏРµС‚СЃСЏ РµРґРёРЅСЃС‚РІРµРЅРЅС‹Рј. РћРґРЅР°РєРѕ, РµСЃР»Рё
+$\nu=\mu^+-\mu^-$, С‚Рѕ $\mu^+A\geqslant\nu^+A$ Рё
 $\mu^-A\geqslant\nu^-A$.
 \end{zam}
 
-Докажем теперь п.1. Назовем множество $C\in\mathfrak{a}$
-\emph{отрицательным}, если $\forall\,A\in\mathfrak{a}\quad\nu(A\cap
-C)\leqslant 0$, и \emph{положительным}, если
+Р”РѕРєР°Р¶РµРј С‚РµРїРµСЂСЊ Рї.1. РќР°Р·РѕРІРµРј РјРЅРѕР¶РµСЃС‚РІРѕ $C\in\mathfrak{a}$
+\emph{РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј}, РµСЃР»Рё $\forall\,A\in\mathfrak{a}\quad\nu(A\cap
+C)\leqslant 0$, Рё \emph{РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј}, РµСЃР»Рё
 $\forall\,A\in\mathfrak{a}\quad\nu(A\cap C)\geqslant 0$.
 
-Пусть $\alpha=\inf\{\nu C\mid C \text{--- отрицательно}\}$ и
-$\{C_n\}$ --- последовательность измеримых множеств, таких, что $\nu
-C_n\searrow \alpha$. Положим $A_0=\bigcup\limits_{n=1}^\infty C_n$.
-Очевидно, что $A_0$ отрицательно. Докажем, что множество
-$\Omega_+=\Omega\setminus A_0$ является положительным (тогда можно
-взять $\Omega_-=A_0$).
+РџСѓСЃС‚СЊ $\alpha=\inf\{\nu C\mid C \text{--- РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕ}\}$ Рё
+$\{C_n\}$ --- РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РёР·РјРµСЂРёРјС‹С… РјРЅРѕР¶РµСЃС‚РІ, С‚Р°РєРёС…, С‡С‚Рѕ $\nu
+C_n\searrow \alpha$. РџРѕР»РѕР¶РёРј $A_0=\bigcup\limits_{n=1}^\infty C_n$.
+РћС‡РµРІРёРґРЅРѕ, С‡С‚Рѕ $A_0$ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕ. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ РјРЅРѕР¶РµСЃС‚РІРѕ
+$\Omega_+=\Omega\setminus A_0$ СЏРІР»СЏРµС‚СЃСЏ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј (С‚РѕРіРґР° РјРѕР¶РЅРѕ
+РІР·СЏС‚СЊ $\Omega_-=A_0$).
 
-Предположим противное: пусть найдется такое $\bar{A}\in\Omega_+$,
-что $\nu\bar{A}<0$. Выберем последовательность $\{\varepsilon_j\}$,
-такую, что $\varepsilon_j>0$ и $\varepsilon_j\searrow 0$. Тогда
-множество $\bar{A}$ не может быть отрицательным, иначе его можно
-присоединить к $A_0$, и тогда получится, что $\nu A_0<\alpha$.
-Поэтому $\exists\,A_1\subset \bar{A}:\nu A_1>\varepsilon_{j_1}$.
-Рассмотрим множество $\bar{A}\setminus A_1$. Проводя аналогичные
-рассуждения, получаем, что $\exists\,A_2\subset\bar{A}\setminus
+РџСЂРµРґРїРѕР»РѕР¶РёРј РїСЂРѕС‚РёРІРЅРѕРµ: РїСѓСЃС‚СЊ РЅР°Р№РґРµС‚СЃСЏ С‚Р°РєРѕРµ $\bar{A}\in\Omega_+$,
+С‡С‚Рѕ $\nu\bar{A}<0$. Р’С‹Р±РµСЂРµРј РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ $\{\varepsilon_j\}$,
+С‚Р°РєСѓСЋ, С‡С‚Рѕ $\varepsilon_j>0$ Рё $\varepsilon_j\searrow 0$. РўРѕРіРґР°
+РјРЅРѕР¶РµСЃС‚РІРѕ $\bar{A}$ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј, РёРЅР°С‡Рµ РµРіРѕ РјРѕР¶РЅРѕ
+РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊ Рє $A_0$, Рё С‚РѕРіРґР° РїРѕР»СѓС‡РёС‚СЃСЏ, С‡С‚Рѕ $\nu A_0<\alpha$.
+РџРѕСЌС‚РѕРјСѓ $\exists\,A_1\subset \bar{A}:\nu A_1>\varepsilon_{j_1}$.
+Р Р°СЃСЃРјРѕС‚СЂРёРј РјРЅРѕР¶РµСЃС‚РІРѕ $\bar{A}\setminus A_1$. РџСЂРѕРІРѕРґСЏ Р°РЅР°Р»РѕРіРёС‡РЅС‹Рµ
+СЂР°СЃСЃСѓР¶РґРµРЅРёСЏ, РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ $\exists\,A_2\subset\bar{A}\setminus
 A_1:\nu A_2>\varepsilon_{j_2}$.
 
-В результате мы получим последовательность попарно непересекающихся
-множеств $\{A_k\}$, где $\nu A_k>\varepsilon_{j_k}$. Кроме того,
+Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РјС‹ РїРѕР»СѓС‡РёРј РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РїРѕРїР°СЂРЅРѕ РЅРµРїРµСЂРµСЃРµРєР°СЋС‰РёС…СЃСЏ
+РјРЅРѕР¶РµСЃС‚РІ $\{A_k\}$, РіРґРµ $\nu A_k>\varepsilon_{j_k}$. РљСЂРѕРјРµ С‚РѕРіРѕ,
 $\nu\Big(\bigsqcup\limits_{k=1}^\infty
-A_k\Big)=\sum\limits_{k=1}^\infty \nu A_k\p<\infty$, поэтому $\nu
-A_k\to0$ и $\varepsilon_{j_k}\to0$.
+A_k\Big)=\sum\limits_{k=1}^\infty \nu A_k\p<\infty$, РїРѕСЌС‚РѕРјСѓ $\nu
+A_k\to0$ Рё $\varepsilon_{j_k}\to0$.
 
-Имеем: $\nu\Big(\bar{A}\setminus\bigsqcup\limits_{k=1}^\infty
-A_k\Big)<0$. Докажем, что множество
-$\bar{A}\setminus\bigsqcup\limits_{k=1}^\infty A_k$ отрицательно.
-Действительно, если бы это было не так, то нашлось бы множество
-$D\subset\bar{A}\setminus\bigsqcup\limits_{k=1}^\infty A_k$, такое,
-что $\nu D=\varepsilon>0$, а значит, нашлось бы такое $k$, что
-$\varepsilon_{j_k}<\varepsilon$ --- противоречие с выбором $A_k$
-(тогда надо было выбрать $D$).
+РРјРµРµРј: $\nu\Big(\bar{A}\setminus\bigsqcup\limits_{k=1}^\infty
+A_k\Big)<0$. Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ РјРЅРѕР¶РµСЃС‚РІРѕ
+$\bar{A}\setminus\bigsqcup\limits_{k=1}^\infty A_k$ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕ.
+Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ, РµСЃР»Рё Р±С‹ СЌС‚Рѕ Р±С‹Р»Рѕ РЅРµ С‚Р°Рє, С‚Рѕ РЅР°С€Р»РѕСЃСЊ Р±С‹ РјРЅРѕР¶РµСЃС‚РІРѕ
+$D\subset\bar{A}\setminus\bigsqcup\limits_{k=1}^\infty A_k$, С‚Р°РєРѕРµ,
+С‡С‚Рѕ $\nu D=\varepsilon>0$, Р° Р·РЅР°С‡РёС‚, РЅР°С€Р»РѕСЃСЊ Р±С‹ С‚Р°РєРѕРµ $k$, С‡С‚Рѕ
+$\varepsilon_{j_k}<\varepsilon$ --- РїСЂРѕС‚РёРІРѕСЂРµС‡РёРµ СЃ РІС‹Р±РѕСЂРѕРј $A_k$
+(С‚РѕРіРґР° РЅР°РґРѕ Р±С‹Р»Рѕ РІС‹Р±СЂР°С‚СЊ $D$).
 
-Значит, множество $\bar{A}\setminus\bigsqcup\limits_{k=1}^\infty
-A_k$ отрицательно, и его можно присоединить к $A_0$, в результате
-чего получится, что $\nu A_0<\alpha$ --- противоречие.
+Р—РЅР°С‡РёС‚, РјРЅРѕР¶РµСЃС‚РІРѕ $\bar{A}\setminus\bigsqcup\limits_{k=1}^\infty
+A_k$ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕ, Рё РµРіРѕ РјРѕР¶РЅРѕ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊ Рє $A_0$, РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ
+С‡РµРіРѕ РїРѕР»СѓС‡РёС‚СЃСЏ, С‡С‚Рѕ $\nu A_0<\alpha$ --- РїСЂРѕС‚РёРІРѕСЂРµС‡РёРµ.
 
-Таким образом, можно выбрать $\Omega_-=A_0$ и
+РўР°РєРёРј РѕР±СЂР°Р·РѕРј, РјРѕР¶РЅРѕ РІС‹Р±СЂР°С‚СЊ $\Omega_-=A_0$ Рё
 $\Omega_+=\Omega\setminus A_0$.
 \end{proof}
 
-Пусть $f$ --- интегрируемая функция,
-$F(t)=\int\limits_{-\infty}^t\!f(\tau)\,d\tau$ и
-$\mu=f\cdot\lambda$, где $\lambda$ --- стандартная мера Лебега.
+РџСѓСЃС‚СЊ $f$ --- РёРЅС‚РµРіСЂРёСЂСѓРµРјР°СЏ С„СѓРЅРєС†РёСЏ,
+$F(t)=\int\limits_{-\infty}^t\!f(\tau)\,d\tau$ Рё
+$\mu=f\cdot\lambda$, РіРґРµ $\lambda$ --- СЃС‚Р°РЅРґР°СЂС‚РЅР°СЏ РјРµСЂР° Р›РµР±РµРіР°.
 
-\begin{theorem}[Лебег]
-Функция $F(t)=\int\limits_{-\infty}^t\!f(\tau)\,d\tau$
-дифференцируема почти всюду по $t$ и $F'(t)=f(t)$.
+\begin{theorem}[Р›РµР±РµРі]
+Р¤СѓРЅРєС†РёСЏ $F(t)=\int\limits_{-\infty}^t\!f(\tau)\,d\tau$
+РґРёС„С„РµСЂРµРЅС†РёСЂСѓРµРјР° РїРѕС‡С‚Рё РІСЃСЋРґСѓ РїРѕ $t$ Рё $F'(t)=f(t)$.
 \end{theorem}
 
 \begin{proof}
 
-Для доказательства нам понадобятся следующие две леммы.
+Р”Р»СЏ РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІР° РЅР°Рј РїРѕРЅР°РґРѕР±СЏС‚СЃСЏ СЃР»РµРґСѓСЋС‰РёРµ РґРІРµ Р»РµРјРјС‹.
 
 \begin{lemm}\label{lemm1}
-Если $\{I_\alpha\}$ --- семейство интервалов,
-$G=\bigcup\limits_\alpha I_\alpha$ и $\lambda G<\infty$, то можно
-выбрать подсемейство попарно непересекающихся интервалов
-$\{I_{\alpha_k}\}$, таких, что $\sum\limits_{k=1}^n\lambda
+Р•СЃР»Рё $\{I_\alpha\}$ --- СЃРµРјРµР№СЃС‚РІРѕ РёРЅС‚РµСЂРІР°Р»РѕРІ,
+$G=\bigcup\limits_\alpha I_\alpha$ Рё $\lambda G<\infty$, С‚Рѕ РјРѕР¶РЅРѕ
+РІС‹Р±СЂР°С‚СЊ РїРѕРґСЃРµРјРµР№СЃС‚РІРѕ РїРѕРїР°СЂРЅРѕ РЅРµРїРµСЂРµСЃРµРєР°СЋС‰РёС…СЃСЏ РёРЅС‚РµСЂРІР°Р»РѕРІ
+$\{I_{\alpha_k}\}$, С‚Р°РєРёС…, С‡С‚Рѕ $\sum\limits_{k=1}^n\lambda
 I_{\alpha_k}\geqslant \frac 1 4 \lambda G$.
 \end{lemm}
 
 \begin{proof}
-Вначале докажем, что существует такой компакт $K\p\subset G$, что
-$\lambda K\geqslant\frac 3 4\lambda G$. Поскольку
-$G=\bigcup\limits_{n=1}^\infty((-n;n)\cap G)$, то можно считать, что
-множество $G$ ограничено. Положим $K_\alpha=\{x\in G\mid
-\rho(x,\mathbb{R}^1\setminus G)\geqslant\alpha\}$. Тогда все
-$K_\alpha$ --- компакты, и $\bigcup\limits_{n=1}^\infty K_{1/n}=G$.
-Значит, $\exists\,K=K_{n_0}:\lambda K\p\geqslant\frac 3 4\lambda G$.
+Р’РЅР°С‡Р°Р»Рµ РґРѕРєР°Р¶РµРј, С‡С‚Рѕ СЃСѓС‰РµСЃС‚РІСѓРµС‚ С‚Р°РєРѕР№ РєРѕРјРїР°РєС‚ $K\p\subset G$, С‡С‚Рѕ
+$\lambda K\geqslant\frac 3 4\lambda G$. РџРѕСЃРєРѕР»СЊРєСѓ
+$G=\bigcup\limits_{n=1}^\infty((-n;n)\cap G)$, С‚Рѕ РјРѕР¶РЅРѕ СЃС‡РёС‚Р°С‚СЊ, С‡С‚Рѕ
+РјРЅРѕР¶РµСЃС‚РІРѕ $G$ РѕРіСЂР°РЅРёС‡РµРЅРѕ. РџРѕР»РѕР¶РёРј $K_\alpha=\{x\in G\mid
+\rho(x,\mathbb{R}^1\setminus G)\geqslant\alpha\}$. РўРѕРіРґР° РІСЃРµ
+$K_\alpha$ --- РєРѕРјРїР°РєС‚С‹, Рё $\bigcup\limits_{n=1}^\infty K_{1/n}=G$.
+Р—РЅР°С‡РёС‚, $\exists\,K=K_{n_0}:\lambda K\p\geqslant\frac 3 4\lambda G$.
 
-Из любого покрытия компакта $K$ можно выбрать конечное подпокрытие
-$J_1$,\ldots, $J_n$. Пусть $I_{\alpha_1}$ --- это то из множеств
-$\{J_k\}$, у которого мера Лебега максимальна, $I_{\alpha_2}$ ---
-множество с наибольшей мерой Лебега из тех, что не пересекаются с
-$I_{\alpha_1}$, и т.д.
+РР· Р»СЋР±РѕРіРѕ РїРѕРєСЂС‹С‚РёСЏ РєРѕРјРїР°РєС‚Р° $K$ РјРѕР¶РЅРѕ РІС‹Р±СЂР°С‚СЊ РєРѕРЅРµС‡РЅРѕРµ РїРѕРґРїРѕРєСЂС‹С‚РёРµ
+$J_1$,\ldots, $J_n$. РџСѓСЃС‚СЊ $I_{\alpha_1}$ --- СЌС‚Рѕ С‚Рѕ РёР· РјРЅРѕР¶РµСЃС‚РІ
+$\{J_k\}$, Сѓ РєРѕС‚РѕСЂРѕРіРѕ РјРµСЂР° Р›РµР±РµРіР° РјР°РєСЃРёРјР°Р»СЊРЅР°, $I_{\alpha_2}$ ---
+РјРЅРѕР¶РµСЃС‚РІРѕ СЃ РЅР°РёР±РѕР»СЊС€РµР№ РјРµСЂРѕР№ Р›РµР±РµРіР° РёР· С‚РµС…, С‡С‚Рѕ РЅРµ РїРµСЂРµСЃРµРєР°СЋС‚СЃСЏ СЃ
+$I_{\alpha_1}$, Рё С‚.Рґ.
 
-Докажем, что подпокрытие $\{I_{\alpha_k}\}$ --- искомое. Заменим
-множества $I_{\alpha_i}$ интервалами $\hat{I}_{\alpha_i}$ с той же
-серединой, но втрое большей длиной. Тогда $\bigcup\limits_r
-\hat{I}_{\alpha_r}\supset K$, поэтому $$\lambda
+Р”РѕРєР°Р¶РµРј, С‡С‚Рѕ РїРѕРґРїРѕРєСЂС‹С‚РёРµ $\{I_{\alpha_k}\}$ --- РёСЃРєРѕРјРѕРµ. Р—Р°РјРµРЅРёРј
+РјРЅРѕР¶РµСЃС‚РІР° $I_{\alpha_i}$ РёРЅС‚РµСЂРІР°Р»Р°РјРё $\hat{I}_{\alpha_i}$ СЃ С‚РѕР№ Р¶Рµ
+СЃРµСЂРµРґРёРЅРѕР№, РЅРѕ РІС‚СЂРѕРµ Р±РѕР»СЊС€РµР№ РґР»РёРЅРѕР№. РўРѕРіРґР° $\bigcup\limits_r
+\hat{I}_{\alpha_r}\supset K$, РїРѕСЌС‚РѕРјСѓ $$\lambda
 K\leqslant\sum\limits_r\lambda
-\hat{I}_{\alpha_r}=3\sum\limits_r\lambda I_{\alpha_r},$$ откуда
-$\frac 1 4\lambda G\leqslant\sum\limits_r\lambda I_{\alpha_r}$, что
-и требовалось.
+\hat{I}_{\alpha_r}=3\sum\limits_r\lambda I_{\alpha_r},$$ РѕС‚РєСѓРґР°
+$\frac 1 4\lambda G\leqslant\sum\limits_r\lambda I_{\alpha_r}$, С‡С‚Рѕ
+Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{lemm}\label{lemm2}
-Если $A\in\mathfrak{B}(\mathbb{R}^1)$ и $\mu A=0$, то $F'(t)=0$ для
-почти всех $t\in A$.
+Р•СЃР»Рё $A\in\mathfrak{B}(\mathbb{R}^1)$ Рё $\mu A=0$, С‚Рѕ $F'(t)=0$ РґР»СЏ
+РїРѕС‡С‚Рё РІСЃРµС… $t\in A$.
 \end{lemm}
 
 \begin{proof}
-Пусть $\delta,\varepsilon>0$. Т.к. $A\in\mathfrak{B}(\mathbb{R}^1)$,
-то $\exists\,G_\delta\supset A:\mu G_\delta<\delta$. Положим
-$I_h=(x-h;x+h)$ и $A_\varepsilon=\{x\in A\mid \lim\limits_{h\to
-0}\sup\frac{\mu I_h}{h}>\varepsilon\}$. Тогда $\forall\,x\in
-A_\varepsilon\quad\exists\,h:I_h\subset G_\delta$ и $\mu
-I_h>\varepsilon h=\varepsilon\frac{\lambda I_h}{2}$, т.е. $2\mu
-I_h>\varepsilon\lambda I_h$. По лемме~\ref{lemm1} объединение
-$V=\bigcup\limits_h I_h$ содержит $A_\varepsilon$ и содержится в
-$G_\delta$, причем $$\lambda A_\varepsilon\leqslant\lambda
+РџСѓСЃС‚СЊ $\delta,\varepsilon>0$. Рў.Рє. $A\in\mathfrak{B}(\mathbb{R}^1)$,
+С‚Рѕ $\exists\,G_\delta\supset A:\mu G_\delta<\delta$. РџРѕР»РѕР¶РёРј
+$I_h=(x-h;x+h)$ Рё $A_\varepsilon=\{x\in A\mid \lim\limits_{h\to
+0}\sup\frac{\mu I_h}{h}>\varepsilon\}$. РўРѕРіРґР° $\forall\,x\in
+A_\varepsilon\quad\exists\,h:I_h\subset G_\delta$ Рё $\mu
+I_h>\varepsilon h=\varepsilon\frac{\lambda I_h}{2}$, С‚.Рµ. $2\mu
+I_h>\varepsilon\lambda I_h$. РџРѕ Р»РµРјРјРµ~\ref{lemm1} РѕР±СЉРµРґРёРЅРµРЅРёРµ
+$V=\bigcup\limits_h I_h$ СЃРѕРґРµСЂР¶РёС‚ $A_\varepsilon$ Рё СЃРѕРґРµСЂР¶РёС‚СЃСЏ РІ
+$G_\delta$, РїСЂРёС‡РµРј $$\lambda A_\varepsilon\leqslant\lambda
 V\leqslant 4\sum\limits_k\lambda I_{h_k}<\frac{8}{\varepsilon}
 \sum\limits_k\mu I_{h_k}\leqslant\frac{8}{\varepsilon}\mu
-G_\delta<\frac{8\delta}{\varepsilon}.$$ Отсюда получаем, что
-$\lambda A_\varepsilon=0$, а значит, для почти всех $\varepsilon$
-функция $F(t)$ дифференцируема, причем $F'(x)=\lim\limits_{h\to
-0}\sup\frac{F(x+h)-F(x-h)}{2h}=0$, что и требовалось.
+G_\delta<\frac{8\delta}{\varepsilon}.$$ РћС‚СЃСЋРґР° РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ
+$\lambda A_\varepsilon=0$, Р° Р·РЅР°С‡РёС‚, РґР»СЏ РїРѕС‡С‚Рё РІСЃРµС… $\varepsilon$
+С„СѓРЅРєС†РёСЏ $F(t)$ РґРёС„С„РµСЂРµРЅС†РёСЂСѓРµРјР°, РїСЂРёС‡РµРј $F'(x)=\lim\limits_{h\to
+0}\sup\frac{F(x+h)-F(x-h)}{2h}=0$, С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
-Теперь докажем теорему Лебега. Пусть $\hat{F}(t)=\lim\limits_{h\to
-0}\sup\frac{F(t+h)-F(t)}{h}$ и $\check{F}(t)=\lim\limits_{h\to
-0}\inf\frac{F(t+h)-F(t)}{h}$. Согласно лемме~\ref{lemm2},
-$\hat{F}(t)=0$ для почти всех $t\in\{x\mid f(x)=0\}$.
+РўРµРїРµСЂСЊ РґРѕРєР°Р¶РµРј С‚РµРѕСЂРµРјСѓ Р›РµР±РµРіР°. РџСѓСЃС‚СЊ $\hat{F}(t)=\lim\limits_{h\to
+0}\sup\frac{F(t+h)-F(t)}{h}$ Рё $\check{F}(t)=\lim\limits_{h\to
+0}\inf\frac{F(t+h)-F(t)}{h}$. РЎРѕРіР»Р°СЃРЅРѕ Р»РµРјРјРµ~\ref{lemm2},
+$\hat{F}(t)=0$ РґР»СЏ РїРѕС‡С‚Рё РІСЃРµС… $t\in\{x\mid f(x)=0\}$.
 
-Для каждого $r\in\mathbb{R}^1$ положим
-$F_r(t)=\int\limits_{-\infty}^t\!(f(\tau)-r)_+\,d\tau$, тогда
-$\hat{F}_r(t)=0$ почти всюду на множестве $\{x\mid f(x)\leqslant
+Р”Р»СЏ РєР°Р¶РґРѕРіРѕ $r\in\mathbb{R}^1$ РїРѕР»РѕР¶РёРј
+$F_r(t)=\int\limits_{-\infty}^t\!(f(\tau)-r)_+\,d\tau$, С‚РѕРіРґР°
+$\hat{F}_r(t)=0$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ РЅР° РјРЅРѕР¶РµСЃС‚РІРµ $\{x\mid f(x)\leqslant
 r\}$.
 
-Т.к. $f\leqslant (f-r)_++r$, то $\hat{F}(t)\leqslant r$ на множестве
-$\{x\mid f(x)\leqslant r\}$. Но
+Рў.Рє. $f\leqslant (f-r)_++r$, С‚Рѕ $\hat{F}(t)\leqslant r$ РЅР° РјРЅРѕР¶РµСЃС‚РІРµ
+$\{x\mid f(x)\leqslant r\}$. РќРѕ
 \begin{multline*}
 \lambda\{x\mid f(x)<\hat{F}(x)\}=\lambda\bigcup\limits_r\{x\mid
 f(x)\leqslant r< \hat{F}(x)\}\leqslant\\
 \leqslant\sum\limits_r\lambda\{\{x\mid f(x)\leqslant r\}\cap\{x\mid
 r<\hat{F}(x)\}\}=0,
 \end{multline*}
-откуда $\hat{F}(t)\leqslant f(t)$ почти всюду. Аналогично,
-$\check{F}(t)\geqslant f(t)$ почти всюду. Таким образом,
+РѕС‚РєСѓРґР° $\hat{F}(t)\leqslant f(t)$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ. РђРЅР°Р»РѕРіРёС‡РЅРѕ,
+$\check{F}(t)\geqslant f(t)$ РїРѕС‡С‚Рё РІСЃСЋРґСѓ. РўР°РєРёРј РѕР±СЂР°Р·РѕРј,
 $\check{F}(t)\geqslant
-f(t)\geqslant\hat{F}(t)\geqslant\check{F}(t)$, а значит, почти всюду
-$\exists\,F'(t)=f(t)$, что и требовалось.
+f(t)\geqslant\hat{F}(t)\geqslant\check{F}(t)$, Р° Р·РЅР°С‡РёС‚, РїРѕС‡С‚Рё РІСЃСЋРґСѓ
+$\exists\,F'(t)=f(t)$, С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
-\tema{Интеграл Лебега-Стильтьеса}
+\tema{РРЅС‚РµРіСЂР°Р» Р›РµР±РµРіР°-РЎС‚РёР»СЊС‚СЊРµСЃР°}
 
-Пусть $(\mathbb{R}^1,\mathfrak{B}(\mathbb{R}^1))$ --- измеримое
-пространство.
+РџСѓСЃС‚СЊ $(\mathbb{R}^1,\mathfrak{B}(\mathbb{R}^1))$ --- РёР·РјРµСЂРёРјРѕРµ
+РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ.
 
 \begin{defen}
-Функция $F$ \emph{имеет ограниченную вариацию}, если
+Р¤СѓРЅРєС†РёСЏ $F$ \emph{РёРјРµРµС‚ РѕРіСЂР°РЅРёС‡РµРЅРЅСѓСЋ РІР°СЂРёР°С†РёСЋ}, РµСЃР»Рё
 $\exists\,\nu\colon
 \mathfrak{B}(\mathbb{R}^1)\to\mathbb{R}^1:\forall\,t\quad
-F(t)=\nu(-\infty;t]$. Тогда $\nu(a;b]=F(b)-F(a)$ --- это \emph{мера
-Лебега-Стильтьеса}. Функция $F$ называется \emph{абсолютно
-непрерывной}, если $\exists\,f\in\mathcal{L}_1:\forall\,t\quad
+F(t)=\nu(-\infty;t]$. РўРѕРіРґР° $\nu(a;b]=F(b)-F(a)$ --- СЌС‚Рѕ \emph{РјРµСЂР°
+Р›РµР±РµРіР°-РЎС‚РёР»СЊС‚СЊРµСЃР°}. Р¤СѓРЅРєС†РёСЏ $F$ РЅР°Р·С‹РІР°РµС‚СЃСЏ \emph{Р°Р±СЃРѕР»СЋС‚РЅРѕ
+РЅРµРїСЂРµСЂС‹РІРЅРѕР№}, РµСЃР»Рё $\exists\,f\in\mathcal{L}_1:\forall\,t\quad
 F(t)=\int\limits_{-\infty}^t\!f(\tau)\,d\tau$.
 \end{defen}
 
 \begin{zam}
-Абсолютно непрерывная функция всегда имеет ограниченную вариацию:
-положим $\nu A=\int\limits_A\!f(x)\,dx$ и $F(t)=\nu(-\infty;t]$.
+РђР±СЃРѕР»СЋС‚РЅРѕ РЅРµРїСЂРµСЂС‹РІРЅР°СЏ С„СѓРЅРєС†РёСЏ РІСЃРµРіРґР° РёРјРµРµС‚ РѕРіСЂР°РЅРёС‡РµРЅРЅСѓСЋ РІР°СЂРёР°С†РёСЋ:
+РїРѕР»РѕР¶РёРј $\nu A=\int\limits_A\!f(x)\,dx$ Рё $F(t)=\nu(-\infty;t]$.
 
-Из теоремы Лебега следует, что если мы знаем производную $F'(t)$
-абсолютно непрерывной функции $F(t)$, то сама функция $F(t)$
-однозначно восстанавливается:
+РР· С‚РµРѕСЂРµРјС‹ Р›РµР±РµРіР° СЃР»РµРґСѓРµС‚, С‡С‚Рѕ РµСЃР»Рё РјС‹ Р·РЅР°РµРј РїСЂРѕРёР·РІРѕРґРЅСѓСЋ $F'(t)$
+Р°Р±СЃРѕР»СЋС‚РЅРѕ РЅРµРїСЂРµСЂС‹РІРЅРѕР№ С„СѓРЅРєС†РёРё $F(t)$, С‚Рѕ СЃР°РјР° С„СѓРЅРєС†РёСЏ $F(t)$
+РѕРґРЅРѕР·РЅР°С‡РЅРѕ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ:
 $F(t)=\int\limits_{-\infty}^t\!F'(\tau)\,d\tau$.
 \end{zam}
 
 \begin{defen}
-Пусть $f,g\colon \mathbb{R}^1\to\mathbb{R}^1$. \emph{Интегралом
-Стильтьеса} называется величина
+РџСѓСЃС‚СЊ $f,g\colon \mathbb{R}^1\to\mathbb{R}^1$. \emph{РРЅС‚РµРіСЂР°Р»РѕРј
+РЎС‚РёР»СЊС‚СЊРµСЃР°} РЅР°Р·С‹РІР°РµС‚СЃСЏ РІРµР»РёС‡РёРЅР°
 $\int\limits_a^b\!g(x)\,df(x)=\lim\limits_{n\to\infty}\sum\limits_{k=1}^n
-g(\xi_k)(f(x_{k+1})-f(x_k))$, где $\{(x_k,\xi_k)\}$ --- отмеченное
-разбиение отрезка $[a;b]$.
+g(\xi_k)(f(x_{k+1})-f(x_k))$, РіРґРµ $\{(x_k,\xi_k)\}$ --- РѕС‚РјРµС‡РµРЅРЅРѕРµ
+СЂР°Р·Р±РёРµРЅРёРµ РѕС‚СЂРµР·РєР° $[a;b]$.
 \end{defen}
 
-\begin{theorem}[без доказательства]
-Пусть $f$ --- функция ограниченной вариации \textup{(}т.е.
-$f(t)=\nu_f(-\infty;t]$\textup{)}, а $g$ --- ограниченная функция.
-Тогда интеграл Стильтьеса $\int\limits_a^b\!g(t)\,df(t)$ существует
-тогда и только тогда, когда значение меры $\nu_f$ на множестве точек
-разрыва функции $g$ равно 0. В этом случае
+\begin{theorem}[Р±РµР· РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІР°]
+РџСѓСЃС‚СЊ $f$ --- С„СѓРЅРєС†РёСЏ РѕРіСЂР°РЅРёС‡РµРЅРЅРѕР№ РІР°СЂРёР°С†РёРё \textup{(}С‚.Рµ.
+$f(t)=\nu_f(-\infty;t]$\textup{)}, Р° $g$ --- РѕРіСЂР°РЅРёС‡РµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ.
+РўРѕРіРґР° РёРЅС‚РµРіСЂР°Р» РЎС‚РёР»СЊС‚СЊРµСЃР° $\int\limits_a^b\!g(t)\,df(t)$ СЃСѓС‰РµСЃС‚РІСѓРµС‚
+С‚РѕРіРґР° Рё С‚РѕР»СЊРєРѕ С‚РѕРіРґР°, РєРѕРіРґР° Р·РЅР°С‡РµРЅРёРµ РјРµСЂС‹ $\nu_f$ РЅР° РјРЅРѕР¶РµСЃС‚РІРµ С‚РѕС‡РµРє
+СЂР°Р·СЂС‹РІР° С„СѓРЅРєС†РёРё $g$ СЂР°РІРЅРѕ 0. Р’ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ
 $\int\limits_a^b\!g(t)\,df(t)=\int\limits_a^b\!g(t)\,\nu_f(dt)$.\hfill{$\square$}
 \end{theorem}
 
-\begin{theorem}[без доказательства]
-Интегралы $\int\limits_a^b\!f(t)\,dg(t)$ и
-$\int\limits_a^b\!g(t)\,df(t)$ существуют или не существуют
-одновременно, причем если они существуют, то верна формула
-интегрирования по частям: $$\int\limits_a^b\!g(t)\,df(t)=
+\begin{theorem}[Р±РµР· РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІР°]
+РРЅС‚РµРіСЂР°Р»С‹ $\int\limits_a^b\!f(t)\,dg(t)$ Рё
+$\int\limits_a^b\!g(t)\,df(t)$ СЃСѓС‰РµСЃС‚РІСѓСЋС‚ РёР»Рё РЅРµ СЃСѓС‰РµСЃС‚РІСѓСЋС‚
+РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ, РїСЂРёС‡РµРј РµСЃР»Рё РѕРЅРё СЃСѓС‰РµСЃС‚РІСѓСЋС‚, С‚Рѕ РІРµСЂРЅР° С„РѕСЂРјСѓР»Р°
+РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ РїРѕ С‡Р°СЃС‚СЏРј: $$\int\limits_a^b\!g(t)\,df(t)=
 f(b)g(b)-f(a)g(a)-\int\limits_a^b\!f(t)\,dg(t).$$\hfill{$\square$}
 \end{theorem}
 
 \begin{theorem}
-Пусть $f$ и $g$ --- функции ограниченной вариации, а также
-$\mu_f(a;b]=f(b)-f(a)$ и $\nu_g(a;b]=g(b)-g(a)$. Тогда верна формула
-интегрирования по частям:
+РџСѓСЃС‚СЊ $f$ Рё $g$ --- С„СѓРЅРєС†РёРё РѕРіСЂР°РЅРёС‡РµРЅРЅРѕР№ РІР°СЂРёР°С†РёРё, Р° С‚Р°РєР¶Рµ
+$\mu_f(a;b]=f(b)-f(a)$ Рё $\nu_g(a;b]=g(b)-g(a)$. РўРѕРіРґР° РІРµСЂРЅР° С„РѕСЂРјСѓР»Р°
+РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ РїРѕ С‡Р°СЃС‚СЏРј:
 $$\int\limits_{(a;b]}\!f(t)\,\nu_g(dt)=g(b)f(b)-g(a)f(a)-\int\limits_
 {(a;b]}\!g(t-0)\,\mu_f(dt).$$
 \end{theorem}
 
 \begin{proof}
-Теорема верна в силу следующей цепочки равенств:
+РўРµРѕСЂРµРјР° РІРµСЂРЅР° РІ СЃРёР»Сѓ СЃР»РµРґСѓСЋС‰РµР№ С†РµРїРѕС‡РєРё СЂР°РІРµРЅСЃС‚РІ:
 
 \begin{align*}
 \int\limits_{(a;b]}\!f(t)\,\nu_g(dt)&=\int\limits_{(a;b]}\!(f(a)+\mu_f(a;t])\,\nu_g(dt)=
@@ -2499,116 +2499,116 @@ f(a)g(t)\!\!\mid_a^b+\int\limits_{(a;b]}\!\mu_f(a;t]\,\nu_g(dt)=\\
 dt_2)=\footnotemark[11]\\
 &=f(a)(g(b)-g(a))-\int\limits_{(a;b]}\!g(t-0)\,\mu_f(dt)+g(t)f(t)\!\!\mid_a^b=\\
 &=g(b)f(b)-g(a)f(a)-\int\limits_ {(a;b]}\!g(t-0)\,\mu_f(dt),
-\end{align*}\footnotetext[11]{Здесь $E$ --- это треугольник на координатной плоскости $t_1Ot_2$
-с вершинами в точках $(a;a)$, $(b;b)$ и $(b;a)$.}%
-что и требовалось.
+\end{align*}\footnotetext[11]{Р—РґРµСЃСЊ $E$ --- СЌС‚Рѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРє РЅР° РєРѕРѕСЂРґРёРЅР°С‚РЅРѕР№ РїР»РѕСЃРєРѕСЃС‚Рё $t_1Ot_2$
+СЃ РІРµСЂС€РёРЅР°РјРё РІ С‚РѕС‡РєР°С… $(a;a)$, $(b;b)$ Рё $(b;a)$.}%
+С‡С‚Рѕ Рё С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ.
 \end{proof}
 
 \begin{zam}
-Если функции $f$ и $g$ абсолютно непрерывны, то формула
-интегрирования по частям записывается в следующем виде:
+Р•СЃР»Рё С„СѓРЅРєС†РёРё $f$ Рё $g$ Р°Р±СЃРѕР»СЋС‚РЅРѕ РЅРµРїСЂРµСЂС‹РІРЅС‹, С‚Рѕ С„РѕСЂРјСѓР»Р°
+РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ РїРѕ С‡Р°СЃС‚СЏРј Р·Р°РїРёСЃС‹РІР°РµС‚СЃСЏ РІ СЃР»РµРґСѓСЋС‰РµРј РІРёРґРµ:
 $$\int\limits_a^b\!f'(t)g(t)\,dt=f(b)g(b)-f(a)g(a)-\int\limits_a^b\!g'(t)f(t)\,dt.$$
-Из этой формулы, в частности, следует, что функция $fg$ также
-абсолютно непрерывна.
+РР· СЌС‚РѕР№ С„РѕСЂРјСѓР»С‹, РІ С‡Р°СЃС‚РЅРѕСЃС‚Рё, СЃР»РµРґСѓРµС‚, С‡С‚Рѕ С„СѓРЅРєС†РёСЏ $fg$ С‚Р°РєР¶Рµ
+Р°Р±СЃРѕР»СЋС‚РЅРѕ РЅРµРїСЂРµСЂС‹РІРЅР°.
 \end{zam}
 %-----------------------------------------------------------------------------------%
 
 \clearpage
 
 \begin{center}
-\textbf{\textsc{Приложение. \\ Экзаменационные вопросы.}}
+\textbf{\textsc{РџСЂРёР»РѕР¶РµРЅРёРµ. \\ Р­РєР·Р°РјРµРЅР°С†РёРѕРЅРЅС‹Рµ РІРѕРїСЂРѕСЃС‹.}}
 \end{center}
 
 \vspace{7pt}
 
-\noindent 1. Продолжение конечно аддитивной меры с полукольца на
-порожденное кольцо.
+\noindent 1. РџСЂРѕРґРѕР»Р¶РµРЅРёРµ РєРѕРЅРµС‡РЅРѕ Р°РґРґРёС‚РёРІРЅРѕР№ РјРµСЂС‹ СЃ РїРѕР»СѓРєРѕР»СЊС†Р° РЅР°
+РїРѕСЂРѕР¶РґРµРЅРЅРѕРµ РєРѕР»СЊС†Рѕ.
 
-\noindent 2. Доказательство неравенства $|\nu^*A-\nu^*B|\leqslant
+\noindent 2. Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ РЅРµСЂР°РІРµРЅСЃС‚РІР° $|\nu^*A-\nu^*B|\leqslant
 \nu^*(A\bigtriangleup B)$.
 
-\noindent 3. Совпадение $\nu^*$ и $\nu$ на области определения меры
+\noindent 3. РЎРѕРІРїР°РґРµРЅРёРµ $\nu^*$ Рё $\nu$ РЅР° РѕР±Р»Р°СЃС‚Рё РѕРїСЂРµРґРµР»РµРЅРёСЏ РјРµСЂС‹
 $\nu$.
 
-\noindent 4. Доказательство того, что множество $\nu$-измеримых
-подмножеств является $\sigma$-алгеброй.
+\noindent 4. Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ С‚РѕРіРѕ, С‡С‚Рѕ РјРЅРѕР¶РµСЃС‚РІРѕ $\nu$-РёР·РјРµСЂРёРјС‹С…
+РїРѕРґРјРЅРѕР¶РµСЃС‚РІ СЏРІР»СЏРµС‚СЃСЏ $\sigma$-Р°Р»РіРµР±СЂРѕР№.
 
-\noindent 5. Доказательство того, что внешняя мера $\nu^*$ счетно
-аддитивна на $\sigma$-алгебре $\nu$-измеримых подмножеств.
+\noindent 5. Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ С‚РѕРіРѕ, С‡С‚Рѕ РІРЅРµС€РЅСЏСЏ РјРµСЂР° $\nu^*$ СЃС‡РµС‚РЅРѕ
+Р°РґРґРёС‚РёРІРЅР° РЅР° $\sigma$-Р°Р»РіРµР±СЂРµ $\nu$-РёР·РјРµСЂРёРјС‹С… РїРѕРґРјРЅРѕР¶РµСЃС‚РІ.
 
-\noindent 6. Доказательство единственности продолжения счетно
-аддитивной меры с алгебры на порожденную $\sigma$-алгебру.
+\noindent 6. Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ РµРґРёРЅСЃС‚РІРµРЅРЅРѕСЃС‚Рё РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ СЃС‡РµС‚РЅРѕ
+Р°РґРґРёС‚РёРІРЅРѕР№ РјРµСЂС‹ СЃ Р°Р»РіРµР±СЂС‹ РЅР° РїРѕСЂРѕР¶РґРµРЅРЅСѓСЋ $\sigma$-Р°Р»РіРµР±СЂСѓ.
 
-\noindent 7. Счетная аддитивность меры Лебега (на полукольце
-полуинтервалов вещественной прямой).
+\noindent 7. РЎС‡РµС‚РЅР°СЏ Р°РґРґРёС‚РёРІРЅРѕСЃС‚СЊ РјРµСЂС‹ Р›РµР±РµРіР° (РЅР° РїРѕР»СѓРєРѕР»СЊС†Рµ
+РїРѕР»СѓРёРЅС‚РµСЂРІР°Р»РѕРІ РІРµС‰РµСЃС‚РІРµРЅРЅРѕР№ РїСЂСЏРјРѕР№).
 
-\noindent 8. Два определения измеримости вещественной функции на
-измеримом пространстве и их эквивалентность.
+\noindent 8. Р”РІР° РѕРїСЂРµРґРµР»РµРЅРёСЏ РёР·РјРµСЂРёРјРѕСЃС‚Рё РІРµС‰РµСЃС‚РІРµРЅРЅРѕР№ С„СѓРЅРєС†РёРё РЅР°
+РёР·РјРµСЂРёРјРѕРј РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ Рё РёС… СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕСЃС‚СЊ.
 
-\noindent 9. Доказательство того, что всякая измеримая функция
-является пределом последовательности простых функций.
+\noindent 9. Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ С‚РѕРіРѕ, С‡С‚Рѕ РІСЃСЏРєР°СЏ РёР·РјРµСЂРёРјР°СЏ С„СѓРЅРєС†РёСЏ
+СЏРІР»СЏРµС‚СЃСЏ РїСЂРµРґРµР»РѕРј РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё РїСЂРѕСЃС‚С‹С… С„СѓРЅРєС†РёР№.
 
-\noindent 10. Доказательство измеримости функции, являющейся
-пределом сходящейся последовательности измеримых функций.
+\noindent 10. Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ РёР·РјРµСЂРёРјРѕСЃС‚Рё С„СѓРЅРєС†РёРё, СЏРІР»СЏСЋС‰РµР№СЃСЏ
+РїСЂРµРґРµР»РѕРј СЃС…РѕРґСЏС‰РµР№СЃСЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№.
 
-\noindent 11. Доказательство существования неизмеримого по Лебегу
-подмножества вещественной прямой.
+\noindent 11. Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ РЅРµРёР·РјРµСЂРёРјРѕРіРѕ РїРѕ Р›РµР±РµРіСѓ
+РїРѕРґРјРЅРѕР¶РµСЃС‚РІР° РІРµС‰РµСЃС‚РІРµРЅРЅРѕР№ РїСЂСЏРјРѕР№.
 
-\noindent 12. Связь между сходимостью почти всюду и сходимостью по
-мере.
+\noindent 12. РЎРІСЏР·СЊ РјРµР¶РґСѓ СЃС…РѕРґРёРјРѕСЃС‚СЊСЋ РїРѕС‡С‚Рё РІСЃСЋРґСѓ Рё СЃС…РѕРґРёРјРѕСЃС‚СЊСЋ РїРѕ
+РјРµСЂРµ.
 
-\noindent 13. Критерий счетно аддитивной конечной меры на кольце
-множеств.
+\noindent 13. РљСЂРёС‚РµСЂРёР№ СЃС‡РµС‚РЅРѕ Р°РґРґРёС‚РёРІРЅРѕР№ РєРѕРЅРµС‡РЅРѕР№ РјРµСЂС‹ РЅР° РєРѕР»СЊС†Рµ
+РјРЅРѕР¶РµСЃС‚РІ.
 
-\noindent 14. Определение интеграла Лебега для измеримых функций.
+\noindent 14. РћРїСЂРµРґРµР»РµРЅРёРµ РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР° РґР»СЏ РёР·РјРµСЂРёРјС‹С… С„СѓРЅРєС†РёР№.
 
-\noindent 15. Неравенство Чебышева.
+\noindent 15. РќРµСЂР°РІРµРЅСЃС‚РІРѕ Р§РµР±С‹С€РµРІР°.
 
-\noindent 16. Теорема Беппо Леви.
+\noindent 16. РўРµРѕСЂРµРјР° Р‘РµРїРїРѕ Р›РµРІРё.
 
-\noindent 17. Теорема Фату-Лебега.
+\noindent 17. РўРµРѕСЂРµРјР° Р¤Р°С‚Сѓ-Р›РµР±РµРіР°.
 
-\noindent 18. Теорема Лебега о предельном переходе под знаком
-интеграла.
+\noindent 18. РўРµРѕСЂРµРјР° Р›РµР±РµРіР° Рѕ РїСЂРµРґРµР»СЊРЅРѕРј РїРµСЂРµС…РѕРґРµ РїРѕРґ Р·РЅР°РєРѕРј
+РёРЅС‚РµРіСЂР°Р»Р°.
 
-\noindent 19. Теорема Фату.
+\noindent 19. РўРµРѕСЂРµРјР° Р¤Р°С‚Сѓ.
 
-\noindent 20. Доказательство того, что интегрируемая по Риману
-функция интегрируема по Лебегу и интегралы совпадают.
+\noindent 20. Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ С‚РѕРіРѕ, С‡С‚Рѕ РёРЅС‚РµРіСЂРёСЂСѓРµРјР°СЏ РїРѕ Р РёРјР°РЅСѓ
+С„СѓРЅРєС†РёСЏ РёРЅС‚РµРіСЂРёСЂСѓРµРјР° РїРѕ Р›РµР±РµРіСѓ Рё РёРЅС‚РµРіСЂР°Р»С‹ СЃРѕРІРїР°РґР°СЋС‚.
 
-\noindent 21. Связь между интегралом Лебега и несобственным
-интегралом Римана.
+\noindent 21. РЎРІСЏР·СЊ РјРµР¶РґСѓ РёРЅС‚РµРіСЂР°Р»РѕРј Р›РµР±РµРіР° Рё РЅРµСЃРѕР±СЃС‚РІРµРЅРЅС‹Рј
+РёРЅС‚РµРіСЂР°Р»РѕРј Р РёРјР°РЅР°.
 
-\noindent 22. Замена переменной в интеграле Лебега.
+\noindent 22. Р—Р°РјРµРЅР° РїРµСЂРµРјРµРЅРЅРѕР№ РІ РёРЅС‚РµРіСЂР°Р»Рµ Р›РµР±РµРіР°.
 
-\noindent 23. Равносильность двух определений абсолютной
-непрерывности одной меры относительно другой.
+\noindent 23. Р Р°РІРЅРѕСЃРёР»СЊРЅРѕСЃС‚СЊ РґРІСѓС… РѕРїСЂРµРґРµР»РµРЅРёР№ Р°Р±СЃРѕР»СЋС‚РЅРѕР№
+РЅРµРїСЂРµСЂС‹РІРЅРѕСЃС‚Рё РѕРґРЅРѕР№ РјРµСЂС‹ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РґСЂСѓРіРѕР№.
 
-\noindent 24. Счетная аддитивность и абсолютная непрерывность
-интеграла Лебега.
+\noindent 24. РЎС‡РµС‚РЅР°СЏ Р°РґРґРёС‚РёРІРЅРѕСЃС‚СЊ Рё Р°Р±СЃРѕР»СЋС‚РЅР°СЏ РЅРµРїСЂРµСЂС‹РІРЅРѕСЃС‚СЊ
+РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР°.
 
-\noindent 25. Теорема Радона-Никодима.
+\noindent 25. РўРµРѕСЂРµРјР° Р Р°РґРѕРЅР°-РќРёРєРѕРґРёРјР°.
 
-\noindent 26. Теорема Хана-Жордана.
+\noindent 26. РўРµРѕСЂРµРјР° РҐР°РЅР°-Р–РѕСЂРґР°РЅР°.
 
-\noindent 27. Неравенство Гельдера.
+\noindent 27. РќРµСЂР°РІРµРЅСЃС‚РІРѕ Р“РµР»СЊРґРµСЂР°.
 
-\noindent 28. Неравенство Минковского.
+\noindent 28. РќРµСЂР°РІРµРЅСЃС‚РІРѕ РњРёРЅРєРѕРІСЃРєРѕРіРѕ.
 
-\noindent 29. Полнота пространства $\mathcal{L}_p$ при $p\geqslant
+\noindent 29. РџРѕР»РЅРѕС‚Р° РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° $\mathcal{L}_p$ РїСЂРё $p\geqslant
 1$.
 
-\noindent 30. Счетная аддитивность произведения двух счетно
-аддитивных мер.
+\noindent 30. РЎС‡РµС‚РЅР°СЏ Р°РґРґРёС‚РёРІРЅРѕСЃС‚СЊ РїСЂРѕРёР·РІРµРґРµРЅРёСЏ РґРІСѓС… СЃС‡РµС‚РЅРѕ
+Р°РґРґРёС‚РёРІРЅС‹С… РјРµСЂ.
 
-\noindent 31. Теорема Фубини.
+\noindent 31. РўРµРѕСЂРµРјР° Р¤СѓР±РёРЅРё.
 
-\noindent 32. Дифференцирование интеграла Лебега с переменным
-верхним пределом.
+\noindent 32. Р”РёС„С„РµСЂРµРЅС†РёСЂРѕРІР°РЅРёРµ РёРЅС‚РµРіСЂР°Р»Р° Р›РµР±РµРіР° СЃ РїРµСЂРµРјРµРЅРЅС‹Рј
+РІРµСЂС…РЅРёРј РїСЂРµРґРµР»РѕРј.
 
-\noindent 33. Восстановление абсолютно непрерывной функции по ее
-производной.
+\noindent 33. Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Р°Р±СЃРѕР»СЋС‚РЅРѕ РЅРµРїСЂРµСЂС‹РІРЅРѕР№ С„СѓРЅРєС†РёРё РїРѕ РµРµ
+РїСЂРѕРёР·РІРѕРґРЅРѕР№.
 
-\noindent 34. Связь между интегралами Римана-Стильтьеса и
-Лебега-Стильть\-еса (без доказательства).
+\noindent 34. РЎРІСЏР·СЊ РјРµР¶РґСѓ РёРЅС‚РµРіСЂР°Р»Р°РјРё Р РёРјР°РЅР°-РЎС‚РёР»СЊС‚СЊРµСЃР° Рё
+Р›РµР±РµРіР°-РЎС‚РёР»СЊС‚СЊ\-РµСЃР° (Р±РµР· РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІР°).
 \end{document}

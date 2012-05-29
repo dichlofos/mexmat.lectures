@@ -24,25 +24,25 @@ $$
 перестановкам $n$ символов:
 
 $$
-\det A = \mbmtx { a_{11} & \cdots & a_{1n} \\ \vdots & \ddots &
+\det A = \mbmat { a_{11} & \cdots & a_{1n} \\ \vdots & \ddots &
 \vdots \\ a_{n1} & \cdots & a_{nn} } =
 \sum_\sigma(
 \sgn\sigma\cdot
 a_{1\sigma(1)}
 a_{2\sigma(2)}
 \cdots
-a_{n\sigma(n)}),\spc\text{Где}\spc\sigma=\rbmtx{1&2&\cdots&n\\i_1&i_2&\cdots&i_n}
+a_{n\sigma(n)}),\spc\text{Где}\spc\sigma=\rbmat{1&2&\cdots&n\\i_1&i_2&\cdots&i_n}
 $$
 
 %Простейшие определители матриц:
 %\begin{description}
 %	\item[Порядок $2\times2$:]
 %		\begin{math}
-%			\mbmtx{a_1&b_1\\a_2&b_2} = a_1b_2 - a_2b_1
+%			\mbmat{a_1&b_1\\a_2&b_2} = a_1b_2 - a_2b_1
 %		\end{math}
 %	\item[Порядок $3\times3$:]
 %		\begin{math}
-%			\mbmtx{a_1&b_1&c_1\\a_2&b_2&c_2\\a_3&b_3&c_3} =
+%			\mbmat{a_1&b_1&c_1\\a_2&b_2&c_2\\a_3&b_3&c_3} =
 %			a_1b_2c_3+a_2b_3c_1+a_3b_1c_2-a_3b_2c_1-b_3c_2a_1-c_3a_2b_1
 %		\end{math}
 %\end{description}
@@ -88,14 +88,14 @@ $$
 	\item При домножении какой-либо строки/столбца на $\lambda$,
 		определитель матрицы тоже увеличивается в $\lambda$ раз.
 		$$
-		\mbmtx {
+		\mbmat {
 		a_{11} & a_{22} & \cdots & a_{1n} \\
 		\vdots & \vdots & \ddots & \vdots \\
 		\lambda a_{i1} & \lambda a_{i2} & \cdots & \lambda a_{in} \\
 		\vdots & \vdots & \ddots & \vdots \\
 		a_{n1} & a_{n2} & \cdots & a_{nn} } =
 		\lambda
-		\mbmtx{
+		\mbmat{
 		a_{11} & a_{22} & \cdots & a_{1n} \\
 		\vdots & \vdots & \ddots & \vdots \\
 		a_{i1} & a_{i2} & \cdots & a_{in} \\
@@ -106,19 +106,19 @@ $$
 	\item Если каждый элемент одной строки/столбца разбит на сумму, то
 		определитель матрицы разбивается на сумму определителей.
 		$$
-		\mbmtx{
+		\mbmat{
 		a_{11} & \cdots & a_{1n} \\
 		\vdots & \ddots & \vdots \\
 		a'_{i1} + a''_{i1} & \cdots & a'_{in} + a''_{in} \\
 		\vdots & \ddots & \vdots \\
 		a_{n1} & \cdots & a_{nn}
-		} = \mbmtx{
+		} = \mbmat{
 		a_{11} & \cdots & a_{1n} \\
 		\vdots & \ddots & \vdots \\
 		a'_{i1} & \cdots & a'_{in} \\
 		\vdots & \ddots & \vdots \\
 		a_{n1} & \cdots & a_{nn}
-		} + \mbmtx{
+		} + \mbmat{
 		a_{11} & \cdots & a_{1n} \\
 		\vdots & \ddots & \vdots \\
 		a''_{i1} & \cdots & a''_{in} \\
@@ -212,7 +212,7 @@ $$
 	Пусть подстановка $\sigma$ имеет такой вид:
 \begin{center}
 \scalebox{0.7}{
-	$\sigma=\rbmtx{
+	$\sigma=\rbmat{
 		1&\cdots&i&\cdots&j&\cdots&n \\
 		p_1&\cdots&p_i&\cdots&p_j&\cdots&p_n
 	}$
@@ -221,7 +221,7 @@ $$
 	Тогда введем подстановку $\tau$:
 \begin{center}
 \scalebox{0.7}{
-	$\tau=\rbmtx{
+	$\tau=\rbmat{
 		1&\cdots&i&\cdots&j&\cdots&n \\
 		p_1&\cdots&p_j&\cdots&p_i&\cdots&p_n
 	}$
@@ -273,7 +273,7 @@ $$
 \end{theorem}
 \begin{proof}
 	$$
-	\mbmtx{
+	\mbmat{
 	a_{11} & a_{12} & a_{13} & \cdots & a_{1n} \\
 	\vdots & \vdots & \vdots & \ddots & \vdots \\
 	\left(a_{i1} + \lambda a_{j1}\right) & \left(a_{i2} + \lambda
@@ -284,7 +284,7 @@ $$
 	a_{n1} & a_{n2} & a_{n3} & \cdots & a_{nn}
 	} =
 	$$ $$
-	= \mbmtx{
+	= \mbmat{
 	a_{11} & a_{12} & \cdots & a_{1n} \\
 	\vdots & \vdots & \ddots & \vdots \\
 	a_{i1} & a_{i2} & \cdots & a_{in} \\
@@ -292,7 +292,7 @@ $$
 	a_{j1} & a_{j2} & \cdots & a_{jn} \\
 	\vdots & \vdots & \ddots & \vdots \\
 	a_{n1} & a_{n2} & \cdots & a_{nn}
-	} + \lambda\underbrace{\mbmtx{
+	} + \lambda\underbrace{\mbmat{
 	a_{11} & a_{12} & \cdots & a_{1n} \\
 	\vdots & \vdots & \ddots & \vdots \\
 	a_{j1} & a_{j2} & \cdots & a_{jn} \\
@@ -302,8 +302,8 @@ $$
 	\hline
 	\vdots & \vdots & \ddots & \vdots \\
 	a_{n1} & a_{n2} & \cdots & a_{nn}
-	}}_{=\spc0\;\text{(\mref{matrixdet:part:samerows})}}
-	= \mbmtx{
+	}}_{=\spc0\;\text{(\ref{matrixdet:part:samerows})}}
+	= \mbmat{
 	a_{11} & \cdots & a_{1n} \\
 	\vdots & \ddots & \vdots \\
 	a_{n1} & \cdots & a_{nn}
@@ -325,22 +325,22 @@ $$
 		$\lambda\in\R$. Также $i$-ую строку можно домножить на ненулевое число
 		$\lambda\in\R$. При этом определитель не изменяется.
 		$$
-			\vbmtx{\cdots\\ i\\\cdots\\ j\\\cdots}=
-			\vbmtx{\cdots\\ i+\lambda j\\\cdots\\ j\\\cdots}
+			\mbmat{\cdots\\ i\\\cdots\\ j\\\cdots}=
+			\mbmat{\cdots\\ i+\lambda j\\\cdots\\ j\\\cdots}
 		$$ $$
-			\vbmtx{\cdots\\ i\\\cdots}=
-			\vbmtx{\cdots\\\lambda i\\\cdots}
+			\mbmat{\cdots\\ i\\\cdots}=
+			\mbmat{\cdots\\\lambda i\\\cdots}
 		$$
 	\item(кососимметричность)\par
 		Если $i$-ую и $j$-ую строки поменять местами, то определитель изменит знак.
 		$$
-			\vbmtx{\cdots\\ i\\\cdots\\ j\\\cdots}=-
-			\vbmtx{\cdots\\ j\\\cdots\\ i\\\cdots}
+			\mbmat{\cdots\\ i\\\cdots\\ j\\\cdots}=-
+			\mbmat{\cdots\\ j\\\cdots\\ i\\\cdots}
 		$$
 	\item(равенство нулю)\par
 		Если две строки матрицы совпадают, то ее определитель равен нулю.
 		$$
-			\vbmtx{\cdots\\\alpha\\\cdots\\\alpha\\\cdots}=0
+			\mbmat{\cdots\\\alpha\\\cdots\\\alpha\\\cdots}=0
 		$$
 	\item(нормировка)\par
 		Определитель единичной матрицы равен единице.
@@ -351,14 +351,14 @@ $$
 
 \begin{multline*}
 	\det A=
-	\vbmtx{a_{11} & \cdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{n1} & \cdots & a_{nn}}=
-	\vbmtx{
+	\mbmat{a_{11} & \cdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{n1} & \cdots & a_{nn}}=
+	\mbmat{
 		a_{11}\varepsilon_1+a_{12}\varepsilon_2+\cdots+a_{1n}\varepsilon_n\\
 		\cdots \\
 		a_{n1}\varepsilon_1+a_{n2}\varepsilon_2+\cdots+a_{nn}\varepsilon_n
 	}= \\
 	=\{\text{раскрывая по линейности определителя}\}= \\
-	=\sum_{i_1,\cdots,i_n\in\{1,\cdots,n\}}\vbmtx{
+	=\sum_{i_1,\cdots,i_n\in\{1,\cdots,n\}}\mbmat{
 		a_{1i_1}\varepsilon_{i_1} \\
 		a_{2i_2}\varepsilon_{i_2} \\
 		\cdots \\
@@ -366,7 +366,7 @@ $$
 	}=
 	\sum_{i_1,\cdots,i_n\in\{1,\cdots,n\}}
 	a_{1i_1}a_{2i_2}\cdots a_{ni_n}
-	\vbmtx{
+	\mbmat{
 		\varepsilon_{i_1} \\
 		\varepsilon_{i_2} \\
 		\cdots \\
@@ -378,16 +378,16 @@ $$
 		\forall\alpha,\beta\in\{1,\cdots,n\}\colon i_\alpha\ne i_\beta
 	}}
 	a_{1i_1}a_{2i_2}\cdots a_{ni_n}
-	\vbmtx{
+	\mbmat{
 		\varepsilon_{i_1} \\
 		\varepsilon_{i_2} \\
 		\cdots \\
 		\varepsilon_{i_n}
 	}= \\
-	=\{\text{введем подстановку $\sigma\in\Sb_n\colon\rbmtx{1&\cdots&n\\i_1&\cdots&i_n}$}\}=
+	=\{\text{введем подстановку $\sigma\in\Sb_n\colon\rbmat{1&\cdots&n\\i_1&\cdots&i_n}$}\}=
 	\sum_{\sigma\in\Sb_n}
 	a_{1\sigma(1)}a_{2\sigma(2)}\cdots a_{n\sigma(n)}
-	\vbmtx{
+	\mbmat{
 		\varepsilon_{\sigma(1)} \\
 		\varepsilon_{\sigma(2)} \\
 		\cdots \\
@@ -415,7 +415,7 @@ $$
 \label{matrixdet:triangular}
 
 Треугольной матрицей называется матрица, имеющая следующий вид:
-$$ A = \rbmtx{
+$$ A = \rbmat{
 a_{11} & a_{12} & a_{23} & \cdots & a_{1n} \\
 0      & a_{22} & a_{23} & \cdots & a_{2n} \\
 0      & 0      & a_{33} & \cdots & a_{3n} \\
@@ -428,7 +428,7 @@ $$
 существует единственная (диагональная) подстановка, которая не содержит
 нулевых элементов.
 
-Любую матрицу можно привести к треугольному виду ({\mref{mat:echelon}}).
+Любую матрицу можно привести к треугольному виду ({\ref{mat:echelon}}).
 
 \subsection{Разложение определителя по строке или столбцу}
 
@@ -463,7 +463,7 @@ $$
 Теперь рассмотрим определитель матрицы размером $n\times n$.
 
 $$
-\mbmtx{
+\mbmat{
 a_{11} & a_{12} & \cdots & a_{1n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{i1} & a_{i2} & \cdots & a_{in} \\
@@ -471,7 +471,7 @@ a_{i1} & a_{i2} & \cdots & a_{in} \\
 a_{n1} & a_{n2} & \cdots & a_{nn}
 }
 =
-\mbmtx{
+\mbmat{
 a_{11} & a_{12} & \cdots & a_{1n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{i1} &    0   & \cdots &    0   \\
@@ -479,7 +479,7 @@ a_{i1} &    0   & \cdots &    0   \\
 a_{n1} & a_{n2} & \cdots & a_{nn}
 }
 + \cdots +
-\mbmtx{
+\mbmat{
 a_{11} & a_{12} & \cdots & a_{1n} \\
 \vdots & \vdots & \ddots & \vdots \\
    0   &    0   & \cdots & a_{in} \\
@@ -600,7 +600,7 @@ a_{nn} & \multicolumn{1}{|c}{a_{n1}} & a_{n2} & \cdots & \multicolumn{1}{c|}{a_{
 Назовем \emph{минором}\index{минор} $i$-ой строки и $j$-ого столбца определитель
 матрицы, полученный <<вычеркиванием>> $i$-ой строки и $j$-ого столбца
 (обозначим за $M_{ij}$). По лемме о блочной матрице
-(\mref{matrixdet:blocklemma}) разложим определители в полученном
+(\ref{matrixdet:blocklemma}) разложим определители в полученном
 выражении. Также заметим, что если к степени $(-1)$ прибавить двойку, то
 ничего не изменится. Таким образом, заменяя соответствующие определители
 минорами, получаем.
@@ -644,25 +644,25 @@ $$
 
 %\begin{sample}
 %	Разложим определитель матрицы по второй строке:
-%	$$\mbmtx{1&-3&2&4\\a&b&c&d\\0&-1&1&2\\1&1&0&3}=
+%	$$\mbmat{1&-3&2&4\\a&b&c&d\\0&-1&1&2\\1&1&0&3}=
 %	a\cdot A_{21}+b\cdot A_{22}+c\cdot A_{23}+d\cdot A_{24}$$
 %	Вычислим $A_{2i}$:
 %	\begin{description}
 %		\item[$A_{21}=$]
 %			\begin{math}
-%				-\mbmtx{-3&2&4\\-1&1&2\\\phm1&0&3}=-(-3)=3
+%				-\mbmat{-3&2&4\\-1&1&2\\\phm1&0&3}=-(-3)=3
 %			\end{math}
 %		\item[$A_{22}=$]
 %			\begin{math}
-%				\phm\mbmtx{-1&2&4\\\phm0&1&2\\\phm1&0&3}=3
+%				\phm\mbmat{-1&2&4\\\phm0&1&2\\\phm1&0&3}=3
 %			\end{math}
 %		\item[$A_{23}=$]
 %			\begin{math}
-%				-\mbmtx{1&-3&4\\0&-1&2\\1&\phm1&3}=-(-9)=9
+%				-\mbmat{1&-3&4\\0&-1&2\\1&\phm1&3}=-(-9)=9
 %			\end{math}
 %		\item[$A_{24}=$]
 %			\begin{math}
-%				\phm\mbmtx{1&-3&2\\0&-1&1\\1&\phm1&0}=-2=2
+%				\phm\mbmat{1&-3&2\\0&-1&1\\1&\phm1&0}=-2=2
 %			\end{math}
 %	\end{description}
 %	Таком образом,
@@ -687,7 +687,7 @@ $$
 	<<подставить>> на $j$-ую строку элементы $i$-ой:
 	$$\Delta'=a_{i1}\cdot A_{j1}+\cdots+a_{in}\cdot A_{jn}$$
 	А $\Delta'=0$, так как в матрице получились две одинаковые строки
-	(\mref{matrixdet:part:samerows}).
+	(\ref{matrixdet:part:samerows}).
 	Значит, равенство верно.
 \end{proof}
 
@@ -736,7 +736,7 @@ $$
 %	c_{n\sigma(n)}
 %	$$
 
-%	Пусть $\sigma=\rbmtx{1&2&\cdots&n\\i_1&i_2&\cdots&i_n}$. Введем для
+%	Пусть $\sigma=\rbmat{1&2&\cdots&n\\i_1&i_2&\cdots&i_n}$. Введем для
 %	элеметнов матрицы $C$ индекс суммирования: $k$-ый элемент $i$-ой строки
 %	матрицы $C$~--- это $c_{ik}=\sum_{j_k}^n a_{ij_k} b_{j_kk}$ (индекс
 %	суммирования -- $j$). Тогда:
@@ -804,13 +804,13 @@ $$
 %	некоторых перестановок строк:
 
 %	$$
-%	B=\rbmtx{
+%	B=\rbmat{
 %	b_{11} & \cdots & b_{1n} \\
 %	\vdots & \ddots & \vdots \\
 %	b_{n1} & \cdots & b_{nn}
 %	}
 %	\ra
-%	\tilde B=\rbmtx{
+%	\tilde B=\rbmat{
 %	b_{j_11} & \cdots & b_{j_1n} \\
 %	\vdots   & \ddots & \vdots   \\
 %	b_{j_n1} & \cdots & b_{j_nn}
@@ -822,7 +822,7 @@ $$
 %	перестановку $\tau$:
 
 %	$$
-%	\exists\tau=\rbmtx{1&2&\cdots&n\\j_1&j_2&\cdots&j_n}
+%	\exists\tau=\rbmat{1&2&\cdots&n\\j_1&j_2&\cdots&j_n}
 %	$$
 
 %	Тогда $\det\tilde B=(-1)^{|\tau|}\det B$ (если четное число раз
@@ -831,7 +831,7 @@ $$
 
 %	Если есть такие $\alpha$ и $\beta$, что $j_\alpha=j_\beta$, то тогда
 %	определитель матрицы $\tilde B$ равен нулю из-за одинаковых строк
-%	(\mref{matrixdet:part:samerows}).
+%	(\ref{matrixdet:part:samerows}).
 
 %	Таким образом, можно считать, что все $j$ различны, так как
 %	одинаковые $j$ дают нулевое слагаемое, которое не влияет на
@@ -852,7 +852,7 @@ $$
 
 Определитель Вандермонда $V(a_1,\dots a_n)$ --- определитель следующей матрицы:
 
-$$\mbmtx{
+$$\mbmat{
 1 &    1 & \cdots & 1 \\
 a_{1} & a_{2} & \cdots & a_{n} \\
 a_{1}^2 & a_{2}^2 & \cdots & a_{n}^2 \\
@@ -862,13 +862,13 @@ a_{1}^{n-1} & a_{2}^{n-1} & \cdots & a_{n}^{n-1}
 $$
 Сделаем все элементы первого столбца, кроме самого первого, нулями. Для этого вычтем из $n$-й строки $a_1$ раз $n-1$-ю, из $n-1$-й~--- $a_1$ раз ${n-2}$-ю и т.д. По схеме вычисления определителя блочной матрицы, определитель исходной матрицы равен определителю следующей матрицы
 \begin{multline*}
-\mbmtx{
+\mbmat{
 a_2-a_1 &    a_3-a_1 & \cdots & a_n-a_1 \\
 a_2^2-a_2a_1 & a_3^2-a_3a_1 & \cdots & a_n^2-a_na_1 \\
 %a_2^3-a_1a_2^2 & a_3^3-a_1a_3^2 & \cdots & a_n^2 \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{2}^{n-1} - a_1a_2^{n-2} & a_{3}^{n-1} - a_1a_3^{n-2} & \cdots & a_{n}^{n-1}-a_1a_n^{n-2}
-}=\\=(a_2-a_1)(a_3-a_1)\dots(a_n-a_1)\mbmtx{
+}=\\=(a_2-a_1)(a_3-a_1)\dots(a_n-a_1)\mbmat{
 1 &    1 & \cdots & 1 \\
 a_{2} & a_{3} & \cdots & a_{n} \\
 a_{2}^2 & a_{3}^2 & \cdots & a_{n}^2 \\
@@ -939,7 +939,7 @@ $$
 \begin{proof}[Необходимость]
 	Доказательство проведем от обратного. Пусть $B$~--- обратная
 	матрица к $A$ и $\det A=0$. Тогда, по определению, $AB=BA=E$. По теореме об
-	определителе произведение (\mref{matrixdet:mul}), имеем равенство:
+	определителе произведение (\ref{matrixdet:mul}), имеем равенство:
 
 	$$\det AB=\det E \ra \det A\det B=\det E$$
 	$$0\cdot\det B=1 \ra \det B=\frac10$$
@@ -952,37 +952,37 @@ $$
 
 	$$
 	A^{-1}=
-	\frac1{\det A}\rbmtx{
+	\frac1{\det A}\rbmat{
 	A_{11} & \cdots & A_{1n} \\
 	\vdots & \ddots & \vdots \\
 	A_{n1} & \cdots & A_{nn}}^T=
-	\frac1{\det A}\rbmtx{
+	\frac1{\det A}\rbmat{
 	A_{11} & \cdots & A_{n1} \\
 	\vdots & \ddots & \vdots \\
 	A_{1n} & \cdots & A_{nn}}
 	$$
 
 	Где $A_{ij}$~--- алгебраическое дополнение к элементу $a_{ij}$ (см.
-	\mref{matrixdet:rowexpansion}).\index{алгебраическое дополнение}
+	\ref{matrixdet:rowexpansion}).\index{алгебраическое дополнение}
 
 	Остается проверить, что эта матрица действительно является обратной
 	к $A$. Обозначим произведение $AA^{-1}=X$. Тогда:
 
 	$$
 	X=\frac1{\det A}
-	\rbmtx{
+	\rbmat{
 	a_{11} & \cdots & a_{1n} \\
 	\vdots & \ddots & \vdots \\
 	a_{n1} & \cdots & a_{nn}
 	}
-	\rbmtx{
+	\rbmat{
 	A_{11} & \cdots & A_{n1} \\
 	\vdots & \ddots & \vdots \\
 	A_{1n} & \cdots & A_{nn}
 	}
 	=
 	\frac1{\det A}
-	\rbmtx{
+	\rbmat{
 	x_{11} & \cdots & x_{1n} \\
 	\vdots & \ddots & \vdots \\
 	x_{n1} & \cdots & x_{nn}
@@ -1008,14 +1008,14 @@ $$
 
 	$$
 	X=\frac1{\det A}
-	\rbmtx{
+	\rbmat{
 	\det A & 0      & 0      & \cdots & 0      \\
 	0      & \det A & 0      & \cdots & 0      \\
 	0      & 0      & \det A & \cdots & 0      \\
 	\vdots & \vdots & \vdots & \ddots & \vdots \\
 	0      & 0      & 0      & \cdots & \det A
 	}=
-	\rbmtx{
+	\rbmat{
 	1      & 0      & 0      & \cdots & 0      \\
 	0      & 1      & 0      & \cdots & 0      \\
 	0      & 0      & 1      & \cdots & 0      \\
