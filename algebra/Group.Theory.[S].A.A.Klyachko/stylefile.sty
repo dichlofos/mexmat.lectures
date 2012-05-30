@@ -1,5 +1,4 @@
 \RequirePackage{amssymb,amsmath,mathrsfs}
-\RequirePackage[cp1251]{inputenc}
 \RequirePackage{epsf}
 %\RequirePackage{mathlh}
 
@@ -34,134 +33,15 @@
 
 \ProcessOptions
 
-\if@rus
-\newtheorem{theorem}{Теорема}
-\newtheorem{stm}{Утверждение}
-\newtheorem{corollary}{Следствие}
-\newtheorem{lemma}{Лемма}
-\newtheorem{hypothesis}{Гипотеза}
-\newcounter{exa}
-\newcommand{\examp}{Пример}
-\newcounter{Fact}
-\newcommand{\wfact}{Факт}
-\newcounter{prlist}
-\newcommand{\probl}{Задача}
-\newcounter{exe}
-\newcommand{\exerc}{Упражнение}
-\newcounter{rem}
-\newcommand{\remar}{Замечание}
-\newcounter{question}
-\newcommand{\wques}{Вопрос}
-\newcommand{\ifif}{тогда и только тогда, когда\ }
-\newenvironment{proof}{\vskip 1pt{\em Доказательство}.~\,}{$\square$ \par\vskip 1pt}
-\newcommand{\inst}{{\em Указание}.~\,}
-\def\theindex{\@restonecoltrue\if@twocolumn\@restonecolfalse\fi
- \columnseprule \z@
- \columnsep 35pt\twocolumn[\hfil\large{Предметный указатель}\hfil\vskip 5pt]
- \addcontentsline{toc}{section}{Предметный указатель}
- \thispagestyle{plain}\parindent\z@
- \parskip\z@ plus .3pt\relax\let\item\@idxitem}
-\def\@idxitem{\par\hangindent 40pt}
-\def\subitem{\par\hangindent 40pt \hspace*{20pt}}
-\def\subsubitem{\par\hangindent 40pt \hspace*{30pt}}
-\def\endtheindex{\if@restonecol\onecolumn\else\clearpage\fi}
-\def\indexspace{\par \vskip 10pt plus 5pt minus 3pt\relax}
-\else
-\newtheorem{theorem}{Theorem}
-\newtheorem{stm}{Statement}
-\newtheorem{corollary}{Corollary}
-\newtheorem{lemma}{Lemma}
-\newtheorem{hypothesis}{Hypothesis}
-\newcounter{exa}
-\newcommand{\examp}{Example}
-\newcounter{Fact}
-\newcommand{\wfact}{Fact}
-\newcounter{prlist}
-\newcommand{\probl}{Problem}
-\newcounter{exe}
-\newcommand{\exerc}{Exercize}
-\newcounter{rem}
-\newcommand{\remar}{Remark}
-\newcounter{question}
-\newcommand{\wques}{Question}
-\newenvironment{proof}{\vskip 1pt{\em Proof}.~\,}{$\square$ \par\vskip 1pt}
-\def\theindex{\@restonecoltrue\if@twocolumn\@restonecolfalse\fi
- \columnseprule \z@
- \columnsep 35pt\twocolumn[\hfil\large{Subject index}\hfil\vskip 5pt]
- \addcontentsline{toc}{section}{Subject index}
- \thispagestyle{plain}\parindent\z@
- \parskip\z@ plus .3pt\relax\let\item\@idxitem}
-\def\@idxitem{\par\hangindent 40pt}
-\def\subitem{\par\hangindent 40pt \hspace*{20pt}}
-\def\subsubitem{\par\hangindent 40pt \hspace*{30pt}}
-\def\endtheindex{\if@restonecol\onecolumn\else\clearpage\fi}
-\def\indexspace{\par \vskip 10pt plus 5pt minus 3pt\relax}
-\fi
 
-\if@two
-\renewcommand{\thetheorem}{\arabic{section}.\arabic{theorem}}
-\renewcommand{\thestm}{\arabic{section}.\arabic{stm}}
-\renewcommand{\thecorollary}{\arabic{section}.\arabic{corollary}}
-\renewcommand{\thelemma}{\arabic{section}.\arabic{lemma}}
-\renewcommand{\thehypothesis}{\arabic{hypothesis}}
-\@addtoreset{theorem}{section}
-\@addtoreset{stm}{section}
-\@addtoreset{corollary}{section}
-\@addtoreset{lemma}{section}
-\@addtoreset{hypothesis}{section}
-\renewcommand{\theexa}{\thesection.\arabic{exa}}
-\newenvironment{example}{\refstepcounter{exa}\vskip 2pt\noindent{\bf \examp~\arabic{section}.\arabic{exa}.~}}{\par\vskip 2pt}
-\@addtoreset{exa}{section}
-\renewcommand{\theFact}{\thesection.\arabic{Fact}}
-\newenvironment{fact}{\refstepcounter{Fact}\vskip 2pt\noindent{\bf \wfact~\arabic{section}.\arabic{Fact}.~}}{\par\vskip 2pt}
-\@addtoreset{Fact}{section}
-\renewcommand{\theprlist}{\thesection.\arabic{prlist}}
-\newenvironment{prob}{\refstepcounter{prlist}\vskip 2pt\noindent{\bf \probl~\arabic{section}.\arabic{prlist}.~}}{\par\vskip 2pt}
-\@addtoreset{prlist}{section}
-\renewcommand{\theexe}{\thesection.\arabic{exe}}
-\newenvironment{exercise}{\refstepcounter{exe}\vskip 2pt\noindent{\bf \exerc~\arabic{section}.\arabic{exe}.~}}{\par\vskip 2pt}
-\@addtoreset{exe}{section}
-\renewcommand{\therem}{\thesection.\arabic{rem}}
-\newenvironment{remark}{\refstepcounter{rem}\vskip 2pt\noindent{\bf \remar~\arabic{section}.\arabic{rem}.~}}{\par\vskip 2pt}
-\@addtoreset{rem}{section}
-\newenvironment{quest}{\refstepcounter{question}\vskip 2pt\noindent{\bf \wques~\arabic{question}.~}}{\par\vskip 2pt}
-\else
-\renewcommand{\thetheorem}{\arabic{section}.\arabic{subsection}.\arabic{theorem}}
-\renewcommand{\thestm}{\arabic{section}.\arabic{subsection}.\arabic{stm}}
-\renewcommand{\thecorollary}{\arabic{section}.\arabic{subsection}.\arabic{corollary}}
-\renewcommand{\thelemma}{\arabic{section}.\arabic{subsection}.\arabic{lemma}}
-\renewcommand{\thehypothesis}{\arabic{section}.\arabic{hypothesis}}
-\@addtoreset{theorem}{subsection}
-\@addtoreset{stm}{subsection}
-\@addtoreset{corollary}{subsection}
-\@addtoreset{lemma}{subsection}
-\@addtoreset{hypothesis}{subsection}
-\renewcommand{\theexa}{\arabic{section}.\arabic{subsection}.\arabic{exa}}
-\newenvironment{example}{\refstepcounter{exa}\vskip 2pt\noindent{\bf \examp~\arabic{section}.\arabic{subsection}.\arabic{exa}.~}}{\par\vskip 2pt}
-\@addtoreset{exa}{subsection}
-\renewcommand{\theFact}{\arabic{section}.\arabic{subsection}.\arabic{Fact}}
-\newenvironment{fact}{\refstepcounter{Fact}\vskip 2pt\noindent{\bf \wfact~\arabic{section}.\arabic{subsection}.\arabic{Fact}.~}}{\par\vskip 2pt}
-\@addtoreset{Fact}{subsection}
-\renewcommand{\theprlist}{\arabic{section}.\arabic{subsection}.\arabic{prlist}}
-\newenvironment{prob}{\refstepcounter{prlist}\vskip 2pt\noindent{\bf \probl~\arabic{section}.\arabic{subsection}.\arabic{prlist}.~}}{\par\vskip 2pt}
-\@addtoreset{prlist}{subsection}
-\renewcommand{\theexe}{\arabic{section}.\arabic{subsection}.\arabic{exe}}
-\newenvironment{exercise}{\refstepcounter{exe}\vskip 2pt\noindent{\bf \exerc~\arabic{section}.\arabic{subsection}.\arabic{exe}.~}}{\par\vskip 2pt}
-\@addtoreset{exe}{subsection}
-\renewcommand{\therem}{\arabic{section}.\arabic{subsection}.\arabic{rem}}
-\newenvironment{remark}{\refstepcounter{rem}\vskip 2pt\noindent{\bf \remar~\arabic{section}.\arabic{subsection}.\arabic{rem}.~}}{\par\vskip 2pt}
-\@addtoreset{rem}{subsection}
-\renewcommand{\thequestion}{\arabic{section}.\arabic{question}}
-\newenvironment{quest}{\refstepcounter{question}\vskip 2pt\noindent{\bf \wques~\arabic{section}.\arabic{question}.~}}{\par\vskip 2pt}
-\@addtoreset{question}{section}
-\fi
+
 
 \def\postsection{.\@postskip@}
 \def\postsubsection{.\@postskip@}
 \def\postsubsubsection{.\@postskip@}
 \def\postparagraph{.\@postskip@}
 \def\postsubparagraph{.\@postskip@}
-
+\newcommand{\ifif}{С‚РѕРіРґР° Рё С‚РѕР»СЊРєРѕ С‚РѕРіРґР°, }
 \raggedbottom
 
 % FOR PICTURES
@@ -172,12 +52,12 @@
 % LETTERS 
 % math 
 \newcommand{\Ma}{\mathbb A} 
-\newcommand{\Mb}{\mathbb B} 
-\newcommand{\Mc}{\mathbb C} 
+\renewcommand{\Mb}{\mathbb B} 
+\renewcommand{\Mc}{\mathbb C} 
 \newcommand{\Md}{\mathbb D} 
 \newcommand{\Me}{\mathbb E} 
-\newcommand{\Mf}{\mathbb F} 
-\newcommand{\Mg}{\mathbb G} 
+\renewcommand{\Mf}{\mathbb F} 
+\renewcommand{\Mg}{\mathbb G} 
 \newcommand{\Mh}{\mathbb H} 
 \newcommand{\Mi}{\mathbb I} 
 \newcommand{\Mj}{\mathbb J} 
@@ -189,7 +69,7 @@
 \newcommand{\Mp}{\mathbb P} 
 \newcommand{\Mq}{\mathbb Q} 
 \newcommand{\Mr}{\mathbb R} 
-\newcommand{\Ms}{\mathbb S} 
+\renewcommand{\Ms}{\mathbb S} 
 \newcommand{\Mt}{\mathbb T} 
 \newcommand{\Mu}{\mathbb U} 
 \newcommand{\Mv}{\mathbb V}
@@ -199,24 +79,24 @@
 \newcommand{\Mz}{\mathbb Z} 
 %cal 
 \newcommand{\Ca}{\mathcal{A}} 
-\newcommand{\Cb}{\mathcal{B}} 
-\newcommand{\Cc}{\mathcal{C}} 
+\renewcommand{\Cb}{\mathcal{B}} 
+\renewcommand{\Cc}{\mathcal{C}} 
 \newcommand{\Cd}{\mathcal{D}} 
 \newcommand{\Ce}{\mathcal{E}} 
-\newcommand{\Cf}{\mathcal{F}} 
-\newcommand{\Cg}{\mathcal{G}} 
+\renewcommand{\Cf}{\mathcal{F}} 
+\renewcommand{\Cg}{\mathcal{G}} 
 \newcommand{\Ch}{\mathcal{H}} 
 \newcommand{\Ci}{\mathcal{I}} 
 \newcommand{\Cj}{\mathcal{J}} 
 \newcommand{\Ck}{\mathcal{K}} 
-\newcommand{\Cl}{\mathcal{L}} 
+\renewcommand{\Cl}{\mathcal{L}} 
 \newcommand{\Cm}{\mathcal{M}} 
 \newcommand{\Cn}{\mathcal{N}} 
 \newcommand{\Co}{\mathcal{O}} 
 \newcommand{\Cp}{\mathcal{P}} 
 \newcommand{\Cq}{\mathcal{Q}} 
 \newcommand{\Cr}{\mathcal{R}} 
-\newcommand{\Cs}{\mathcal{S}} 
+\renewcommand{\Cs}{\mathcal{S}} 
 \newcommand{\Ct}{\mathcal{T}} 
 \newcommand{\Cu}{\mathcal{U}} 
 \newcommand{\Cv}{\mathcal{V}} 
@@ -225,7 +105,7 @@
 \newcommand{\Cy}{\mathcal{Y}} 
 \newcommand{\Cz}{\mathcal{Z}} 
 %gothic big 
-\newcommand{\GA}{\mathfrak{A}} 
+\renewcommand{\GA}{\mathfrak{A}} 
 \newcommand{\GB}{\mathfrak{B}} 
 \newcommand{\GC}{\mathfrak{C}} 
 \newcommand{\GD}{\mathfrak{D}} 
@@ -236,7 +116,7 @@
 \newcommand{\GI}{\mathfrak{I}} 
 \newcommand{\GJ}{\mathfrak{J}} 
 \newcommand{\GK}{\mathfrak{K}} 
-\newcommand{\GL}{\mathfrak{L}} 
+\renewcommand{\GL}{\mathfrak{L}} 
 \newcommand{\GM}{\mathfrak{M}} 
 \newcommand{\GN}{\mathfrak{N}} 
 \newcommand{\GO}{\mathfrak{O}} 
@@ -252,13 +132,13 @@
 \newcommand{\GY}{\mathfrak{Y}} 
 \newcommand{\GZ}{\mathfrak{Z}} 
 %gothic little 
-\newcommand{\Ga}{\mathfrak{a}} 
-\newcommand{\Gb}{\mathfrak{b}} 
-\newcommand{\Gc}{\mathfrak{c}} 
+\renewcommand{\Ga}{\mathfrak{a}} 
+\renewcommand{\Gb}{\mathfrak{b}} 
+\renewcommand{\Gc}{\mathfrak{c}} 
 \newcommand{\Gd}{\mathfrak{d}} 
 \newcommand{\Ge}{\mathfrak{e}} 
-\newcommand{\Gf}{\mathfrak{f}} 
-\newcommand{\Gg}{\mathfrak{g}} 
+\renewcommand{\Gf}{\mathfrak{f}} 
+\renewcommand{\Gg}{\mathfrak{g}} 
 \newcommand{\Gh}{\mathfrak{h}} 
 \newcommand{\Gi}{\mathfrak{i}} 
 \newcommand{\Gj}{\mathfrak{j}} 
@@ -270,7 +150,7 @@
 \newcommand{\Gp}{\mathfrak{p}} 
 \newcommand{\Gq}{\mathfrak{q}} 
 \newcommand{\Gr}{\mathfrak{r}} 
-\newcommand{\Gs}{\mathfrak{s}} 
+\renewcommand{\Gs}{\mathfrak{s}} 
 \newcommand{\Gt}{\mathfrak{t}} 
 \newcommand{\Gu}{\mathfrak{u}} 
 \newcommand{\Gv}{\mathfrak{v}} 
@@ -280,25 +160,25 @@
 \newcommand{\Gz}{\mathfrak{z}}
 %script
 \newcommand{\Sa}{\mathscr{A}} 
-\newcommand{\Sb}{\mathscr{B}} 
-\newcommand{\Sc}{\mathscr{C}} 
+\renewcommand{\Sb}{\mathscr{B}} 
+\renewcommand{\Sc}{\mathscr{C}} 
 \newcommand{\Sd}{\mathscr{D}} 
 \newcommand{\Se}{\mathscr{E}} 
-\newcommand{\Sf}{\mathscr{F}} 
-\newcommand{\Sg}{\mathscr{G}} 
+\renewcommand{\Sf}{\mathscr{F}} 
+\renewcommand{\Sg}{\mathscr{G}} 
 \newcommand{\Sh}{\mathscr{H}} 
-\newcommand{\Si}{\mathscr{I}} 
+\renewcommand{\Si}{\mathscr{I}} 
 \newcommand{\Sj}{\mathscr{J}} 
 \newcommand{\Sk}{\mathscr{K}} 
 \newcommand{\Sl}{\mathscr{L}} 
 \newcommand{\Sm}{\mathscr{M}} 
 \newcommand{\Sn}{\mathscr{N}} 
 \newcommand{\So}{\mathscr{O}} 
-\newcommand{\Sp}{\mathscr{P}} 
+\renewcommand{\Sp}{\mathscr{P}} 
 \newcommand{\Sq}{\mathscr{Q}} 
 \newcommand{\Sr}{\mathscr{R}} 
-\newcommand{\Ss}{\mathscr{S}} 
-\newcommand{\St}{\mathscr{T}} 
+\renewcommand{\Ss}{\mathscr{S}} 
+\renewcommand{\St}{\mathscr{T}} 
 \newcommand{\Su}{\mathscr{U}} 
 \newcommand{\Sv}{\mathscr{V}} 
 \newcommand{\Sw}{\mathscr{W}} 
@@ -324,7 +204,7 @@
 \renewcommand{\angle}[1]{\langle#1\rangle}     
 \newcommand{\ncl}[1]{\langle\!\langle#1\rangle\!\rangle} 
 \newcommand{\chaf}[1]{[\![#1]\!]}
-\newcommand{\wo}{\setminus}
+\renewcommand{\wo}{\setminus}
 \renewcommand{\le}{\leqslant}
 \renewcommand{\ge}{\geqslant}
 \newcommand{\op}[1]{{#1}^{\mathrm{op}}}
@@ -338,27 +218,14 @@
 \newcommand{\subGd}{\mathop\subset\limits_{G_\delta}}
 
 % OPERATORS
-\DeclareMathOperator{\Ann}{Ann}
 \DeclareMathOperator{\Arr}{Arr}
-\DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\cl}{cl}
 \DeclareMathOperator{\cod}{cod}
-\DeclareMathOperator{\diam}{diam}
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\Dom}{Dom}
-\DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\Fr}{Fr}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Image}{Im}
-\DeclareMathOperator{\Int}{int}
 \DeclareMathOperator{\Mor}{Mor}
-\DeclareMathOperator{\Ob}{Ob}
 \DeclareMathOperator{\On}{On}
-\DeclareMathOperator{\rk}{rk}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\Tor}{Tor}
 \DeclareMathOperator{\var}{var}
 
 \newcommand{\choice}[1]{\mathop\mathrm{choice}\limits_{#1}}
@@ -377,76 +244,13 @@
 \newcommand{\Liealg}{\mathfrak{LieAlg}}
 \newcommand{\Shv}{\mathfrak{Shv}}
 \newcommand{\Lochom}{\mathfrak{LocHomeo}}
-\newcommand{\Lin}{\mathfrak{Lin}}
+\renewcommand{\Lin}{\mathfrak{Lin}}
 \newcommand{\Topgroup}{\mathfrak{TopGroup}}
 
 \newcommand{\litr}[3]{{\em #1} {\sl #2.} {#3.}}
-\newcommand{\tran}[3]{{\sf\,\ Имеется русский перевод:} {\em #1} {\sl #2.} {#3.}}
+\newcommand{\tran}[3]{{\sf\,\ РРјРµРµС‚СЃСЏ СЂСѓСЃСЃРєРёР№ РїРµСЂРµРІРѕРґ:} {\em #1} {\sl #2.} {#3.}}
                            
 
-%DMVN StyleFile
-\newcommand{\cupl}[2]{\bigcup\limits_{{#1}}^{{#2}}}                                     % limited union
-\newcommand{\cups}[1]{\bigcup\limits_{{#1}}}                                            % union over set
-
-\newcommand{\cupkui}{\bigcup\limits_{k=1}^{\infty}}                                     % unions to 'infty'
-\newcommand{\cupnui}{\bigcup\limits_{n=1}^{\infty}}
-\newcommand{\cupiui}{\bigcup\limits_{i=1}^{\infty}}
-\newcommand{\cupkzi}{\bigcup\limits_{k=0}^{\infty}}
-\newcommand{\cupnzi}{\bigcup\limits_{n=0}^{\infty}}
-\newcommand{\cupizi}{\bigcup\limits_{i=0}^{\infty}}
-\newcommand{\cupkun}{\bigcup\limits_{k=1}^{n}}                                          % unions to 'n'
-\newcommand{\cupiun}{\bigcup\limits_{i=1}^{n}}
-\newcommand{\cupkzn}{\bigcup\limits_{k=0}^{n}}                                          % unions to 'n'
-\newcommand{\cupizn}{\bigcup\limits_{i=0}^{n}}
-
-\newcommand{\cupun}{\bigcup\limits_{1}^{n}}                                             % unions w/o variable
-\newcommand{\cupzn}{\bigcup\limits_{0}^{n}}
-\newcommand{\cupui}{\bigcup\limits_{1}^{\infty}}
-\newcommand{\cupzi}{\bigcup\limits_{0}^{\infty}}
-
-\newcommand{\cupi}{\bigcup\limits_{i}}                                                  % union over 'i'
-\newcommand{\cupn}{\bigcup\limits_{n}}                                                  % union over 'n'
-
-\newcommand{\capl}[2]{\bigcap\limits_{{#1}}^{{#2}}}                                     % limited anion
-\newcommand{\caps}[1]{\bigcap\limits_{{#1}}}                                            % anion over set
-
-\newcommand{\capkui}{\bigcap\limits_{k=1}^{\infty}}                                     % anions to 'infty'
-\newcommand{\capnui}{\bigcap\limits_{n=1}^{\infty}}
-\newcommand{\capiui}{\bigcap\limits_{i=1}^{\infty}}
-\newcommand{\capkzi}{\bigcap\limits_{k=0}^{\infty}}
-\newcommand{\capnzi}{\bigcap\limits_{n=0}^{\infty}}
-\newcommand{\capizi}{\bigcap\limits_{i=0}^{\infty}}
-\newcommand{\capkun}{\bigcap\limits_{k=1}^{n}}                                          % anions to 'n'
-\newcommand{\capiun}{\bigcap\limits_{i=1}^{n}}
-\newcommand{\capkzn}{\bigcap\limits_{k=0}^{n}}                                          % anions to 'n'
-\newcommand{\capizn}{\bigcap\limits_{i=0}^{n}}
-
-\newcommand{\capun}{\bigcap\limits_{1}^{n}}                                             % anions w/o variable
-\newcommand{\capzn}{\bigcap\limits_{0}^{n}}
-\newcommand{\capui}{\bigcap\limits_{1}^{\infty}}
-\newcommand{\capzi}{\bigcap\limits_{0}^{\infty}}
-
-\newcommand{\capi}{\bigcap\limits_{i}}                                                  % anion over 'i'
-\newcommand{\capn}{\bigcap\limits_{n}}                                                  % anion over 'n'
-
-\newcommand{\oplusl}[2]{\bigoplus\limits_{{#1}}^{{#2}}}                                 % limited direct sum
-\newcommand{\otimesl}[2]{\bigotimes\limits_{{#1}}^{{#2}}}                               % limited cross product
-
-\newcommand{\opluss}[1]{\bigoplus\limits_{{#1}}}                                 % limited direct sum
-\newcommand{\otimess}[1]{\bigotimes\limits_{{#1}}}                               % limited cross product
-
-\newcommand{\cupsql}[2]{\bigsqcup\limits_{{#1}}^{{#2}}}                                 % disjunctive two-limited union
-\newcommand{\cupsqs}[1]{\bigsqcup\limits_{{#1}}}                                        % disjunctive one-limited union
-
-\newcommand{\prodl}[2]{\prod\limits_{{#1}}^{{#2}}}                                      % limited product
-\newcommand{\prods}[1]{\prod\limits_{{#1}}}                                             % half-limited product
-\newcommand{\liml}[1]{\lim\limits_{{#1}}}                                               % limited limit
-\newcommand{\infl}[1]{\inf\limits_{{#1}}}                                               % limited inf
-\newcommand{\supl}[1]{\sup\limits_{{#1}}}                                               % limited sup
-\newcommand{\minl}[1]{\min\limits_{{#1}}}                                               % limited min
-\newcommand{\maxl}[1]{\max\limits_{{#1}}}                                               % limited max
-\newcommand{\uliml}[1]{\varlimsup\limits_{#1}}                                          % upper limit
-\newcommand{\lliml}[1]{\varliminf\limits_{#1}}                                          % lower limit
 
 \newcommand{\gra}{\alpha}
 \newcommand{\grb}{\beta}
@@ -474,19 +278,5 @@
 \newcommand{\gru}{\upsilon}
 \newcommand{\grz}{\zeta}
 
-\newcommand{\LR}{\mathbf{L_R}}                                                          % LR class
-\newcommand{\LRp}{\mathbf{L_R^p}}                                                       % LR-p class
-\newcommand{\SegC}{\mathbf{SegC}}                                                       % Seg-continuous n-th derivative
-\newcommand{\LocR}{\mathbf{LocR}}                                                       % Riemann local-integrated
-\newcommand{\RP}{\mathbb{R}\mathrm{P}}                                                  % Real projective space RP
-\newcommand{\CP}{\mathbb{C}\mathrm{P}}                                                  % Complex projective space RP
-\newcommand{\AC}{\mathbf{AC}}                                                           % Absolute-continious
-\newcommand{\VB}{\mathbf{VB}}                                                           % Variation bounded
 
-\newcommand{\UT}{\mathbf{UT}}
-\newcommand{\SO}{\mathbf{SO}}
-\newcommand{\SU}{\mathbf{SU}}
-\newcommand{\GLgr}{\mathbf{GL}}
-\newcommand{\SL}{\mathbf{SL}}
 
-\newcommand*{\bw}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
