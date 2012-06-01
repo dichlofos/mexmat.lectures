@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 project (MMLectures "NONE")
+set_property(GLOBAL PROPERTY ALLOW_DUPLICATE_CUSTOM_TARGETS 1)
 
-find_program(LATEX NAMES texify latex)
+find_program(LATEX NAMES  latexmk latex texify)
 find_program(DVIPS dvips)
 find_program(MPOST mpost)
 find_program(GS gs)
