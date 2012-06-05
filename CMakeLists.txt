@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project (MMLectures "NONE")
 
-find_program(LATEX NAMES texify latex)
+find_program(LATEX NAMES latexmk texify latex)
 find_program(DVIPS dvips)
 find_program(MPOST mpost)
 find_program(GS gs)
