@@ -1,0 +1,1 @@
+texify(Differential.Operators.Spectral.Theory.[S].A.I.Aptekarev,V.N.Sorokin diff.operators.spectral.thory-aptekarev.sorokin)
