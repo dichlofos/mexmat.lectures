@@ -1,0 +1,1 @@
+texify(Classical.Mechanics.KAV classical.mechanics-7s-karapetyan)
