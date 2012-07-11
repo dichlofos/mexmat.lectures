@@ -1,1 +1,1 @@
-texify(ODE-Sergeev-EP ep-ode-sergeev pictures)
+texify(ODE-Sergeev-PR pr-ode-sergeev pictures)
