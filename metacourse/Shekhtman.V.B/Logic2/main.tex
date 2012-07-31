@@ -3,6 +3,7 @@
 \usepackage{polyglossia}
 \usepackage{unicode-math}
 \usepackage{makeidx}
+\usepackage{xltxtra}
 \setmainfont[Mapping=tex-text]{DejaVu Serif}
 \setsansfont[Mapping=tex-text]{DejaVu Sans}
 \setmonofont[Mapping=tex-text]{DejaVu Sans Mono}
@@ -22,9 +23,11 @@
 
 \newcommand{\baggr}[1]{\left\[\begin{aligned}#1\end{aligned}\right.}
 \newcommand{\Ml}{\ul{M}}
-\newcommand{\sst}[2]{\hs{#2/#1}}
+\newcommand{\sst}[2]{\hs{#2/#1}\!}
 \newcommand{\need}{{\bf Необходимость({⇐}).}\par}
 \newcommand{\suff}{{\bf Достаточность(⇒).}\par}
+\newcommand{\Ko}{\mathrel{{\rotatebox[origin=c]{-180}{\ensuremath{\text{\texttt{K}}}}}}}
+\newcommand{\enumtitle}[1]{\underline{\bfseries{#1}}}
 \makeindex
 \begin{document}
 \dmvntitle{Математическая логика}
@@ -451,5 +454,70 @@ M→M'$. Оно называется гомоморфизмом, если
   \item $π(f^M(\pargs ak)) ≠ f^N(\pargs bk)$
   \item $π(P^M(\pargs ak)) ≠ P^N(\pargs bk)$
   \end{itemize}
+Всего биекций из $M$ в $N$ конечное число. Пусть $Ω'$ содержит все
+«плохие» символы из $Ω$. Но $N⊧φ_{M,Ω'}$. 
+Поэтому $N\evn{Ω'} = M\evn{Ω'}$.
 \end{proof}
+
+\begin{df}
+  $t∈\Tm$ свободен для $x∈\Var$ в $φ∈\Fm$ означает, что свободное
+  вхождение $x$ не находится в области действия квантеров по переменным из $t$.
+\end{df}
+\begin{df}
+  Определим $\sst{t}{x}r$, $r∈\Tm$.
+  \begin{petit}
+    Вроде уже определяли. Nevermind…
+  \end{petit}
+  \begin{enumerate}
+  \item $\sst xtc = c$
+  \item $\sst xtx = t$
+  \item $\sst xty = y$
+  \item $\sst xt f(\enum rm) = f(\enum{\sst xt r}m)$
+  \end{enumerate}
+\end{df}
+
+\begin{df}
+  Определим $\sst xtφ$, $φ∈\Fm$.
+  \begin{enumerate}
+  \item $\sst xtP(\enum rm) ≔ P(\enum{\sst xtr}m)$
+  \item $★∈\hc{∧,∨,¬,→}:\quad \sst xt(φ_1★φ_2) ≔ (\sst xtφ_1 ★ \sst xtφ_2)$
+  \item $\Ko∈\hc{∀,∃}:$
+    \begin{itemize}
+    \item $\sst xt \Ko ψ≔ \Ko\sst xt ψ ( y ≠ x)$
+    \item $\sst xt \Ko ψ≔ \Ko x ψ$
+    \end{itemize}
+  \end{enumerate}
+\end{df}
+
+\begin{denote}
+$r(t) ≔ \sst xtr(x)$
+\end{denote}
+
+\begin{petit}
+  В исходниках указано, что здесь пропущена половина лекции. Мне кажется, больше.
+\end{petit}
+
+
+\begin{theorem}
+  Пусть $Γ$ -- конечное множество формул.  Тогда
+  \begin{displaymath}
+    Γ⊦φ ⇔⊦∨ Γ→φ
+  \end{displaymath}
+\end{theorem}
+\enumtitle{Примеры дополнительных правил}
+\begin{enumerate}
+\item $φ_1∧…∧φ_n ⊦ φ_i$
+\item $φ_1,…,φ_n⊦ φ_1∧…∧φ_n$
+\item Правила Бернайса ($x∉\FV$)
+  \begin{displaymath}
+    \begin{array}{lr}
+      \displaystyle\frac{φ(x)→ψ}{∃φ(x)→ψ} &
+      \displaystyle\frac{ψ→φ(x)}{ψ→∀φ(x)}
+    \end{array}
+  \end{displaymath}
+\end{enumerate}
+
+
+
+
 \end{document}
