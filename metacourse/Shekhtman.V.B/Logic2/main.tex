@@ -1,15 +1,14 @@
-\documentclass{article}
+\documentclass[unicode,10pt]{article}
 \usepackage{dmvn}
 \usepackage{polyglossia}
 \usepackage{unicode-math}
+\usepackage{fontspec}
 \usepackage{makeidx}
-\usepackage{xltxtra}
-\setmainfont[Mapping=tex-text]{DejaVu Serif}
-\setsansfont[Mapping=tex-text]{DejaVu Sans}
-\setmonofont[Mapping=tex-text]{DejaVu Sans Mono}
 \defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
-\setmathfont{Asana-Math.ttf}
-
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+\setmathfont{xits-math.otf}
 \DeclareMathOperator{\Cnst}{Cnst}
 \DeclareMathOperator{\Fn}{Fn}
 \DeclareMathOperator{\Tm}{Tm_Ω}
@@ -20,14 +19,20 @@
 \DeclareMathOperator{\Fm}{Fm_Ω}
 \DeclareMathOperator{\FV}{FV}
 \DeclareMathOperator{\Th}{Th}
+\DeclareMathOperator{\PC}{PC_Ω}
 
 \newcommand{\baggr}[1]{\left\[\begin{aligned}#1\end{aligned}\right.}
 \newcommand{\Ml}{\ul{M}}
-\newcommand{\sst}[2]{\hs{#2/#1}\!}
-\newcommand{\need}{{\bf Необходимость({⇐}).}\par}
-\newcommand{\suff}{{\bf Достаточность(⇒).}\par}
+\newcommand{\sst}[2]{\hs{ #1\,/\,#2}\!}
+\newcommand{\need}{{\bf Необходимость({\ensuremath{⇐}}).}\par}
+\newcommand{\suff}{{\bf Достаточность(\ensuremath{⇒}).}\par}
 \newcommand{\Ko}{\mathrel{{\rotatebox[origin=c]{-180}{\ensuremath{\text{\texttt{K}}}}}}}
-\newcommand{\enumtitle}[1]{\underline{\bfseries{#1}}}
+\newcommand{\enumtitle}[1]{\par\noindent\underline{\bfseries{#1}}\par}
+\newcommand{\contrib}[1]{%
+  {
+  \setmainfont{URW Chancery L}
+  \underline{#1}
+  }}
 \makeindex
 \begin{document}
 \dmvntitle{Математическая логика}
@@ -37,6 +42,13 @@
 {Москва, 2012г}
 \tableofcontents
 \newpage
+\section*{Contributors}
+\contrib{Петр Житников} -- фотографированные лекции 2012 года.
+
+\contrib{Anonymus} -- уважаемые авторы \LaTeX{} лекций 2006 года.
+
+\contrib{Богатов Дмитрий <illusion.of.life92@gmail.com>} -- слияние источников и верстка.
+
 \section{The beginning}
 \begin{df}
   Рассмотрим тройку множеств $Ω=(\Cnst,\Fn,\Pr)$, где $\Cnst$ --
@@ -92,24 +104,24 @@
 \begin{df}
   Реккурентно определим множество формул $\Fm$:
   \begin{enumerate}
-  \item $φ$ -- атормарная формула ⇒ $φ ∈ \Fm$
-  \item $φ,ψ ∈\Fm$ ⇒ $(φ∧ψ), (φ∨ψ), (φ→ψ) ∈\Fm$
-  \item $ φ∈ \Fm $ ⇒ $¬φ ∈ \Fm$
-  \item $φ ∈\Fm$, $x ∈\Var$  ⇒ $(∀x φ), (∃x φ) ∈\Fm$
+  \item $φ$ -- атормарная формула $⇒$ $φ ∈ \Fm$
+  \item $φ,ψ ∈\Fm$ $⇒$ $(φ∧ψ), (φ∨ψ), (φ→ψ) ∈\Fm$
+  \item $ φ∈ \Fm $ $⇒$ $¬φ ∈ \Fm$
+  \item $φ ∈\Fm$, $x ∈\Var$ $ ⇒$ $(∀x φ), (∃x φ) ∈\Fm$
   \end{enumerate}
 \end{df}
 
 \begin{df}
   Определим свободные и связанные вхождения переменных в формулы:
   \begin{enumerate}
-  \item $φ$ -- атомарная ⇒ все вхождения свободные.
-  \item $φ = φ_1∘φ_2$, $∘ ∈\hc{∨,∧,→}$ ⇒
+  \item $φ$ -- атомарная $ ⇒$ все вхождения свободные.
+  \item $φ = φ_1★φ_2$, $★ ∈\hc{∨,∧,→}$ $⇒$
     $\bcase{
       (x,φ,k+1)  \text{ -- свободно, если свободно } (x,φ_1, k) \\
       (x,φ, n+k+2) \text{ -- свободно, если свободно } (x,φ_2,k)
     }$
   \item $φ = ¬ψ$
-  \item $φ = Δyψ$, $Δ∈\hc{∀,∃}$ ⇒ $(x,ψ,k)$ -- свободное и $x ≠ y$ → $(x,φ,k+2)$ -- свободно
+  \item $φ = Δyψ$, $Δ∈\hc{∀,∃}$ $⇒$ $(x,ψ,k)$ -- свободное и $x ≠ y$ → $(x,φ,k+2)$ -- свободно
   \end{enumerate}
   Все остальные вхождения называются связанными.
 \end{df}
@@ -132,42 +144,42 @@
   а $\Jc$ -- интерпретирующая функция, $\Dom(\Jc) = \Cnst ∪\Pr∪\Fn$, действующая следующим образом:
   %% Функции высшего порядка. Да я любить логику должен…
   \begin{itemize}
-  \item $ c ∈ \Cnst$  ⇒ $\Jc(c) ∈\Ml$
-  \item $ f^k ∈\Fn$ ⇒ $\Jc(f^k)\colon \Ml^k → \Ml$
-  \item $ p^k ∈ \Pr$ ⇒$ \Jc(p^k)\colon \Ml^k → \hc{0,1}$
+  \item $ c ∈ \Cnst$  $⇒$ $\Jc(c) ∈\Ml$
+  \item $ f^k ∈\Fn$ $⇒$ $\Jc(f^k)\colon \Ml^k → \Ml$
+  \item $ p^k ∈ \Pr$$ ⇒$ $ \Jc(p^k)\colon \Ml^k → \hc{0,1}$
   \end{itemize}
 \end{df}
 
 \begin{denotes}
-  $c^M ≔ \Jc(c)$, $f^M ≔ \Jc(f)$, $p^M ≔ \Jc(p)$.
+  $c^M ≝ \Jc(c)$, $f^M ≝ \Jc(f)$, $p^M ≝ \Jc(p)$.
 \end{denotes}
 
 \begin{denote}
   \begin{displaymath}
-    Ω∪M ≔ (\Cnst∪\Ml, \Pr, \Fn, γ)
+    Ω∪M ≝ (\Cnst∪\Ml, \Pr, \Fn, γ)
   \end{displaymath}
 \end{denote}
 
 \begin{df}
-  $\CFmu$ называется множестом оцененных формул, $\CTmu$ --- множестом
+  $\CFmu$ -- множество оцененных формул, $\CTmu$ --- множество
   оцененных термов.
 \end{df}
 
 \begin{df}
   Подробно распишем операцию оценики:
   \begin{enumerate}
-  \item $c ∈\Cnst$ ⇒ $ c^M≔ \Jc(c) $
-  \item $ c∈ \Ml$ ⇒ $ c^M ≔ c $
-  \item $ (f(t_1,t_2,…,t_k))^M ≔ f^M(t_1^M,t_2^M,…,t_k^M)$
-  \item $ (p(t_1,t_2,…,t_k))^M ≔ p^M(t_1^M,t_2^M,…,t_k^M)$
-  \item $ (¬φ)^M ≔ 1 - φ^M $
-  \item $ (∀x φ)^M = 1 ≔ \hr{\sst{x}aφ}^M\!= 1\; ∀ a∈\Ml $
-  \item $ (∃x φ)^M = 1 ≔  ∃\; a∈ \Ml\;\; \hr{\sst{x}aφ}^M\!= 1 $
+  \item $c ∈\Cnst$ $⇒$ $ c^M≝ \Jc(c) $
+  \item $ c∈ \Ml$ $⇒$ $ c^M ≝ c $
+  \item $ (f(t_1,t_2,…,t_k))^M ≝ f^M(t_1^M,t_2^M,…,t_k^M)$
+  \item $ (p(t_1,t_2,…,t_k))^M ≝ p^M(t_1^M,t_2^M,…,t_k^M)$
+  \item $ (¬φ)^M ≝ 1 - φ^M $
+  \item $ (∀x φ)^M = 1 ≝ \hr{\sst{x}aφ}^M\!= 1\; ∀ a∈\Ml $
+  \item $ (∃x φ)^M = 1 ≝  ∃\; a∈ \Ml\;\; \hr{\sst{x}aφ}^M\!= 1 $
   \end{enumerate}
 \end{df}
 \begin{denote}
   \begin{displaymath}
-    M ⊧φ ≔ φ^M = 1
+    M ⊧φ ≝ φ^M = 1
   \end{displaymath}
 \end{denote}
 
@@ -272,12 +284,12 @@ M→M'$. Оно называется гомоморфизмом, если
       \hm{P^k(a_{i_1},…,a_{i_k})}_M =\hm{P^k(π(a_{i_1}),…,π(a_{i_k}))}_{M'}
     \end{displaymath}
   \item
-    $M\;⊧ a_{i_1}=a_{i_2}$ ⇔ $a_{i_1}$ равно $a_{i_2}$. \par
-    $M'⊧ π(a_{i_1})=π(a_{i_2})$ ⇔ $π(a_{i_1})$ равно $π(a_{i_2})$.
+    $M\;⊧ a_{i_1}=a_{i_2}$ $⇔$ $a_{i_1}$ равно $a_{i_2}$. \par
+    $M'⊧ π(a_{i_1})=π(a_{i_2})$ $⇔$ $π(a_{i_1})$ равно $π(a_{i_2})$.
   \item Пусть $φ=∃yψ(y,x_1,…,x_n)$. Из сюрьективности,
     $∀c∈M'\;∃b∈M\colon π(b)=c$.
-    \par $M⊧φ(\bar a)$ ⇔ $∃b∈M\colon M⊧ψ(b,\bar a)$
-    \par $M'⊧φ(π(\bar a))$ ⇔ $∃c∈M'\colon M'⊧ψ(c,π(\bar a))$
+    \par $M⊧φ(\bar a)$ $⇔$ $∃b∈M\colon M⊧ψ(b,\bar a)$
+    \par $M'⊧φ(π(\bar a))$ $⇔$ $∃c∈M'\colon M'⊧ψ(c,π(\bar a))$
   \end{itemize}
 \end{proof}
 
@@ -290,7 +302,7 @@ M→M'$. Оно называется гомоморфизмом, если
 \end{lemma}
 \begin{denote}
   \begin{math}
-    M ≅ M' ≔ \;∃ π\colon M→M', π \text{ --- изоморфизм}
+    M ≅ M' ≝ \;∃ π\colon M→M', π \text{ --- изоморфизм}
   \end{math}
 \end{denote}
 \begin{lemma}
@@ -352,7 +364,7 @@ M→M'$. Оно называется гомоморфизмом, если
   Модели $M$, $M'$  элементарно эквивалентны, если
   $\Th(M) = \Th(M')$.
   \begin{displaymath}
-    M≡M'\,≔\, \Th(M) = \Th(M')
+    M≡M'\,≝\, \Th(M) = \Th(M')
   \end{displaymath}
 \end{df}
 \begin{df}
@@ -377,7 +389,7 @@ M→M'$. Оно называется гомоморфизмом, если
   %% Уверен, что пробелы можно расставлять грамотней. diff -U4 господа.
   \begin{displaymath}
     \begin{gathered}
-      ψ_M≔\bigwedge_{i≠j}v_i≠v_j ∧ ∀y\bigvee_i( y=v_i) ∧ \bigwedge\hc{c=v_i\,|\, c∈\Cnst,\, M⊧c=a_i} ∧\\
+      ψ_M≝\bigwedge_{i≠j}v_i≠v_j ∧ ∀y\bigvee_i( y=v_i) ∧ \bigwedge\hc{c=v_i\,|\, c∈\Cnst,\, M⊧c=a_i} ∧\\
       ∧\bigwedge\hc{P^k(\pargs vk)\,|\,P^k∈\Pr,\, M⊧P^k(\pargs ak)}
       ∧\bigwedge\hc{¬P^k(\pargs vk)\,|\,P^k∈\Pr,\, M⊧¬P^k(\pargs ak)}∧\\
       ∧\bigwedge\hc{f^k(\pargs vk) = v_j\,|\,f^k ∈\Fn,\, M⊧f^k(\pargs ak) = a_j}
@@ -398,7 +410,7 @@ M→M'$. Оно называется гомоморфизмом, если
   $$M⊧ψ_M(\enum an)$$
   \suff
   \begin{displaymath}
-    N⊧φ_M⇒N⊧ψ_M(\enum bn)
+    N⊧φ_M ⇒N⊧ψ_M(\enum bn)
   \end{displaymath}
   Покажем, что $π\colon a_i→b_i$ --- изоморфизм.
   \begin{enumerate}
@@ -425,7 +437,7 @@ M→M'$. Оно называется гомоморфизмом, если
 \end{proof}
 
 \begin{df}
-  $ T_M ≔ \hc{φ_{M,Ω'} \,|\, Ω' \text{ -- конечна, } Ω' ⊆ Ω }$
+  $ T_M ≝ \hc{φ_{M,Ω'} \,|\, Ω' \text{ -- конечна, } Ω' ⊆ Ω }$
 \end{df}
 
 \begin{lemma}
@@ -479,18 +491,18 @@ M→M'$. Оно называется гомоморфизмом, если
 \begin{df}
   Определим $\sst xtφ$, $φ∈\Fm$.
   \begin{enumerate}
-  \item $\sst xtP(\enum rm) ≔ P(\enum{\sst xtr}m)$
-  \item $★∈\hc{∧,∨,¬,→}:\quad \sst xt(φ_1★φ_2) ≔ (\sst xtφ_1 ★ \sst xtφ_2)$
+  \item $\sst xtP(\enum rm) ≝ P(\enum{\sst xtr}m)$
+  \item $★∈\hc{∧,∨,¬,→}:\quad \sst xt(φ_1★φ_2) ≝ (\sst xtφ_1 ★ \sst xtφ_2)$
   \item $\Ko∈\hc{∀,∃}:$
     \begin{itemize}
-    \item $\sst xt \Ko ψ≔ \Ko\sst xt ψ ( y ≠ x)$
-    \item $\sst xt \Ko ψ≔ \Ko x ψ$
+    \item $\sst xt \Ko ψ≝ \Ko\sst xt ψ ( y ≠ x)$
+    \item $\sst xt \Ko ψ≝ \Ko x ψ$
     \end{itemize}
   \end{enumerate}
 \end{df}
 
 \begin{denote}
-$r(t) ≔ \sst xtr(x)$
+$r(t) ≝ \sst xtr(x)$
 \end{denote}
 
 \begin{petit}
@@ -504,7 +516,37 @@ $r(t) ≔ \sst xtr(x)$
     Γ⊦φ ⇔⊦∨ Γ→φ
   \end{displaymath}
 \end{theorem}
+\begin{petit}
+   Вытащено из лекций 2006 года.
+\end{petit}
+%% Feel the diffrence
+\enumtitle{Список аксиом:}
+\begin{nums}{-2}
+  \newcommand{\fora}[1]{\fa #1\,}
+  \newcommand{\exis}[1]{\exi #1\,}
+  \item $A \ra (B \ra A)$.
+  \item $\br{A \ra (B \ra C)}\ra\br{(A\ra B) \ra (A \ra C)}$.
+  \item $A \& B \ra A$.
+  \item $A \& B \ra B$.
+  \item $A \ra (B\ra A\&B)$.
+  \item $A \ra (A \vee B)$.
+  \item $B \ra (A \vee B)$.
+  \item $(A \ra C) \ra \br{(B \ra C) \ra (A \vee B \ra C)}$.
+  \item $\neg A \ra (A \ra B)$.
+  \item $(A \ra B) \ra \br{(A \ra \neg B) \ra \neg A}$.
+  \item $A\vee \neg A$.
+  \item $\fora{x}\ph(x) \ra \ph(t)$.
+  \item $\ph(t) \ra \exis{x}\ph(x)$.
+  \item $\fora{x}\br{\ph(x) \ra \psi} \ra\br{\exis{x} \ph(x) \ra \psi}$.
+  \item $\fora{x}\br{\psi \ra \ph(x)} \ra \br{\psi \ra \fora{x}\ph(x)}$.
+\end{nums}
+\enumtitle{Правило вывода}
+
+  Правило вывода (modus ponens, MP для краткости) это правило $\frac{A,\; A \ra B}{B}$, которое говорит,
+  что если истинны формулы $A$ и $A \ra B$, то $B$ тоже истинна.
+
 \enumtitle{Примеры дополнительных правил}
+
 \begin{enumerate}
 \item $φ_1∧…∧φ_n ⊦ φ_i$
 \item $φ_1,…,φ_n⊦ φ_1∧…∧φ_n$
@@ -515,9 +557,122 @@ $r(t) ≔ \sst xtr(x)$
       \displaystyle\frac{ψ→φ(x)}{ψ→∀φ(x)}
     \end{array}
   \end{displaymath}
+\item $φ→ψ ⊦¬ψ→¬φ$
+\item $Γ,φ⊦ψ,¬ψ$ $⇒$ $Γ⊦¬φ$
+\item $Γ,φ⊦α$,$Γ,ψ⊦α$ $⇒$ $Γ,ψ∨φ⊦α$
+\item $¬∃xφ⊦∀x¬φ$
+\item $∀x¬φ⊦¬∃xφ$
+\item $¬∀xφ⊦∃x¬φ$
 \end{enumerate}
+\begin{petit}
+  Что вообще это было?
+\end{petit}
+\begin{df}
+  Введем обозначение для множественной подстановки. 
+
+Пусть $\enum an  ∈M$, а $\enum xn∈\Var$ -- различные переменные. Тогда будем использовать обозначение 
+  \begin{displaymath}
+    \sst{\enum xn}{\enum an}φ
+  \end{displaymath}
+\end{df}
+
+\begin{lemma}
+  $M⊧\enum{∀x}n$ $⇔$ $∀\enum an ∈ M ⊧ \sst{\enum xn}{\enum an}φ$
+\end{lemma}
+
+\begin{df}
+  Пусть $φ,ψ$ -- замкнутые формулы. $φ\sim ψ ⇔\;⊧φ↔ψ$
+\end{df}
+\newcommand{\forl}[2]{∀#1_{1}…∀#1_{#2}}
+\begin{lemma}
+  Пусть $\forl xnφ$ -- замкнутая формула и $\hc{\enum yn} = 
+  \hc{\enum xn}$ -- равенство множеств.  Тогда
+
+\begin{displaymath}
+  \forl xnφ \sim \forl ynφ
+\end{displaymath}
+\end{lemma}
+\begin{proof}
+  \begin{petit}
+    Нужно бы больше подробностей, но я с трудом понимаю, что здесь
+    происходит.
+  \end{petit}
+  По условию $y_i = x_{k_i}$. Тогда
+  \begin{displaymath}
+    \sst{\enum bn}{\enum yn}φ=\sst{b_{k_1},…,b_{k_n}}{\enum xn}φ
+  \end{displaymath}
+\end{proof}
+
+\begin{df}
+  Пусть $\FV(φ) = \hc{\enum xn}$. 
+
+  Определим формулу $\bar ∀φ ≝ \forl xnφ$, называемую универсальным
+  замыканием $φ$.
+\end{df}
+
+\begin{df}
+$  ⊧φ ≝ \;⊧\bar ∀φ$
+\end{df}
+
+\begin{lemma}
+  Пусть $\FV(φ) ⊆ \hc{\enum xn}$. Тогда 
+  \begin{displaymath}
+    \bar ∀φ \sim \forl xnφ
+  \end{displaymath}
+\end{lemma}
+\begin{petit}
+  Доказательство быть должно здесь.
+\end{petit}
+\newcommand{\PCi}{⊦_{\!\PC}}
+\begin{theorem}
+  $\PCi φ \, ⇒\;⊧φ$
+\end{theorem}
+\begin{petit}
+  Что такое $\PC$?! А что такое пропозициональная аксиома?
+\end{petit}
+\begin{lemma}
+  Пусть $φ$ -- пропозициональная асиома. Тогда $⊧φ$.
+\end{lemma}
+\begin{proof}
+  Пусть $x⊇\FV(φ)$, $φ=φ(\bar x)$. 
+  Далее, пусть $φ(\bar x) = α(\bar x)→(β(\bar x)→α(\bar x))$
+  По доказанной лемме,
+  \begin{displaymath}
+    M⊧φ(\bar x) ⇔ ∀ \bar a∈\Ml^n\; M⊧α(\bar a) →(β(\bar a) → α(\bar a))
+  \end{displaymath}
+  $\hm{φ(\bar a)}_M = \hm{p→(q→p)}_Θ$, где $Θ(p) = \hm{α(\bar a)}_M$, 
+    $Θ(q)=\hm{β(\bar a)}_M$. Отсюда $\hm{φ(\bar a)}_M = 1$.
+\end{proof}
 
 
+\begin{petit}
+  Откуда эта нумерация взялась?
+\end{petit}
 
+\begin{lemma}
+  Пусть $φ$ -- вида A14. Тогда $⊧φ$.
+\end{lemma}
+\begin{proof}
+  По условию, $φ=∀x(α(x,\bar y)→β(\bar y))→(∃xα(x,\bar y)→β(\bar y))$, полагая 
+  $ \hc{x,\bar y} =\FV(α)∪\FV(β)$, $x∉\FV(β)$.
+  \begin{petit}
+    Дальше что-то совсем непонятное. Надо бы найти где-нибудь ещё.
+  \end{petit}
+\end{proof}
+\begin{lemma}
+  Пусть $φ$ -- вида A15. Тогда $⊧φ$.
+\end{lemma}
 
+\begin{lemma}
+  Верны следующие импликации
+  \begin{enumerate}
+  \item $⊧φ,φ→ψ$ $⇒$ $⊧ψ$
+  \item $⊧φ ⇒ ⊧∀xφ$
+  \end{enumerate}
+\end{lemma}
+\begin{proof}
+  \begin{enumerate}
+  \item $M⊧ ∀\bar xφ$, $M⊧∀\bar xφ→ψ$ $⇒$ $M⊧∀\bar xψ$
+  \end{enumerate}
+\end{proof}
 \end{document}
