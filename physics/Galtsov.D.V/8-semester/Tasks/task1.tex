@@ -1,0 +1,76 @@
+\begin{tproblem}
+  Построить электростатический потенциал (решение уравнения Пуассона)
+  в $R^n$, $n≥2$ для
+  \begin{itemize}
+  \item Точечного заряда
+  \item Заряженного шара (внутри и снаружи)
+  \item Заряда, равномерно распределенного по двумерной плоскости ($n≥3$)
+  \end{itemize}
+\end{tproblem}
+\begin{solution}
+  \begin{itemize}
+  \item Плотность заряда $ρ=eδ^n(\vec r -\vec r_0)$. Без ограничения
+    общности, можно считать, что $\vec r_0 = \vec 0$.
+    \begin{denote}
+      $S_n^R$ -- площадь $n$-мерной сферы радиуса $R$.
+    \end{denote}
+    \begin{denote}
+      $V_n^R$ -- объем $n$-мерного шара радиуса $R$.
+    \end{denote}
+
+    По электростатической теореме Гаусса (в учебнике коэффицент
+    $4π$ для $n=3$, в общем случае он равен $S^1_{n-1}$)
+    \begin{equation*}
+      \displaystyle
+      ∮\limits_{∂V}\vec E·d\!\vec S = S¹_{n-1}\!∫\limits_V ρ(\vec r)\,d^nx
+    \end{equation*}
+    для любого шара с центром в заряде, имеем
+    \begin{equation*}
+      S¹_{n-1}e = ES^r_{n-1}
+    \end{equation*}
+    т.к из соображений симметрии, $\vec E |\!| \vec n$.  Т.к
+    $S^r_{n-1} = r^{n-1}S¹_{n-1}$, то
+    \begin{equation}
+      E= \frac{e}{r^{n-1}} = -\grad φ
+    \end{equation}
+    Откуда $φ = \frac{e}{(n-2)r^{n-2}} +c$. Константу полагаем нулю, что бы $φ(∞) = 0$.
+  \item Равномерно заряженный с плотностью $ρ_0$ шар радиуса $R$,
+    \begin{enumerate}
+    \item Вне шара $r>R$. Из соображений симметрии, $φ=φ(r)$. По т. Гаусса
+      \begin{equation*}
+        \begin{array}{c}
+          \displaystyle S¹_{n-1}(ρ_0V^R_n) = ES^r_{n-1} \\
+          \displaystyle E = \frac{ρ_0V^R_n}{r^{n-1}} = -\grad φ \\
+          \displaystyle  φ = \frac{ρ_0V^R_n}{(n-2)r^{n-2}}
+        \end{array}
+      \end{equation*}
+    \item Внутри шара, $r<R$ также по т.Гаусса
+      \begin{equation*}
+        \begin{array}{c}
+          \displaystyle S¹_{n-1}V¹_nr^nρ_0 = ES^r_{n-1} = ES¹_{n-1}r^{n-1}\\
+          \displaystyle \vec E= ρ_0V¹_n\vec r = V¹_nρ_0\grad{\frac{r^2}{2}} = -\grad φ \\
+          \displaystyle φ = -V¹_nρ_0\frac{r^2}{2}+φ_0
+        \end{array}
+      \end{equation*}
+      Выберем $φ_0$ по непрерывности в $r = R$:
+      \begin{equation*}
+        -V¹_nρ_0\frac{r^2}{2}+φ_0 = \frac{ρ_0V^R_n}{(n-2)r^{n-2}}
+      \end{equation*}
+      Отсюда, $φ_0 = R^2V¹_nρ_0(\frac 1{n-2} + \frac 12)$.
+      Получаем, полное выражение потенциала
+      \begin{equation*}
+        φ =
+        \begin{aligned}
+          \bcase{
+            \frac{n}{2(n-2)}R^2V¹_nρ_0 -V¹_nρ_0\frac{r^2}{2}&,r≤R\\
+            \frac{ρ_0V^R_n}{(n-2)r^{n-2}}&,r>R
+          }
+        \end{aligned}
+      \end{equation*}
+    \end{enumerate}
+  \item $σ$ -- плотность заряда на плоскости.(Картинка будет
+    когда-нибудь.) Рассмотрим сечение $R^n$ пространством
+    $R^{n-2}=R(x_3,…,x_n)$. От плоскости будет точка и $φ=\frac
+    1r^{n-4}$. Из  симметрии, $φ = (x²_3+…+x²_n)^{\frac{4-n}2}$
+  \end{itemize}
+\end{solution}
