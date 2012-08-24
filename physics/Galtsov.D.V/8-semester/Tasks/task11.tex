@@ -1,0 +1,50 @@
+\begin{tproblem}
+  Найти связь между средним магнитным полем в круге и значением поля
+  на окружности в бетатроне (ускорителе электронов, в котором
+  ускоряющее электрическое поле создается благодаря электро-магнитной
+  индукции неоднородным, зависящим от времени магнитным полем
+  $B_z(ρ,t)$, $ρ² = x² + y²$, причем электроны ускоряются, оставаясь на окружности постоянного радиуса)
+\end{tproblem}
+\begin{solution}
+  \newcommand{\vecec}{\vec\Ec}
+  \newcommand{\δ}{\,d²\!}
+  \newcommand{\Α}[1]{\!<\!\!#1\!\!>}
+  По классическим определениям импульса и энергии,
+  \begin{equation*}
+    \begin{array}{c}
+      \frac{d\vec p}{dt} = e\hr{\vece + \frac 1c[\vec v×\vecb]}\\
+      \frac{d\vecec}{dt} = e(\vece, \vec v) = eEv
+    \end{array}
+  \end{equation*}
+    Запишем закон индукции Фарадея ($D_2$ -- это круг)
+    \begin{equation*}
+      \begin{array}{c}
+       \displaystyle  \intl {D²}{}\rot\vece d²x = ∮\limits_{S¹}\vece ds = 2πRE\\
+       \displaystyle \intl {D²}{}\rot\vece\δ x  = -\frac 1c\frac{∂}{∂t}\intl{D²}{}\vecb \δ x = -\frac 1c πR²\frac{∂}{∂t}\Α{B}
+      \end{array}
+    \end{equation*}
+    где $\Α{B}$ мы обозначили среднее магнитное поле в круге. Совмещая два равенства, получаем,
+    \begin{equation*}
+      E = -\frac{πR²}{2πRc}\frac{∂}{∂t}\Α{B} = -\frac{1}{2c}R\frac d{dt}\Α{B}.
+    \end{equation*}
+  Также нам понадобится равенство неясной природы
+  \begin{equation*}
+    pΩ = \hm{\hs{p×Ω}} = f_ν = \frac ec |[\vec v, \vecb\evn{R}]| = \frac ec VB_R
+  \end{equation*}
+  где $B_R$ -- среднее значение поля на окружности.
+
+  Подставим полученное выражение для $E$ в имеющиеся формулы:
+  \begin{equation*}
+    \begin{array}{c}
+      \displaystyle pΩ = \frac ec VB_R\\
+      \displaystyle eE = \frac{dp}{dt}\frac 1R =\frac ec\dot B_R
+    \end{array}
+  \end{equation*}
+  Приравнивая, получаем, что
+  \begin{equation*}
+    \begin{array}{ccc}
+      \frac {R\dot B_R}c = \frac 1{2c}R\frac{d}{dt}\Α{B} & ⇒ &
+      B_R = \frac 12\Α{B}
+    \end{array}
+  \end{equation*}
+\end{solution}
