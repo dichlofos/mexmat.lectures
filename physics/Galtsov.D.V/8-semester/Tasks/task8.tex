@@ -1,31 +1,3 @@
 \begin{tproblem}
   Рассчитать магнитное поле равномерно вращающейся сферы.
 \end{tproblem}
-\begin{solution}
-  Обозначим в отсутсвии картинки угловую скорость $\vec Ω$. Тогда
-  $\vec v = \vec Ω ×\vec r$, $\vec\jmath = ρ\vec v = σδ(r-R)\vec
-  v$. Запишем известные уравнения на магнитное поле:
-
-  \begin{displaymath}
-    \begin{array}{cc}
-      \Div\vecb = 0 & \rot\vecb = \frac{4π}c\vec\jmath
-    \end{array}
-  \end{displaymath}
-  Введем вектор-потенциал $\veca: \Div\veca  = 0, \rot\veca = \vecb$. Тогда $Δ\veca = -\frac{4π}c\vec\jmath$.
-  \questionably{ Значит, т.к} $\frac 1r$ -- функция Грина, $Δ\frac 1r = -4πδ(r)$,
-  \newcommand{\hmr}{\hm{r-r'}}
-  \newcommand{\Rreq}{{\vec r' = R\vec n}}
-  \newcommand{\sRreq}{\evn\Rreq}
-  \newcommand{\vecd}{\vec\nabla}
-  \begin{eqnarray*}
-    \veca(r) = \frac 1c∫\frac\jmath(r')\hmr d³x'
-    = \frac 1c∫\frac{σδ(r'-R)[\vec Ω×\vec r']}\hmr d³x' = \hc{d³x' = dS'dr'} = \frac σc∫\frac{δ(r-r')[\vec Ω×\vec r']}\hmr dS'dr \bw= \\
-    = \hc\Rreq = \frac σc∫_{S²}\frac{Ω×r'}{\hmr}\sRreq dS'
-    = \frac{Rσ}c \vec Ω×∫_{S²}\frac{dS'}\hmr \sRreq = \text{\questionably{Почему??}}
-    = -\frac{Rσ}c \vec Ω×\vecd ∫\frac{dV}\hmr
-  \end{eqnarray*}
-  \begin{petit}
-    Ваш верстальщик ничего дальше не понял. Дабы не плодить в этом
-    мире лажу, дальше смотрите в оригинале.
-  \end{petit}
-\end{solution}

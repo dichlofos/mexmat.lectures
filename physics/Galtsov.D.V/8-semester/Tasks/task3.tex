@@ -7,37 +7,3 @@
   (двойной электрический слой). Под каким углом заряд выйдет с другой
   стороны плоскости? (механического взаимодейтвия нет)
 \end{tproblem}
-\begin{solution}
-  \newcommand{\Eres}{4πλδ(z)}
-  \newcommand{\fd}[2]{\frac{d#1}{d#2}}
-
-  Из соображений симметрии, $E$ не зависит от $x$,$y$.
-  Запишем уравнение Пуассона
-  \begin{equation*}
-    4πλδ'(z) = \Div E = \pf{E}{z}
-  \end{equation*}
-  \begin{wrapfigure}{l}{0.16\textwidth}
-    \begin{center}
-      \includegraphics[width=0.16\textwidth]{t3image.eps}
-    \end{center}
-  \end{wrapfigure}
-  Проинтегрировав, получаем $4πλδ(z) + c= E$. \questionably{Вне двойного слоя поля
-    нет, поэтому $c=0$.} Это поле изменяет импульс частицы по координате
-  $z$, т.к не влияет на $x$, $y$ координаты. Т.к заряд нерелятивистский,
-  то верны формулы классической механики:
-  \begin{equation*}
-    \begin{array}{ccc}
-      \displaystyle
-      \vec p = m\vec v & \frac{d\vec p}{dt} = \vec F = e\vec E & \frac{d\vec p_z}{dt} = m\frac{d\vec v_z}{dt} = \Eres e
-    \end{array}
-  \end{equation*}
-  После соударения
-  \begin{equation*}
-    \fd pt = m\pf{v_z}{z}\pf zt = m\pf{v_z}{z}v_z = \frac m2 \frac{∂}{∂z}v²_z
-  \end{equation*}
-  Отсюда, $p(+0) - p(-0) = \frac 12 mv²_z\Big{|}_{\text{
-      до}}^{\text{после}} = 4πeλ$. Т.е $v²_z(+0) - v²_z(-0) = \frac{8πeλ}{m}$. Отсюда получаем соотношение на углы
-  \begin{equation*}
-    v_z(+0) = \sqrt{\frac{8πeλ}{m}+v²_z(-0)} ⇒ \cos β = \sqrt{\frac{8πeλ}{m}+\cos^2α}
-  \end{equation*}
-\end{solution}

@@ -3,33 +3,3 @@
   водорода, при учете излучения. То же для заряда, вращающегося в
   однородном магнитном поле.
 \end{tproblem}
-\begin{solution}
-  Полагаем, что излучение мало. Тогда $\frac{d\Ec}{dt} = -I(R)$, где
-  $I$ -- интенсивность излучения.
-
-  Уравнение движения электрона $m\ddot{\vec r} = -\frac{e²\vec r}{r³}$
-  -- центральное поле.  \questionably{Существует} круговая орбита, что
-  $\vec a = -a\vec n$, $v = \const$.  Далее, $a = v²/r$, второй закон
-  Ньютона $\hm{\vec F_\text{цент}} =\hm{\frac{mv²}r} = \frac{e²}{r²}$.
-  \questionably{Полная энергия частицы}: $\Ec = \frac{mv²}2 - \frac{e²}r =
-  -\frac{e²}{2r}$. Подставим в уравнение излучения:
-  \begin{petit}
-    Подходящую формулу я не нашел. Впрочем, я почти верю.
-  \end{petit}
-  \begin{equation*}
-    \frac{e²\dot r}{2r²} = -\frac 23 e²a² = -\frac 23 \frac{e^6}{m²r^4}
-  \end{equation*}
-  Отсюда, $a²\dot r = -\frac 43ρ²$, $ρ ≝ e²/m$.
-  Интегрируя, получаем систему
-  \begin{equation*}
-    \begin{array}{cc}
-      \displaystyle\bcase{r³ = -4ρ²t + C\\ r(0) = r_0} &
-      \displaystyle\bcase{r = \sqrt[3]{-4ρ²t + r³_0}}
-    \end{array}
-  \end{equation*}
-  Конец жизни электрона означает, что $r = 0$. Отсюда $t = \frac{r³_0}{4ρ^2}$.
-  \questionably{При учете того, что $T=t/c =\frac{r³_0}{4ρ^2c}$} получаем
-  для $ ρ≈ 10^{-13}cm$, $r_0 ≈10^{-8}cm$, $c ≈3·10^{10}cm$ имеем $T≈10^{-9}cm$.
-
-  Пункт про магнитное поле отстутствует. \tbk
-\end{solution}
