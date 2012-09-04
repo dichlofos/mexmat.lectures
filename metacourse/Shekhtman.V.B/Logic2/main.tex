@@ -20,6 +20,7 @@
 \DeclareMathOperator{\FV}{FV}
 \DeclareMathOperator{\Th}{Th}
 \DeclareMathOperator{\PC}{PC_Ω}
+\DeclareMathOperator{\PCe}{PC^=_Ω}
 
 \newcommand{\baggr}[1]{\left\[\begin{aligned}#1\end{aligned}\right.}
 \newcommand{\Ml}{\ul{M}}
@@ -34,6 +35,7 @@
   \underline{#1}
   }}
 \makeindex
+\newcommand{\setif}[2]{\hc{#1\,|\,#2}}
 \begin{document}
 \dmvntitle{Математическая логика}
 { и теория алгоритмов}
@@ -351,8 +353,7 @@ M→M'$. Оно называется гомоморфизмом, если
   Противоречие.
 \end{proof}
 \section{Теории}
-\newcommand{\pargs}[2]{#1_{i_1},…,#1_{i_{#2}}}
-\newcommand{\enum}[2]{#1_1,#1_2,…,#1_{#2}}
+\newcommand{\pargs}[2]{\enumsub{#1}i1{#2}}
 \begin{df}
   Пусть $M$ -- интерпретация сигнатуры $Ω$. Элементарной теорией
   называется
@@ -407,10 +408,10 @@ M→M'$. Оно называется гомоморфизмом, если
   \begin{petit}
     Из этого все должно следовать, но мне это непонятно.
   \end{petit}
-  $$M⊧ψ_M(\enum an)$$
+  $$M⊧ψ_M(\enumun a)$$
   \suff
   \begin{displaymath}
-    N⊧φ_M ⇒N⊧ψ_M(\enum bn)
+    N⊧φ_M ⇒N⊧ψ_M(\enumun b)
   \end{displaymath}
   Покажем, что $π\colon a_i→b_i$ --- изоморфизм.
   \begin{enumerate}
@@ -467,7 +468,7 @@ M→M'$. Оно называется гомоморфизмом, если
   \item $π(P^M(\pargs ak)) ≠ P^N(\pargs bk)$
   \end{itemize}
 Всего биекций из $M$ в $N$ конечное число. Пусть $Ω'$ содержит все
-«плохие» символы из $Ω$. Но $N⊧φ_{M,Ω'}$. 
+«плохие» символы из $Ω$. Но $N⊧φ_{M,Ω'}$.
 Поэтому $N\evn{Ω'} = M\evn{Ω'}$.
 \end{proof}
 
@@ -484,14 +485,14 @@ M→M'$. Оно называется гомоморфизмом, если
   \item $\sst xtc = c$
   \item $\sst xtx = t$
   \item $\sst xty = y$
-  \item $\sst xt f(\enum rm) = f(\enum{\sst xt r}m)$
+  \item $\sst xt f(\enumum r) = f(\enumum{\sst xt r})$
   \end{enumerate}
 \end{df}
 
 \begin{df}
   Определим $\sst xtφ$, $φ∈\Fm$.
   \begin{enumerate}
-  \item $\sst xtP(\enum rm) ≝ P(\enum{\sst xtr}m)$
+  \item $\sst xtP(\enumum r) ≝ P(\enumum{\sst xtr})$
   \item $★∈\hc{∧,∨,¬,→}:\quad \sst xt(φ_1★φ_2) ≝ (\sst xtφ_1 ★ \sst xtφ_2)$
   \item $\Ko∈\hc{∀,∃}:$
     \begin{itemize}
@@ -568,16 +569,16 @@ $r(t) ≝ \sst xtr(x)$
   Что вообще это было?
 \end{petit}
 \begin{df}
-  Введем обозначение для множественной подстановки. 
+  Введем обозначение для множественной подстановки.
 
-Пусть $\enum an  ∈M$, а $\enum xn∈\Var$ -- различные переменные. Тогда будем использовать обозначение 
+Пусть $\enumun a  ∈M$, а $\enumun x∈\Var$ -- различные переменные. Тогда будем использовать обозначение
   \begin{displaymath}
-    \sst{\enum xn}{\enum an}φ
+    \sst{\enumun x}{\enumun a}φ
   \end{displaymath}
 \end{df}
 
 \begin{lemma}
-  $M⊧\enum{∀x}n$ $⇔$ $∀\enum an ∈ M ⊧ \sst{\enum xn}{\enum an}φ$
+  $M⊧\enumun {∀x}$ $⇔$ $∀\enumun a ∈ M ⊧ \sst{\enumun x}{\enumun a}φ$
 \end{lemma}
 
 \begin{df}
@@ -585,8 +586,8 @@ $r(t) ≝ \sst xtr(x)$
 \end{df}
 \newcommand{\forl}[2]{∀#1_{1}…∀#1_{#2}}
 \begin{lemma}
-  Пусть $\forl xnφ$ -- замкнутая формула и $\hc{\enum yn} = 
-  \hc{\enum xn}$ -- равенство множеств.  Тогда
+  Пусть $\forl xnφ$ -- замкнутая формула и $\hc{\enumun y} =
+  \hc{\enumun x}$ -- равенство множеств.  Тогда
 
 \begin{displaymath}
   \forl xnφ \sim \forl ynφ
@@ -599,12 +600,12 @@ $r(t) ≝ \sst xtr(x)$
   \end{petit}
   По условию $y_i = x_{k_i}$. Тогда
   \begin{displaymath}
-    \sst{\enum bn}{\enum yn}φ=\sst{b_{k_1},…,b_{k_n}}{\enum xn}φ
+    \sst{\enumun b}{\enumun y}φ=\sst{b_{k_1},…,b_{k_n}}{\enumun x}φ
   \end{displaymath}
 \end{proof}
 
 \begin{df}
-  Пусть $\FV(φ) = \hc{\enum xn}$. 
+  Пусть $\FV(φ) = \hc{\enumun x}$.
 
   Определим формулу $\bar ∀φ ≝ \forl xnφ$, называемую универсальным
   замыканием $φ$.
@@ -615,7 +616,7 @@ $  ⊧φ ≝ \;⊧\bar ∀φ$
 \end{df}
 
 \begin{lemma}
-  Пусть $\FV(φ) ⊆ \hc{\enum xn}$. Тогда 
+  Пусть $\FV(φ) ⊆ \hc{\enumun x}$. Тогда
   \begin{displaymath}
     \bar ∀φ \sim \forl xnφ
   \end{displaymath}
@@ -634,13 +635,13 @@ $  ⊧φ ≝ \;⊧\bar ∀φ$
   Пусть $φ$ -- пропозициональная асиома. Тогда $⊧φ$.
 \end{lemma}
 \begin{proof}
-  Пусть $x⊇\FV(φ)$, $φ=φ(\bar x)$. 
+  Пусть $x⊇\FV(φ)$, $φ=φ(\bar x)$.
   Далее, пусть $φ(\bar x) = α(\bar x)→(β(\bar x)→α(\bar x))$
   По доказанной лемме,
   \begin{displaymath}
     M⊧φ(\bar x) ⇔ ∀ \bar a∈\Ml^n\; M⊧α(\bar a) →(β(\bar a) → α(\bar a))
   \end{displaymath}
-  $\hm{φ(\bar a)}_M = \hm{p→(q→p)}_Θ$, где $Θ(p) = \hm{α(\bar a)}_M$, 
+  $\hm{φ(\bar a)}_M = \hm{p→(q→p)}_Θ$, где $Θ(p) = \hm{α(\bar a)}_M$,
     $Θ(q)=\hm{β(\bar a)}_M$. Отсюда $\hm{φ(\bar a)}_M = 1$.
 \end{proof}
 
@@ -653,7 +654,7 @@ $  ⊧φ ≝ \;⊧\bar ∀φ$
   Пусть $φ$ -- вида A14. Тогда $⊧φ$.
 \end{lemma}
 \begin{proof}
-  По условию, $φ=∀x(α(x,\bar y)→β(\bar y))→(∃xα(x,\bar y)→β(\bar y))$, полагая 
+  По условию, $φ=∀x(α(x,\bar y)→β(\bar y))→(∃xα(x,\bar y)→β(\bar y))$, полагая
   $ \hc{x,\bar y} =\FV(α)∪\FV(β)$, $x∉\FV(β)$.
   \begin{petit}
     Дальше что-то совсем непонятное. Надо бы найти где-нибудь ещё.
@@ -675,4 +676,283 @@ $  ⊧φ ≝ \;⊧\bar ∀φ$
   \item $M⊧ ∀\bar xφ$, $M⊧∀\bar xφ→ψ$ $⇒$ $M⊧∀\bar xψ$
   \end{enumerate}
 \end{proof}
+
+\begin{petit}
+  {\large\bf \#!} Здесь пропущено какое-то количество материала, и
+  далее идет выжимка только из формулировок всех теорем. Сомнительная
+  польза, но пока нет возможности все это добро доказать.
+\end{petit}
+
+\begin{df}
+  $ \PCe$ -- исчисление предикатов с равенством.  Для отношения
+  равенства вводятся дополнительные аксиомы:
+  \begin{enumerate}
+  \item[A16] $ ∀x\, x=x$
+  \item[A17] $ ∀x∀y (x=y →y=x)$
+  \item[A18] $ ∀x∀y∀z (x = y ∧ y = z →x =z)$
+  \item[A19] $ ∀\bar x∀\bar y (\bar x = \bar y →f^n(\bar x) = f^n(\bar
+    y))$, где $\bar x ∩ \bar y = ∅$, $\hm{\bar x}=\hm{\bar y} = n$.
+  \item[A20] $∀\bar x∀\bar y (\bar x = \bar y → (P^n(\bar x) = P^n(\bar y))$
+  \end{enumerate}
+  где $ \bar x = \bar y ⇔ \veeiun(x_i = y_i)$
+\end{df}
+\begin{lemma}
+Пусть $φ$ - без квантеров, $\enumun x$ -- различные переменные,
+$\hc{\enumun x}⊆\FV(φ)$.  Тогда
+\begin{equation*}
+  ⊦_{\PC}  ∀x_1…∀x_n φ(\enumun x) →φ(\enumun t)
+\end{equation*}
+\end{lemma}
+\begin{lemma}
+  Пусть $\bar t, \bar r$ -- списки термов длины $n$. Тогда
+  \begin{equation*}
+    \begin{array}{c}
+      \bar t = \bar r ⇒ f^n(\bar t) = f^n(\bar r)\\
+      \bar t = \bar r ⇒ P^n(\bar t) = P^n(\bar r)
+    \end{array}
+  \end{equation*}
+\end{lemma}
+\begin{df}
+  $φ$ называется нормально общезначима, если $M⊧φ$ для любой нормальной интерпретации $M$.
+\end{df}
+\begin{df}
+  $φ$ -- нормально выполнима, если существует нормальная интерпретация $M$, что $M⊧φ$.
+\end{df}
+\begin{theorem}
+  \begin{math}
+    \displaystyle
+    ⊦_{\PC}φ ⇒⊧_{\text{нормально}}φ
+  \end{math}
+\end{theorem}
+\begin{theorem}
+  \begin{math}
+    T⊦_{\PC}φ ⇒T⊧_{\text{нормально}}φ
+  \end{math}
+\end{theorem}
+\begin{df}
+  Теория $T$ полна, если $∀φ∈\CFm$ либо $T⊦φ$, либо $T⊦¬φ$.
+\end{df}
+\begin{lemma}
+  Свойства непротиворечивых полных теорий
+  \begin{enumerate}
+  \item $T⊦¬φ ⇔ T\not⊦φ$
+  \item $T⊦φ∧ψ ⇔ T⊦φ \text{ и } T⊦ψ$
+  \item $T⊦φ∨ψ ⇔ T⊦φ \text{ или } T⊦ ψ$
+  \item $T⊦φ→ψ ⇔ T\not⊦φ \text{ или } T⊦ψ$
+  \end{enumerate}
+\end{lemma}
+\begin{lemma}[Лемма Линденбаума]
+Пусть $T_0$ -- непротиворечивая теория в счетной сигнатуре. Тогда
+список всех формул счетен и существует полная и непротиворечивая теория в той же сигнатуре: $T_0⊆T$.
+\end{lemma}
+\begin{df}
+  Теория $T$ -- $∃$-полна, если
+  \begin{equation*}
+    T⊦∃xφ(x) ⇒ ∃t∈\CFm\cln T⊦φ(t)
+  \end{equation*}
+\end{df}
+\begin{ex}
+  Рассмотрим $\Th(N)$ в сигнатуре $\hc{+,·,0,1,=}$. Теория будет
+  $∃$-полна, т.к
+  \begin{equation*}
+    N⊧∃xφ(x) ⇒ N⊧φ(n)
+  \end{equation*}
+  где $n = \underbrace{1+1+\ldots+1}_{\text{n times}}$ -- искомый
+  терм. Заметим, что если из сигнатуры убрать $\hc{1}$, то $∃$-полноты не будет.
+\end{ex}
+\begin{df}
+  Теория обладает свойством Хенкена(Henkin), если для любой замкнутой
+  формулы вида $∃xφ(x)$, $T⊦∃xφ(x)$, то найдется $c∈\Cnst$, что
+  $T⊦∃xφ(x)→φ(c)$.
+\end{df}
+\begin{lemma}
+  Из свойства Хенкина следует $∃$-полнота.
+\end{lemma}
+\begin{lemma}
+Пусть $φ(x)∈\Fm$, $\FV(φ)=\hc x$, $T$ -- теория, $c∈\Cnst$ и не входит
+в $T$ и $φ$. Тогда $T⊦_{\PC}φ(c)$.
+\end{lemma}
+\begin{df}
+  Теория называется теорией Хенкина, если она обладает свойством
+  Хенкина.
+\end{df}
+\begin{lemma}
+  Пусть $T_0$ -- непротиворечивая теория в счетной сигнатуре $Ω_0$.
+  Тогда существует $T⊇T_0$ -- теория Хенкина в сигнатуре $Ω=Ω_0∪\setif{c_n}{n∈ℕ}$
+\end{lemma}
+\begin{lemma}
+  Пусть $T_0$ -- непротиворечивая теория в $Ω_0$, не обязательно счетной.
+  Тогда существует  полная и $∃$-полная теория $T⊆T_0$ в сигнатуре $Ω=Ω∪\setif{c_n}{n∈ℕ}$.
+\end{lemma}
+
+\begin{lemma}
+  Пусть $S$ -- непротиворечивая, полная, $∃$-полная теория в счетной
+  сигнатуре без равенства.  Тогда $S$ имеет счетную модель.
+\end{lemma}
+
+\begin{theorem}
+  Пусть $T$ -- непротиворечивая теория без равенства в счетной
+  сигнатуре. Тогда $T$ -- счетно выполнима.
+\end{theorem}
+
+\begin{theorem}
+  Пусть $T$ -- теория без равенства в счетной сигнатуре. Тогда
+  \begin{equation*}
+    T⊧φ ⇒T⊦φ
+  \end{equation*}
+\end{theorem}
+
+\begin{theorem}[Геделя о полноте]
+  \begin{math}
+    \displaystyle
+    ⊧φ ⇒ ⊦_{\PC}φ
+  \end{math}
+\end{theorem}
+
+\begin{lemma}[Левингейма-Сколема]
+  Пусть $T$ -- теория безз равенства в счетной сигнатуре. Тогда если
+  $T$ выполнима, то $T$ имеет счетную модель.
+\end{lemma}
+
+\begin{lemma}
+  Пусть $T$ -- непротиворечивая  теория с равенством в $\PCe$. Тогда $T$ имеет не более чем счетную модель.
+\end{lemma}
+\begin{theorem}
+  \begin{math}
+    T⊧_{\text{норм}}φ ⇒ T⊦_{\PCe}φ
+  \end{math}
+\end{theorem}
+
+\begin{theorem}[Геделя о полноте с равенством]
+  \begin{math}
+    \displaystyle
+    ⊧_{\text{норм}}φ ⇒ ⊦_{\PCe}φ
+  \end{math}
+\end{theorem}
+
+\begin{theorem}
+  Пусть $T$ -- нормально выполнимая теория. Тогда $T$ имеет не более, чем счетную модель.
+\end{theorem}
+
+\begin{theorem}
+  Пусть $Ω$ -- счетная сигнатура и пусть $T$ -- теория с
+  равенством. Тогда если всякая конечная $T'⊆T$ выполнима, то и $T$
+  выполнима.
+\end{theorem}
+
+\begin{df}
+  Если $Ω$ -- бесконечна, то $\hm Ω≝\hm{\Fm}$
+\end{df}
+
+\begin{theorem}
+  Пусть $T$ -- непротиворечивая теория в сигнатуре $Ω$. Тогда $T$
+  имеет модель мощности не больше, чем $\hm Ω$.
+\end{theorem}
+
+\begin{theorem}
+  Если всякая конечнная $T'⊆T$ в необязательно конечной сигнатуре $Ω$
+  выполнима, то и $T$ выполнима.
+\end{theorem}
+
+\begin{theorem}
+  \begin{enumerate}
+  \item Всякое векторное пространство имеет бази
+  \item Все базисы равномощны.
+  \end{enumerate}
+\end{theorem}
+
+\begin{df}
+  \begin{math}
+    \Dc(M)≔\setif φ{M⊧φ,\, φ\text{ или } ¬φ \text{ -- атомарны в $Ω∪M$}}
+  \end{math}
+\end{df}
+\newcommand{\fish}{>\!\!-\!\!>}
+\newcommand{\bfish}{<\!\!-\!\!<}
+\begin{df}
+  Пусть $M$,$N$  -- модели в $Ω$.
+  \begin{itemize}
+  \item $f\cln M\fish N$ -- вложение $M$ в $N$, если $f$ -- гомоморфизм с равенством($f$ -- инъекция).
+  \item $f\cln M\bfish N$ -- элемент вложения, если $∀φ(\enumun x)∈\Fm$
+    \begin{equation*}
+      M⊧φ(\enumun a) ⇔ N⊧φ(f(a_1)\sco f(a_n))
+    \end{equation*}
+  \end{itemize}
+\end{df}
+
+
+\begin{theorem}
+  \begin{itemize}
+  \item $M\fish N ⇔ N⊧\Dc(M)$
+  \item $M\bfish N ⇔ N⊧E(M)$
+  \end{itemize}
+\end{theorem}
+\begin{petit}
+  Что такое $E(M)$ я не знаю.
+\end{petit}
+
+\begin{theorem}
+  Пусть $T$ -- теория в сигнатуре $Ω$, $M⊧T$, $k≥\hm Ω$, $k≥\hm
+  M$. Тогда $M$ -- элементарно вложено в модели $T$ мощности $k$.
+\end{theorem}
+
+\begin{df}
+  Универсальная формула -- формула вида $∀x_1…∀x_n φ$, где $φ$ -- без квантеров.
+\end{df}
+
+\begin{df}
+  Формула $φ$ называется устойчивой отностительно
+  подмоделей(замкнутой), если $M⊧φ \& N⊆M ⇒N⊧φ$ для всех $M$,$N$.
+\end{df}
+
+\begin{lemma}
+  Если $φ$ -- универсальна, то она замкнута.
+\end{lemma}
+
+\begin{df}
+  Универсальным фрагментом теории $T$ называется множество
+  \begin{equation*}
+    T_∀ ≝ \setif{φ∈\CFm}{T⊦φ,\,φ\text{ -- универсальная }}
+  \end{equation*}
+\end{df}
+
+\begin{lemma}
+  Если $M⊧T_∀$ тогда и только тогда, когда $M$ вложима в модель $T$.
+\end{lemma}
+
+\begin{df}
+  Теория $T$ называеся универсальбно аксиоматизируемой,е сли
+  существует универсальная теория $T'$ с тем же множеством теорем.
+\end{df}
+
+\begin{df}
+  Теория $T$ -- устойчива относительно подмоделей, если каждая
+  подгруппа является моделью.
+\end{df}
+
+\begin{theorem}[Тарского-Лось]
+  Теория $T$ универсально аксиомаизируема тогда и олько тогда, когда
+  $T$ устойчива относительно подмоделей.
+\end{theorem}
+
+\begin{df}
+  Пусть $Ω$ -- без функциональных символов. Формула вида $P(\enumun
+  x)$, где $x=c$ или $x=y$ называются простыми.
+\end{df}
+
+\begin{df}
+  Кванторный ранг $q$ формулы определяется следующим образом:
+  \begin{enumerate}
+  \item $φ$ -- атормарна, то $q(φ) = 0$.
+  \item $q(φ_1★φ_2) =\max(q(φ_1),q(φ_2))$
+  \item $q(¬φ) = q(φ)$
+  \item $q(\Ko xφ) = q(φ) + 1$
+  \end{enumerate}
+\end{df}
+
+\paragraph{Игра Эренфойхта длины $n$}
+Пусть $A$,$B$ -- модели.
 \end{document}
+
+%% Local Variables:
+%% compile-command: "xelatex -halt-on-error -file-line-error main.tex"
+%% End:
