@@ -1,6 +1,15 @@
-\documentclass[a4paper]{article}
-\usepackage[simple]{dmvn}
+\documentclass[unicode,10pt]{article}
+\usepackage{dmvn}
+\usepackage{polyglossia}
+\usepackage{unicode-math}
+\usepackage{fontspec}
+\usepackage{makeidx}
 \usepackage{sh57}
+\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+\setmathfont{xits-math.otf}
 
 \title{Математический анализ --- формулировки}
 \author{Лектор --- Т.\,П.\,Лукашенко}
@@ -11,9 +20,14 @@
 \begin{document}
 \maketitle
 
-{\footnotesize Данное издание представляет собой все леммы, теоремы \итп из курса математического анализа
+{\footnotesize Данное издание представляет собой все леммы, теоремы \итд из курса математического анализа
 Т.\,П.\,Лукашенко во втором семестре. Основная цель --- помочь в запоминании основных теорем курса, для
 улучшения понимания сути курса. Набор осуществлён Сергеем Шашковым. Отсутствие лажи не гарантируется.\par}
+
+\begin{petit}
+ {\bf \#!}Категорическая просьба взять исходники и привести в божеский
+вид. Макросы кириллицей это странно.{$\sim\sim\sim\sim$}
+\end{petit}
 
 \dmvntrail
 
@@ -36,7 +50,7 @@
 \begin{df} Масштаб.
 \end{df}
 
-\begin{df} Интегралы Римана, Мак-Шейна, Курцвейля\ч Хенстока.
+\begin{df} Интегралы Римана, Мак-Шейна, Курцвейля-Хенстока.
 \end{df}
 
 \begin{df} Базы $\mathfrak{R},{ }\mathfrak{M},{ }\mathfrak{H}$, в частности $\mathcal
@@ -556,8 +570,11 @@ $$|\sum_{k=1}^n a_k b_k|\le \sqrt{\summ a_k^2}\sqrt{\summ b_k^2}.$$ \end{lemma}
 \begin{df} Бесконечно малая последовательность нормированного пространства.
 \end{df}
 
-\begin{lemma} Если $a_n$\т последовательность из нормированного пространства $N$, то
-$\lim_{n\rightarrow\беск}a_n=a$ тогда и только тогда, когда $a_n-a=o^.(1)$. \end{lemma}
+\begin{lemma}
+  Если $a_n$ -- последовательность из нормированного пространства $N$,
+  то $\lim_{n\rightarrow\беск}a_n=a$ тогда и только тогда, когда
+  $a_n-a=o^.(1)$.
+\end{lemma}
 
 \begin{lemma} Сумма и разность двух бесконечно малых -- бесконечно малая. Произведение бесконечно малой и
 числовой -- бесконечно малая. \end{lemma}
@@ -954,3 +971,8 @@ y^0,\vxx)}{y_j}\xg{y_j(\vxx)}{x_k},\ i=1,\bnl,m$. Из этой системы \
 \end{theorem}
 
 \end{document}
+
+
+%% Local Variables:
+%% eval: (setq compile-command (concat "xelatex  -halt-on-error -file-line-error " (buffer-name)))
+%% End:

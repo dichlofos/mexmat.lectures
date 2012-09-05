@@ -1,11 +1,13 @@
 \documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
 \usepackage[simple]{dmvn}
 
 \newcommand{\lima}{\uliml{n\ra\infty}}
 \newcommand{\limb}{\lliml{n\ra\infty}}
 
 \title{Задачи для подготовки к коллоквиуму №1\\ по математическому анализу}
-\author{Лектор\т В.\,Н.\,Чубариков}
+\author{Лектор В.\,Н.\,Чубариков}
 \date{I семестр, 2004~г.}
 
 \begin{document}
@@ -15,10 +17,9 @@
 \begin{nums}{-1}
 \item Пусть $x$, $y\in[a, b]$. Тогда $|x-y|\le b-a$.
 \item  Доказать равенство
-$$
-\frac{x+y+|x-y|}{2}=\max\{x, y\}.
-$$
-
+  \begin{equation*}
+    \frac{x+y+|x-y|}{2}=\max\hc{x, y}.
+  \end{equation*}
 \item Пусть $F(1)=2$, $F(n)=F(n-1)+\frac{1}{2}$ для всех
 натуральных чисел $n$, больших единицы. Тогда
 $F(n)=2+\frac{n-1}{2}$.
@@ -65,13 +66,15 @@ $X=\N$ и $f(n)>n$ при $n\ge 0$; это приводит к
 B=\max(\sup A, \sup B)$.
 
 \item Пусть определены выражения в правых частях соотношений.
-Тогда справедливы следующие утверждения:\\
-${\text а)} \inf\limits_{x\in A}(-f(x))=-\supl{x\in A} f(x)$;\\
-${\text б)} \supl{x\in A} (f(x)+g(x))\leq \supl{x\in A} f(x)+\supl{x\in A} g(x)$;\\
-${\text в)} \supl{x\in A}(f(x)+g(x))\ge \supl{x\in A}f(x)+\inf\limits_{x\in A}g(x)$, если $\sup g(x)$ существует;\\
-${\text г)} \supl{x\in A}(f(x)+c)=c+\supl{x\in A} f(x)$ для любого вещественного числа $c$;\\
-д) $\supl{x_1\in A_1}\hr{\supl{x_2\in A_2}f(x_1, x_2)}=\supl{(x_1, x_2)\in A_1\times A_2}f(x_1, x_2)$;\\
-е) $\supl{(x_1, x_2)\in A_1\times A_2}\br{f(x_1)+f(x_2)}=\supl{x_1\in A_1}f(x_1)+\supl{x_1\in A_1}f(x_2)$.
+Тогда справедливы следующие утверждения:
+\begin{enumerate}
+\item $ \inf\limits_{x\in A}(-f(x))=-\supl{x\in A} f(x)$;
+\item $ \supl{x\in A} (f(x)+g(x))\leq \supl{x\in A} f(x)+\supl{x\in A} g(x)$;
+\item $ \supl{x\in A}(f(x)+g(x))\ge \supl{x\in A}f(x)+\inf\limits_{x\in A}g(x)$, если $\sup g(x)$ существует;
+\item $ \supl{x\in A}(f(x)+c)=c+\supl{x\in A} f(x)$ для любого вещественного числа $c$;
+\item $\supl{x_1\in A_1}\hr{\supl{x_2\in A_2}f(x_1, x_2)}=\supl{(x_1, x_2)\in A_1\times A_2}f(x_1, x_2)$;
+\item $\supl{(x_1, x_2)\in A_1\times A_2}\br{f(x_1)+f(x_2)}=\supl{x_1\in A_1}f(x_1)+\supl{x_1\in A_1}f(x_2)$.
+\end{enumerate}
 
 \item Пусть $B$ --- непустое ограниченное множество
 вещественных чисел, $b =\sup B$ и $b\notin B$. Тогда $b$ является

@@ -1,5 +1,5 @@
-%Эта часть относится к оформлению заголовка, билетов, теорем, предложений,
-%следствий и т.п.
+%Р­С‚Р° С‡Р°СЃС‚СЊ РѕС‚РЅРѕСЃРёС‚СЃСЏ Рє РѕС„РѕСЂРјР»РµРЅРёСЋ Р·Р°РіРѕР»РѕРІРєР°, Р±РёР»РµС‚РѕРІ, С‚РµРѕСЂРµРј, РїСЂРµРґР»РѕР¶РµРЅРёР№,
+%СЃР»РµРґСЃС‚РІРёР№ Рё С‚.Рї.
 
 \newcounter{bilet}
 \newcounter{opr}[bilet]
@@ -10,42 +10,42 @@
 \newcounter{theo}[bilet]
 \newcounter{pr}[bilet]
 %\refstepcounter
-\newcommand{\бил}{\par\vspace{0.6\baselineskip}\hspace{-\baselineskip}\refstepcounter{bilet}%
-        \textbf{\large Билет \arabic{bilet}. } \par}
-\newcommand{\заг}[1]{\par\vspace{0.2\baselineskip}%
+\newcommand{\Р±РёР»}{\par\vspace{0.6\baselineskip}\hspace{-\baselineskip}\refstepcounter{bilet}%
+        \textbf{\large Р‘РёР»РµС‚ \arabic{bilet}. } \par}
+\newcommand{\Р·Р°Рі}[1]{\par\vspace{0.2\baselineskip}%
     {\Large\hfil#1\hfil}\par}
-\newcommand{\опр}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{opr}%
-    \textit{Опр \arabic{bilet}.\arabic{opr}.} }
-\newcommand{\предл}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{predl}%
-    \textsc{Предл \arabic{bilet}.\arabic{predl}.} }
-\newcommand{\лем}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{lem}%
-    \textsl{Лемма \arabic{bilet}.\arabic{lem}.} }
-\newcommand{\теор}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{theo}%
-    \textbf{Теорема \arabic{bilet}.\arabic{theo}.} }
-\newcommand{\сл}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{sl}%
-    \texttt{Следствие \arabic{bilet}.\arabic{sl}.} }
-\newcommand{\св}{\par\vspace{0mm}\hspace{-\baselineskip}\refstepcounter{sv}%
-    \texttt{Свойство \arabic{sv}.} }
-\newcommand{\призн}{\par\vspace{0mm}\hspace{-\baselineskip}\refstepcounter{pr}%
-    \texttt{Признак \arabic{pr}.} }
+\newcommand{\РѕРїСЂ}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{opr}%
+    \textit{РћРїСЂ \arabic{bilet}.\arabic{opr}.} }
+\newcommand{\РїСЂРµРґР»}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{predl}%
+    \textsc{РџСЂРµРґР» \arabic{bilet}.\arabic{predl}.} }
+\newcommand{\Р»РµРј}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{lem}%
+    \textsl{Р›РµРјРјР° \arabic{bilet}.\arabic{lem}.} }
+\newcommand{\С‚РµРѕСЂ}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{theo}%
+    \textbf{РўРµРѕСЂРµРјР° \arabic{bilet}.\arabic{theo}.} }
+\newcommand{\СЃР»}{\par\vspace{0.2\baselineskip}\hspace{-\baselineskip}\refstepcounter{sl}%
+    \texttt{РЎР»РµРґСЃС‚РІРёРµ \arabic{bilet}.\arabic{sl}.} }
+\newcommand{\СЃРІ}{\par\vspace{0mm}\hspace{-\baselineskip}\refstepcounter{sv}%
+    \texttt{РЎРІРѕР№СЃС‚РІРѕ \arabic{sv}.} }
+\newcommand{\РїСЂРёР·РЅ}{\par\vspace{0mm}\hspace{-\baselineskip}\refstepcounter{pr}%
+    \texttt{РџСЂРёР·РЅР°Рє \arabic{pr}.} }
 \renewcommand{\theenumi}{(\roman{enumi})}
 
-\newcommand{\выд}[1]{\textit{#1}}
+\newcommand{\РІС‹Рґ}[1]{\textit{#1}}
 
 
 
 
 
-%вывод интегралов Римана Мак-Шейна и Курцвейля-Хенстока
+%РІС‹РІРѕРґ РёРЅС‚РµРіСЂР°Р»РѕРІ Р РёРјР°РЅР° РњР°Рє-РЁРµР№РЅР° Рё РљСѓСЂС†РІРµР№Р»СЏ-РҐРµРЅСЃС‚РѕРєР°
 
-\newcommand{\ринт}[3]{(\mathfrak{R})\int_{#1}^{#2}#3\,dx}
-\newcommand{\минт}[3]{(\mathfrak{M})\int_{#1}^{#2}#3\,dx}
-\newcommand{\кинт}[3]{(\mathfrak{H})\int_{#1}^{#2}#3\,dx}
-\newcommand{\рсинт}[4]{(\mathfrak{R-S})\int_{#1}^{#2}#3\,d#4}
-\newcommand{\мсинт}[4]{(\mathfrak{M-S})\int_{#1}^{#2}#3\,d#4}
-\newcommand{\ксинт}[4]{(\mathfrak{H-S})\int_{#1}^{#2}#3\,d#4}
-\newcommand{\оинт}[3]{\int_{#1}^{#2}#3\,dx}
-\newcommand{\осинт}[4]{\int_{#1}^{#2}#3\,d#4}
+\newcommand{\СЂРёРЅС‚}[3]{(\mathfrak{R})\int_{#1}^{#2}#3\,dx}
+\newcommand{\РјРёРЅС‚}[3]{(\mathfrak{M})\int_{#1}^{#2}#3\,dx}
+\newcommand{\РєРёРЅС‚}[3]{(\mathfrak{H})\int_{#1}^{#2}#3\,dx}
+\newcommand{\СЂСЃРёРЅС‚}[4]{(\mathfrak{R-S})\int_{#1}^{#2}#3\,d#4}
+\newcommand{\РјСЃРёРЅС‚}[4]{(\mathfrak{M-S})\int_{#1}^{#2}#3\,d#4}
+\newcommand{\РєСЃРёРЅС‚}[4]{(\mathfrak{H-S})\int_{#1}^{#2}#3\,d#4}
+\newcommand{\РѕРёРЅС‚}[3]{\int_{#1}^{#2}#3\,dx}
+\newcommand{\РѕСЃРёРЅС‚}[4]{\int_{#1}^{#2}#3\,d#4}
 
 \newcommand{\hbyn}[3]{(\mathfrak{R})\int_{#1}^{#2}#3\,dx}
 \newcommand{\vbyn}[3]{(\mathfrak{M})\int_{#1}^{#2}#3\,dx}
@@ -60,28 +60,28 @@
 
 
 
-%Короткие обозначения извращенных букв
+%РљРѕСЂРѕС‚РєРёРµ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ РёР·РІСЂР°С‰РµРЅРЅС‹С… Р±СѓРєРІ
 
-\newcommand{\баз}{\ensuremath{\mathcal{B}}}
-\newcommand{\рим}{\ensuremath{\mathfrak{R}\;}}
-\newcommand{\мш}{\ensuremath{\mathfrak{M}\;}}
-\newcommand{\кх}{\ensuremath{\mathfrak{H}\;}}
-\newcommand{\римс}{\ensuremath{\mathfrak{R-S}\;}}
-\newcommand{\мшс}{\ensuremath{\mathfrak{M-S}\;}}
-\newcommand{\кхс}{\ensuremath{\mathfrak{H-S}\;}}
-\newcommand{\рр}{\ensuremath{\mathbb R}}
-\newcommand{\рн}{\ensuremath{\mathbb R^n}}
-\newcommand{\нн}{\ensuremath{\mathbb N}}
-\newcommand{\цц}{\ensuremath{\mathbb C}}
-\newcommand{\кк}{\ensuremath{\mathbb Q}}
-\newcommand{\зз}{\ensuremath{\mathbb Z}}
-\renewcommand{\тт}{\ensuremath{\mathbb T}}
-\newcommand{\дх}{\ensuremath{\Delta x}}
-\newcommand{\вдх}{\ensuremath{\overrightarrow{\Delta x}}}
-\newcommand{\хх}{\ensuremath{x_0}}
-\newcommand{\вхх}{\ensuremath{\vec x^0}}
-\newcommand{\чп}[2]{\frac{\partial #1}{\partial #2}}
-\newcommand{\ччп}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
+\newcommand{\Р±Р°Р·}{\ensuremath{\mathcal{B}}}
+\newcommand{\СЂРёРј}{\ensuremath{\mathfrak{R}\;}}
+\newcommand{\РјС€}{\ensuremath{\mathfrak{M}\;}}
+\newcommand{\РєС…}{\ensuremath{\mathfrak{H}\;}}
+\newcommand{\СЂРёРјСЃ}{\ensuremath{\mathfrak{R-S}\;}}
+\newcommand{\РјС€СЃ}{\ensuremath{\mathfrak{M-S}\;}}
+\newcommand{\РєС…СЃ}{\ensuremath{\mathfrak{H-S}\;}}
+\newcommand{\СЂСЂ}{\ensuremath{\mathbb R}}
+\newcommand{\СЂРЅ}{\ensuremath{\mathbb R^n}}
+\newcommand{\РЅРЅ}{\ensuremath{\mathbb N}}
+\newcommand{\С†С†}{\ensuremath{\mathbb C}}
+\newcommand{\РєРє}{\ensuremath{\mathbb Q}}
+\newcommand{\Р·Р·}{\ensuremath{\mathbb Z}}
+\newcommand{\С‚С‚}{\ensuremath{\mathbb T}}
+\newcommand{\РґС…}{\ensuremath{\Delta x}}
+\newcommand{\РІРґС…}{\ensuremath{\overrightarrow{\Delta x}}}
+\newcommand{\С…С…}{\ensuremath{x_0}}
+\newcommand{\РІС…С…}{\ensuremath{\vec x^0}}
+\newcommand{\С‡Рї}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\С‡С‡Рї}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
 
 
 \newcommand{\hbv}{\ensuremath{\mathfrak{R}\;}}
@@ -106,18 +106,18 @@
 
 
 
-%  Непрерывность, дифференцируемость, интегрируемость на множестве
+%  РќРµРїСЂРµСЂС‹РІРЅРѕСЃС‚СЊ, РґРёС„С„РµСЂРµРЅС†РёСЂСѓРµРјРѕСЃС‚СЊ, РёРЅС‚РµРіСЂРёСЂСѓРµРјРѕСЃС‚СЊ РЅР° РјРЅРѕР¶РµСЃС‚РІРµ
 
-\newcommand{\непр}{\ensuremath{\in\mathfrak{C}}}
-\newcommand{\диф}{\ensuremath{\in\mathfrak{D}}}
-\newcommand{\ри}{\ensuremath{\in\mathfrak{R}}}
-\newcommand{\ми}{\ensuremath{\in\mathfrak{M}}}
-\newcommand{\ки}{\ensuremath{\in\mathfrak{H}}}
-\newcommand{\рcи}{\ensuremath{\in\mathfrak{R-S}}}
-\newcommand{\мcи}{\ensuremath{\in\mathfrak{M-S}}}
-\newcommand{\кcи}{\ensuremath{\in\mathfrak{H-S}}}
-\newcommand{\кон}{\ensuremath{\in\mathbb{R}}}
-\newcommand{\огрв}{\ensuremath{\in\mathbb{VB}}}
+\newcommand{\РЅРµРїСЂ}{\ensuremath{\in\mathfrak{C}}}
+\newcommand{\РґРёС„}{\ensuremath{\in\mathfrak{D}}}
+\newcommand{\СЂРё}{\ensuremath{\in\mathfrak{R}}}
+\newcommand{\РјРё}{\ensuremath{\in\mathfrak{M}}}
+\newcommand{\РєРё}{\ensuremath{\in\mathfrak{H}}}
+\newcommand{\СЂcРё}{\ensuremath{\in\mathfrak{R-S}}}
+\newcommand{\РјcРё}{\ensuremath{\in\mathfrak{M-S}}}
+\newcommand{\РєcРё}{\ensuremath{\in\mathfrak{H-S}}}
+\newcommand{\РєРѕРЅ}{\ensuremath{\in\mathbb{R}}}
+\newcommand{\РѕРіСЂРІ}{\ensuremath{\in\mathbb{VB}}}
 
 
 \newcommand{\ytgh}{\ensuremath{\in\mathfrak{C}}}
@@ -131,88 +131,88 @@
 \newcommand{\rjy}{\ensuremath{\in\mathbb{R}}}
 \newcommand{\juhd}{\ensuremath{\in\mathbb{VB}}}
 
-%Латинские буквы по-русски
+%Р›Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹ РїРѕ-СЂСѓСЃСЃРєРё
 
-\newcommand{\алф}{\ensuremath{\alpha}}
-\newcommand{\бет}{\ensuremath{\beta}}
-\newcommand{\лям}{\ensuremath{\lambda}}
-\newcommand{\мю}{\ensuremath{\mu}}
-\newcommand{\фи}{\ensuremath{\varphi}}
-\newcommand{\кси}{\ensuremath{\xi}}
-\newcommand{\пси}{\ensuremath{\psi}}
-\newcommand{\эпс}{\ensuremath{\varepsilon}}
-\newcommand{\Делт}{\ensuremath{\delta}}
+\newcommand{\Р°Р»С„}{\ensuremath{\alpha}}
+\newcommand{\Р±РµС‚}{\ensuremath{\beta}}
+\newcommand{\Р»СЏРј}{\ensuremath{\lambda}}
+\newcommand{\РјСЋ}{\ensuremath{\mu}}
+\newcommand{\С„Рё}{\ensuremath{\varphi}}
+\newcommand{\РєСЃРё}{\ensuremath{\xi}}
+\newcommand{\РїСЃРё}{\ensuremath{\psi}}
+\newcommand{\СЌРїСЃ}{\ensuremath{\varepsilon}}
+\newcommand{\Р”РµР»С‚}{\ensuremath{\delta}}
 
-%Английские буквы по-русски
+%РђРЅРіР»РёР№СЃРєРёРµ Р±СѓРєРІС‹ РїРѕ-СЂСѓСЃСЃРєРё
 
-\newcommand{\В}{\ensuremath{V}}
-\newcommand{\в}{\ensuremath{v}}
-\newcommand{\дВ}{\ensuremath{W}}
-\newcommand{\дв}{\ensuremath{w}}
-\newcommand{\н}{\ensuremath{n}}
-\newcommand{\Н}{\ensuremath{N}}
-\newcommand{\и}{\ensuremath{i}}
-\newcommand{\И}{\ensuremath{I}}
-\newcommand{\м}{\ensuremath{m}}
-\newcommand{\М}{\ensuremath{M}}
-\newcommand{\ж}{\ensuremath{j}}
-\newcommand{\Ж}{\ensuremath{J}}
-\newcommand{\к}{\ensuremath{k}}
-\newcommand{\К}{\ensuremath{K}}
-\newcommand{\Ф}{\ensuremath{F}}
-\newcommand{\ф}{\ensuremath{f}}
-\newcommand{\ё}{\ensuremath{\phantom{.}}}
-\newcommand{\х}{\ensuremath{x}}
-\newcommand{\Х}{\ensuremath{X}}
-\newcommand{\уу}{\ensuremath{y}}
-\newcommand{\уУ}{\ensuremath{Y}}
-\newcommand{\е}{\ensuremath{e}}
-\newcommand{\Е}{\ensuremath{E}}
-\newcommand{\а}{\ensuremath{a}}
-\newcommand{\А}{\ensuremath{A}}
-\newcommand{\У}{\ensuremath{U}}
-\newcommand{\у}{\ensuremath{u}}
-\newcommand{\б}{\ensuremath{b}}
-\newcommand{\Б}{\ensuremath{B}}
+\newcommand{\Р’}{\ensuremath{V}}
+\newcommand{\РІ}{\ensuremath{v}}
+\newcommand{\РґР’}{\ensuremath{W}}
+\newcommand{\РґРІ}{\ensuremath{w}}
+\newcommand{\РЅ}{\ensuremath{n}}
+\newcommand{\Рќ}{\ensuremath{N}}
+\newcommand{\Рё}{\ensuremath{i}}
+\newcommand{\Р}{\ensuremath{I}}
+\newcommand{\Рј}{\ensuremath{m}}
+\newcommand{\Рњ}{\ensuremath{M}}
+\newcommand{\Р¶}{\ensuremath{j}}
+\newcommand{\Р–}{\ensuremath{J}}
+\newcommand{\Рє}{\ensuremath{k}}
+\newcommand{\Рљ}{\ensuremath{K}}
+\newcommand{\Р¤}{\ensuremath{F}}
+\newcommand{\С„}{\ensuremath{f}}
+\newcommand{\С‘}{\ensuremath{\phantom{.}}}
+\newcommand{\С…}{\ensuremath{x}}
+\newcommand{\РҐ}{\ensuremath{X}}
+\newcommand{\СѓСѓ}{\ensuremath{y}}
+\newcommand{\СѓРЈ}{\ensuremath{Y}}
+\newcommand{\Рµ}{\ensuremath{e}}
+\newcommand{\Р•}{\ensuremath{E}}
+\newcommand{\Р°}{\ensuremath{a}}
+\newcommand{\Рђ}{\ensuremath{A}}
+\newcommand{\РЈ}{\ensuremath{U}}
+\newcommand{\Сѓ}{\ensuremath{u}}
+\newcommand{\Р±}{\ensuremath{b}}
+\newcommand{\Р‘}{\ensuremath{B}}
 
-%  Различные полезные команды
+%  Р Р°Р·Р»РёС‡РЅС‹Рµ РїРѕР»РµР·РЅС‹Рµ РєРѕРјР°РЅРґС‹
 
-\newcommand{\люб}{\ensuremath{\forall}}
-\newcommand{\сущ}{\ensuremath{\exists}}
-\newcommand{\сум}{\ensuremath{\sum}}
-\newcommand{\пер}{\ensuremath{\cap}}
-\newcommand{\объ}{\ensuremath{\cup}}
-\newcommand{\прс}{\ensuremath{\oplus}}
-\newcommand{\след}{\ensuremath{\Rightarrow}}
-\newcommand{\титтк}{\ensuremath{\Leftrightarrow}}
-\renewcommand{\итд}{\ensuremath{\ldots}}
-\newcommand{\нер}{\ensuremath{\ne}}
-\newcommand{\беск}{\ensuremath{\infty}}
-\newcommand{\отб}{\ensuremath{\colon}}
-\newcommand{\усл}{\ensuremath{\mid}}
-\newcommand{\изм}{\ensuremath{\cong}}
-\newcommand{\спр}{\ensuremath{\to}}
-\newcommand{\пст}{\ensuremath{\varnothing}}
-\newcommand{\влжр}{\ensuremath{\subseteq}}
-\newcommand{\влж}{\ensuremath{\subset}}
-\newcommand{\содр}{\ensuremath{\supseteq}}
-\newcommand{\сод}{\ensuremath{\supset}}
-\newcommand{\мер}{\ensuremath{\mu^*}}
-\newcommand{\сисин}{\ensuremath{\{\Delta_i\}_{i=1}^n}}
-\newcommand{\волн}{\ensuremath{\tilde}}
-\newcommand{\черта}{\ensuremath{\bar}}
-\newcommand{\вв}{\ensuremath{\in}}
-\newcommand{\стр}{\ensuremath{\rightarrow}}
-\newcommand{\стрп}{\ensuremath{\xrigtharrow}}
-\newcommand{\омвм}{\ensuremath{\отб(M_1,\rho_1)\cnh(M_2,\rho_2)}}
-\newcommand{\онвн}{\ensuremath{\отб(N_1,\|\cdot\|_1)\cnh(N_2,\|\cdot\|_2)}}
-\newcommand{\омвн}{\ensuremath{\отб(M,\rho)\cnh(N,\|\cdot\|)}}
-\newcommand{\окмвм}{\ensuremath{\отб(K\влж M_1,\rho_1)\cnh(M_2,\rho_2)}}
-\newcommand{\отр}{\ensuremath{[a,b]}}
-\newcommand{\чпр}{\frac{\partial}{\partial x_k}}
-\newcommand{\дфдх}{\frac{\partial f}{\partial x_k}}
-\newcommand{\сумм}{\sum_{k=1}^n}
-\newcommand{\вкт}{\overrigtharrow}
+\newcommand{\Р»СЋР±}{\ensuremath{\forall}}
+\newcommand{\СЃСѓС‰}{\ensuremath{\exists}}
+\newcommand{\СЃСѓРј}{\ensuremath{\sum}}
+\newcommand{\РїРµСЂ}{\ensuremath{\cap}}
+\newcommand{\РѕР±СЉ}{\ensuremath{\cup}}
+\newcommand{\РїСЂСЃ}{\ensuremath{\oplus}}
+\newcommand{\СЃР»РµРґ}{\ensuremath{\Rightarrow}}
+\newcommand{\С‚РёС‚С‚Рє}{\ensuremath{\Leftrightarrow}}
+\newcommand{\РёС‚Рґ}{\ensuremath{\ldots}}
+\newcommand{\РЅРµСЂ}{\ensuremath{\ne}}
+\newcommand{\Р±РµСЃРє}{\ensuremath{\infty}}
+\newcommand{\РѕС‚Р±}{\ensuremath{\colon}}
+\newcommand{\СѓСЃР»}{\ensuremath{\mid}}
+\newcommand{\РёР·Рј}{\ensuremath{\cong}}
+\newcommand{\СЃРїСЂ}{\ensuremath{\to}}
+\newcommand{\РїСЃС‚}{\ensuremath{\varnothing}}
+\newcommand{\РІР»Р¶СЂ}{\ensuremath{\subseteq}}
+\newcommand{\РІР»Р¶}{\ensuremath{\subset}}
+\newcommand{\СЃРѕРґСЂ}{\ensuremath{\supseteq}}
+\newcommand{\СЃРѕРґ}{\ensuremath{\supset}}
+\newcommand{\РјРµСЂ}{\ensuremath{\mu^*}}
+\newcommand{\СЃРёСЃРёРЅ}{\ensuremath{\{\Delta_i\}_{i=1}^n}}
+\newcommand{\РІРѕР»РЅ}{\ensuremath{\tilde}}
+\newcommand{\С‡РµСЂС‚Р°}{\ensuremath{\bar}}
+\newcommand{\РІРІ}{\ensuremath{\in}}
+\newcommand{\СЃС‚СЂ}{\ensuremath{\rightarrow}}
+\newcommand{\СЃС‚СЂРї}{\ensuremath{\xrigtharrow}}
+\newcommand{\РѕРјРІРј}{\ensuremath{\РѕС‚Р±(M_1,\rho_1)\cnh(M_2,\rho_2)}}
+\newcommand{\РѕРЅРІРЅ}{\ensuremath{\РѕС‚Р±(N_1,\|\cdot\|_1)\cnh(N_2,\|\cdot\|_2)}}
+\newcommand{\РѕРјРІРЅ}{\ensuremath{\РѕС‚Р±(M,\rho)\cnh(N,\|\cdot\|)}}
+\newcommand{\РѕРєРјРІРј}{\ensuremath{\РѕС‚Р±(K\РІР»Р¶ M_1,\rho_1)\cnh(M_2,\rho_2)}}
+\newcommand{\РѕС‚СЂ}{\ensuremath{[a,b]}}
+\newcommand{\С‡РїСЂ}{\frac{\partial}{\partial x_k}}
+\newcommand{\РґС„РґС…}{\frac{\partial f}{\partial x_k}}
+\newcommand{\СЃСѓРјРј}{\sum_{k=1}^n}
+\newcommand{\РІРєС‚}{\overrigtharrow}
 
 
 \newcommand{\cev}{\ensuremath{\sum}}
@@ -236,10 +236,10 @@
 \newcommand{\dd}{\ensuremath{\in}}
 \newcommand{\cnh}{\ensuremath{\rightarrow}}
 \newcommand{\cnhg}{\ensuremath{\xrigtharrow}}
-\newcommand{\jvdv}{\ensuremath{\отб(M_1,\rho_1)\cnh(M_2,\rho_2)}}
-\newcommand{\jydy}{\ensuremath{\отб(N_1,\|\cdot\|_1)\cnh(N_2,\|\cdot\|_2)}}
-\newcommand{\jvdy}{\ensuremath{\отб(M,\rho)\cnh(N,\|\cdot\|)}}
-\newcommand{\jrvdv}{\ensuremath{\отб(K\влж M_1,\rho_1)\cnh(M_2,\rho_2)}}
+\newcommand{\jvdv}{\ensuremath{\РѕС‚Р±(M_1,\rho_1)\cnh(M_2,\rho_2)}}
+\newcommand{\jydy}{\ensuremath{\РѕС‚Р±(N_1,\|\cdot\|_1)\cnh(N_2,\|\cdot\|_2)}}
+\newcommand{\jvdy}{\ensuremath{\РѕС‚Р±(M,\rho)\cnh(N,\|\cdot\|)}}
+\newcommand{\jrvdv}{\ensuremath{\РѕС‚Р±(K\РІР»Р¶ M_1,\rho_1)\cnh(M_2,\rho_2)}}
 \newcommand{\jnh}{\ensuremath{[a,b]}}
 \newcommand{\xgh}{\frac{\partial}{\partial x_k}}
 \newcommand{\dfdx}{\frac{\partial f}{\partial x_k}}
@@ -247,14 +247,14 @@
 \newcommand{\vkt}{\overrightarrow}
 \newcommand{\drn}{\overrightarrow}
 
-%  Операторы
+%  РћРїРµСЂР°С‚РѕСЂС‹
 
-\DeclareMathOperator{\дим}{dim}
-\DeclareMathOperator{\вар}{Var}
-\DeclareMathOperator{\осц}{Osc}
-\DeclareMathOperator{\дет}{det}
-\DeclareMathOperator{\огрвар}{VB}
-\DeclareMathOperator{\град}{grad}
+\DeclareMathOperator{\РґРёРј}{dim}
+\DeclareMathOperator{\РІР°СЂ}{Var}
+\DeclareMathOperator{\РѕСЃС†}{Osc}
+\DeclareMathOperator{\РґРµС‚}{det}
+\DeclareMathOperator{\РѕРіСЂРІР°СЂ}{VB}
+\DeclareMathOperator{\РіСЂР°Рґ}{grad}
 
 \DeclareMathOperator{\var}{Var}
 \DeclareMathOperator{\osc}{Osc}

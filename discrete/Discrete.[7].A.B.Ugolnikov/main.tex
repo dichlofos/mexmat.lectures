@@ -1,12 +1,14 @@
-\documentclass[unicode, 10pt, a4paper, oneside, fleqn]{article}
+\documentclass[unicode,10pt]{article}
 \usepackage{dmvn}
 \usepackage{polyglossia}
-\newcommand*{\restorefont}{\setmainfont{DejaVu Sans}}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
-\restorefont
+\usepackage{unicode-math}
+\usepackage{fontspec}
+\usepackage{makeidx}
 \defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
-\usepackage[usenames]{color}
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+\setmathfont{xits-math.otf}
 \usepackage[all]{xy}
 \usepackage{textcomp}
 \usepackage{geometry}
@@ -30,7 +32,7 @@
 \subsection{Основные определения.}
 \begin{denote}
   \begin{math}
-    \Ef = \hc{0,1}   
+    \Ef = \hc{0,1}
   \end{math}
 \end{denote}
 \begin{denote}
@@ -41,21 +43,21 @@
 \begin{df}
   n-местная булева функция:
   \begin{displaymath}
-    f^{(n)} (\set[x]{n}): \Ef^n \to \Ef 
+    f^{(n)} (\set[x]{n}): \Ef^n \to \Ef
   \end{displaymath}
 \end{df}
 \begin{denote}
   $\PD$-множество всех булевых функций.
 \end{denote}
 \begin{df}
-  $f(\set[x]{n})=g(\set[x]{n})$, если 
+  $f(\set[x]{n})=g(\set[x]{n})$, если
   \begin{displaymath}
-    \allset[x]{n} \quad f(\xt)=g(\xt) 
+    \allset[x]{n} \quad f(\xt)=g(\xt)
   \end{displaymath}
 \end{df}
 \begin{df}
-  $x_1$ --- существенная переменная для $f^{(n)}(\set{n})$,   если существует 
-  \begin{displaymath} 
+  $x_1$ --- существенная переменная для $f^{(n)}(\set{n})$,   если существует
+  \begin{displaymath}
     \uset{n}{\Ef},\text{что выполнено}
   \end{displaymath}
   \begin{displaymath}
@@ -78,7 +80,7 @@
       \item Композиция (подстановка функции вместо переменных)
     \end{itemize}
   \item Введение фиктивной переменной ($\nab$)
-    \begin{df} 
+    \begin{df}
       Пусть есть функция $f^{(n)}(\set{n})$. Оператор $\nab$ определяется соотношением
       \begin{displaymath}
         (\nab f)(\set{n}\al_{n+1})=f(\set{n})  \quad \forall (\set) \in \Ef^n
@@ -87,8 +89,8 @@
 \end{enumerate}
 \subsection{Замкнутые классы}
 \begin{df}
-  Замыканием множества $\ag\subseq\PD$ называется множество булевых функций, 
-  которые можно получить из множества функций $\ag$ с помощью операций 
+  Замыканием множества $\ag\subseq\PD$ называется множество булевых функций,
+  которые можно получить из множества функций $\ag$ с помощью операций
   суперпозиции и введения фиктивной переменной.
 \end{df}
 \begin{denote}
@@ -101,7 +103,7 @@
   Пусть $[F]=F$ и [$\ag$]=F. Тогда будем говорить, что $\ag$ порождает F.
 \end{df}
 \begin{df}
-    Замкнутый класс F называется конечнопорожденным, если найдется конечная система 
+    Замкнутый класс F называется конечнопорожденным, если найдется конечная система
     $\ag\subseq\PD$, что $\ag$ порождает F.
 \end{df}
 \begin{prop}
@@ -129,9 +131,9 @@
     \item $xy\notin\Lb$
     \item $[\Lb] = \Lb$
     \item $\Lb = \cls{0,1,x+y}$
-    \item 
+    \item
       \begin{stm}
-	Из нелиненйной функции подстановкой 0,x,y можно получить 
+	Из нелиненйной функции подстановкой 0,x,y можно получить
         нелинейную функцию двух переменных.
       \end{stm}
   \end{enumerate}
@@ -139,7 +141,7 @@
   \begin{df}
     Коньюнкции -- функции вида
     \begin{displaymath}
-      f(\set[x]{n}) = a_0\&(a_1\vee x_1)\&\dots\&(a_n\vee x_n) \quad \pcoef 
+      f(\set[x]{n}) = a_0\&(a_1\vee x_1)\&\dots\&(a_n\vee x_n) \quad \pcoef
     \end{displaymath}
   \end{df}
   \property
@@ -153,7 +155,7 @@
   \begin{df}
     Дизьюнкции -- функции вида
     \begin{displaymath}
-      f(\set[x]{n}) = a_0\vee(a_1x_1)\vee\dots\vee a_nx_n \quad \pcoef 
+      f(\set[x]{n}) = a_0\vee(a_1x_1)\vee\dots\vee a_nx_n \quad \pcoef
     \end{displaymath}
   \end{df}
   \property
@@ -181,9 +183,9 @@
     \begin{enumerate}
       \item $0, 1, xy, x+y \in \Mb$
       \item $ [\Mb] = \Mb $
-      \item  
-          \begin{stm} 
-            Пусть $f(\set[x]{n}) \in \Mb$. Тогда верно соотношение 
+      \item
+          \begin{stm}
+            Пусть $f(\set[x]{n}) \in \Mb$. Тогда верно соотношение
             \begin{displaymath}
               f(\set[x]{n}) = x_1f(1, \setf[x]{n})\vee f(0, \setf[x]{n})
             \end{displaymath}
@@ -193,18 +195,18 @@
               \Mb =\cls{0, 1, xy, x\vee y}
             \end{math}
           \end{imp}
-        \item 
+        \item
           \begin{stm}
-            Пусть $f \neq 0$,$f \neq 1$, $f \in \Mb$. Тогда 
+            Пусть $f \neq 0$,$f \neq 1$, $f \in \Mb$. Тогда
             \begin{displaymath}
               f \in \cls{\dn, xy}
             \end{displaymath}
           \end{stm}
-        \item 
+        \item
           \begin{stm}
             Пусть $f_K, f_D \in \Mb$. Тогда
             \begin{displaymath}
-              x\vee y \in [\{1, f_K\}]  
+              x\vee y \in [\{1, f_K\}]
             \end{displaymath}
             \begin{displaymath}
               xy \in [\{0, f_D\}]
@@ -212,12 +214,12 @@
           \end{stm}
           \begin{proof}
             Докажем один случай. Второй аналогичен.
-            \begin{displaymath} 
+            \begin{displaymath}
               f_{\Db}(\set[x]{n}) \notin \Db, f_{\Db} \in \Mb, n \ge 2
             \end{displaymath}
-            Пусть все $\set[x]{n}$ существенны. Существует $\tilde \al= (\set{n})$ 
-            с ровно одной единицей, что  $f_{\Db}(\tilde \al) = 0$. \WHY 
-            Без ограничения общности можно считать, что 
+            Пусть все $\set[x]{n}$ существенны. Существует $\tilde \al= (\set{n})$
+            с ровно одной единицей, что  $f_{\Db}(\tilde \al) = 0$. \WHY
+            Без ограничения общности можно считать, что
             \begin{math}
               \alt = (1, 0 \etc, 0)
             \end{math}
@@ -226,51 +228,51 @@
             \end{displaymath}
             Так как  переменная $x_1$ --- существенная, то существует $\setf[\beta]{n}$, что
             \begin{displaymath}
-              f_{\Db}(0, \setf[\beta]{n}) \neq f_{\Db}(1, \setf[\beta]{n}) 
+              f_{\Db}(0, \setf[\beta]{n}) \neq f_{\Db}(1, \setf[\beta]{n})
             \end{displaymath}
             На самом деле, из монотонности следует, что
             \begin{displaymath}
-              \fD(0, \setf[\beta]{n})  = 0;\; \fD(1, \setf[\beta]{n}) 
+              \fD(0, \setf[\beta]{n})  = 0;\; \fD(1, \setf[\beta]{n})
             \end{displaymath}
             Не все $\beta_j$ -- нули, \WHY поэтому существует k,
-            что, не ограничивая общности можно считать, что 
+            что, не ограничивая общности можно считать, что
             \begin{displaymath}
-              \beta_2 = \ldots =\beta_k = 1 
+              \beta_2 = \ldots =\beta_k = 1
             \end{displaymath}
             \begin{displaymath}
-                \beta_{k+1}= \ldots = \beta_n = 0 
+                \beta_{k+1}= \ldots = \beta_n = 0
             \end{displaymath}
-            Рассмотрим функцию 
+            Рассмотрим функцию
             \begin{displaymath}
-              g(x,y)=\fD(x, \ub{y\etc, y}_{k-1}, 0\etc, 0) 
+              g(x,y)=\fD(x, \ub{y\etc, y}_{k-1}, 0\etc, 0)
             \end{displaymath}
-            Из предыдущий выклдок следует, что $g(1,0) = 0, g(0,1) = 0, g(1,1)=1$. 
+            Из предыдущий выклдок следует, что $g(1,0) = 0, g(0,1) = 0, g(1,1)=1$.
             По монотонности, $g(0,0) =0$.
-            Отсюда, 
+            Отсюда,
             \begin{displaymath}
               g(x,y)=xy
             \end{displaymath}
           \end{proof}
-        \item 
+        \item
            \begin{stm}
              \begin{math}
                \fK,\fD \in \Mb \Ra \Mb=\cls{0, 1, \fK,\fD}
              \end{math}
            \end{stm}
-         \item 
+         \item
            \begin{stm}
              Из немонотонной функции подстановкой 0, 1, x можно получить $\ol x$
            \end{stm}
       \end{enumerate}%Конец свойств монотонных
 
-      
+
 
 
 
 
 \section{Частный случай теоремы Поста. Часть 1}
 \begin{theorem}
-   Пусть 
+   Пусть
    \begin{displaymath}
      \ag \subseq \PD, F = [\ag], 0,1 \in F
    \end{displaymath}
@@ -284,7 +286,7 @@
    \item $\ag \nsubseteq \Lb$ $\Ra$ $f_\Lb \in F$ \THEN
   \item $\ag \subseq \Lb$
   \begin{itemize}
-   \item В $\ag$ найдется функция $g$, имеющая по крайней мере две существенные 
+   \item В $\ag$ найдется функция $g$, имеющая по крайней мере две существенные
     переменные $\Ra$ \WHY $[\ag] = \cls{0, 1, g} = \cls{0, 1, x+y} $
   \item Каждая функция из $\ag$ имеет не более одной существенной переменной. Значит,
   $[\ag] = \cls{0, 1, \ol x} = \Ub$
@@ -297,7 +299,7 @@
   \item $\ag \subseq \Kb$, $\ag \nsubseteq \Db$ $\Ra$ $[\ag] = \Kb = \cls{0, 1, f_\Db}$
   \item $\ag \subseq \Kb$, $\ag \subseq \Db$
   \begin{itemize}
-   \item Каждая функция из $\ag$ не имеет существенных переменных. 
+   \item Каждая функция из $\ag$ не имеет существенных переменных.
       Тогда $[\ag] = \cls{0, 1} =\Cb$
     \item В $\ag$ есть функция, имеющая по крайней мере одну существенную переменную.
     Тогда  $[\ag] = \cls{0, 1, x} = \Mb\Ub$
@@ -317,7 +319,7 @@
   }
 \end{displaymath}
 \begin{df}
-  Если F, G -- замкнутые классы и $G \subseq F, G \neq F$, тогда G - предполный в F, если 
+  Если F, G -- замкнутые классы и $G \subseq F, G \neq F$, тогда G - предполный в F, если
   \begin{displaymath}
     \forall f \in F\wo G \Ra [G\cup\hc{f}] = F
   \end{displaymath}
@@ -337,19 +339,19 @@
       f \in [{0} \cup \ag]
   \end{equation*}
   \begin{equation*}
-    \exists\, g \in \ag, g \le f    
+    \exists\, g \in \ag, g \le f
   \end{equation*}
-  Тогда 
+  Тогда
   \begin{displaymath}
     f \in [\ag]
   \end{displaymath}
 \end{lemma}
 \begin{proof}
-  Существует $\varPhi$ над $\ag \cup \hc{0}$, реализующая $f(\set[x])$. 
+  Существует $\varPhi$ над $\ag \cup \hc{0}$, реализующая $f(\set[x])$.
   Заменим все вхождения $0\in\PD$ в формуле $\varPhi$ на переменную $y \notin \hc{\set[x]{n}}$.
   Получим формулу $\varPsi(y,\set[x])$, реализующую функцию $h(y,\set[x]{n}) \in [\ag]$.
   Заметим, что $h(0,\set[x]{n}) = f(\set[x]{n})$.
-  Далее, рассмотрим функцию 
+  Далее, рассмотрим функцию
   \begin{displaymath}
     \tilde f = g(\set[x]{n}) \vee h(g(\set[x]{n}), \set[x]{n})
   \end{displaymath}
@@ -361,7 +363,7 @@
 \end{proof}
 \section{Частный случай теоремы Поста. Часть 2}
 \begin{df}
-  $f(\set[x]) \subseq \PD$ удовлетворяет условию $<0^\bes>$, если 
+  $f(\set[x]) \subseq \PD$ удовлетворяет условию $<0^\bes>$, если
   найдется $i : f \ge x_i$
 \end{df}
 \begin{df}
@@ -376,7 +378,7 @@
 \end{df}
 \begin{df}
   \begin{math}
-    d_p(x_1,x_2\etc,x_p) = {\huge \vee}_{1\le i<j\le p}x_ix_j 
+    d_p(x_1,x_2\etc,x_p) = {\huge \vee}_{1\le i<j\le p}x_ix_j
   \end{math}
 \end{df}
 \begin{df}
@@ -390,7 +392,7 @@
   \item $1, e(x), x\to y, \dn, \om\in \Oib$
   \item $0, xy \notin \Oib$
   \item $[\Oib] = \Oib$ \WHY
-  \item 
+  \item
     \begin{lemma}
       \begin{math}
         \Oib = \cls{x\to y}
@@ -403,12 +405,12 @@
         \dn = (x\to y) \to y
       \end{equation*}
       \begin{equation*}
-        f \in \cls{0,x\to y} = \PD 
+        f \in \cls{0,x\to y} = \PD
       \end{equation*}
       \begin{equation*}
         f \ge e(x_i) \in \cls{x\to y}
       \end{equation*}
-      Отсюда, 
+      Отсюда,
       \begin{displaymath}
         f \in\cls{x\to y}
       \end{displaymath}
@@ -417,11 +419,11 @@
 \end{enumerate}
 \subsection{Свойства функции $\om=x\vee yz$.}
 \begin{enumerate}
- \item 
+ \item
    \begin{math}
      \om \in \Oib\cap\Mb \eqdef \Mb\Oib
    \end{math}
- \item 
+ \item
    \begin{lemma}
      \begin{math}
        f \in \Mb\Oib, f \ne 1 \Ra f \in \cls{0,\om}
@@ -430,7 +432,7 @@
    \begin{proof}
      Применим лемму \ref{ast}. \THEN
    \end{proof}
- \item 
+ \item
    \begin{lemma}
      \begin{math}
        \fK,\fD \in \Mb \Ra \om \in \cls{1, \fD, \fK}
@@ -442,31 +444,31 @@
 \end{enumerate}
 \subsection{Свойства функции $d_p$.}
 \begin{enumerate}
-  \item 
+  \item
     \begin{math}
       d_p \in \Mb\Oib
     \end{math}
-  \item 
+  \item
     \begin{math}
       d_{p+1}(\seti[x]{1}{p+1}) =x_{p+1}(\svee[x]{1}{p})\vee d_p(\set[x]{n})
     \end{math}
-  \item 
+  \item
     \begin{math}
       d_{p+1}(\set[x]{p},1) = \svee[x]{1}{p}
     \end{math}
-  \item 
+  \item
     \begin{math}
       d_{p+1}(x_1, x_2,\etc, x_p, x_{p+1}) > d_p(x_1, x_2\etc, x_p)
     \end{math}
-  \item 
+  \item
     \begin{lemma}
       При $p \ge 3$ $\om \in \cls{1, d_p}$
     \end{lemma}
-  \item 
+  \item
     \begin{lemma}
       При $p>3$ $d_p(y,z,x\etc, x) = \om$ \WHY
     \end{lemma}
-  \item 
+  \item
     \begin{lemma}
       $d_{p+1}\in \cls{\om, d_p}$
     \end{lemma}
@@ -480,7 +482,7 @@
       \end{math}
       \WHY
     \end{stm}
- \item 
+ \item
    \begin{math}
      \om \subseq \cls{\om,d_{p+1}} \subseq \cls{\om,d_p} \subseq\ldots\subseq\cls{\om,d_2}
    \end{math}
@@ -488,7 +490,7 @@
 \subsection{Свойства отождествления переменных.}
 \begin{enumerate}
   \item $\fij \in \cls{f}$
-  \item 
+  \item
     \begin{lemma}
       $\fij \le x_i\vee f$
     \end{lemma}
@@ -503,7 +505,7 @@
           в силу монотонности $f$.
       \end{itemize}
     \end{proof}
-      \item 
+      \item
         \begin{lemma}
           \begin{math}
             x_j\fij \le f
@@ -534,23 +536,23 @@
 \end{stm}
 \subsection{Лемма о порождении монотонной функции.}
 \begin{lemma}
-  Пусть $f(\set[x]{n}) \in \Mb, n \ge 2$ и $\ag_f=\hc{\om,d_h}\cup A_{n-1}(f)$. 
+  Пусть $f(\set[x]{n}) \in \Mb, n \ge 2$ и $\ag_f=\hc{\om,d_h}\cup A_{n-1}(f)$.
   Тогда $f \in [\ag_f]$.
 \end{lemma}
 \begin{proof}
   Рассмотрим следующие случаи:
   \begin{itemize}
-    \item 
+    \item
       Если $f=0$ или $f=1$, утверждение леммы очевидно
-    \item 
+    \item
       Если $f \in \Oib$, то утверждение леммы следует из того, что
       \begin{math}
         \Oib=\cls{\om}
       \end{math}
-    \item 
+    \item
       Пусть $f \notin \Oib$, $f\ne 0,1$. Будем доказывать по индукции.
       \begin{itemize}
-        \item{База индукции $n=2$.} 
+        \item{База индукции $n=2$.}
           $d_2 = x_1x_2$ База индукции доказана.
         \item{Индукционный переход. $n>2$}
           \begin{displaymath}
@@ -561,12 +563,12 @@
           \end{displaymath}
           Рассмотрим случаи:\\
           \begin{itemize}
-            \item 
+            \item
               \begin{math}
                 g \in \Oib \Ra f \in \Oib
               \end{math}
               Противоречие. Отсюда, \WHY $g \ne 1$.
-            \item {$g = 0$} Тогда 
+            \item {$g = 0$} Тогда
               \begin{math}
                 f(\set[x]{n})=x_nf(\seti[x]{1}{n-1},1)
               \end{math}
@@ -578,19 +580,19 @@
               Понятно, что $r(x) \in \hc{0, 1, x}$.\\
               Рассмотрим варианты:
               \begin{itemize}
-                \item 
+                \item
                   \begin{math}
                     r(x) = 0 \Ra f(1,1,\ldots,1) = 0 \Ra f=0
                   \end{math}
                   Противоречие.
-                \item 
+                \item
                   \begin{math}
                     r(x) = 1 \Ra f(0,0,\ldots,1) = 1 \Ra f\ge x_n
                   \end{math}
                   По определению, $f \in \Oib$. Противоречие.
                 \item $r(x) = x$ $\Ra$  $ f(\set[x]{n},y) = xy \in [\ag_f]$
               \end{itemize}
-            \item Пусть $g \ne 0$. \WHY 
+            \item Пусть $g \ne 0$. \WHY
               \begin{displaymath}
                 g \in [\ag_g], \ag_g=\hc{\om, d_{n-1}}\cup A_{n-2}(g)
               \end{displaymath}
@@ -607,23 +609,23 @@
               Получим формулу $\Psi$ над $\ag_f$, реализующую некоторую функцию $h(\set[y]{n}) \in [\ag_f]$.
               \paragraph {Свойства функции $h(\set[y]{n})$.}
               \begin{enumerate}
-                \item 
+                \item
                   \begin{math}
                     h(\set[y]{n-1},0)=g(\set[y]{n-1}) = f(\set[y]{n-1},0)
                   \end{math}
-                \item \ACC 
+                \item \ACC
                   \begin{math}
                     0 = h(0,\etc,0,1) = g(0,\etc,0) = f(0,\etc,0,1)
                   \end{math}
                   Доказывается индукцией по глубине формулы. \PROOF
-                \item  
+                \item
                   \begin{denote}
                     \begin{displaymath}
                       \lambda(\set[y]{n})\eqdef \om(h(\set[y]{n}),y_{n},\svee[y]{1}{n}) =y_n(\svee[y]{1}{n})\vee h(\set[y]{n})
                     \end{displaymath}
                   \end{denote}
               \end{enumerate}
-              По определению, $\lambda(\set[y]{n}) \in [\ag_f]$. Из свойств (2) и (3) 
+              По определению, $\lambda(\set[y]{n}) \in [\ag_f]$. Из свойств (2) и (3)
               \begin{displaymath}
                 \lambda(\set[y])=y_n(\dsn[y])\vee g(y_1,y_2\etc,y_{n-1})
               \end{displaymath}
@@ -644,7 +646,7 @@
 \end{proof}
 \subsection{Подсекция непонятного назначения}
 \begin{note}
-  Пусть в дальнейших рассмотрениях 
+  Пусть в дальнейших рассмотрениях
   \begin{math}
     f(\set[x]{n}) \in \Mb, f \notin \Oib, f \neq 0,1.
   \end{math}
@@ -665,10 +667,10 @@
 \subsubsection{Свойства множества $\Ff$.}
 \begin{itemize}
   \item $\Ff\ne\varnothing$, т.к $f(x,x\etc,x) = x$ \THEN
-  \item 
+  \item
     \begin{lemma}
-      Пусть $g(x_1,x_2\etc,x_p) \in \Ff$ и все переменные существенные. 
-      Тогда 
+      Пусть $g(x_1,x_2\etc,x_p) \in \Ff$ и все переменные существенные.
+      Тогда
       \begin{displaymath}
         g(\set[x]{p}) = d_p(\set[x]{p})
       \end{displaymath}
@@ -696,18 +698,18 @@
 \end{itemize}
 \subsubsection{Ещё одна подсекция непонятного назначения.}
 \begin{theorem}
-  \label{thm}       
+  \label{thm}
   Пусть $\ag\in\Mb$,$F=[\ag]$,$1\in F$,$0\notin F$. Тогда существует $\Bg\subseq\ag$, что
   $|\Bg|<\bes$ и $[\Bg\cup\{1\}]=F$.
 \end{theorem}
 \begin{proof}
 Рассмотрим варианты.
 \begin{enumerate}
-  \item 
+  \item
     \begin{math}
       \ag\subseq\Cb \Ra F=\cls{1}=\Cb_1
     \end{math}
-  \item 
+  \item
     \begin{math}
       \ag\nsubseq\Cb,\ag\subseq\Ub \Ra F=\cls{1,x}=\Ub_1
     \end{math}
@@ -726,7 +728,7 @@
         \item $\ag\nsubseq\Oib$ Тогда для каждой функции $f\in\ag$:
         \begin{itemize}
           \item $f\in\Oib$ $\Ra$ $f\in\cls{1,\om}$
-          \item $f\notin\Oib$ $\Ra$ $f\in\cls{\om,d_{P(f)}}$ 
+          \item $f\notin\Oib$ $\Ra$ $f\in\cls{\om,d_{P(f)}}$
         \end{itemize}
         Получаем, что $\ag\subseq[\{1,\om\}\cup\cup_{f\in\ag,f\notin\Oib}\{d_{P(f)}\}]$
    \end{itemize}
@@ -757,13 +759,13 @@
   \end{displaymath}
 \end{imp}
 \begin{lemma}
-  Пусть $f\in\Mb$, $f\notin\Oib$, $f\neq 1$. Тогда $f\in\cls{\om,d_{P(f)}}$. 
+  Пусть $f\in\Mb$, $f\notin\Oib$, $f\neq 1$. Тогда $f\in\cls{\om,d_{P(f)}}$.
 \end{lemma}
 \begin{proof}
-    По основной лемме, $f\in[\{\om,d_n\}\cup A_{n-1}]$. 
+    По основной лемме, $f\in[\{\om,d_n\}\cup A_{n-1}]$.
     Рассмотрим следующие случаи:
     \begin{itemize}
-        \item 
+        \item
           \begin{math}
             A_{n-1}(f)\subseq\Oib \Ra F_f=\hc{f}, P(f)=n
           \end{math}
@@ -815,7 +817,7 @@
   Рассмотрим функцию $g(x,y)=\fM(y\etc,y,1\etc,1,x\etc,x)$. По построению $g(x,0)=\ol x$.
   Возможны два подслучая
   \begin{itemize}
-    \item 
+    \item
       \begin{math}
         g(0,1)=1 \Ra g=x\to y
       \end{math}
@@ -825,7 +827,7 @@
         g(0,1) = 0 \Ra g= x+y+1
       \end{math}
       В таком случае воспользуемся леммой о нелинейной функции.
-      Из нелинейной функции $f(\set[x]{n})$ получим нелинейную функцию $h(x,y)\notin\Lb$ 
+      Из нелинейной функции $f(\set[x]{n})$ получим нелинейную функцию $h(x,y)\notin\Lb$
       подстановкой $1,x,y$.
       Функция $h(x,y)$ имеет вид
       \begin{displaymath}
@@ -899,7 +901,7 @@
               \begin{itemize}
                 \item По лемме \ref{ast} \CHECK  $h\in\cls{1,\dn,f}$.\PROOF
                 \item $f_1\in\cls{1,\dn,f}$
-                \item 
+                \item
                   \begin{stm}
                     \begin{math}
                       f_1\le f
@@ -921,7 +923,7 @@
                         \end{displaymath}
                     \end{enumerate}
                   \end{proof}
-                \item 
+                \item
                   \WHY
                   \begin{math}
                     f_1<f \;(R\neq\varnothing) \Ra \Ng_{f_1}<N
@@ -945,7 +947,7 @@
   Если $\ag\subseq\Mb$, то теорема верна по доказанной теореме \ref{thm}.\REF. Далее рассматриваем,
   что $\ag\nsubseq\Mb$.
   \begin{itemize}
-    \item Пусть $\ag\in\Lb$. 
+    \item Пусть $\ag\in\Lb$.
       \begin{stm}
         \begin{math}
           \ag\in\Tb_1
@@ -964,17 +966,17 @@
         x\to y\in\cls{1,\fM,\fL}
       \end{displaymath}
       \begin{enumerate}
-        \item $\ag\in\Oib=\cls{x\to y}$. Тогда 
+        \item $\ag\in\Oib=\cls{x\to y}$. Тогда
           \begin{displaymath}
             F=\Oib=\cls{x\to y}=\cls{1,\fM,\fL}
           \end{displaymath}
         \item $\ag\notin\Oib$. Тогда для произвольной фунции из F возможны два случая:
           \begin{itemize}
-            \item 
+            \item
               \begin{math}
                 f\in\Oib \Ra f\in\cls{x\to y}
               \end{math}
-            \item 
+            \item
               \begin{math}
                 f\notin\Oib
               \end{math}
@@ -984,7 +986,7 @@
                   B=\cup_{f\in\ag,f\neq 0}{g_f}\subseq\Mb
                 \end{math}. Функция $\hg$ --- это функция из B, что P($\hg$)=P(B).
               \end{denote}
-              По теореме 2 \REF 
+              По теореме 2 \REF
               \begin{math}
                 B\subseq\cls{1,\om,d_{P(B)}}\subseq\cls{1,\om,\hg}
               \end{math}
@@ -1006,8 +1008,8 @@
 \end{proof}
 \begin{imp}
   \CHECK
-  Множество замкнутых классов в $\PD$, содержащих 1 и не содержащих 0 и немонотонные функции, 
-  исчерпывается 
+  Множество замкнутых классов в $\PD$, содержащих 1 и не содержащих 0 и немонотонные функции,
+  исчерпывается
   \begin{displaymath}
     \Lb_1,\Oib,\cls{x\to y, d_p}\; p=2,3...
   \end{displaymath}
@@ -1031,7 +1033,7 @@
 \end{df}
 \paragraph{Свойства самодвойственных функций}
 \begin{enumerate}
-  \item $x,\bar x, x+y+z,d_3 \in S$ 
+  \item $x,\bar x, x+y+z,d_3 \in S$
   \item $0,1,xy,x\vee y \notin S$
   \item $f^*(0,\setf[x]{n})\eqdef (f(0,\setf[x]{n}))^*=f(1,\setf[x]{n}) $
   \item Принцип двоственности \\
@@ -1049,7 +1051,7 @@
        $\Tb_0= \Tb_1^*$, $\Tb_1=\cls{\impl,xy}$. Тогда по принципу двойственности,
        $\Tb_0=\cls{x\vee y, \bar xy}$%I know, what I do
      \end{ex}
-     \item 
+     \item
        \begin{lemma}{Лемма о нелинейной функции.}
        Из нелинейной функции f(\set[x]{n}) подстановкой 1, x, y можно
        получить $g(x,y) \notin\Lb$.
@@ -1069,7 +1071,7 @@
  \label{22}
   Пусть $\fS \notin S$. Тогда $0,1 \in \cls{\fS,\bar x}$.
 \end{lemma}
-Пусть $\ag\subseq\PD, F=[\ag]$. 
+Пусть $\ag\subseq\PD, F=[\ag]$.
 Мы уже доказали теорему Поста в следующих случаях: \REF
 \begin{enumerate}
   \item $0,1\in [\ag]$ (~\ref{?})
@@ -1081,13 +1083,13 @@
 Пусть $\ag\subseq\PD,F=[\ag], 0,1\notin[\ag]$. Тогда F конечнопорожден.
 \end{theorem}
 \begin{itemize}
-\item Пусть $\ag\subseq\Sb$. 
+\item Пусть $\ag\subseq\Sb$.
   Тогда $[\ag\cup\hc{1}] = F_1$. По доказанным теоремам (~\ref{?})
   существует $B\subseq\ag, \hm{B}<\bes$ и $\hs{B\cup\hc{1}} = [\ag\cup\hc{1}]=F_1$.
   Докажем, что $\hs{B}=\hs{\ag}$.\par
   Возьмем $f(\set[x]{n})\in\hs{\ag\cup\hc{1}}\cap\Sb$.
   Cуществует формула $\Phi$ над $B\cup\hc{1}$, реализующая $f(\set[x]{n})$.
-  Заменим все вхождения $1$ в $\Phi$ на новую переменную $y$. 
+  Заменим все вхождения $1$ в $\Phi$ на новую переменную $y$.
   Получим новую формулу $\Phi'$, реализующую функцию $h(y,\set[x]{n})$.
   \par Свойства функции $h$.
   \begin{itemize}
@@ -1099,7 +1101,7 @@
   \begin{problem}
     Найти все классы $F\subseq\Sb,[F]=F$.
   \end{problem}
-  \item Пусть теперь $\ag\not\subseq\Sb$. 
+  \item Пусть теперь $\ag\not\subseq\Sb$.
     Следовательно, существует $\fS\in\ag,\fS\not\in\Sb$.
     \begin{lemma}
       $\displaystyle \ag\subseq\Tb_1\cap\Tb_0$
@@ -1122,7 +1124,7 @@
       \begin{enumerate}
         \item $g(x,y)=x\vee y \in \cls{\fS}\subseq [\ag]$\par
           Тогда, аналогично первому пункту, $[\ag\cup\hc{1}] = F_1$ и по доказанным
-          теоремам, существует $B\subseq\ag, \hm{B}<\infty$ и 
+          теоремам, существует $B\subseq\ag, \hm{B}<\infty$ и
           \begin{displaymath}
             [B\cup\hc{1}]=[\ag\cup\hc{1}]=F_1
           \end{displaymath}
@@ -1140,7 +1142,7 @@
           \begin{authornote}
             А в математических текстах понятие перегрузки используется? А то как-то нехорошо получается,
             что функция $g$ означает две разные вещи. Но так было у первоисточника. diff are welcome.
-            Ну и почему он не сдвигает комментарий вправо? 
+            Ну и почему он не сдвигает комментарий вправо?
           \end{authornote}
           \begin{itemize}
               \item $\displaystyle \alt \neq \tilde 0 \Ra g(\alt)  = f(\alt) $
@@ -1152,7 +1154,7 @@
 \end{itemize}
 \part{Комбинаторика}
 \begin{authornote}
-  Структуризация из рук вон плохая, ибо повествование было в стиле "Ну а ещё, как вы знаете, есть такая 
+  Структуризация из рук вон плохая, ибо повествование было в стиле "Ну а ещё, как вы знаете, есть такая
   штука". Много кириллических букв добавлено от меня, что бы поддержать некую логическую связность.
 \end{authornote}
 \section{Выборки}
@@ -1183,7 +1185,7 @@
   Неупорядоченные выборки также называются сочетаниями.
 \end{note}
 \begin{df}
-  Число количество неупорядоченных выборок без повторений называется числом сочетаний 
+  Число количество неупорядоченных выборок без повторений называется числом сочетаний
   и обозначается $C_n^k$ или $\rbmat{n\\k\\}$
 \end{df}
 \paragraph{Свойства числа сочетаний}
@@ -1202,7 +1204,7 @@
 \end{enumerate}
 \subsection{Неупорядоченные с повторениями}
 Каждая такая выборка задается числом раз, которое был выбран конкретный элемент.
-Итак, пусть элемент $x_j$ был выбран $\al_j\ge 0$ раз($1\le j\le n$). 
+Итак, пусть элемент $x_j$ был выбран $\al_j\ge 0$ раз($1\le j\le n$).
 По условию задачи $\displaystyle \sumiun\al_i = k$. Каждому такому разбиению числа $k$ поставим
 в соответствие набор из нулей и единиц длины $n+k-1$ следующего вида:\par
 $\displaystyle (\underbrace{0\dots0}_{\al_1} 1 \underbrace{0\dots 0}_{\al_2} 1 \dots \dots 1 \underbrace{0\dots 0}_{\al_n})$
@@ -1215,7 +1217,7 @@ $\displaystyle (\underbrace{0\dots0}_{\al_1} 1 \underbrace{0\dots 0}_{\al_2} 1 \
 \end{denote}
 \subsection{Полиномиальный коэффицент}
 Пусть есть различные $x_1\dots x_m$ элементы, из которых выбирается
-упорядоченная последовательность длины $n$, что элемент $x_j$ встречается 
+упорядоченная последовательность длины $n$, что элемент $x_j$ встречается
 в последовательности $r_j$ раз.
 \begin{denote}
 Тогда искомое число последовательностей называется полиномиальным
@@ -1248,7 +1250,7 @@ $B_i\neq\varnothing, B_i\cap B_j=\varnothing, i\neq j$.
       $\displaystyle \alt=(\set{n}) \text{ и } \tilde\beta=(\set[\beta]{n})$, построенные следующим образом:
       $\al_i = 1 \Lra x_i\in B_1$\\
       $\ \beta_i=1 \Lra x_i\in B_2$.
-      Очевидно, что $\alt = \bar\tilde\beta$ и $\alt \neq \tilde 0,\tilde 1$.
+      Очевидно, что $\alt = \bar{\tilde\beta}$ и $\alt \neq \tilde 0,\tilde 1$.
       Поэтому, искомое число Стирлинга равно $\frac{1}{2}(2^n-2)$.(Вычли два набора и разделили на
       количество перестановок двух последовательностей.)
     \end{proof}
@@ -1260,7 +1262,7 @@ $B_i\neq\varnothing, B_i\cap B_j=\varnothing, i\neq j$.
       \item $\displaystyle S(n,k) = S(n-1, k-1) + kS(n-1,k)$
         \begin{proof}
           \begin{authornote}
-            Опять-таки, лингвистическая аккуратность не на высоте. 
+            Опять-таки, лингвистическая аккуратность не на высоте.
           \end{authornote}
           Каждое из слагаемых в правой части соответствует одному из двух случаев:
           \begin{itemize}
@@ -1279,7 +1281,7 @@ $B_i\neq\varnothing, B_i\cap B_j=\varnothing, i\neq j$.
 $\displaystyle x^n = \sumkzn S(n,k) (x)_k$
 \end{lemma}
 \begin{proof}
-  Т.к выражение справа и слева знака равенства являются многочленами по переменной $x$, 
+  Т.к выражение справа и слева знака равенства являются многочленами по переменной $x$,
   то доказав равенство для $x=m\in\N$, получим и для $x\in\R$.\par
   $m^n$- число $m$-чных наборов длины $n$. Пусть $\alt=(\set{n})$ - такой набор.
   В нем $k$ различных разрядов, $1\le k\le m'=min(m,n)$.
@@ -1292,7 +1294,7 @@ $\displaystyle x^n = \sumkzn S(n,k) (x)_k$
   циклы и другие элементарные понятия алгебры минуты так на четыре.
 \end{authornote}
 \begin{denote}
-  Число перестановок $n$ элементного множества, разлагающихся на $k$ циклов, называется 
+  Число перестановок $n$ элементного множества, разлагающихся на $k$ циклов, называется
   числом Стирлинга первого рода без знака и обозначается $C(n,k)$.
 \end{denote}
 \begin{denote}
@@ -1326,16 +1328,16 @@ $\displaystyle x^n = \sumkzn S(n,k) (x)_k$
 \end{lemma}
 \begin{proof}
   Заметим, что верно $\displaystyle (x)_n = \sumkzn a(n,k)\cdot x^k $ по определению убывающего
-  факториала. Можно доопределить $a(0,0) =1,\ a(n,0)=0, a(n,k)=0 \text{ при } n<k $. 
+  факториала. Можно доопределить $a(0,0) =1,\ a(n,0)=0, a(n,k)=0 \text{ при } n<k $.
   Покажем, что $a(n,k)$ удовлетворяет тому же реккурентному соотношеню, что и $s(n,k)$.
   \begin{displaymath}
-    (x)_n = (x-n+1)(x)_{n-1} = (x-n+1)\sum_{k=0}^{n-1}a(n-1,k) x^k = 
+    (x)_n = (x-n+1)(x)_{n-1} = (x-n+1)\sum_{k=0}^{n-1}a(n-1,k) x^k =
   \end{displaymath}
   \begin{displaymath}
-    =\sum_{k=0}^{n-1}a(n-1,k) x^{k+1} - (n-1)\sum_{k=0}^{n-1}a(n-1,k)x^k=\sumkun a(n-1,k-1)x^k 
+    =\sum_{k=0}^{n-1}a(n-1,k) x^{k+1} - (n-1)\sum_{k=0}^{n-1}a(n-1,k)x^k=\sumkun a(n-1,k-1)x^k
     -(n-1)\sumkzn a(n-1,k) x^n
   \end{displaymath}
-  Получаем нужное реккурентное соотношение 
+  Получаем нужное реккурентное соотношение
   \begin{displaymath}
     a(n,k) = a(n-1, k-1) - (n-1)a(n-1,k)
   \end{displaymath}
@@ -1346,13 +1348,13 @@ $\displaystyle x^n = \sumkzn S(n,k) (x)_k$
 \end{denote}
 Рассмотрим два базиса в линейном пространстве многочленов степени не выше $n$:
 I: $\displaystyle x^0=1, x^1, x^2, \dots, x^n$ \par
-II: $\displaystyle (x)_0=1, (x)_1,\dots, (x)_n$ \par 
+II: $\displaystyle (x)_0=1, (x)_1,\dots, (x)_n$ \par
 По доказанным теоремам имеют место следующие формулы:
 \begin{displaymath}
   \rbmat{x^0\\x^1\\\vdots\\x^n} = \Sc_{n+1}\rbmat{(x)_0\\(x)_1\\\vdots\\(x)_n}\qquad
   \rbmat{(x)_0\\(x)_1\\\vdots\\(x)_n} = \mathfrak{s}_{n+1}\rbmat{x^0\\x^1\\\vdots\\x^n}
 \end{displaymath}
-Иными словами, $\displaystyle \Sc_{n+1}s_{n+1} = \Ic_{n+1} = s_{n+1}\Sc_{n+1}$, или\ 
+Иными словами, $\displaystyle \Sc_{n+1}s_{n+1} = \Ic_{n+1} = s_{n+1}\Sc_{n+1}$, или\
 $\displaystyle \sumkzn S(i,k)\cdot s(k,j) = \delta_{ij}$
 \begin{lemma}{Обращение Стирлинга}
   Пусть $\hc{a}_{j=0}^n$, $\hc{b}_{j=0}^n \in \Cbb$. Тогда для \linebreak $m=0\dots n$ верно
@@ -1384,8 +1386,8 @@ $\rbmat{-n\\k} = \frac{(-n)_k}{k!}=(-1)^k\frac{(n)^k}{k!}=(-1)^k\cnka{n}{k}$
   Обозначим $M_n^r(d)$ - число $r$-ичных циклических последовательностей длины $n$ и минимального
   периода $d$.
 \end{denote}
-Заметим, что последовательность 
-с минимальным периодом $d$ имеет вид 
+Заметим, что последовательность
+с минимальным периодом $d$ имеет вид
 \begin{displaymath}
   \overbrace{\underbrace{a_1\dots a_d}_{d}\underbrace{a_1\dots a_d}_{d}\dots\dots \underbrace{a_1\dots a_d}_{d}}^n
 \end{displaymath}
@@ -1395,14 +1397,14 @@ $$r^n=\sum\limits_{d|n}dM_d^r(d)$$
   Величина слева - это число всех последовательностей, линейных. Именно поэтому в сумме мы домножаем на $d$.
 \end{authornote}
 \begin{displaymath}
-  T(n) = \sum\limits_{d|n}M_d^r(d) 
+  T(n) = \sum\limits_{d|n}M_d^r(d)
 \end{displaymath}
 \begin{authornote}
 А что такое $T(n)$?
 \end{authornote}
 \subsection{Частично упорядоченное множество}
 \begin{df}
-  Множество $P=(P,\le)$ с заданным на нем бинарном отношении "$\le$" называется частично 
+  Множество $P=(P,\le)$ с заданным на нем бинарном отношении "$\le$" называется частично
   упорядоченным множеством, если выполнено для всеx $x$ и $y$:
   \begin{enumerate}
     \item $\displaystyle x\le x$
@@ -1428,7 +1430,7 @@ $$r^n=\sum\limits_{d|n}dM_d^r(d)$$
   Множество называется локально конечным,\linebreak  если $\forall x,y\in P$ верно $\hm{\hs{x,y}}<\infty$
 \end{df}
 \begin{note}
-Если не сказано иного, в дальнейших рассмотрениях будем предпологать, 
+Если не сказано иного, в дальнейших рассмотрениях будем предпологать,
 что частично упорядоченное множество содержит ноль и локально конечно.
 \end{note}
 \subsection{Алгебра инциндентности}
@@ -1459,7 +1461,7 @@ $$r^n=\sum\limits_{d|n}dM_d^r(d)$$
 \end{enumerate}
 \subsection{Формулы обращения}
 \begin{df}
-  Функция $g\in\arp$ называется правым обратным для $f\in\arp$, если $f\ast g=\delta$, 
+  Функция $g\in\arp$ называется правым обратным для $f\in\arp$, если $f\ast g=\delta$,
   и левым обратным, если $g\ast f=\delta$.
 \end{df}
 \begin{lemma}
@@ -1492,7 +1494,7 @@ $$r^n=\sum\limits_{d|n}dM_d^r(d)$$
 \end{df}
 \begin{theorem}(Формула обращения Мебиуса для частично упорядоченного множества)
   Пусть $P$-локально ограниченное частично упорядоченное множество. Тогда
-  для любых $f,g: P\to\R$ верно 
+  для любых $f,g: P\to\R$ верно
   \begin{displaymath}
     g(x)=\sum_{y\le x}f(y) \Lra f(x) = \sum_{y\le x}g(y)\mu(y,x)
   \end{displaymath}
@@ -1512,24 +1514,24 @@ $$r^n=\sum\limits_{d|n}dM_d^r(d)$$
   Возьмем $P=\Z_+$ со стандтным отношением "$\le$". Имеем,
   $\mu(x,x) =1$, $\mu(x,x+1)=-1$, $\mu(x,x+2) = -(\mu(x+1,x+2) + \mu(x+2,x+2)) = 0$,
   $\mu(x,x+k) = 0, when\  k\ge 2$\WHY
-  Таким образом, 
+  Таким образом,
   \begin{displaymath}
     \mu(x,y) = \case{\ 1,\  x =y\\ -1, y=x+1\\\ 0, otherwise}
   \end{displaymath}
-  Формула обращения имеет вид 
+  Формула обращения имеет вид
   $g(x) = \sum_{y\le x}f(y) \Lra f(x)=g(x) - g(x-1)$
 \end{ex}
 \subsubsection{Теорема о произведении}
 Пусть $P_1,P_2$ - частично упорядоченные множества. Рассмотрим $P=P_1\times P_2$.
 Пусть $x=(x_1,x_2), y=(y_1,y_2)\in P$. Определим $\displaystyle x\le y \Lra x_1\le y_1, x_2\le y_2$.
-Заметим, что если $P_1,P_2$ локально конечны с нулями $0_1$ и $0_2$ соответсвенно, то 
+Заметим, что если $P_1,P_2$ локально конечны с нулями $0_1$ и $0_2$ соответсвенно, то
 $P$ - локально конечно с нулем $(0_1,0_2)$.
 \begin{theorem}
   Пусть $P_1,P_2$- локально упорядоченные множества с нулями, $P=P_1\times P_2$.
   Тогда $\displaystyle \mu_P((x_1,x_2),(y_1,y_2)) = \mu_{\tiny P_1}(x_1,x_2)\mu_{\tiny P_2}(x_2,y_2)$
 \end{theorem}
 \begin{proof}
-Пусть $x\not\le y$. Тогда либо $x_1\not\le y_1$, либо $x_2\not\le y_2$. В таком случае доказываемое 
+Пусть $x\not\le y$. Тогда либо $x_1\not\le y_1$, либо $x_2\not\le y_2$. В таком случае доказываемое
 равенство выполнено.\par
 Пусть теперь $x\le y$. Если $x = y$, то $x_1=y_1$, $x_2=y_2$, и доказываемое равенство выглядит как
 \begin{displaymath}
@@ -1539,7 +1541,7 @@ $P$ - локально конечно с нулем $(0_1,0_2)$.
   Далее идет что-то, опасное для сознания. Приятного чтения. Надеюсь я нигде
   не перепутал немеренное количество индексов.
 \end{authornote}
-Доказываем индукцией по $r=\hm{\hs{x,y}}$. 
+Доказываем индукцией по $r=\hm{\hs{x,y}}$.
 Случай $r = 1$, т.е $x=y$ уже разобран. Пусть утверждение верно для $\hm{\hc{x,y}}<r$.
 Для $x,y$, что $\hm{\hc{x,y}}=r$ выполняется
 \begin{displaymath}
@@ -1560,11 +1562,11 @@ $P$ - локально конечно с нулем $(0_1,0_2)$.
 Суммируя, получаем требуемое утверждение. Теорема доказана.
 \end{proof}
 \begin{imp}
-  Пусть $P_1\sco P_n$ - локально конечные конечно упорядочнные 
+  Пусть $P_1\sco P_n$ - локально конечные конечно упорядочнные
   множества с нулями, $P=P_1\times\dots P_n$. Тогда $\displaystyle \mu_P(x,y) = \prod_{i=1}^n\mu_{P_i}(x,y)$
 \end{imp}
 \begin{ex}
-  Рассмотрим $E=\hc{0, 1}$. По доказанной теореме, 
+  Рассмотрим $E=\hc{0, 1}$. По доказанной теореме,
   \begin{displaymath}
     \mu_{E^n}=\bcase
        {1, x=y\\
@@ -1580,7 +1582,7 @@ $P$ - локально конечно с нулем $(0_1,0_2)$.
 Пусть $P\cong P'$, т.е $P\corr{\phi}P'$, $\phi$-биекция, причем $x\le y \Lra \phi(x)\le\phi(y)$.
 Тогда $\mu_P(x,y)=\mu_{P'}(\phi(x),\phi(y))$.
 \begin{ex}
-  Рассмотрим множество $T=\hc{\set[t]{n}}$ и множество его подмножеств $\wh P^n = 2^T$, на котором 
+  Рассмотрим множество $T=\hc{\set[t]{n}}$ и множество его подмножеств $\wh P^n = 2^T$, на котором
   определим частичный порядок: $\forall x,y\in\wh P^n$ $x\le y \Lra x\subseq y$, $\varnothing = 0$.
   Заметим, что $\wh P^n \cong E^n$, поэтому
   \begin{displaymath}
@@ -1600,11 +1602,11 @@ $\displaystyle \mu_{P'}(x,y)=\mu_{P}(x,y)$.
 \begin{ex}
   Рассмотрим $N=\hc{\set{N}}$ - множество объектов и $T=\hc{\set[t]{n}}$.
   \begin{denote}
-    $\displaystyle f_=(x)$ - число объектов, обладающихв точности свойствами $T\wo x$. В частности, $f_=(T)$ - число объектов, 
+    $\displaystyle f_=(x)$ - число объектов, обладающихв точности свойствами $T\wo x$. В частности, $f_=(T)$ - число объектов,
     не обладающих ни одним свойством.
   \end{denote}
   \begin{denote}
-    $\displaystyle g_\ge(x) = \sum_{y\le x}f_=(y)$ - число объектов, обладающих по крайней мере свойствами из $T\wo x$. 
+    $\displaystyle g_\ge(x) = \sum_{y\le x}f_=(y)$ - число объектов, обладающих по крайней мере свойствами из $T\wo x$.
     В частности, $g_\ge(T)=N$.
   \end{denote}
   \begin{denotes}
@@ -1642,17 +1644,17 @@ $\displaystyle \mu_{P'}(x,y)=\mu_{P}(x,y)$.
       \wh \mu(d)=\bcase{1, d=1\\ (-1)^l, d=t_{i_1}\dots t_{i_l}\\ 0, otherwise}
     \end{displaymath}
     \begin{authornote}
-      По логике вещей, если речь идет о делимости, то $t_j$ должно быть простые. С другой стороны, 
+      По логике вещей, если речь идет о делимости, то $t_j$ должно быть простые. С другой стороны,
       а почему не $p_j$?
     \end{authornote}
   \end{df}
-  Верна следующая формула\WHY: 
+  Верна следующая формула\WHY:
   \begin{displaymath}
     \displaystyle \ph(k)=\sum_{d|k}\frac{k}{d}\wh\mu(d)=\sum_{d'|k}d'\wh\mu(\frac{k}{d'})
     %-- Так он клан ветра или воды? --Ветра.Но он раньше был кланом воды.
     % Простите за non-ASCII комментарии.
   \end{displaymath}
-  
+
   \begin{lemma}
     Рассмотрим частично упорядоченное множество $P=(N,\le)$. Определим для $x,y\in P$ сравнение: $x\le y\Lra x|y$.
     Тогда для $x\le y$, $\mu_P(x,y) = \wh\mu(y/x)$.
@@ -1664,7 +1666,7 @@ $\displaystyle \mu_{P'}(x,y)=\mu_{P}(x,y)$.
     \end{denote}
     Заметим, что $D_n\cong(\Z_+)^n$. Функция Мебиуса для этого множества выглядит(по теореме умножения)
     \begin{displaymath}
-      \mu_{D_n}(x,y) = \mu_{Z_+^n}(\wh x, \wh y) = 
+      \mu_{D_n}(x,y) = \mu_{Z_+^n}(\wh x, \wh y) =
       \bcase{1, \wh x=\wh y\\ (-1)^l,\ \wh x\le\wh y,\ \wh y_i=\wh x_i+1 \text{ в ровно $l$ разрядах}\\ 0, otherwise\\}=\wh\mu(y/x)
     \end{displaymath}
     \begin{authornote}
@@ -1675,14 +1677,14 @@ $\displaystyle \mu_{P'}(x,y)=\mu_{P}(x,y)$.
     $\mu_P(x,y) = \mu_{D_n}(x,y)=\wh\mu(y/x)$.
   \end{proof}
   \begin{imp}
-    Формула обращения Мебиуса.\par 
-    Пусть $f,g: \N\to\R$. Тогда верно 
+    Формула обращения Мебиуса.\par
+    Пусть $f,g: \N\to\R$. Тогда верно
     \begin{displaymath}
       \displaystyle g(x) = \sum_{d|x}f(d) \Lra f(x) = \sum_{d|x}g(d)\wh\mu(\frac{x}{d})
     \end{displaymath}
   \end{imp}
   \begin{imp}
-    Формула Гаусса: \WHY 
+    Формула Гаусса: \WHY
     \begin{displaymath}
       \sum_{d|k}\ph(d) = k
     \end{displaymath}
@@ -1706,10 +1708,10 @@ $\displaystyle \mu_{P'}(x,y)=\mu_{P}(x,y)$.
   Поэтому $(\delta+g)^{-1}(x,x) = 1$. База индукции доказана.
 
 
-  Пусть теперь теорема доказана для всех $x,y\in P$, что $\hm{\hc{x,y}}<k$. Возьмем 
+  Пусть теперь теорема доказана для всех $x,y\in P$, что $\hm{\hc{x,y}}<k$. Возьмем
   $\hm{\hc{x,y}}=k$.
   \begin{displaymath}
-    (\delta+g)^{-1}(x,y) = -\sum_{x\le z<y}(\delta+g)^{-1}(x,z)(\delta+g)(z,y) = 
+    (\delta+g)^{-1}(x,y) = -\sum_{x\le z<y}(\delta+g)^{-1}(x,z)(\delta+g)(z,y) =
     -\sum_{x\le z<y}(\delta-g+g^2-\dots+(-1)^kg^k)(x,z)g(z,y) =
   \end{displaymath}
   \begin{displaymath}
@@ -1737,9 +1739,9 @@ $\displaystyle \mu_{P'}(x,y)=\mu_{P}(x,y)$.
   \item Выполнены левая и правая дистрибутивность по сложения.
   \item Если есть единица в группе по умножению, то кольцо называется с единицей.
   \item  Ненулевые элементы $a,b\in\Kc$ называются делителями нуля, если $ab=0$.
-  \item 
+  \item
     \begin{df}
-      Характеристикой кольца называется минимальное число $n$, что $\forall a\in\Kc$ 
+      Характеристикой кольца называется минимальное число $n$, что $\forall a\in\Kc$
       $na=0$, или $0$, есть такого числа не существует.
     \end{df}
     \item Поле - коммутативное кольцо и ассоциативное кольцо с единицей
@@ -1779,17 +1781,17 @@ $\displaystyle B(x)=\sum_{n\ge 0}b_nx^n$:
     \end{itemize}
     \item      $\displaystyle \Ks\subs\Ksm\subs\Ksr$
       \begin{df}
-        $\Ksm$- множество многочленов, т.е рядов, имеющих конечное количество ненулевых 
+        $\Ksm$- множество многочленов, т.е рядов, имеющих конечное количество ненулевых
         коэффицентов.
       \end{df}
       \item Если $A(x)B(x)=1$, то $B(x)=A^{-1}(x)$ называется обратным к $A(x)$.
 \end{enumerate}
 \begin{lemma}
-  Пусть $A(x)\in\Ksr$. Тогда $A^{-1}(x)$ существует тогда и только тогда, когда сущестует 
+  Пусть $A(x)\in\Ksr$. Тогда $A^{-1}(x)$ существует тогда и только тогда, когда сущестует
   $(A(0))^{-1}$.
 \end{lemma}
 \begin{proof}
-  По определению произведения рядов, выполнено 
+  По определению произведения рядов, выполнено
   \begin{displaymath}
     \mat{a_0b_0=1\\a_0b_1+a_1b+0=0\\\vdots\\a_0b_k+\dots+a_kb_0=0} \Ra
     \mat{b_0=\inv{a_0}\\b_1=-\inv{a_0}a_1b_0\\\vdots\\b_k=-\inv{a_0}(a_1b_{k-1}+\dots+a_kb_o)}
@@ -1801,7 +1803,7 @@ $\displaystyle B(x)=\sum_{n\ge 0}b_nx^n$:
 \end{ex}
 \subsection{Применение теории производящих функций}
 \subsubsection{Сочетания с повторениями}
-Из комбинаторных соображений понятно, что 
+Из комбинаторных соображений понятно, что
 \begin{displaymath}
   \sum_{k\ge0}\cnka{n}{n}x^k=(1+x+x^2+\dots)^n
 \end{displaymath}
@@ -1813,7 +1815,7 @@ $\displaystyle B(x)=\sum_{n\ge 0}b_nx^n$:
   И вновь философский вопрос - зачем все это?
 \end{authornote}
 \subsubsection{Задача о двоичных последовательностях}
-Найдем количество двоичных последовательностей длины $n$, 
+Найдем количество двоичных последовательностей длины $n$,
 начинающихся с $1$ и не содержащих двух нулей подряд.
 Обозначим искомое количество $u_n$. Очевидно $u_1=1$,$u_2=2$. Для удобства Обозначим
 $u_0=1$. Заметим, что $u_n=u_{n-1}+u_{n-2}$. Такая последовательность называется числам Фибоначчи.
@@ -1822,18 +1824,18 @@ $u_0=1$. Заметим, что $u_n=u_{n-1}+u_{n-2}$. Такая последо
 \end{authornote}
 \subsubsection{Линейные реккурентные соотношения с постоянными коэффицентами}
 Предположим, необходимо найти последовательность, удовлетворяющую соотношению
-$u_{u+r}=a_1u_{n+r-1}+a_2u_{n+r-2}+\dots+a_ru_n$, где $n\ge 0$, $a_1\sco a_r\in\Cbb$,$a_r\neq 0$ 
-и заданы начальные значения $u_0\sco u_{r-1}$. 
+$u_{u+r}=a_1u_{n+r-1}+a_2u_{n+r-2}+\dots+a_ru_n$, где $n\ge 0$, $a_1\sco a_r\in\Cbb$,$a_r\neq 0$
+и заданы начальные значения $u_0\sco u_{r-1}$.
 
-Определим ряды $\displaystyle U(x)=\sum_{n\ge0}u_nx^n$, $B(x)=1-a_1x-a_2x^2-\dots-a_rx^r$ и ряд 
+Определим ряды $\displaystyle U(x)=\sum_{n\ge0}u_nx^n$, $B(x)=1-a_1x-a_2x^2-\dots-a_rx^r$ и ряд
 \begin{displaymath}
   \displaystyle C(x)=U(x)B(x)=\sum_{n\ge0}c_nx^n
 \end{displaymath}
-Заметим, что $c_{n+r}=u_{n+r}-a_1u_{n+r-1}-\dots-a_nu_n=0$ для всех $n\ge0$. Т.е $C(x)\in\Ksm$, причем 
+Заметим, что $c_{n+r}=u_{n+r}-a_1u_{n+r-1}-\dots-a_nu_n=0$ для всех $n\ge0$. Т.е $C(x)\in\Ksm$, причем
 $\deg C(x)\le r-1$. Т.к существует $B^{-1}(x)$, то $U(x)=\frac{C(x)}{B(x)}$.
 
-Теперь рассмотрим многочлен $G(x)=x^r-a_1x^{r-1}-\dots-a_r\neq0$ и пусть 
-$\set{s}$ - его корни, кратностей $\set[l]{s}$ соответственно. По основной теореме алгебры, $l_1\spl l_s=r$. Если 
+Теперь рассмотрим многочлен $G(x)=x^r-a_1x^{r-1}-\dots-a_r\neq0$ и пусть
+$\set{s}$ - его корни, кратностей $\set[l]{s}$ соответственно. По основной теореме алгебры, $l_1\spl l_s=r$. Если
 $\al$  - корень $G(x)$, то $\inv{\al}$- корень $B(x)$. Поэтому верно представление
 \begin{displaymath}
   B(x)=(1-\al_1x)^{l_1}(1-\al_2x)^{l_2}\dots(1-\al_sx)^{l_s}
@@ -1845,19 +1847,19 @@ $\al$  - корень $G(x)$, то $\inv{\al}$- корень $B(x)$. Поэто�
 \begin{displaymath}
   =\sum{n\ge0}\sumind{i}{1}{s}\al_i^n\sumind{k}{0}{l_i}B_{ik}\cnka{k}{n}x^n
 \end{displaymath}
-Обозначив $\displaystyle P_i(n)=\sumind{k}{0}{l_i}B_{ik}\cnka{k}{n}$, $\deg P_i(n)\le l_i-1$ получаем решение 
-задачи 
+Обозначив $\displaystyle P_i(n)=\sumind{k}{0}{l_i}B_{ik}\cnka{k}{n}$, $\deg P_i(n)\le l_i-1$ получаем решение
+задачи
 \begin{displaymath}
   \displaystyle u_n=\sumind{i}{1}{s}\al_i^nP_i(n)
 \end{displaymath}
 \subsubsection{Задача о расстановке скобок}
 Пусть есть некоммутативное произведение $x_1x_2\dots X_n$. Посчитаем количество различных возможных
 способов расставить скобки, которое называется числами Каталана и обозначается $c_n$. Очевидно,
-$c_0=0$,$c_1=c_2=1$. Так же, можно заметить, что $c_n=c_1c_{n-1}+c_2c_{n-2}+\dots+c_{n-1}c_1$ для всех 
+$c_0=0$,$c_1=c_2=1$. Так же, можно заметить, что $c_n=c_1c_{n-1}+c_2c_{n-2}+\dots+c_{n-1}c_1$ для всех
 $n\ge2$.
-Рассмотрим производящую функцию $\displaystyle C(x)=\sum_{n\ge0}c_nx^n$ и ряд 
+Рассмотрим производящую функцию $\displaystyle C(x)=\sum_{n\ge0}c_nx^n$ и ряд
 $\displaystyle D(x)=\sum_{n\ge0}d_nx^n=C(x)\cdot C(x)$.
-Так же имеет место следующие соотношения: $d_0=d_1=0$,$\forall n\ge2$ $d_n=c_n$. Иными словами, 
+Так же имеет место следующие соотношения: $d_0=d_1=0$,$\forall n\ge2$ $d_n=c_n$. Иными словами,
 в терминах производящих функций, $C^2(x)-C(x)+x=0$.
 \begin{authornote}
   To be continued...?
@@ -1869,7 +1871,7 @@ $\displaystyle D(x)=\sum_{n\ge0}d_nx^n=C(x)\cdot C(x)$.
   $a_n^i=a_n$.
 \end{df}
 \begin{denote}
-  Пусть $B^i(x)=\sumind{j}{1}{i}A^j(x)$. Если $B^i(x)\to B(x)$, то 
+  Пусть $B^i(x)=\sumind{j}{1}{i}A^j(x)$. Если $B^i(x)\to B(x)$, то
   говорим, что $\displaystyle\sum_{i\ge1}A^i(x)=B(x)$.
 \end{denote}
 \begin{denote}
@@ -1889,7 +1891,7 @@ vim/Emacs знает едва ли больше 20\% о своем редакт�
 \begin{proof}
   {\bf Необходимость.}
   Будем обозначать $\displaystyle B^i(x)=\sum_{i\ge0}$
-  
+
 \end{proof}
 \end{document}
 
@@ -1898,3 +1900,8 @@ vim/Emacs знает едва ли больше 20\% о своем редакт�
 
 
 
+
+
+%% Local Variables:
+%% eval: (setq compile-command (concat "xelatex  -halt-on-error -file-line-error " (buffer-name)))
+%% End:
