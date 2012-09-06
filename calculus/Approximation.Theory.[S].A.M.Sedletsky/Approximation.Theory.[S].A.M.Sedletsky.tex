@@ -83,65 +83,73 @@ $\wh{f}(x)=\frac1{2\pi}\int_\R e^{-ixt}f(t)dt$).
 
 \subsection{Предмет теории аппроксимации}
 
-\defin \emph{Метрическое пространство} это совокупность элементов, для каждой пары $(x_1,x_2)$ которой
-определена функция расстояния $\rho(x_1,x_2)$, обладающая следующими свойствами:
-\begin{enumerate}
+\begin{df}
+  \emph{Метрическое пространство} это совокупность элементов, для каждой пары $(x_1,x_2)$ которой
+  определена функция расстояния $\rho(x_1,x_2)$, обладающая следующими свойствами:
+  \begin{enumerate}
   \item Неотрицательная определенность и невырожденность:
     $$\rho(x_1,x_2) \ge 0,\quad \rho(x_1,x_2)=0\Lra x_1=x_2;$$
   \item Неравенство треугольника: $\rho(x_1,x_3)\le\rho(x_1,x_2)+\rho(x_2,x_3)$;
   \item Симметричность: $\rho(x_1,x_2)=\rho(x_2,x_1)$.
-\end{enumerate}
+  \end{enumerate}
+\end{df}
 
-\defin Подпространство $Y$ метрического пространства $X$
-называется \emph{плотным} (в $X$), если $\fa x\in X$, $\fa\ep>0$ $\exi y\in Y\cln \rho(x,y)<\ep$
-(в этом случае говорят, что $y$ приближает элемент $x$ с точностью~$<\ep$).
+\begin{df}
+  Подпространство $Y$ метрического пространства $X$
+  называется \emph{плотным} (в $X$), если $\fa x\in X$, $\fa\ep>0$ $\exi y\in Y\cln \rho(x,y)<\ep$
+  (в этом случае говорят, что $y$ приближает элемент $x$ с точностью~$<\ep$).
+\end{df}
 
 Теория аппроксимации изучает плотные множества в различных метрических пространствах.
 
 Частный случай метрического пространства пространство нормированное.
 
-\defin \emph{Нормированное пространство} это линейное пространство, снабженное функцией
-<<норма>> (обозначается~$\hn{\cdot}_X$), обладающей свойствами:
-\begin{enumerate}
-\item
-$\fa x\in X\quad\hn{x}\ge 0$, $\hn{x}=0\Lra x=0$;
-\item
-$\fa x\in X\quad\hn{kx}=\hm{k}\hn{x},\quad k\in\R;$
-\item
-$\fa x\in X$, $y\in Y\quad\hn{x+y}\le\hn{x}+\hn{y}.$
-\end{enumerate}
+\begin{df}
+  \emph{Нормированное пространство} это линейное пространство, снабженное функцией
+  <<норма>> (обозначается~$\hn{\cdot}_X$), обладающей свойствами:
+  \begin{enumerate}
+  \item
+    $\fa x\in X\quad\hn{x}\ge 0$, $\hn{x}=0\Lra x=0$;
+  \item
+    $\fa x\in X\quad\hn{kx}=\hm{k}\hn{x},\quad k\in\R;$
+  \item
+    $\fa x\in X$, $y\in Y\quad\hn{x+y}\le\hn{x}+\hn{y}.$
+  \end{enumerate}
+\end{df}
 
 \noindent\textbf{Примеры нормированных пространств:}
-\begin{enumerate}
-\item
-$C[a,b]$ пространство непрерывных на $[a,b]$ функций с нормой
-$\hn{f}_{C[a,b]}=\maxl{x\in[a,b]}|f(x)|$;
-\item
-$L^p(a,b),\quad 1\le p<\infty$ пространство функций,
-интегрируемых в степени $p$ по Лебегу на $(a,b)$ (е $\exi\int_a^b|f(x)|^pdx<\infty$).
-$$\hn{f}_{L^p}=\hr{\int_a^b|f(x)|^pdx }^{1/p}.$$
 
-\end{enumerate}
+\begin{denote}
+  $C[a,b]$ -- пространство непрерывных на $[a,b]$ функций с нормой
+  $\hn{f}_{C[a,b]}=\maxl{x\in[a,b]}|f(x)|$;
+\end{denote}
 
-\noindent\textbf{Опр:} Если имеется последовательность
-$\{x_n\}_{n=1}^{\infty}\subset X$, говорят, что она
-\emph{сходится} к элементу $x$ ($x_n\xra{n\ra\infty} x$), если
-$\hn{x_n-x}_X\xra{n\ra\infty} 0$.
+\begin{denote}
+  $L^p(a,b),\quad 1\le p<\infty$ пространство функций, интегрируемых в
+  степени $p$ по Лебегу на $(a,b)$ (е
+  $\exi\int_a^b|f(x)|^pdx<\infty$).
+  $$\hn{f}_{L^p}=\hr{\int_a^b|f(x)|^pdx }^{1/p}.$$
+\end{denote}
+
+\begin{df}
+  Если имеется последовательность
+  $\{x_n\}_{n=1}^{\infty}\subset X$, говорят, что она
+  \emph{сходится} к элементу $x$ ($x_n\xra{n\ra\infty} x$), если
+  $\hn{x_n-x}_X\xra{n\ra\infty} 0$.
+\end{df}
 
 \subsection{Полиномы Бернштейна, плотность алгебраических
 многочленов}
 
-\textbf{Опр:} \emph{Полиномом Бернштейна} степени $n$ для функции
-$f$ называется следующий многочлен (степени $\le n$)
-$$B_n(x)=\sum\limits_{k=0}^n C_n^k f\hr{\frac{k}{n}}x^k(1-x)^{n-k}.$$
-\newtheorem{theorems}{Теорема}[section]
-\newtheorem{lemms}{Лемма}[section]
-\newtheorem{sled}{Следствие}[section]
-\newtheorem{utv}{Утверждение}[section]
-\begin{theorems}[Бернштейн]
+\begin{df}
+  \emph{Полиномом Бернштейна} степени $n$ для функции
+  $f$ называется следующий многочлен (степени $\le n$)
+  $$B_n(x)=\sum\limits_{k=0}^n C_n^k f\hr{\frac{k}{n}}x^k(1-x)^{n-k}.$$
+\end{df}
+\begin{theorem}[Бернштейн]
 $\fa \;f\in C[0,1]\quad B_n(x)\xra{n\ra\infty}
 f(x).$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Воспользуемся всем известной формулой
 \begin{equation}\label{1}
 \sum_{k=0}^n C_n^k a^k b^{n-k}=(a+b)^n,\quad n\in\mathbb{N}.
@@ -215,17 +223,17 @@ x\in[0,1].
 $\blacksquare$
 
 Из этой оценки сразу следует нужная нам теорема.
-\begin{theorems}[Вейерштрасс]
+\begin{theorem}[Вейерштрасс]
 Алгебраические многочлены плотны в пространстве $C[a,b]$.
-\end{theorems}
+\end{theorem}
 
 \noindent\textbf{Замечание:} Теорема доказана для случая
 $[a,b]=[0,1]$, но общий случай сводится к этому линейной заменой
 переменных, переводящей $[a,b]$ в $[0,1]$.
 
-\begin{theorems} Алгебраические многочлены плотны в
+\begin{theorem} Алгебраические многочлены плотны в
 пространстве $L^p[a,b]$.
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Пусть $f\in L_p[a,b]$. Воспользуемся
 широко известным фактом из действительного анализа: $C[a,b]$
 плотно в $L^p[a,b]$. Поэтому можно найти $\ph\in C[a,b]:\quad
@@ -237,10 +245,10 @@ $\hn{f-P}_{L^p[a,b]}\le\hn{f-\ph}_{L^p[a,b]}+\hn{\ph-P}_{L^p[a,b]}\le\frac{\ep}2
 
 \medskip Введем новое пространство: $C_0[a,b]=\{f\in C[a,b]:\quad f(0)=0\}$.
 
-\begin{theorems}
+\begin{theorem}
 Многочлены без свободного члена плотны в $C_0[0,1]$ и в
 $L^p[0,1]$.
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Пусть $f\in C[0,1]\Ra\exi
 P_n(x)\ra f.$
 $$P_n(x)=a_0^{(n)}+a_1^{(n)}x+\ldots+a_{k_n}^{(n)}x^{k_n}.$$
@@ -258,22 +266,26 @@ C_0[0,1]\Ra\hn{f-\wt{P_n}}=\hn{f-P_n+a_0^{(n)}}\le\hn{f-P_n}+\hm{a_0^{(n)}}.$$
 \textbf{Опр:} \emph{Ядром Дирихле} порядка $n$ называется
 $$D_n(t)=\frac12+\cos t+\ldots+\cos nt=\frac{\sin\hr{n+\frac12}t}{2\sin \frac t2}.$$
 
-\defin \emph{Ядром Фейера} порядка $n$ называется
-\begin{multline*}
-F_n(t)=\frac{D_0(t)+D_1(t)+\dots+D_{n-1}(t)}{n}=\frac12+\hr{1-\frac1n}\cos
-t+\dots+\hr{1-\frac{n-1}{n}}\cos
-(n-1)t=\frac1{2n}\left(\frac{\sin \frac{nt}2}{\sin\frac t2}\right)^2.
-\end{multline*}
+\begin{df}
+  \emph{Ядром Фейера} порядка $n$ называется
+  \begin{multline*}
+    F_n(t)=\frac{D_0(t)+D_1(t)+\dots+D_{n-1}(t)}{n}=\frac12+\hr{1-\frac1n}\cos
+    t+\dots+\hr{1-\frac{n-1}{n}}\cos
+    (n-1)t=\frac1{2n}\left(\frac{\sin \frac{nt}2}{\sin\frac t2}\right)^2.
+  \end{multline*}
+\end{df}
 
-\defin \emph{Ядром Джексона} порядка $n$
-называется
-$$J_n(t)=\frac{6n}{2n^2+1}F_n^2(t).$$
+\begin{df}
+  \emph{Ядром Джексона} порядка $n$
+  называется
+  $$J_n(t)=\frac{6n}{2n^2+1}F_n^2(t).$$
+\end{df}
 
 \noindent\textbf{Свойства ядра Джексона:}
 \begin{enumerate}
 \item
-Ядро Джексона - четный тригонометрический полином порядка $2n-2.$
-Ну действительно,
+Ядро Джексона - четный тригонометрический полином порядка $2n-2.$ Ну
+действительно,
 \begin{equation}\label{10}
 J_n(t)=\frac{6n}{2n^2+1}\hr{\frac14+\sum_{j=1}^{n-1}
 \hr{1-\frac jn}^2\cos^2 jt+\sum_{j=1}^{2n-2}C_j^{(n)}\cos
@@ -321,80 +333,88 @@ C[-\pi,\pi]:\;f(\pi)=f(-\pi)\}.$ Очевидно,
 $\hn{f-T_n}_{C[-\pi,\pi]}\ra 0$ только если $f\in
 C_{2\pi}.$
 
-\defin Пусть $f(x)\in C_{2\pi}$, тогда $E_n(f,T)=\inf_{T_n}\hn{f-T_n}_{C[-\pi,\pi]}$ \emph{наилучшее приближение} функции $f(x)$ тригонометрическими полиномами порядка $n.$
+\begin{df}
+  Пусть $f(x)\in C_{2\pi}$, тогда
+  $E_n(f,T)=\inf_{T_n}\hn{f-T_n}_{C[-\pi,\pi]}$ \emph{наилучшее
+    приближение} функции $f(x)$ тригонометрическими полиномами порядка
+  $n.$
+\end{df}
 
-\begin{theorems}[Джексона] Если $f\in C_{2\pi}$ с модулем непрерывности $\omega_f(\de)$, то $E_n(f,T)\le
+\begin{theorem}[Джексона] Если $f\in C_{2\pi}$ с модулем непрерывности $\omega_f(\de)$, то $E_n(f,T)\le
 C\omega_f\hr{\frac1n}.$
-\end{theorems}
-\textbf{Доказательство:} Воспользовавшись свойством 2 ядра
-Джексона, можно записать
-\begin{equation}\label{14}
-f(x)=\frac1{\pi}\intl{-\pi}{\pi}f(x)J_n(t)dt.
-\end{equation}
+\end{theorem}
 
-Пусть $Q_n(x,f)=\frac1{\pi}\int_{-\pi}^{\pi}f(x)J_n(x-t)dt.$ Мы
-знаем, что
-$$J_n(t)=\frac12+\sum_{j=1}^{2n-2}a_j^{(n)}\cos jt\Ra
-J_n(x-t)=\frac12+\sum_{j=1}^{2n-2}a_j^{(n)}(\cos jx\cos jt+\sin
-jx\sin jt).$$
+\begin{proof}
+  Воспользовавшись свойством 2 ядра
+  Джексона, можно записать
+  \begin{equation}\label{14}
+    f(x)=\frac1{\pi}\intl{-\pi}{\pi}f(x)J_n(t)dt.
+  \end{equation}
 
-Поэтому $Q_n(x,f)$ тригонометрический полином порядка $2n-2.$
+  Пусть $Q_n(x,f)=\frac1{\pi}\int_{-\pi}^{\pi}f(x)J_n(x-t)dt.$ Мы
+  знаем, что
+  $$J_n(t)=\frac12+\sum_{j=1}^{2n-2}a_j^{(n)}\cos jt\Ra
+  J_n(x-t)=\frac12+\sum_{j=1}^{2n-2}a_j^{(n)}(\cos jx\cos jt+\sin
+  jx\sin jt).$$
 
-Поскольку интеграл от $2\pi$-периодической функции по любому
-отрезку длины $2\pi$ имеет постоянное значение, то можно записать
-$Q_n(x,f)$ так:
-\begin{equation}\label{13}
-Q_n(x,f)=\frac1{\pi}\intl{x-\pi}{x+\pi}f(x-t)J_n(t)dt=\frac1{\pi}\intl{\pi}{\pi}f(x-t)J_n(t)dt.
-\end{equation}
+  Поэтому $Q_n(x,f)$ тригонометрический полином порядка $2n-2.$
 
-Соединяя вместе (\ref{14}) и (\ref{13}), получаем
-\begin{equation}\label{15}
-f(x)-Q_n(x,f)=\frac1{\pi}\intl{-\pi}{\pi}(f(x)-f(x-t))J_n(t)dt.
-\end{equation}
+  Поскольку интеграл от $2\pi$-периодической функции по любому
+  отрезку длины $2\pi$ имеет постоянное значение, то можно записать
+  $Q_n(x,f)$ так:
+  \begin{equation}\label{13}
+    Q_n(x,f)=\frac1{\pi}\intl{x-\pi}{x+\pi}f(x-t)J_n(t)dt=\frac1{\pi}\intl{\pi}{\pi}f(x-t)J_n(t)dt.
+  \end{equation}
 
-Заметим, что
-\begin{equation*}
-|f(x)-f(x-t)|\le\omega_f(|t|)=\omega_f\hr{2n|t|\frac1{2n}}\le(2n|t|+1)\omega_f\hr{\frac1{2n}}.
-\end{equation*}
+  Соединяя вместе (\ref{14}) и (\ref{13}), получаем
+  \begin{equation}\label{15}
+    f(x)-Q_n(x,f)=\frac1{\pi}\intl{-\pi}{\pi}(f(x)-f(x-t))J_n(t)dt.
+  \end{equation}
 
-и подставим эту оценку в (\ref{15}). Пользуемся свойствами 2 и 3
-ядра Джексона, получаем:
-\begin{equation*}
-|f(x)-Q_n(x,f)|\le\omega_f\hr{\frac1{2n}}\hr{\frac{4n}{\pi}\int\limits_0^{\pi}tJ_n(t)dt+\frac1{\pi}\intl{-\pi}{\pi}J_n(t)dt}\le4\omega_f\hr{\frac1{2n}}.
-\end{equation*}
+  Заметим, что
+  \begin{equation*}
+    |f(x)-f(x-t)|\le\omega_f(|t|)=\omega_f\hr{2n|t|\frac1{2n}}\le(2n|t|+1)\omega_f\hr{\frac1{2n}}.
+  \end{equation*}
 
-Таким образом,
-$$\left\{\begin{aligned}
-&E_{2n}(f,T)\le E_{2n-2}(f,T)\le C\omega_f\hr{\frac1{2n}}\\
-&E_{2n-1}(f,T)\le E_{2n-2}(f,T)\le
-C\omega_f\hr{\frac1{2n}}\le
-C\omega_f\hr{\frac1{2n-1}}
-\end{aligned}
-\right.
-$$
-и теорема доказана. $\blacksquare$
+  и подставим эту оценку в (\ref{15}). Пользуемся свойствами 2 и 3
+  ядра Джексона, получаем:
+  \begin{equation*}
+    |f(x)-Q_n(x,f)|\le\omega_f\hr{\frac1{2n}}\hr{\frac{4n}{\pi}\int\limits_0^{\pi}tJ_n(t)dt+\frac1{\pi}\intl{-\pi}{\pi}J_n(t)dt}\le4\omega_f\hr{\frac1{2n}}.
+  \end{equation*}
+
+  Таким образом,
+  $$\left\{\begin{aligned}
+  &E_{2n}(f,T)\le E_{2n-2}(f,T)\le C\omega_f\hr{\frac1{2n}}\\
+  &E_{2n-1}(f,T)\le E_{2n-2}(f,T)\le
+  C\omega_f\hr{\frac1{2n}}\le
+  C\omega_f\hr{\frac1{2n-1}}
+  \end{aligned}
+  \right.
+  $$
+  и теорема доказана.
+\end{proof}
 
 Введем новое пространство $C_{2\pi}^r$ подпространство в
 $C_{2\pi}$, состоящее из функций, имеющих $r$ непрерывных
 производных.
-\begin{theorems}[Обобщенная теорема Джексона] $f\in
+\begin{theorem}[Обобщенная теорема Джексона] $f\in
 C_{2\pi}^r\Ra\quad E_n(f,T)\le
 \frac{C(r)}{n^r}\;\omega_{f^{(r)}}\hr{\frac1n}.$
-\end{theorems}
+\end{theorem}
 Мы не будем доказывать эту теорему.
 
-\begin{theorems}[Вейерштрасс] Тригонометрические полиномы плотны в
+\begin{theorem}[Вейерштрасс] Тригонометрические полиномы плотны в
 $C_{2\pi}.$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Т.к. для непрерывной на отрезке функции
 $f$ $\omega_f(\de)\xra{\de\ra +0} 0$, то,
 пользуясь оценкой, приведенной в предыдущей теореме, получаем
 $E_n(f,T)\xra{n\ra\infty} 0.$ Отсюда
 непосредственно и следует плотность тригонометрических полиномов.
 
-\begin{theorems} Тригонометрические полиномы плотны в
+\begin{theorem} Тригонометрические полиномы плотны в
 $L^p(-\pi,\pi),\quad1\le p<\infty$.
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} По функции $f(x)\in L^p(-\pi,\pi)$
 построим функцию $f_{\de}(x)$:
 
@@ -423,9 +443,9 @@ $3\ep$. Ну а для $\wt{\ph}$ уже известна теорема
 $n$ назовем
 $$E_n(f,P)=\inf_{P_n}\hn{f-P_n}_{C[-\pi,\pi]}.$$
 
-\begin{theorems}[Джексон] $E_n(f,P)\le
+\begin{theorem}[Джексон] $E_n(f,P)\le
 C\omega_f\hr{\frac1n}.$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:}
 \begin{enumerate}
 \item
@@ -469,24 +489,28 @@ kt\cos ku+\sin kt\sin ku).
 будет искомым: $|f(x)-P_{2n-2}(x)|\le
 C\omega_f\hr{\frac1n},\qquad x\in[-1,1]$.
 \end{enumerate}
-\begin{theorems} [Обобщенная теорема Джексона]
+\begin{theorem} [Обобщенная теорема Джексона]
 $f\in C^r[-\pi,\pi]\Ra E_n(f,P)\le
 C(r)\frac1{n^r}\omega_{f^{(r)}}\hr{\frac1n}.$
-\end{theorems}
+\end{theorem}
 
 \subsection{Прямые и обратные теоремы теории приближений}
-\textbf{Опр:} Теоремы, в которых скорость убывания наилучших приближений оценивается через дифференциальные
-свойства функции, называются \emph{прямыми} (теоремы Джексона - прямые).
+\begin{df}
+  Теоремы, в которых скорость убывания наилучших приближений оценивается через дифференциальные
+  свойства функции, называются \emph{прямыми} (теоремы Джексона - прямые).
+\end{df}
 
-\defin \emph{Обратными} называются теоремы, в
-которых на основе скорости убывания наилучшего приближения делают
-вывод о дифференциальных свойствах функции.
+\begin{df}
+  \emph{Обратными} называются теоремы, в
+  которых на основе скорости убывания наилучшего приближения делают
+  вывод о дифференциальных свойствах функции.
+\end{df}
 
-\begin{theorems}[Бернштейн] Пусть $E_n(f,P)\le C
+\begin{theorem}[Бернштейн] Пусть $E_n(f,P)\le C
 \frac1{n^{r+\al}},\; r\in\mathbb{Z}^{+},\;\al\in(0,1).$
 Тогда $f\in C^r[-1,1]$ и \\\hangindent=5cm$f^{(r)}\in
 Lip\;\al.$
-\end{theorems}
+\end{theorem}
 Эту теорему мы доказывать не будет, заметим лишь, что она
 относится к обратным теоремам.
 
@@ -495,60 +519,69 @@ Lip\;\al.$
 Пусть $X$ нормированное пространство, $e_1\sco e_n\in X$ конечная линейно независимая система. Пусть также $x\in X$.
 Обозначим $E_n(x)=\inf_{\{\al_k\}}\hn{x-\sum_{k=1}^n \al_k e_k}.$
 
-\medskip\defin Если $\exi\sum_{k=1}^n \al_k^0
-e_k:\quad\hn{x-\sum_{k=1}^n \al_k^0 e_k}=E_n(x)$, то эта
-линейная комбинация называется \emph{ЭНП}.
-\begin{theorems}
+\begin{df}
+  Если $\exi\sum_{k=1}^n \al_k^0
+  e_k:\quad\hn{x-\sum_{k=1}^n \al_k^0 e_k}=E_n(x)$, то эта
+  линейная комбинация называется \emph{ЭНП}.
+\end{df}
+
+\begin{theorem}
 ЭНП существует.
-\end{theorems}
-\textbf{Доказательство:}
-$f(\al_1\sco \al_n)=\hn{x-\sum_{k=1}^n \al_k e_k},\quad
-f:\R ^n\ra \R .$ $f$ непрерывна:
-\begin{multline*}
-\hm{f(\al_1\sco \al_n)-f(\al_1'\sco \al_n')}=\left|\;\;\left\|x-\sum_{k=1}^n
-\al_k e_k\right\|-\left\|x-\sum_{k=1}^n \al_k'
-e_k\right\|\;\;\right|\le\\
-\le\left\|\left(x-\sum_{k=1}^n \al_k
-e_k\right)-\left(x-\sum_{k=1}^n \al_k'
-e_k\right)\right\|=\left\|\sum_{k=1}^n (\al_k-\al_k')
-e_k\right\|\xra{\al'\ra\al}0.
-\end{multline*}
+\end{theorem}
+\begin{proof}
 
-$\ph(\al_1\sco \al_n)=\hn{\sum_{k=1}^n \al_k e_k}$
- - непрерывная функция, $\al=(\al_1\sco \al_n),\quad|\al|=\sqrt{\sum_{k=1}^n\al_k^2}.$
+  $f(\al_1\sco \al_n)=\hn{x-\sum_{k=1}^n \al_k e_k},\quad
+  f:\R ^n\ra \R .$ $f$ непрерывна:
+  \begin{multline*}
+    \hm{f(\al_1\sco \al_n)-f(\al_1'\sco \al_n')}=\left|\;\;\left\|x-\sum_{k=1}^n
+    \al_k e_k\right\|-\left\|x-\sum_{k=1}^n \al_k'
+    e_k\right\|\;\;\right|\le\\
+    \le\left\|\left(x-\sum_{k=1}^n \al_k
+    e_k\right)-\left(x-\sum_{k=1}^n \al_k'
+    e_k\right)\right\|=\left\|\sum_{k=1}^n (\al_k-\al_k')
+    e_k\right\|\xra{\al'\ra\al}0.
+  \end{multline*}
 
-Пусть $S={\al\in\R ^n:\;|\al|=1}$ компакт, поэтому
-$\ph$ достигает на $S$ своего минимума (обозначим его $m$). $m>0$
-(иначе $e_i$ зависимы).
+  $\ph(\al_1\sco \al_n)=\hn{\sum_{k=1}^n \al_k e_k}$
+  - непрерывная функция, $\al=(\al_1\sco \al_n),\quad|\al|=\sqrt{\sum_{k=1}^n\al_k^2}.$
 
-$$|f(\al_1\sco \al_n)|\ge\left\|\sum_{k=1}^n \al_k
-e_k\right\|-\hn{x}=|\al|\left\|\sum_{k=1}^n
-\frac{\al_k}{|\al|} e_k\right\|-\hn{x}\ge|\al| m-\hn{x}.$$
+  Пусть $S={\al\in\R ^n:\;|\al|=1}$ компакт, поэтому
+  $\ph$ достигает на $S$ своего минимума (обозначим его $m$). $m>0$
+  (иначе $e_i$ зависимы).
 
-Пусть $|\al|>R$, тогда $|f(\al_1\sco \al_n)|\ge
-Rm-\hn{x}$ и поэтому нижняя грань $f$ достигается (точнее сказать,
-найдется последовательность к ней стремящаяся) в каком-то шаре
-радиуса $R_0$. Но шар - компакт, поэтому $f$ достигает значения
-нижней грани.$\blacksquare$
+  $$|f(\al_1\sco \al_n)|\ge\left\|\sum_{k=1}^n \al_k
+  e_k\right\|-\hn{x}=|\al|\left\|\sum_{k=1}^n
+  \frac{\al_k}{|\al|} e_k\right\|-\hn{x}\ge|\al| m-\hn{x}.$$
 
-\defin Нормированное пространство $X$ называется \emph{строго нормированным}, если в
-неравенстве треугольника $\hn{x+y}\le\hn{x}+\hn{y}$ равенство имеет место лишь когда $y=cx, \quad c\ge0$.
+  Пусть $|\al|>R$, тогда $|f(\al_1\sco \al_n)|\ge
+  Rm-\hn{x}$ и поэтому нижняя грань $f$ достигается (точнее сказать,
+  найдется последовательность к ней стремящаяся) в каком-то шаре
+  радиуса $R_0$. Но шар - компакт, поэтому $f$ достигает значения
+  нижней грани.
+\end{proof}
 
-\begin{theorems} В строго нормированном пространстве ЭНП
+\begin{df}
+  Нормированное пространство $X$ называется \emph{строго нормированным}, если в
+  неравенстве треугольника $\hn{x+y}\le\hn{x}+\hn{y}$ равенство имеет место лишь когда $y=cx, \quad c\ge0$.
+\end{df}
+
+\begin{theorem} В строго нормированном пространстве ЭНП
 единственен.
-\end{theorems}
-\textbf{Доказательство:} Пусть $x\in X$ и существуют два ЭНП:
-$\sum\al_k e_k$ и $\sum\beta_k e_k.$ Тогда:
-\begin{equation}\label{16}
-E_n\le\hn{x-\sum\frac{\al_k+\beta_k}2e_k}\le\frac12\hn{x-\sum\al_k e_k}+\frac12\hn{x-\sum\beta_k e_k}=E_n.
-\end{equation}
-Очевидно, что в (\ref{16}) знак равенства имеет место всюду,
-поэтому $x-\sum\al_k e_k=c(x-\sum\beta_k e_k).$ Если $c\neq1$,
-то $x\in<e_1\sco e_n>$ и поэтому разложение единственно. Если
-$c=1$, то $\al_k=\beta_k.\blacksquare$
+\end{theorem}
+\begin{proof}
+  Пусть $x\in X$ и существуют два ЭНП:
+  $\sum\al_k e_k$ и $\sum\beta_k e_k.$ Тогда:
+  \begin{equation}\label{16}
+    E_n\le\hn{x-\sum\frac{\al_k+\beta_k}2e_k}\le\frac12\hn{x-\sum\al_k e_k}+\frac12\hn{x-\sum\beta_k e_k}=E_n.
+  \end{equation}
+  Очевидно, что в (\ref{16}) знак равенства имеет место всюду,
+  поэтому $x-\sum\al_k e_k=c(x-\sum\beta_k e_k).$ Если $c\neq1$,
+  то $x\in<e_1\sco e_n>$ и поэтому разложение единственно. Если
+  $c=1$, то $\al_k=\beta_k.$
+\end{proof}
 
 \subsection{Многочлены наилучшего приближения в пространстве $C[a,b]$}
-\begin{theorems}[Чебышев]
+\begin{theorem}[Чебышев]
 Пусть $f\in C[a,b]$. $P_n(x)$ МНП для $f(x)$ $\Lra$
 функция $r_n(x)=f(x)-P_n(x)$ обладает свойствами:
 \begin{enumerate}
@@ -558,75 +591,78 @@ $|r_n(x_k)|=\max_{[a,b]}|r_n(x)|.$
 \item
 Знаки $r_n(x_k)$ чередуются.
 \end{enumerate}
-\end{theorems}
-\defin Совокупность точек $x_k$ называется
-\emph{чебышевским альтернансом}.
+\end{theorem}
+\begin{df}
+  Совокупность точек $x_k$ называется \emph{чебышевским альтернансом}.
+\end{df}
 
-\medskip\noindent\textbf{Доказательство:} \emph{Необходимость}
-Пусть $P_n(x)$ МНП для $f(x)$. Тогда, очевидно,
-$\hn{r_n(x)}_{C[a,b]}=E_n(f).$ Для простоты точки $x_k$ из
-формулировки теоремы будем называть $e$-точками и будем разделять
-их на $e_+$-точки и $e_-$-точки.
+\begin{proof}
+  \emph{Необходимость}
+  Пусть $P_n(x)$ МНП для $f(x)$. Тогда, очевидно,
+  $\hn{r_n(x)}_{C[a,b]}=E_n(f).$ Для простоты точки $x_k$ из
+  формулировки теоремы будем называть $e$-точками и будем разделять
+  их на $e_+$-точки и $e_-$-точки.
 
-По определению наилучшего приближения существует хотя бы одна
-$e$-точка. Пусть, для определенности это $e_+$-точка. Докажем, что
-тогда существует и $e_-$-точка. Предположим противное - ее нет.
-Это означает, что $\min_{[a,b]}r_n(x)>-E_n$, т.е. $r_n(x)\ge
-\de-E_n$. Пусть $Q_n=P_n(x)+\frac{\de}2$. Тогда
-$$|f(x)-Q_n(x)|=\hm{f(x)-P_n(x)-\frac{\de}2}=\hm{r_n(x)-\frac{\de}2}\Ra
-\max|f(x)-Q_n(x)|\le E_n-\frac{\de}2.$$ Но это означает, что
-$Q_n$ приближает $f$ лучше, чем $P_n$, что невозможно по
-определению $P_n$ противоречие. Значит $e_-$-точки таки есть.
+  По определению наилучшего приближения существует хотя бы одна
+  $e$-точка. Пусть, для определенности это $e_+$-точка. Докажем, что
+  тогда существует и $e_-$-точка. Предположим противное - ее нет.
+  Это означает, что $\min_{[a,b]}r_n(x)>-E_n$, т.е. $r_n(x)\ge
+  \de-E_n$. Пусть $Q_n=P_n(x)+\frac{\de}2$. Тогда
+  $$|f(x)-Q_n(x)|=\hm{f(x)-P_n(x)-\frac{\de}2}=\hm{r_n(x)-\frac{\de}2}\Ra
+  \max|f(x)-Q_n(x)|\le E_n-\frac{\de}2.$$ Но это означает, что
+  $Q_n$ приближает $f$ лучше, чем $P_n$, что невозможно по
+  определению $P_n$ противоречие. Значит $e_-$-точки таки есть.
 
-Разобьем отрезок $[a,b]$ на конечное число отрезков
-$[t_i,t_{i+1}]$ таких, что
-\begin{enumerate}
-\item
-На каждом отрезке деления существует хотя бы одна $e$-точка.
-\item
-На каждом отрезке деления $e$-точки одного знака.
-\item
-На соседних отрезках знаки $e$-точек противоположные.
-\end{enumerate}
+  Разобьем отрезок $[a,b]$ на конечное число отрезков
+  $[t_i,t_{i+1}]$ таких, что
+  \begin{enumerate}
+  \item
+    На каждом отрезке деления существует хотя бы одна $e$-точка.
+  \item
+    На каждом отрезке деления $e$-точки одного знака.
+  \item
+    На соседних отрезках знаки $e$-точек противоположные.
+  \end{enumerate}
 
-Докажем, что таких отрезков конечное число. Предположим это не
-так, тогда из $e_+$-точек можно выделить сходящуюся
-подпоследовательность $x_{k_i}^+\ra x.$ Но тогда
-$r_n(x_{k_i}^+)\ra r_n(x)=E_n(f)$. Аналогично
-$r_n(x_{k_i}^-)\ra r_n(x)=-E_n(f)$ противоречие. Значит
-отрезков таки конечное число. Пусть $(m+2)$ число таких
-отрезков.
+  Докажем, что таких отрезков конечное число. Предположим это не
+  так, тогда из $e_+$-точек можно выделить сходящуюся
+  подпоследовательность $x_{k_i}^+\ra x.$ Но тогда
+  $r_n(x_{k_i}^+)\ra r_n(x)=E_n(f)$. Аналогично
+  $r_n(x_{k_i}^-)\ra r_n(x)=-E_n(f)$ противоречие. Значит
+  отрезков таки конечное число. Пусть $(m+2)$ число таких
+  отрезков.
 
-Надо доказать, что $m+2\ge n+2$. Предположим противное:
-$m+2<n+2\Ra m+1\le n$. Возьмем многочлен
-$p_{m+1}=h(x-t_1)\dots(x-t_{m+1})$, где $h$ некоторая константа,
-которую мы сейчас подберем нужным нам образом.
+  Надо доказать, что $m+2\ge n+2$. Предположим противное:
+  $m+2<n+2\Ra m+1\le n$. Возьмем многочлен
+  $p_{m+1}=h(x-t_1)\dots(x-t_{m+1})$, где $h$ некоторая константа,
+  которую мы сейчас подберем нужным нам образом.
 
-Пусть минимальное значение $r_n(x)$ на совокупности отрезков
-$[t_i,t_{i+1}]$, содержащих только $e_+$-точки, не меньше, чем
-$\de_1-E_n(f),\quad\de_1>0$. И пусть максимальное значение
-$r_n(x)$ на совокупности отрезков $[t_i,t_{i+1}]$, содержащих
-только $e_-$-точки, не больше, чем
-$E_n(f)-\de_2,\quad\de_2>0$. Положим
-$\de=\min\{\de_1,\de_2\}$. Теперь $h$ выберем так, чтобы:
-\begin{enumerate}
-\item
-Знак $p_{m+1}$ на $[t_i,t_{i+1}]$ совпадал со знаком $e$-точек,
-лежащих на этом отрезке.
-\item
-$\hn{p_{m+1}(x)}_{C[a,b]}<\frac{\de}2.$
-\end{enumerate}
+  Пусть минимальное значение $r_n(x)$ на совокупности отрезков
+  $[t_i,t_{i+1}]$, содержащих только $e_+$-точки, не меньше, чем
+  $\de_1-E_n(f),\quad\de_1>0$. И пусть максимальное значение
+  $r_n(x)$ на совокупности отрезков $[t_i,t_{i+1}]$, содержащих
+  только $e_-$-точки, не больше, чем
+  $E_n(f)-\de_2,\quad\de_2>0$. Положим
+  $\de=\min\{\de_1,\de_2\}$. Теперь $h$ выберем так, чтобы:
+  \begin{enumerate}
+  \item
+    Знак $p_{m+1}$ на $[t_i,t_{i+1}]$ совпадал со знаком $e$-точек,
+    лежащих на этом отрезке.
+  \item
+    $\hn{p_{m+1}(x)}_{C[a,b]}<\frac{\de}2.$
+  \end{enumerate}
 
-Пусть $Q_n(x)=P_n(x)+p_{m+1}(x)$. Тогда
-$|f(x)-Q_n(x)|=|r_n(x)-p_{m+1}(x)|\le E_n(f)-\frac{\de}2$ противоречие, завершающее доказательство этой части теоремы.
+  Пусть $Q_n(x)=P_n(x)+p_{m+1}(x)$. Тогда
+  $|f(x)-Q_n(x)|=|r_n(x)-p_{m+1}(x)|\le E_n(f)-\frac{\de}2$ противоречие, завершающее доказательство этой части теоремы.
 
-\emph{Достаточность} Предположим $P_n$ не многочлен наилучшего
-приближения. Тогда пусть $Q_n\neq P_n$ МНП. Тогда очевидно, что
-$|f(x_k)-Q_n(x_k)|\le|f(x_k)-P_n(x_k)|.$
-$$Q_n(x_k)-P_n(x_k)=(f(x_k)-P_n(x_k))-(f(x_k)-Q_n(x_k)).$$
-Поэтому $sign(Q_n(x_k)-P_n(x_k))=sign\; r_n(x_k)$. Значит
-многочлен $Q_n(x)-P_n(x)$ имеет $n+1$ смену знака. Учитывая то,
-что это многочлен степени не выше $n$, получаем $Q_n(x)=P_n(x)$ противоречие с предположением.$\blacksquare$
+  \emph{Достаточность} Предположим $P_n$ не многочлен наилучшего
+  приближения. Тогда пусть $Q_n\neq P_n$ МНП. Тогда очевидно, что
+  $|f(x_k)-Q_n(x_k)|\le|f(x_k)-P_n(x_k)|.$
+  $$Q_n(x_k)-P_n(x_k)=(f(x_k)-P_n(x_k))-(f(x_k)-Q_n(x_k)).$$
+  Поэтому $sign(Q_n(x_k)-P_n(x_k))=sign\; r_n(x_k)$. Значит
+  многочлен $Q_n(x)-P_n(x)$ имеет $n+1$ смену знака. Учитывая то,
+  что это многочлен степени не выше $n$, получаем $Q_n(x)=P_n(x)$ противоречие с предположением.
+\end{proof}
 
 \subsection{Многочлены наименее уклоняющиеся от нуля (многочлены Чебышева)}
 Поставим задачу: найти многочлен $P_n(x)$ степени $n$ наименее
@@ -668,70 +704,72 @@ $\wt{L}^2=L^2\hr{(-1,1),\frac{dx}{\sqrt{1-x^2}}}$
 интегрируемых на $(-1,1)$ с весом $\frac{dx}{\sqrt{1-x^2}}$
 функций, т.е. функций $f$:
 $$\hn{f}_{\wt{L}^2}=\hr{\int\limits_{-1}^1|f(x)|^2\frac{dx}{\sqrt{1-x^2}}}^{1/2}<\infty.$$
-\begin{theorems}
+\begin{theorem}
 Система многочленов Чебышева $T_0,\;T_1,\dots$ ортогональна в
 $\wt{L}^2.$
-\end{theorems}
-\textbf{Доказательство:} Если $m\neq n$, то
-$$(T_n,T_m)=2^{2-n-m}\int\limits_{-1}^1\cos(n\arccos
-x)\cos(m\arccos
-x)\frac{dx}{\sqrt{1-x^2}}=2^{2-n-m}\int\limits_0^{\pi}\cos(nt)\cos(mt)dt=0.$$
-$$\hn{T_n}^2=2^{2-2n}\hr{\int\limits_0^{\pi}\cos^2nt\;dt}=\frac{\pi}{2^{2n-1}}.\qquad\blacksquare$$
-\begin{theorems}
+\end{theorem}
+\begin{proof}
+  Если $m\neq n$, то
+  $$(T_n,T_m)=2^{2-n-m}\int\limits_{-1}^1\cos(n\arccos
+  x)\cos(m\arccos
+  x)\frac{dx}{\sqrt{1-x^2}}=2^{2-n-m}\int\limits_0^{\pi}\cos(nt)\cos(mt)dt=0.$$
+  $$\hn{T_n}^2=2^{2-2n}\hr{\int\limits_0^{\pi}\cos^2nt\;dt}=\frac{\pi}{2^{2n-1}}.$$
+\end{proof}
+\begin{theorem}
 Нормированная система многочленов Чебышева образует базис
 пространства $\wt{L}^2.$
-\end{theorems}
-\textbf{Доказательство:} Достаточно проверить полноту этой системы
-(раз нормированность уже есть). Доказывать будем по-шагам:
-\begin{enumerate}
-\item
-$$\fa\ep>0\;\exi\de>0:\quad\int_{1-\de<|x|<1}\frac{|f(x)|^2}{\sqrt{1-x^2}}dx<\ep.$$
-Пусть
-$$f_{\ep}(x)=\left\{\begin{aligned}f(x),&\quad|x|<1-\de\\
-0,&\quad1-\de<|x|<1.\end{aligned}\right.$$
+\end{theorem}
+\begin{proof}
+  Достаточно проверить полноту этой системы
+  (раз нормированность уже есть). Доказывать будем по-шагам:
+  \begin{enumerate}
+  \item
+    $$\fa\ep>0\;\exi\de>0:\quad\int_{1-\de<|x|<1}\frac{|f(x)|^2}{\sqrt{1-x^2}}dx<\ep.$$
+    Пусть
+    $$f_{\ep}(x)=\left\{\begin{aligned}f(x),&\quad|x|<1-\de\\
+    0,&\quad1-\de<|x|<1.\end{aligned}\right.$$
 
-Тогда
-\begin{equation}\label{a}
-\hn{f-f_{\ep}}_{\wt{L}^2}<\ep.
-\end{equation}
-\item
-$$\int_{|x|<1-\de}|f(x)|^2dx=\int_{|x|<1-\de}\frac{|f(x)|^2}{\sqrt{1-x^2}}\sqrt{1-x^2}dx\le\hn{f}_{\wt{L}^2}.$$
-Поэтому $f_{\ep}\in L^2(|x|<1-\de)$. Значит найдется $\ph_{\ep}(x)\in
-C[\de-1,1-\de]:\quad\hn{f_{\ep}-\ph_{\ep}}_{L^2(|x|<1-\de)}<\ep.$ А~из этого
-следует, что
-\begin{multline}\label{b}
-\hn{f_{\ep}-\ph_{\ep}}_{\wt{L}^2}=\hr{\int\limits_{-1}^1|f_{\ep}-\ph_{\ep}|^2\frac{dx}{\sqrt{1-x^2}}}^{1/2}=\\
-=\hr{\int\limits_{|x|<1-\de}|f_{\ep}-\ph_{\ep}|^2\frac{dx}{\sqrt{1-x^2}}}^{1/2}\le\frac{\hn{f_{\ep}-\ph_{\ep}}_{L^2(|x|<1-\de)}}{\sqrt{1-(1-\de)^2}}<\ep.
-\end{multline}
+    Тогда
+    \begin{equation}\label{a}
+      \hn{f-f_{\ep}}_{\wt{L}^2}<\ep.
+    \end{equation}
+  \item
+    $$\int_{|x|<1-\de}|f(x)|^2dx=\int_{|x|<1-\de}\frac{|f(x)|^2}{\sqrt{1-x^2}}\sqrt{1-x^2}dx\le\hn{f}_{\wt{L}^2}.$$
+    Поэтому $f_{\ep}\in L^2(|x|<1-\de)$. Значит найдется $\ph_{\ep}(x)\in
+    C[\de-1,1-\de]:\quad\hn{f_{\ep}-\ph_{\ep}}_{L^2(|x|<1-\de)}<\ep.$ А~из этого
+    следует, что
+    \begin{multline}\label{b}
+      \hn{f_{\ep}-\ph_{\ep}}_{\wt{L}^2}=\hr{\int\limits_{-1}^1|f_{\ep}-\ph_{\ep}|^2\frac{dx}{\sqrt{1-x^2}}}^{1/2}=\\
+      =\hr{\int\limits_{|x|<1-\de}|f_{\ep}-\ph_{\ep}|^2\frac{dx}{\sqrt{1-x^2}}}^{1/2}\le\frac{\hn{f_{\ep}-\ph_{\ep}}_{L^2(|x|<1-\de)}}{\sqrt{1-(1-\de)^2}}<\ep.
+    \end{multline}
 
-\item
-Можно линейно доопределить $\ph_{\ep}$ на отрезке
-$[-1,1]$ до функции $\psi$ так, чтобы
-\begin{equation}\label{c}
-\hn{\ph_{\ep}-\psi}_{\wt{L}^2}<\ep.
-\end{equation}
-\item
-$\psi\in C[-1,1]\Ra P_n(x):\quad
-\hn{\psi-P_n}_{C[-1,1]}<\ep.$ Но тогда
-\begin{equation}\label{d}
-\hn{\psi-P_n}_{\wt{L}^2}=\hr{\int\limits_{-1}^1|\psi-P_n|^2\frac{dx}{\sqrt{1-x^2}}}^{1/2}<\ep\hr{\int\limits_{-1}^1\frac{dx}{\sqrt{1-x^2}}}^{1/2}=\ep\sqrt{\pi}.
-\end{equation}
-\item
-Теперь соединим все полученные оценки:
-$$\hn{f-P_n}_{\wt{L}^2}=\hn{(f-f_{\ep})+(f_{\ep}-\ph_{\ep})+(\ph_{\ep}-\psi)+(\psi-P_n)}_{\wt{L}^2}\le|(\ref{a})+(\ref{b})+(\ref{c})+(\ref{d})|\le C\ep.$$
-Таким образом, нами показано, что алгебраические многочлены плотны
-в $\wt{L}^2$. Для завершения доказательства остается только
-проверить, что
-$$\fa n\in\mathbb{N}\quad\exi
-c_1,c_2\sco c_{n-1}:\quad
-x^n=T_n(x)+\sum_{k=0}^{n-1}c_kT_k(x).$$
+  \item
+    Можно линейно доопределить $\ph_{\ep}$ на отрезке
+    $[-1,1]$ до функции $\psi$ так, чтобы
+    \begin{equation}\label{c}
+      \hn{\ph_{\ep}-\psi}_{\wt{L}^2}<\ep.
+    \end{equation}
+  \item
+    $\psi\in C[-1,1]\Ra P_n(x):\quad
+    \hn{\psi-P_n}_{C[-1,1]}<\ep.$ Но тогда
+    \begin{equation}\label{d}
+      \hn{\psi-P_n}_{\wt{L}^2}=\hr{\int\limits_{-1}^1|\psi-P_n|^2\frac{dx}{\sqrt{1-x^2}}}^{1/2}<\ep\hr{\int\limits_{-1}^1\frac{dx}{\sqrt{1-x^2}}}^{1/2}=\ep\sqrt{\pi}.
+    \end{equation}
+  \item
+    Теперь соединим все полученные оценки:
+    $$\hn{f-P_n}_{\wt{L}^2}=\hn{(f-f_{\ep})+(f_{\ep}-\ph_{\ep})+(\ph_{\ep}-\psi)+(\psi-P_n)}_{\wt{L}^2}\le|(\ref{a})+(\ref{b})+(\ref{c})+(\ref{d})|\le C\ep.$$
+    Таким образом, нами показано, что алгебраические многочлены плотны
+    в $\wt{L}^2$. Для завершения доказательства остается только
+    проверить, что
+    $$\fa n\in\mathbb{N}\quad\exi
+    c_1,c_2\sco c_{n-1}:\quad
+    x^n=T_n(x)+\sum_{k=0}^{n-1}c_kT_k(x).$$
 
-Докажем это по индукции. $T_0(x)=1,\;T_1(x)=x$ база индукции.
-$$T_n(x)=x^n+\sum_{k=0}^{n-1}b_kx^k=|\text{по предположению индукции}|=x^n+\sum_{k=0}^{n-1}b_k\sum_{j=0}^{k-1}d_kT_k(x).\quad\blacksquare$$
+    Докажем это по индукции. $T_0(x)=1,\;T_1(x)=x$ база индукции.
+    $$T_n(x)=x^n+\sum_{k=0}^{n-1}b_kx^k=|\text{по предположению индукции}|=x^n+\sum_{k=0}^{n-1}b_k\sum_{j=0}^{k-1}d_kT_k(x).\quad$$
 
-
-
-\end{enumerate}
+  \end{enumerate}
+\end{proof}
 
 \newpage
 \section{Часть II}
@@ -745,11 +783,11 @@ $\{x^{\la_n},\quad(\la_n)_1^{\infty}\subset\R ^{+}\}$*. Наша задача - 
 $C[0,1]$ системы *.
 
 Одним из результатов решения этой задачи станет следующая теорема.
-\begin{theorems}[Мюнц 1914г.]
+\begin{theorem}[Мюнц 1914г.]
 Пусть $0<\la_1<\la_2<\ldots$ Тогда для того, чтобы * была
 полна в $C[0,1]$, необходимо и достаточно расходимости ряда
 $\sum_{n=1}^{\infty}\frac1{\la_n}$.
-\end{theorems}
+\end{theorem}
 Как видно, теорема Вейерштрасса - частный случай теоремы Мюнца
 (здесь возникает гармонический ряд, который, как известно,
 расходится).
@@ -761,65 +799,71 @@ $\sum_{n=1}^{\infty}\frac1{\la_n}$.
 Пусть в $\mathbb{C}$ есть область $G$ и пусть на ней определена
 функция $f(z)$.
 
-\defin \emph{Производной} функции $f(z)$ в точке
-$z_0$ называется следующий предел (если он существует):
-$$f'(z_0):=\lim_{h\ra0}\frac{f(z_0+h)-f(z_0)}{h}.$$
+\begin{df}
+  \emph{Производной} функции $f(z)$ в точке
+  $z_0$ называется следующий предел (если он существует):
+  $$f'(z_0):=\lim_{h\ra0}\frac{f(z_0+h)-f(z_0)}{h}.$$
+\end{df}
 
 Существование предела можно переписать так: $\De
 f=f'(z_0)\De z+o(\De z)$ при $\De z\ra0.$ Это
 означает, что приращение функции есть комплексный дифференциал.
 Такие функции называются \emph{комплексно дифференцируемыми}.
 
-\defin Говорят, что функция \emph{аналитична в
-точке} $z_0$, если она комплексно-дифференцируема в некоторой
-окрестности этой точки.
+\begin{df}
+  Говорят, что функция \emph{аналитична в
+    точке} $z_0$, если она комплексно-дифференцируема в некоторой
+  окрестности этой точки.
+\end{df}
 
-\defin Функция называется \emph{аналитической в
-области}, если она аналитична в каждой точке области.
+\begin{df}
+  Функция называется \emph{аналитической в
+    области}, если она аналитична в каждой точке области.
+\end{df}
 
-\begin{theorems}[Эквивалентное определение аналитичности]
+\begin{theorem}[Эквивалентное определение аналитичности]
 $f(z)$ аналитична в $G\Lra\;\fa z_0\in G\;\exi
 U_{z_0}:\;f(z)=\sum_{k=0}^{\infty}c_k(z-z_0)^k$ сходится
 равномерно в $U_{z_0}.$
-\end{theorems}
+\end{theorem}
 
 
-\begin{theorems}
+\begin{theorem}
 Если функция аналитична в области, то во всех точках этой области
 у нее существуют производные всех порядков.
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}[Единственности]
+\begin{theorem}[Единственности]
 Пусть $f(z)$ аналитична в области $G$ и множество ее нулей имеет
 предельную точку в $G$, тогда $f(z)\equiv0.$
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}
+\begin{theorem}
 Пусть $f(z)$ и $g(z)$ аналитичны в некоторой окрестности $U_{z_0}$
 точки $z_0$. И пусть $z_0$ ноль порядка $m$ для $f(z)$ и порядка
 $n$ для $g(z)$ ($m\ge n$) и других нулей в $U_{z_0}$ нет. Тогда
 функция $\frac {f(z)}{g(z)}$ аналитична в $U_{z_0}$.
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}[Принцип максимума модуля]
+\begin{theorem}[Принцип максимума модуля]
 Если $f(z)$ аналитична в ограниченной области $G$ и непрерывна на
 ее замыкании, тогда $\max_{z\in \ol{G}}|f(z)|$ достигается
 на границе области.
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}[Вейерштрасс]
+\begin{theorem}[Вейерштрасс]
 Если последовательность аналитических в области $G$ функций
 сходится равномерно на любом компакте из этой области, то
 предельная функция также аналитична в $G.$
-\end{theorems}
+\end{theorem}
 
 \subsection{Условие и произведение Бляшке для круга}
-\begin{theorems}
+\begin{theorem}
 Пусть $f(z)$ аналитична и ограничена в $|z|<1$ и $f(0)=0$.
 $\{z_n\}_1^{\infty}$ последовательность нулей $f(z)$,
 занумерованная в порядке неубывания модулей. Тогда
 $\sum_{n=1}^{\infty}(1-|z_n|)<\infty\quad(B).$
-\end{theorems}
+\end{theorem}
 Условие (B) называют условием Бляшке.
 
 \noindent\textbf{Доказательство:} Рассмотрим конечное произведение
@@ -856,13 +900,13 @@ $$\sum_{n=1}^{\infty}(1-|z_n|)m_k<\infty.$$
 общности, т.к. если $0$ корень кратности $m$, то можно перейти к
 функции $\frac{f(z)}{z^m}.$
 
-\begin{theorems}
+\begin{theorem}
 Пусть $\{z_k\}_1^{\infty}$ последовательность ненулевых точек
 единичного круга и выполнено условие Бляшке, тогда
 $$B(z)=\prod\limits_{k=1}^{\infty}\frac{z_k-z}{1-\ol{z_k}z}\frac{\ol{z_k}}{|z_k|}$$
 сходится равномерно на каждом круге $|z|\le r<1$ и задает ограниченную аналитическую функцию в этом круге,
 множество нулей которой совпадает с $\{z_k\}_1^{\infty}$.
-\end{theorems}
+\end{theorem}
 $B(z)$ называют произведением Бляшке.
 
 \noindent\textbf{Доказательство:} Обозначим общий член
@@ -928,17 +972,17 @@ $\wt{B}(w)=B\hr{\frac{w-1}{w+1}}.$
 
 Из всех этих соображений очевидным образом вытекают две теоремы.
 
-\begin{theorems}
+\begin{theorem}
 Пусть $f(w)$ аналитична и ограничена в $Re\;w>0$, $\{w_n\}_1^{\infty}$ ее нули. Тогда выполнено условие
 Бляшке для полуплоскости (\ref{19}).
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}\label{B}
+\begin{theorem}\label{B}
 Пусть $w_k: \quad Re\;w_k>0$ и выполнено условие Бляшке для
 полуплоскости. Тогда $\wt{B}(w)$ аналитична, ограничена по
 модулю единицей в $Re\;w>0$ и множество ее нулей совпадает с
 $\{w_n\}_1^{\infty}$.
-\end{theorems}
+\end{theorem}
 
 \subsection{Классы Харди}
 \textbf{Опр:} Будем говорить, что аналитическая в $Re\;w>0$
@@ -950,24 +994,24 @@ p<\infty.
 
 Ниже приведены несколько теорем, которые будут полезны нам в
 дальнейшем, но доказывать их мы не будем.
-\begin{theorems}
+\begin{theorem}
 Если $f(w)\in H^p$, тогда для последовательности ее нулей
 выполнено условие Бляшке для полуплоскости.
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}
+\begin{theorem}
 Если $f(w)\in H^p$, тогда почти в каждой точке $iv$ существует
 угловой предел, т.е.
 $$\exi \lim_{r\ra
 0}f(iv+re^{i\ph}).$$
 
 при этом функция граничных значений $f(iv)\in L^p(\R ).$
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}[Единственности]
+\begin{theorem}[Единственности]
 Если $f(w)\in H^p$ и $f(iv)=0$ на множестве положительной меры,
 тогда $f(w)\equiv0.$
-\end{theorems}
+\end{theorem}
 Таким образом, функция класса $H^p$ полностью определяется своей
 функцией граничных значений.
 
@@ -981,26 +1025,26 @@ F(w)=\int\limits_0^{\infty} e^{-wt}f(t)\;dt.
 Тот факт, что $F(w)$ преобразование Лапласа для $f(t)$,
 обозначается $F(w)\risingdotseq f(t)$.
 
-\begin{theorems}\label{2.9}
+\begin{theorem}\label{2.9}
 $f(t)\in L^p(\R ^{+}),\quad1\le p\le2\Ra F(w)\in
 H^{q},\quad q:\frac1p+\frac1q=1$.
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}\label{2.10}
+\begin{theorem}\label{2.10}
 $F(w)\in H^p,\quad1\le p\le2\Ra F(w)$ представляется в
 виде (\ref{20}) с $f\in L^q(\R ^{+}),\quad
 q:\frac1p+\frac1q=1$ (и такая $f$ единственна).
-\end{theorems}
+\end{theorem}
 
-\begin{sled}[Пэли Винер (Paley Wiener)]
+\begin{imp}[Пэли Винер (Paley Wiener)]
 Класс $H^2$ совпадает с классом функций, представимых в виде (\ref{200}) с $f\in L^2(\R ^{+})$ (и
 такая $f$ единственна).
-\end{sled}
+\end{imp}
 
-\begin{theorems}
+\begin{theorem}
 Если $f\in L^p(\R ^{+}),\quad1\le p\le2\Ra F(w)$
 аналитична в $Re\;w>0$.
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} По одной из теорем комплексного анализа
 для аналитичности в области $G$ интеграла вида
 $$\int\limits_0^{\infty}f(w,t)dt,\quad f\in A(G)\;\fa t\in\R ^{+}$$
@@ -1022,10 +1066,10 @@ $\fa t\in\R ^{+}$. Возьмем какой-нибудь компакт $K$ и�
 
 Отсюда и следует равномерная сходимость на $K.\quad\blacksquare$
 
-\begin{theorems}[Единственности]
+\begin{theorem}[Единственности]
 Если в $Re\;w>0\quad0\equiv F(w)\risingdotseq f(t),\quad f\in
 L^q\;(1\le q<\infty)$, тогда почти всюду $f(t)=0.$
-\end{theorems}
+\end{theorem}
 
 \subsection{Преобразование Лапласа Стилтьеса}
 Обозначим за $V[0,\infty)=\{\si(t):\quad var_{[0,\infty)}
@@ -1033,11 +1077,11 @@ L^q\;(1\le q<\infty)$, тогда почти всюду $f(t)=0.$
 преобразование Лапласа-Стилтьеса как
 $$F(w)=\int\limits_0^{\infty}e^{-wt}d\si(t).$$
 
-\begin{theorems}
+\begin{theorem}
 Если $\si(t)\in V[0,\infty)$, то ее преобразование
 Лапласа-Стилтьеса $F(w)$ аналитично и ограничено в $Re\;w>0$ и
 непрерывно в $Re\;w\ge0.$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Докажем равномерную сходимость интеграла
 на каждом компакте из $Re\;w>0$ (как и в случае преобразования
 Лапласа, считаем, что абсцисса самой <<левой>> точки компакта есть
@@ -1047,21 +1091,21 @@ $$\hm{\int\limits_R^{\infty}e^{-wt}d\si(t)}\le e^{-u_0 R}var_{[0,\infty)}\si(t).
 $F(w)$ ограничена, поскольку $F(w)\le
 var_{[0,\infty)}\si(t).\blacksquare$
 
-\begin{theorems}[Единственности]
+\begin{theorem}[Единственности]
 Пусть $F(w)$ преобразование Лапласа Стилтьеса от $\si(t)$, причём $\si\in V[0,\infty).$ Если
 $F(w)\equiv0,\quad Re\;w>0$, то $\si(t)\equiv const.$
-\end{theorems}
+\end{theorem}
 
 
 \newpage
 \section{Часть III}
 \subsection{Проблема Мюнца Саса (Muntz Szasz)}
-\begin{theorems}[Сас 1916]\label{sas}
+\begin{theorem}[Сас 1916]\label{sas}
 Пусть $Re\;\mu_n>-\frac12$, тогда для того, чтобы
 $\{x^{\mu_n}\}_1^{\infty}$ была полна в $L^2(0,1)$ необходимо и
 достаточно сходимости ряда
 $$\suml{k=1}{\infty}\frac{Re\;\mu_k+\frac12}{1+(Re\;\mu_k+\frac12)^2}<\infty.$$
-\end{theorems}
+\end{theorem}
 
 Условие $Re\;\mu_n>-\frac12$ требуется для того, чтобы
 $x^{\mu_n}\in L^2(0,1).$
@@ -1126,7 +1170,7 @@ f(x)\in C_0[0,\infty).$$
 
 Здесь, как видно, и находят свое применения преобразования Лапласа и Лапласа-Стилтьеса. Окончательная теорема
 формулируется так:
-\begin{theorems}[Аналитический эквивалент неполноты]
+\begin{theorem}[Аналитический эквивалент неполноты]
 Неполнота системы $\{e^{-\la_n t}\}_1^{\infty}$ в
 $L^p[0,\infty)$\\ ($C_0[0,\infty)$) равносильна существованию
 нетривиальной функции $F(w)$ вида:
@@ -1136,7 +1180,7 @@ $$C_0[0,\infty):\quad F(w)=\int\limits_0^{\infty}e^{-wt}d\si(t),\quad\si\in
 V[0,\infty),$$
 
 обращающегося в $0$ в точках $\la_n.$
-\end{theorems}
+\end{theorem}
 
 \subsection{Начальные результаты}
 Ниже для простоты обозначений вместо <<система $\{e^{-\la_n
@@ -1144,11 +1188,11 @@ t}\}_1^{\infty}$>> будем писать <<система $*$>>. А вмест
 $L^p[0,\infty)$ и $C_0[0,\infty)$ будем писать соответственно
 просто $L^p$ и $C_0.$
 
-\begin{theorems}\label{22}
+\begin{theorem}\label{22}
 Пусть $\La=\{\la_n\}_1^{\infty}$. Если $\La$ имеет
 конечную предельную точку ($\la$) в $Re\;w>0$, тогда система *
 полна и в $L^p$ и в $C_0$.
-\end{theorems}
+\end{theorem}
 
 \begin{wrapfigure}[8]{l}{90pt}
 \epsfbox{pictures.4}
@@ -1166,11 +1210,11 @@ $L^p[0,\infty)$ и $C_0[0,\infty)$ будем писать соответств�
 предельные точки расположены либо в бесконечности (в правой
 полуплоскости), либо на мнимой оси.
 
-\begin{theorems}\label{S}
+\begin{theorem}\label{S}
 Если множество предельных точек последовательности $\La$ на
 мнимой оси имеет положительную линейную меру, то система * полна в
 $C_0$.
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Предположим противное - система неполна, тогда найдется нетривиальная $F(w)$, такая что
 $F(\la_n)=0$. Пусть $Y$ множество предельных точек последовательности $\La$ на мнимой оси. Вспомним,
 что $F(w)$ это преобразование Лапласа-Стилтьеса, а про него мы знаем, что оно непрерывно на $Re\;w\ge0$.
@@ -1178,7 +1222,7 @@ $F(\la_n)=0$. Пусть $Y$ множество предельных точек 
 единственности для функций данного класса получаем, что $F\equiv0$ противоречие с
 нетривиальностью.$\blacksquare$
 
-\begin{theorems}
+\begin{theorem}
 Рассмотрим условие Саса:
 $$\suml{n=1}{\infty}\frac{Re\;\la_n}{1+|\la_n|^2}=\infty\quad(S).$$
 
@@ -1187,7 +1231,7 @@ $$\suml{n=1}{\infty}\frac{Re\;\la_n}{1+|\la_n|^2}=\infty\quad(S).$$
 
 2) Условие (S) необходимо для полноты * в $L^p,\quad 1\le
 p\le2.$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} 1)Предположим противное - * неполна в
 $L^p$ ($C_0$). Значит некоторая нетривиальная функция $F(w)$
 обращается в $0$ в точках $\La$. Но по Теореме \ref{2.9}
@@ -1206,17 +1250,17 @@ u>0.$$ Поэтому $F(w)\in H^p.$ А значит, по Теореме \ref{2
 $F(w)$ представляется в виде преобразования Лапласа от функции из
 $L^q$ а это означает неполноту * - противоречие.$\blacksquare$
 
-\begin{sled}[Теорема Саса]
+\begin{imp}[Теорема Саса]
 Полнота * в $L^2$ равносильна условию $(S).$
-\end{sled}
+\end{imp}
 
 Такая формулировка теоремы Саса эквивалентна приведенной в части
 $3.1.$
 
 \subsection{Случай пространства $C_0$ (1972, Siegel)}
-\begin{theorems}
+\begin{theorem}
 Условие $(S)$ не является необходимым для полноты * в $C_0$.
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Положим
 $$\La=\left\{\left\{\al_k+\frac{in}{\beta_k}\right\}_{n\in
 \mathbb{Z}}\right\}_{k\in\mathbb{N}},\quad\al_k,\;\beta_k>0,\quad\al_k\ra0,\quad\beta_k\ra\infty,\quad\suml{k=1}{\infty}\al_k\beta_k<\infty.$$
@@ -1233,10 +1277,10 @@ $$\sum\limits_0^{\infty}\frac1{n^2+b^2}\le\frac1{b^2}+\int\limits_0^{\infty}\fra
 Условие $(B)$ выполнено, а * полна.$\blacksquare$
 
 \subsection{Необходимое условие Саса}
-\begin{theorems}\label{neob}
+\begin{theorem}\label{neob}
 Если * полна в $C_0$ или в $L^p,\quad p\ge2$, тогда
 $$\fa\de>0\qquad\suml{k=1}{\infty}\frac{Re\;\la_k+\de}{1+|\la_k|^2}=\infty.$$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Вспомним, что вначале изучения проблемы
 Мюнца-Саса мы имели дело с системой
 $\{x^{\mu_n}\}_1^{\infty},\quad Re\;\mu_n>-\frac1p\quad **$. Мы
@@ -1261,11 +1305,11 @@ $$\suml{k=1}{\infty}\frac1{1+|\la_k|^2}=\infty.$$
 Отсюда, очевидно, и следует утверждение теоремы.$\blacksquare$
 
 \subsection{Случай, когда $\La$ отделена от мнимой оси}
-\begin{theorems}\label{331}
+\begin{theorem}\label{331}
 Пусть $\fa n\in\mathbb{N}\quad Re\;\la_k\ge h>0$. Тогда
 для полноты * в $L^p$ или $C_0$ необходимо достаточно выполнение
 $(S).$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} \emph{Необходимость} В эту сторону нужно
 доказывать только для $L^p\quad p>2,\quad C_0$. Предположим *
 полна, тогда по необходимому условию Саса (Теорема \ref{neob})
@@ -1298,11 +1342,11 @@ $$\hm{\Phi\hr{w+\frac{h}2}}\le C_p\frac1{(\frac{h}2)^{1/p}}<\infty$$
 Из (\ref{20}) и (\ref{21}) получаем
 $$\suml{k=1}{\infty}\frac{Re\;\la_k}{1+|\la_k-\frac{h}2|^2}<\infty\Ra\suml{k=1}{\infty}\frac{Re\;\la_k}{1+|\la_k|^2}<\infty.\blacksquare$$
 
-\begin{sled}[Теорема Мюнца]
+\begin{imp}[Теорема Мюнца]
 Пусть $0<\la_1<\la_2<\ldots$, тогда для полноты * в
 $L^p,\quad 1\le p<\infty$ или $C_0$ необходимо и достаточно чтобы
 $$\suml{k=1}{\infty}\frac1{\la_k}=\infty. \quad(M)$$
-\end{sled}
+\end{imp}
 \textbf{Доказательство:} в роли $h$ из предыдущей теоремы
 выступает $\la_1$, значит полнота равносильна условию~$(S)$.
 Поскольку $\la_k\in\R $ и если считать, что
@@ -1327,22 +1371,22 @@ $\sum\frac1{\mu_n}$, то эта формулировка теоремы Мюн�
 найдут своего применения впоследствии, но это не так - все они
 понадобятся для доказательства необходимости в Теореме Шварца.
 
-\begin{lemms}\label{35}
+\begin{lemma}\label{35}
 $$tg(t)\in L^2(1,\infty)\Ra g(t)\in
 L^q(1,\infty)\quad\fa q\in[1,2).$$
-\end{lemms}
+\end{lemma}
 \textbf{Доказательство:} Положим
 $r=\frac2q,\;\frac1r+\frac1s=1\Ra \frac1s=\frac{2-q}2.$
 Тогда
 $$\int\limits_1^{\infty}|g(t)|^qdt=\int\limits_1^{\infty}|g(t)t|^q\frac1{t^q}dt\le\hr{\int\limits_1^{\infty}|g(t)t|^2dt}^{1/r}\hr{\int\limits_1^{\infty}\frac1{t^{\frac{2q}{2-q}}}dt}^{1/s}<\infty.\qquad\blacksquare$$
 
-\begin{lemms}\label{34}
+\begin{lemma}\label{34}
 Пусть $g\in L^2(\R )$, пусть $\wh{g}$ дифференцируемо
 всюду за исключением конечного числа точек и $\wh{g}\;'\in
 L^2(\R )$, тогда $tg(t)\in L^2(\R ).$
-\end{lemms}
+\end{lemma}
 
-\begin{lemms}\label{37}
+\begin{lemma}\label{37}
 Пусть
 \begin{enumerate}
 \item
@@ -1357,7 +1401,7 @@ L^2(\R ).$
 \end{enumerate}
 Тогда, если $\La$ множество корней $F(w)$ в $Re\;w>0$, то
 система $\{e^{-\la_nt}\}$ неполна в $L^p,\; p>2$ и в $C_0.$
-\end{lemms}
+\end{lemma}
 \textbf{Доказательство:} Из условия 1 по теореме Пэли-Винера
 следует, что
 $$F(w)=\int\limits_0^{\infty}e^{-wt}f(t)dt,\quad f\in
@@ -1373,11 +1417,11 @@ L^q(0,1),\;1\le q<2.$ Итак, $f(t)\in L^q(0,\infty),\;1\le q<2.$
 функция, что фигурировала в аналитическом эквиваленте
 неполноты.$\blacksquare$
 
-\begin{theorems}[Шварц, 1943 необходимость, Грамм, 1957 достаточность]
+\begin{theorem}[Шварц, 1943 необходимость, Грамм, 1957 достаточность]
 Пусть $\la_n>0,\;n\in\mathbb{N}.$ Тогда для полноты системы *
 в $L^p$ или в $C_0$ необходимо и достаточно
 $$\suml{k=1}{\infty}\frac{\la_k}{1+\la_k^2}=\infty.$$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} \emph{Достаточность} Очевидно,
 интересовать нас может лишь случай $1\le p<2.$ Доказывать будем
 от противного - предположим * не полна. Тогда по аналитическому
@@ -1458,14 +1502,14 @@ $C_0$.$\blacksquare$
 Ниже приведены некоторые интересные и важные результаты, которые
 мы не будем доказывать.
 
-\begin{theorems}[Грамм]
+\begin{theorem}[Грамм]
 Если $\La$ лежит в объединении конечного числа кругов из
 правой полуплоскости, касающихся мнимой оси, то условие $(S)$
 является необходимым и достаточным для полноты $e(\La)$ в
 $L^p,\;1\le p<\infty$ и в $C_0$.
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}[Седлецкий]
+\begin{theorem}[Седлецкий]
 Пусть
 \begin{equation}\label{33}
 \intl{-\infty}{\infty}\frac{\log
@@ -1474,18 +1518,18 @@ $L^p,\;1\le p<\infty$ и в $C_0$.
 
 Тогда $(S)$ является необходимым для полноты * в $L^p, \;p>2$ и в
 $C_0.$
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}[Ладыгин]
+\begin{theorem}[Ладыгин]
 Если выполнено условие (\ref{33}), тогда условие $(S)$ достаточно
 для полноты системы * в $L^p,\;1\le p<2.$
-\end{theorems}
+\end{theorem}
 
-\begin{sled}
+\begin{imp}
 В классе последовательностей $\La$ со свойством (\ref{33})
 условие $(S)$ является необходимым и достаточным для полноты * в
 $L^p,\;1\le p<\infty$ и в $C_0.$
-\end{sled}
+\end{imp}
 
 Теперь рассмотрим некоторые частные случаи.
 
@@ -1525,7 +1569,7 @@ $e(\La)=\{e^{i\la_nt}\}_{n=1}^{\infty}.$ Будем считать,
 что $|\la_{n+1}|>|\la_n|.$ В роли $(a,b)$ у нас будет
 выступать $(-\pi,\pi).$
 
-\begin{theorems}[Левинсон, N.Levinson (1936), Аналитический эквивалент неполноты]
+\begin{theorem}[Левинсон, N.Levinson (1936), Аналитический эквивалент неполноты]
 Неполнота системы $e(\La)$ в $L^p(-\pi,\pi),\;1\le p<\infty$
 (в $C(-\pi,\pi)$) равносильна существованию нетривиальной функции
 вида
@@ -1544,16 +1588,16 @@ var\si(t)<\infty,
 обращающейся в $0$ в точках $\La.$
 
 
-\end{theorems}
+\end{theorem}
 
 Заметим, что $\Phi(z)$ является целой функцией, т.е. аналитической
 во всей комплексной плоскости.
 
-\begin{lemms}\label{ew}
+\begin{lemma}\label{ew}
 Если $\la$ корень функции вида (\ref{40}) (или (\ref{41})),
 то $\frac{\Phi(z)}{z-\la}$ тоже имеет вид (\ref{40}) (или
 (\ref{41})).
-\end{lemms}
+\end{lemma}
 \textbf{Доказательство:} По условию
 
 $$\intl{-\pi}{\pi}e^{i\la u}\ph(u)du=0.$$
@@ -1568,11 +1612,11 @@ u}\ph(u)du\right)dt.$$
 
 $$\frac{\Phi(z)}{z-\la}=\intl{-\pi}{\pi}e^{izt}\ph_{\la}(t)dt,\quad\text{где  }\ph_{\la}(t)=-ie^{-i\la t}\intl{-\pi}{t}e^{i\la u}\ph(u)du\in L^q(-\pi,\pi).\blacksquare$$
 
-\begin{theorems}[Свойство инвариантности полноты]
+\begin{theorem}[Свойство инвариантности полноты]
 Полнота $e(\La)$ в $L^p(-\pi,\pi)$ ($C[-\pi,\pi]$) не
 нарушится при замене конечного числа точек $\la_n$ таким же
 количеством точек не из $\La.$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Пусть $e(\La)$ неполна. Заменим
 точку $\la_1$ точкой $\mu_1$ и покажем, что новая система
 $e(\wt{\La})$ неполна.
@@ -1615,19 +1659,19 @@ $$N_{\Phi}(r)=\int\limits_0^r\frac{n_{\Phi}(t)}{t}dt,\qquad \Phi(0)\neq0.$$
 
 Приведем ниже теорему без доказательства. Ею мы позже
 воспользуемся.
-\begin{theorems}[Формула Йенсена]
+\begin{theorem}[Формула Йенсена]
 Пусть $F(z)$ целая функция и $|F(0)|=1.$ Тогда
 $$\fa r>0\qquad N_F(r)=\frac1{2\pi}\intl{-\pi}{\pi}\log|F(re^{i\theta})|d\theta.$$
-\end{theorems}
+\end{theorem}
 
 
 
-\begin{theorems}\label{50}
+\begin{theorem}\label{50}
 Если $0\notin\La$ и
 $$\ol{\lim}_{r\ra\infty}\left(N_{\La}(r)-2r+\frac1p \log
 r\right)>-\infty,\quad 1<p<\infty\qquad(=+\infty,\quad
 p=1,\infty),$$ то $e(\La)$ полна в $L^p(-\pi,\pi).$
-\end{theorems}
+\end{theorem}
 \textbf{Доказательство:} Предположим противное система неполна.
 Тогда существует нетривиальная $\Phi(z)$ класса (\ref{40}):
 $\Phi(\La)=0.$ Воспользовавшись неравенством Гельдера,
@@ -1681,131 +1725,144 @@ $I_2<C<+\infty.$ Поэтому $I_r\xra{r\ra\infty}
 подразумевается пространство с нормой $\inf\{M:\quad|f(x)|\le
 M,\quad x\in\R \backslash E,\quad\mu(E)=0\}\blacksquare.$
 
-\begin{sled}[Теорема Левинсона]
+\begin{imp}[Теорема Левинсона]
 Если $|\la_n|\le|n|+\frac1{2p},\quad1<p<\infty$
 ($|\la_n|\le|n|+\frac1{2p}-\ep,\quad p=1,\infty$),
 тогда $\{e^{i\la_n t}\}_{n=-\infty}^{+\infty}$ полна в
 $L^p(-\pi,\pi).$
-\end{sled}
-\textbf{Доказательство:} Можно считать, что $\la_0>0$ (в силу
-теоремы об инвариантности полноты при конечных заменах). Если
-выполнены условия теоремы и $n+\frac1{2p}<t<n+1+\frac1{2p}$, то
-$n_{\La}(t)=2n+1.$
+\end{imp}
+\begin{proof}
+  Можно считать, что $\la_0>0$ (в силу
+  теоремы об инвариантности полноты при конечных заменах). Если
+  выполнены условия теоремы и $n+\frac1{2p}<t<n+1+\frac1{2p}$, то
+  $n_{\La}(t)=2n+1.$
 
-Тогда
-\begin{multline*}
-N_{\La}(r)=\int\limits_0^r\frac{n_{\La}(t)}tdt=\intl{\la_0}{1+\frac1{2p}}\frac{dt}t+\sum\limits_{n=1}^N\intl{n+\frac1{2p}}{n+1+\frac1{2p}}\frac{2n+1}t
-dt=C+\sum\limits_{n=1}^N(2n+1)\log\frac{n+1+\frac1{2p}}{n+\frac1{2p}}\le\\
-\le
-C+2\sum\limits_{n=1}^N\hr{n+\frac1{2p}+\frac12-\frac1{2p}}\log\hr{1+\frac1{n+\frac1{2p}}}=\\
-=C+2\sum\limits_{n=1}^N\hr{\hr{n+\frac1{2p}}+\hr{\frac12-\frac1{2p}}}\hr{\frac1{n+\frac1{2p}}-\frac1{2\hr{n+\frac1{2p}}^2}+O\hr{\frac1{n^3}}}=\\
-=O(1)+2N-\sum\limits_{n=1}^N\frac1p\frac1{n+\frac1{2p}}=O(1)+2N-\frac1p\log
-N=O(1)+2r-\frac1p\log r=N_{\La}(r).
-\end{multline*}
-И остается лишь воспользоваться Теоремой \ref{50}
+  Тогда
+  \begin{multline*}
+    N_{\La}(r)=\int\limits_0^r\frac{n_{\La}(t)}tdt=\intl{\la_0}{1+\frac1{2p}}\frac{dt}t+\sum\limits_{n=1}^N\intl{n+\frac1{2p}}{n+1+\frac1{2p}}\frac{2n+1}t
+    dt=C+\sum\limits_{n=1}^N(2n+1)\log\frac{n+1+\frac1{2p}}{n+\frac1{2p}}\le\\
+    \le
+    C+2\sum\limits_{n=1}^N\hr{n+\frac1{2p}+\frac12-\frac1{2p}}\log\hr{1+\frac1{n+\frac1{2p}}}=\\
+    =C+2\sum\limits_{n=1}^N\hr{\hr{n+\frac1{2p}}+\hr{\frac12-\frac1{2p}}}\hr{\frac1{n+\frac1{2p}}-\frac1{2\hr{n+\frac1{2p}}^2}+O\hr{\frac1{n^3}}}=\\
+    =O(1)+2N-\sum\limits_{n=1}^N\frac1p\frac1{n+\frac1{2p}}=O(1)+2N-\frac1p\log
+    N=O(1)+2r-\frac1p\log r=N_{\La}(r).
+  \end{multline*}
+  И остается лишь воспользоваться Теоремой \ref{50}
+\end{proof}
 
-\noindent\textbf{Замечание:} Константа $\frac1{2p}$ в Теореме
-Левинсона точная, т.е. не может быть уменьшена. Можно построить
-пример, иллюстрирующий это. Но мы не станем этим заниматься.
+\begin{note}
+  Константа $\frac1{2p}$ в Теореме
+  Левинсона точная, т.е. не может быть уменьшена. Можно построить
+  пример, иллюстрирующий это. Но мы не станем этим заниматься.
+\end{note}
 
 \subsection{Устойчивость полноты системы экспонент}
-\begin{theorems}
+\begin{theorem}
 Пусть есть две последовательности: $\La$ и $M$. И пусть
 $\sum|\la_n-\mu_n|<\infty$, тогда системы $e(\La)$ и
 $e(M)$ полны в $L^p(-a,a)$ и в $C[-a,a]$ одновременно.
-\end{theorems}
-\textbf{Доказательство:} Предположим условия теоремы выполнены, но
-$e(M)$ полна, а $e(\La)$ неполна. Тогда по аналитическому
-эквиваленту существует нетривиальная целая функция $F$ вида
-$$F(z)=\int\limits_{-a}^a e^{izt}f(t)dt,\qquad f\in L^q,$$
-обращающаяся в $0$ в точках $\La.$ Покажем, что тогда
-существует нетривиальная целая $G(z)$, обращающаяся в $0$ в точках
-M.
+\end{theorem}
+\begin{proof}
+  Предположим условия теоремы выполнены, но
+  $e(M)$ полна, а $e(\La)$ неполна. Тогда по аналитическому
+  эквиваленту существует нетривиальная целая функция $F$ вида
+  $$F(z)=\int\limits_{-a}^a e^{izt}f(t)dt,\qquad f\in L^q,$$
+  обращающаяся в $0$ в точках $\La.$ Покажем, что тогда
+  существует нетривиальная целая $G(z)$, обращающаяся в $0$ в точках
+  M.
 
-Пусть $f_0(t)=f(t)$. Тогда, пользуясь леммой (\ref{ew}),
-\begin{equation*}
-F_1(z)=\frac{z-\mu_1}{z-\la_1}F(z)=F(z)+\frac{\la_1-\mu_1}{z-\la_1}F(z)=\int\limits_{-a}^ae^{izt}f_1(t)dt,\quad
-f_1(t)=f(t)+i(\mu_1-\la_1)\int\limits_{-a}^te^{i\la_1(u-t)}f_0(u)du.
-\end{equation*}
-Аналогично
-\begin{equation*}
-F_n(z)=\prod\limits_{k=1}^n\hr{\frac{z-\mu_k}{z-\la_k}}F(z)=\int\limits_{-a}^ae^{izt}f_n(t)dt,\quad
-f_n(t)=f_{n-1}(t)+i(\mu_n-\la_n)\int\limits_{-a}^te^{i\la_n(u-t)}f_{n-1}(u)du.
-\end{equation*}
+  Пусть $f_0(t)=f(t)$. Тогда, пользуясь леммой (\ref{ew}),
+  \begin{equation*}
+    F_1(z)=\frac{z-\mu_1}{z-\la_1}F(z)=F(z)+\frac{\la_1-\mu_1}{z-\la_1}F(z)=\int\limits_{-a}^ae^{izt}f_1(t)dt,\quad
+    f_1(t)=f(t)+i(\mu_1-\la_1)\int\limits_{-a}^te^{i\la_1(u-t)}f_0(u)du.
+  \end{equation*}
+  Аналогично
+  \begin{equation*}
+    F_n(z)=\prod\limits_{k=1}^n\hr{\frac{z-\mu_k}{z-\la_k}}F(z)=\int\limits_{-a}^ae^{izt}f_n(t)dt,\quad
+    f_n(t)=f_{n-1}(t)+i(\mu_n-\la_n)\int\limits_{-a}^te^{i\la_n(u-t)}f_{n-1}(u)du.
+  \end{equation*}
 
-Рассмотрим $\la_n:\quad
-Im\;\la_n\le0\Ra|e^{i\la_n(u-t)}|=e^{Im\;\la_n(t-u)}\le1.$
-Тогда
+  Рассмотрим $\la_n:\quad
+  Im\;\la_n\le0\Ra|e^{i\la_n(u-t)}|=e^{Im\;\la_n(t-u)}\le1.$
+  Тогда
 
-$$\hm{\int\limits_{-a}^te^{i\la_n(u-t)}f_{n-1}(u)du}\le\int\limits_{-a}^t\hm{e^{i\la_n(u-t)}f_{n-1}(u)}du\le(2a)^{1/p}\hn{f_{n-1}}_{L^q}.$$
+  $$\hm{\int\limits_{-a}^te^{i\la_n(u-t)}f_{n-1}(u)du}\le\int\limits_{-a}^t\hm{e^{i\la_n(u-t)}f_{n-1}(u)}du\le(2a)^{1/p}\hn{f_{n-1}}_{L^q}.$$
 
-И значит
-$\hn{f_n}_{L^q}\le(1+C_q|\mu_n-\la_n|)\hn{f_{n-1}}_{L^q}\le\hn{f_0}_{L^q}\prod\limits_{k=1}^n(1+C_q|\mu_k-\la_k|).$
+  И значит
+  $\hn{f_n}_{L^q}\le(1+C_q|\mu_n-\la_n|)\hn{f_{n-1}}_{L^q}\le\hn{f_0}_{L^q}\prod\limits_{k=1}^n(1+C_q|\mu_k-\la_k|).$
 
-Бесконечное произведение $\prod\limits_{k=1}^{\infty}(1+C_q|\mu_k-\la_k|)$ сходится по условию теоремы,
-поэтому все частные произведения ограничены. Вывод: $\hn{f_n}_{L^q}\le C<\infty.$
+  Бесконечное произведение $\prod\limits_{k=1}^{\infty}(1+C_q|\mu_k-\la_k|)$ сходится по условию теоремы,
+  поэтому все частные произведения ограничены. Вывод: $\hn{f_n}_{L^q}\le C<\infty.$
 
-$$\hn{f_n-f_{n-1}}_{L^q}\le
-A|\mu_n-\la_n| \hn{f_{n-1}}_{L^q}\le B|\mu_n-\la_n|.$$
+  $$\hn{f_n-f_{n-1}}_{L^q}\le
+  A|\mu_n-\la_n| \hn{f_{n-1}}_{L^q}\le B|\mu_n-\la_n|.$$
 
-Поэтому в $L^q(-a,a)$ сходится ряд
-$\sum_{n=1}^{\infty}(f_n-f_{n-1})$. Обозначим за $g(t)$ предел
-этого ряда. Легко заметить, что
-$g(t)=-f_0(t)+\lim_{n\ra\infty}f_n(t).$ Поэтому у
-последовательности $f_n$ есть предел в $L^q$. Обозначим его $g_0$
-$(g_0=g+f_0).$
+  Поэтому в $L^q(-a,a)$ сходится ряд
+  $\sum_{n=1}^{\infty}(f_n-f_{n-1})$. Обозначим за $g(t)$ предел
+  этого ряда. Легко заметить, что
+  $g(t)=-f_0(t)+\lim_{n\ra\infty}f_n(t).$ Поэтому у
+  последовательности $f_n$ есть предел в $L^q$. Обозначим его $g_0$
+  $(g_0=g+f_0).$
 
-Обозначим $G(z)=\intl{-a}{a}e^{izt}g_0(t)dt$. Тогда
-$$|G(z)-F_n(z)|\le\intl{-a}{a}e^{izt}|g_0(t)-f_n(t)|dt.$$
-И поэтому $F_n(z)\rra G(z)$ на каждом круге конечного
-радиуса. $G(z)$ целая по построению. К тому же ясно, что
-$G(\mu_n)=0$, если $Im\;\mu_n\le 0.$ Построим функцию
-$\wt{G}(z)$:
-$$\wt{G}(z)=\left\{\begin{aligned}
-G(z),\qquad Im\;z\le0\\
-\ol{G(\ol{z})},\qquad Im\;z\ge0\end{aligned}\right.$$
-Полученная функция по одной из теорем комплексного анализа будет
-целой. Кроме того, $\wt{G}(M)=0.\blacksquare$
+  Обозначим $G(z)=\intl{-a}{a}e^{izt}g_0(t)dt$. Тогда
+  $$|G(z)-F_n(z)|\le\intl{-a}{a}e^{izt}|g_0(t)-f_n(t)|dt.$$
+  И поэтому $F_n(z)\rra G(z)$ на каждом круге конечного
+  радиуса. $G(z)$ целая по построению. К тому же ясно, что
+  $G(\mu_n)=0$, если $Im\;\mu_n\le 0.$ Построим функцию
+  $\wt{G}(z)$:
+  $$\wt{G}(z)=\left\{\begin{aligned}
+  G(z),\qquad Im\;z\le0\\
+  \ol{G(\ol{z})},\qquad Im\;z\ge0\end{aligned}\right.$$
+  Полученная функция по одной из теорем комплексного анализа будет
+  целой. Кроме того, $\wt{G}(M)=0.$
+\end{proof}
 
 \subsection{Радиус полноты системы экспонент}
-\textbf{Опр:} \emph{Радиусом полноты} системы экспонент $e(\La)$ называют
-$$r(\La)=\sup\{a>0:\quad
-e(\La)\text{ полна в }L^2(-a,a)\}=\inf\{a>0:\quad
-e(\La)\text{ не полна в }L^2(-a,a)\}.
-$$
+\begin{df}
+  \emph{Радиусом полноты} системы экспонент $e(\La)$ называют
+  $$r(\La)=\sup\hc{a>0:\;
+  e(\La)\text{ полна в }L^2(-a,a)\}=\inf\{a>0:\;
+  e(\La)\text{ не полна в }L^2(-a,a)}.
+  $$
+\end{df}
 
-\defin \emph{Плотностью} последовательности
-$\La$ называют $\De(\La)=\lim_{n\ra\infty}\frac
-n{|\la_n|}.$ Предела может и не существовать, тогда можно
-рассматривать \emph{верхнюю плотность}
-$\ol{\De}(\La)=\varlimsup_{n\ra\infty}\frac
-n{|\la_n|}.$
+\begin{df}
+  \emph{Плотностью} последовательности
+  $\La$ называют $\displaystyle \De(\La)=\lim\limits_{n\ra\infty}\frac
+  n{|\la_n|}.$ Предела может и не существовать, тогда можно
+  рассматривать \emph{верхнюю плотность}
+  $\displaystyle \ol{\De}(\La)=\varlimsup\limits_{n\ra\infty}\frac
+  n{|\la_n|}.$
+\end{df}
 
-\par\begin{theorems}[Картрайт, Cartwright] Пусть
+\begin{theorem}[Картрайт, Cartwright] Пусть
 $F(z)=\int_{-a}^ae^{izt}f(t)dt,\quad f\in L^q(-a,a),\quad f\neq0$
 п.в. в любой окрестности точки $a.$ Тогда $\fa\quad
 0<\ep<\pi/2$ сужение корней $F(z)$ в угле
 $|arg\;z|<\ep$ имеет плотность $\De=\frac a{\pi}$, вне
 его $\De=0.$ Одним словом, почти все нули функции $F(z)$
 расположены вблизи действительной оси.
-\end{theorems}
+\end{theorem}
 
 
-\begin{theorems}
+\begin{theorem}
 Пусть $\La\in \R ^{+}$ и
 $\ol{\De}(\La)>\frac a{\pi}.$ Тогда $e(\La)$
 полна в $L^2(-a,a).$
-\end{theorems}
-\textbf{Доказательство:} Предположим противное - система неполна.
-Тогда существует нетривиальная целая функция как в условиях
-предыдущей теоремы с $q=2.$ Поэтому плотность ее нулей в секторе
-$|arg\;z|<\ep$ равна $a/\pi$. В частности
-$\ol{\De}(\La)\le a/\pi$ противоречие с
-условием.$\blacksquare$
+\end{theorem}
+\begin{proof}
+  Предположим противное - система неполна.
+  Тогда существует нетривиальная целая функция как в условиях
+  предыдущей теоремы с $q=2.$ Поэтому плотность ее нулей в секторе
+  $|arg\;z|<\ep$ равна $a/\pi$. В частности
+  $\ol{\De}(\La)\le a/\pi$ противоречие с
+  условием.
+\end{proof}
 
-\medskip\noindent \textbf{Гипотеза Шварца:} Пусть
-$\exi\De(\La),\quad\La\subset\R ^{+}.$ Тогда
-$r(\La)=\pi\De(\La).$
+\begin{hypotetic}[Шварца]
+  Пусть $\exi\De(\La),\quad\La\subset\R ^{+}.$ Тогда
+  $r(\La)=\pi\De(\La).$
+\end{hypotetic}
 
 Эта гипотеза оказалась неверна. В 1950-е годы Ж.П.Кахан построил
 такой опровергающий ее пример:
@@ -1830,25 +1887,33 @@ $\La\subset\R ^{+}$, $n_{\La}(t)$ ее считающая
 функции. Что это такое? $S_a(t):=$наименьшая мажоранта функции
 $n_{\La}(t)$ из класса $M_a$.
 
-\defin \emph{Эффективной плотностью} называется
-величина
-$A_e(\La):=\inf\{a>0:\frac{S_a-n_{\La}(t)}{1+t^2}\notin
-L^1(\R ^{+})\}.$
+\begin{df}
+  \emph{Эффективной плотностью} называется
+  величина
+  \begin{equation*}
+    A_e(\La):=\inf\hc{a>0:\frac{S_a-n_{\La}(t)}{1+t^2}\notin
+    L^1(\R ^{+})}.
+  \end{equation*}
+\end{df}
 
-\begin{theorems}[Бъерлинг и Мальявен]
+\begin{theorem}[Бъерлинг и Мальявен]
 $r(\La)=\pi A_e(\La).$
-\end{theorems}
+\end{theorem}
 
 \subsection{Минимальные системы экспонент}
 
-\defin Система $\{e_n\}_{n=1}^{\infty}$ элементов Банахова
-пространства называется \emph{минимальной}, если ни один ее
-элемент не принадлежит замыканию линейной оболочки остальных, т.е.
-$dist(e_n,\;clos \{e_k\}_{k\neq n})>0$. Другими словами, нет
-лишних элементов.
+\begin{df}
+  Система $\{e_n\}_{n=1}^{\infty}$ элементов Банахова пространства
+  называется \emph{минимальной}, если ни один ее элемент не
+  принадлежит замыканию линейной оболочки остальных, т.е.
+  $dist(e_n,\;clos \{e_k\}_{k\neq n})>0$. Другими словами, нет лишних
+  элементов.
+\end{df}
 
-Обозначим за $B'$ пространство линейных непрерывных функционалов
-на $B.$
+\begin{denote}
+  Обозначим за $B'$ пространство линейных непрерывных функционалов
+  на $B.$
+\end{denote}
 
 \noindent\textbf{Эквивалентное определение минимальности:}
 $\{e_n\}_{n=1}^{\infty}$ минимальна в $B\Lra$
@@ -1857,96 +1922,106 @@ $\{e_n\}_{n=1}^{\infty}$ минимальна в $B\Lra$
 $\{f_n\}_{n=1}^{\infty}$ называется биортогональной к системе
 $\{e_n\}_{n=1}^{\infty}.$
 
-\defin Пусть $F(z)$ целая функция. Говорят, что
-$F(z)$ \emph{конечного порядка}, если при некотором $\mu>0$
-$|F(z)|\le e^{|z|^{\mu}},\quad\fa |z|\ge R_0$. Инфимум таких
-$\mu$ называют \emph{порядком} (будем обозначать $\rho$) целой
-функции.
+\begin{df}
+  Пусть $F(z)$ целая функция. Говорят, что
+  $F(z)$ \emph{конечного порядка}, если при некотором $\mu>0$
+  $|F(z)|\le e^{|z|^{\mu}},\quad\fa |z|\ge R_0$. Инфимум таких
+  $\mu$ называют \emph{порядком} (будем обозначать $\rho$) целой
+  функции.
+\end{df}
 
-\defin Пусть $F(z)$ целая порядка $\rho>0.$
-Говорят, что $F(z)$ конечного типа при порядке $\rho$, если
-$\exi A:\quad|F(z)|\le e^{A|z|^{\rho}},\quad|z|>R_1.$ Инфимум
-таких $A$ называют типом функции $F(z)$ (будем обозначать
-$\si$) при порядке $\rho.$
+\begin{df}
+  Пусть $F(z)$ целая порядка $\rho>0.$
+  Говорят, что $F(z)$ конечного типа при порядке $\rho$, если
+  $\exi A:\quad|F(z)|\le e^{A|z|^{\rho}},\quad|z|>R_1.$ Инфимум
+  таких $A$ называют типом функции $F(z)$ (будем обозначать
+  $\si$) при порядке $\rho.$
+\end{df}
 
-\noindent\textbf{Примеры:}
-\begin{enumerate}
-\item
-$F(z)=e^{az^n},\quad\rho=n,\;\si=a$
-\item
-$F(z)=\sin\;z,\quad\rho=1,\;\si=1.$
-\end{enumerate}
+\begin{ex}
+  \begin{enumerate}
+  \item
+    $F(z)=e^{az^n},\quad\rho=n,\;\si=a$
+  \item
+    $F(z)=\sin\;z,\quad\rho=1,\;\si=1.$
+  \end{enumerate}
+\end{ex}
 
-\defin Целой функцией экспоненциального типа $a$
-будем называть функцию с порядком $1$ и типом $a$.
+\begin{df}
+  Целой функцией экспоненциального типа $a$
+  будем называть функцию с порядком $1$ и типом $a$.
+\end{df}
 
 Введем новое пространство $W^2_a$ целых функций, экспоненциального
 типа не выше, чем $a$, таких, что
 $$\int_{\R }|F(x)|^2dx<\infty.$$
 
-\begin{theorems}[Пэли-Винер]
+\begin{theorem}[Пэли-Винер]
 $W^2_a$ совпадает с классом функций, представимых в виде
 $$F(z)=\int\limits_{-a}^ae^{izt}f(t)dt,\quad f\in L^2(-a,a).$$
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}
+\begin{theorem}
 Для того, чтобы $e(\La)$ была минимальной в $L^2(-a,a)$
 необходимо и достаточно, чтобы существовала нетривиальная целая
 $F(z)$: $F(\La)=0$, $\frac {F(z)}{z-\la_1}\in W^2_a.$
-\end{theorems}
-\textbf{Доказательство:} \emph{Необходимость} Пусть $e(\La)$
-минимальна в $L^2(-a,a)$. Тогда найдется биортогональная система
-$\{f_n\}_{n=1}^{\infty}\subset L^2(-a,a)$ (здесь мы
-воспользовались фактом из функционального анализа: $(L^2)'\simeq
-L^2$). $f_n(e^{i\la_k t})=(f_n(t),e^{i\la_k
-t})=\de_{nk}$ ($(\cdot\;,\cdot)$ скалярное произведение в
-$L^2(-a,a)$).
-$$F_1=\int\limits_{-a}^ae^{izt}f_1(t)dt,\quad f_1\in L^2(-a,a).$$
-Но, в силу биортогональности системы $\{f_n\}_{n=1}^{\infty}$,
-$F_1(\la_n)=\de_{1n}.$ Возьмем в качестве $F(z)$ из
-формулировки этой теоремы функцию $(z-\la_1)F_1(z).$
+\end{theorem}
+\begin{proof}
+  \emph{Необходимость} Пусть $e(\La)$
+  минимальна в $L^2(-a,a)$. Воспользовавшись фактом из функционального анализа, что $(L^2)'\simeq
+  L^2$, имеем, что найдется биортогональная система
+  $\{f_n\}_{n=1}^{\infty}\subset L^2(-a,a)$. $f_n(e^{i\la_k t})=(f_n(t),e^{i\la_k
+    t})=\de_{nk}$ ($(\cdot\;,\cdot)$ скалярное произведение в
+  $L^2(-a,a)$).
+  $$F_1=\int\limits_{-a}^ae^{izt}f_1(t)dt,\quad f_1\in L^2(-a,a).$$
+  Но, в силу биортогональности системы $\{f_n\}_{n=1}^{\infty}$,
+  $F_1(\la_n)=\de_{1n}.$ Возьмем в качестве $F(z)$ из
+  формулировки этой теоремы функцию $(z-\la_1)F_1(z).$
 
-\emph{Достаточность} Рассмотрим
-$\frac{F(z)}{F'(\la_n)(z-\la_n)}\in W^2_a$. Поэтому
-$$\frac{F(z)}{F'(\la_n)(z-\la_n)}=\int\limits_{-a}^ae^{izt}f_n(t)dt,\quad f_n\in L^2(-a,a).$$
+  \emph{Достаточность} Рассмотрим
+  $\frac{F(z)}{F'(\la_n)(z-\la_n)}\in W^2_a$. Поэтому
+  $$\frac{F(z)}{F'(\la_n)(z-\la_n)}=\int\limits_{-a}^ae^{izt}f_n(t)dt,\quad f_n\in L^2(-a,a).$$
 
-Из последнего равенства видно, что $f_n(t)$ образуют
-биортогональную систему, поскольку
-$$\lim_{z\ra\la_n}\frac{F(z)}{F'(\la_n)(z-\la_n)}=1,\qquad F(\la_k)=0\quad(k\neq n).\blacksquare$$
+  Из последнего равенства видно, что $f_n(t)$ образуют
+  биортогональную систему, поскольку
+  $$\lim_{z\ra\la_n}\frac{F(z)}{F'(\la_n)(z-\la_n)}=1,\qquad F(\la_k)=0\quad(k\neq n).$$
+\end{proof}
 
-\defin
-$$f_n(t)=\frac1{2\pi}\int_{\R }e^{-ixt}\frac{F(x)}{F'(\la_n)(x-\la_n)}dx,\text{ где  } F(x)=\int\limits_{-a}^ae^{ixt}f(t)dt.$$
-\emph{Негармоническим рядом Фурье} функции $f(t)\in L^2(-a,a)$
-называется ряд
-$$\suml{n=1}{\infty}(f_n,f)e^{i\la_n t}.$$
+\begin{df}
+  $$f_n(t)=\frac1{2\pi}\int_{\R }e^{-ixt}\frac{F(x)}{F'(\la_n)(x-\la_n)}dx,\text{ где  } F(x)=\int\limits_{-a}^ae^{ixt}f(t)dt.$$
+  \emph{Негармоническим рядом Фурье} функции $f(t)\in L^2(-a,a)$
+  называется ряд
+  $$\suml{n=1}{\infty}(f_n,f)e^{i\la_n t}.$$
+\end{df}
 
 \section{<<Ликбез>>}
 \subsection{Преобразование Фурье}
 Преобразование Фурье первоначально определяется для функций из $L^1$. В этом параграфе мы постараемся
 распространить его и на некоторые другие классы функций.
 
-\noindent\textbf{Утверждение:}
-$\wh{f}(x)\in\textbf{C}(\R ),\;\hn{\wh{f}}_{\textbf{C}(\R )}\le\frac1{2\pi}\hn{f}_{L^1},\;\lim_{x\ra\pm\infty}\wh{f}(x)=0.$
+\begin{stm}
+ $\hat{f}(x)\in\Cb(\R ),\;\hn{\wh{f}}_{\Cb(\R )}\le\frac1{2\pi}\hn{f}_{L^1},\;\lim_{x\ra\pm\infty}\wh{f}(x)=0.$
+ \end{stm}
 
 Доказательство этого утверждения входит в стандартный курс функционального анализа. Оно не очень сложное, но,
 тем не менее, на нем останавливаться мы не будем. Заметим лишь простое следствие: оператор, действующий из
 $L^1$ в $L^{\infty}$ как преобразование Фурье, является ограниченным.
 
-\begin{theorems}[Планшерель] Если $f\in L^2(\R )$, тогда существует предел (в $L^2)$ $\lim_{A\ra\infty}\wh{f_A}(x)$, где $\wh{f_A}(x)=\int_{-A}^A
-e^{-ixt}f(t)dt$. Этот предел и назовем преобразованием Фурье для функции $f$. Если кроме того $f\in
-L^1(\R )$, то этот предел совпадает с обыкновенным преобразованием Фурье.
+\begin{theorem}[Планшерель] Если $f\in L^2(\R )$, тогда существует предел (в $L^2)$ $\lim_{A\ra\infty}\wh{f_A}(x)$, где $\wh{f_A}(x)=\int_{-A}^A
+e^{-ixt}f(t)dt$. Этот предел и назовем преобразованием Фурье для
+функции $f$. Если кроме того $f\in L^1(\R )$, то этот предел совпадает
+с обыкновенным преобразованием Фурье.
+\end{theorem}
 
-\end{theorems}
-
-\begin{theorems}[Равенство Парсеваля]
-$\hn{\wh{f}}_{L^2}=\sqrt{2\pi}\hn{f}_{L^2}.$
-\end{theorems}
+\begin{theorem}[Равенство Парсеваля]
+  $\hn{\wh{f}}_{L^2}=\sqrt{2\pi}\hn{f}_{L^2}.$
+\end{theorem}
 
 Опираясь на результаты этих теорем, можно сказать, что мы распространили преобразование Фурье и на функции из
 $L^2$:
 $$\wh{f}:\;L^2(\R )\ra L^2(\R ).$$
 
-\begin{theorems}[1930г, Рисс-Торин] Пусть $T$ линейный оператор, $T:L^{p_1}(X,d\mu)\ra
+\begin{theorem}[1930г, Рисс-Торин] Пусть $T$ линейный оператор, $T:L^{p_1}(X,d\mu)\ra
 L^{q_1}(Y,d\eta)$ и $T:L^{p_2}(X,d\mu)\ra L^{q_2}(Y,d\nu)$. Пусть $1\le
 p_1,p_2,q_1,q_2\le\infty,\;p_1\neq p_2,\;q_1\neq q_2$ и
 \begin{equation}\label{102}
@@ -1955,18 +2030,21 @@ p_1,p_2,q_1,q_2\le\infty,\;p_1\neq p_2,\;q_1\neq q_2$ и
 \end{equation}
 
 Тогда $T:L^{p}(X,d\mu)\ra L^{q}(Y,d\nu).$
-\end{theorems}
+\end{theorem}
 
-Применим эту теорему к следующему случаю: $X=\R ,\;d\mu=d\nu=dx,\;p_1=1,\;p_2=2,\;q_1=\infty,\;q_2=2.$
-Пусть $p\in(1,2)$, тогда, очевидно, $\exi\theta\in(0,1):\;\frac{1-\theta}1+\frac{\theta}2=\frac1p.$ $q$ в
-этом случае определяется из равенства $\frac{1-\theta}{\infty}+\frac{\theta}2=\frac1q.$ Легко заметить, что
+Применим эту теорему к следующему случаю: $X=\R
+,\;d\mu=d\nu=dx,\;p_1=1,\;p_2=2,\;q_1=\infty,\;q_2=2.$ Пусть
+$p\in(1,2)$, тогда, очевидно, $\exi\theta\in(0,1):\;\frac{1-\theta}1+\frac{\theta}2=\frac1p.$ $q$ в
+этом случае определяется из равенства
+$\frac{1-\theta}{\infty}+\frac{\theta}2=\frac1q.$ Легко заметить, что
 $\frac1p+\frac1q=1.$ И мы пришли к
-\begin{theorems}[Хаусдорф-Юнг]
+
+\begin{theorem}[Хаусдорф-Юнг]
 Пусть $p\in[1,2],\;q\in[2,\infty],\;\frac1p+\frac1q=1$. Тогда $\wh{f}:L^p(\R )\ra
 L^q(\R ).$ Правильнее будет сформулировать теорему так: $f\in L^p(\R ),\;1\le
 p\le2\Ra \wh{f}(x)=\lim_{A\ra\infty} \wh{f_A}(x)$ (предел здесь в
 $L^q(\R )$).
-\end{theorems}
+\end{theorem}
 
 Вот так мы распространили преобразование Фурье с $L_1$ на $L_p,\;1\le p \le 2$. На $p>2$ распространить
 нельзя.
@@ -1981,16 +2059,20 @@ $$M\hn{f}_{(p,d\mu)}=M\hr{\int_X |f|^pd\mu}^{1/p}\ge \hr{\int_Y |Tf|^qd\nu}^{1/q
 \nu(E_{\si})\le\hr{\frac{M\hn{f}_{(p,d\mu)}}{\si}}^q.
 \end{equation}
 
-\defin Говорят, что оператор $T$ имеет \emph{слабый тип} $(p,q)$, если $\fa\si>0$
-выполнено (\ref{*}), где $M$ не зависит от $f$ и $1\le p,q\le\infty.$
+\begin{df}
+  Говорят, что оператор $T$ имеет \emph{слабый тип} $(p,q)$, если $\fa\si>0$
+  выполнено (\ref{*}), где $M$ не зависит от $f$ и $1\le p,q\le\infty.$
+\end{df}
 
-\defin Говорят, что оператор $T$ имеет \emph{сильный тип} $(p,q)$, если он действует как
-ограниченный из $L^p(X,d\mu)$ в $L^q(Y,d\nu).$
+\begin{df}
+  Говорят, что оператор $T$ имеет \emph{сильный тип} $(p,q)$, если он действует как
+  ограниченный из $L^p(X,d\mu)$ в $L^q(Y,d\nu).$
+\end{df}
 
-\begin{theorems}[Марцинкевич] Пусть $T$ имеет слабый тип
+\begin{theorem}[Марцинкевич] Пусть $T$ имеет слабый тип
 $(p_1,q_1)$ и $(p_2,q_2),\;1\le p_i\le q_i<\infty$. Тогда $T$ имеет сильный тип $(p,q)$, где $p$ и $q$
 определяются из (\ref{102}).
-\end{theorems}
+\end{theorem}
 
 Применим эту теорему к такому случаю: $X=Y=\R ,\;d\mu=dx,\;d\nu=\frac{dx}{x^2},\;Tf=x\wh{f}(x)$
 \begin{enumerate}
@@ -2013,7 +2095,7 @@ L^p(\R ),\;1<p<2,$ то $x\wh{f}(x)\in L^p\hr{\R ,\frac{dx}{x^2}}.$
 $$\int_{\R }|x\wh{f}(x)|^p\frac{dx}{x^2}\le M\int_{\R }|f(x)|^p
 dx.$$
 
-\begin{theorems}
+\begin{theorem}
 $$f\in L^p(\R ),\;1<p<2\Ra
 \int_{\R }|\wh{f}(x)|^px^{p-2}dx\le M_p\int_{\R }|f(x)|^pdx.$$ Т.е.
 \begin{enumerate}
@@ -2022,11 +2104,11 @@ $\wh{f}:L^p(\R )\ra L^p_{p-2}(\R ),\;1<p\le2$
 \item
 $\wh{f}:L^p_{p-2}(\R )\ra L^p(\R ),\;2\le p<\infty.$
 \end{enumerate}
-\end{theorems}
+\end{theorem}
 
 Введем новое пространство $L^p_{\al}(\R )$:
 $$\hn{f}_{p,\al}=\hr{\int_{\R }|f(t)|^p|t|^{\al}dt}^{1/p},\;1\le p<\infty,\;\al\in \R .$$
-\begin{theorems}[Питт]
+\begin{theorem}[Питт]
 Пусть
 
 \begin{center}$\left\{\begin{aligned}
@@ -2037,7 +2119,7 @@ $$\hn{f}_{p,\al}=\hr{\int_{\R }|f(t)|^p|t|^{\al}dt}^{1/p},\;1\le p<\infty,\;\al\
 \end{aligned}\right.$
 \end{center}
 Тогда $\wh{f}:L^p_{\al}(\R )\ra L^q_{\beta}(\R ).$
-\end{theorems}
+\end{theorem}
 
 \begin{wrapfigure}[10]{l}{220pt}
 \epsfbox{pictures.8}
@@ -2078,110 +2160,119 @@ y_0>0\;f(z)\xra{|z|\ra\infty}0$ в полуплоскости $y\ge y_0.$
 
 $$F(z)=\int\limits_0^{\infty}e^{izt}f(t)dt\quad (*).$$
 
-\begin{theorems}\label{104}
+\begin{theorem}\label{104}
 1. $f(x)\in L^p(\R ^+),\;1\le p\le2\Ra F(z)\in H^q.$ \\\hangindent=2.3cm 2. $F(z)\in
 H^p,\;1\le p\le2\Ra F(z)$ представима в виде (*) с $f\in L^q(\R ^+).$
-\end{theorems}
-\textbf{Доказательство:}
+\end{theorem}
+\begin{proof}
 
-1.
-\begin{equation}\label{101}
-F(z)=\int\limits_0^{\infty}e^{izt}f(t)dt,\quad f\in L^p(\R ^+),\;1\le p\le2.
-\end{equation}
-$|e^{izt}f(t)|=e^{-yt}|f(t)|$, поэтому интеграл в (\ref{101}) сходится абсолютно и равномерно, значит можно
-дифференцировать и значит есть аналитичность.
+  1.
+  \begin{equation}\label{101}
+    F(z)=\int\limits_0^{\infty}e^{izt}f(t)dt,\quad f\in L^p(\R ^+),\;1\le p\le2.
+  \end{equation}
+  $|e^{izt}f(t)|=e^{-yt}|f(t)|$, поэтому интеграл в (\ref{101}) сходится абсолютно и равномерно, значит можно
+  дифференцировать и значит есть аналитичность.
 
-$$F(x+iy)=\int\limits_0^{\infty}e^{ixt}(e^{-yt}f(t))dt.$$
-Но $e^{-yt}f(t)\in L^p(\R ^+)$ как произведение функций из $L^p(\R ^+)$. Теперь можно применить
-теорему Хаусдорфа-Юнга, согласно которой $\hn{F(x+iy)}_q\le c_p\hn{f}_p$. Отсюда и следует принадлежность $F$
-к классу $H^q.$
+  $$F(x+iy)=\int\limits_0^{\infty}e^{ixt}(e^{-yt}f(t))dt.$$
+  Но $e^{-yt}f(t)\in L^p(\R ^+)$ как произведение функций из $L^p(\R ^+)$. Теперь можно применить
+  теорему Хаусдорфа-Юнга, согласно которой $\hn{F(x+iy)}_q\le c_p\hn{f}_p$. Отсюда и следует принадлежность $F$
+  к классу $H^q.$
 
-2. Пусть $F\in H^p,\;1\le p\le 2.$ Фиксируем $y>0.$
+  2. Пусть $F\in H^p,\;1\le p\le 2.$ Фиксируем $y>0.$
 
-\begin{wrapfigure}[10]{l}{200pt}
-\epsfbox{pictures.7}
-\end{wrapfigure}
+  \begin{wrapfigure}[10]{l}{200pt}
+    \epsfbox{pictures.7}
+  \end{wrapfigure}
 
-$$\wh{F}_R(x+iy)=\frac1{2\pi}\int_{-R}^RF(t+iy)e^{-ixt}dt.$$
+  $$\wh{F}_R(x+iy)=\frac1{2\pi}\int_{-R}^RF(t+iy)e^{-ixt}dt.$$
 
-По одному из свойств функций из класса $H^p$, $F(z)\xra{|z|\ra{\infty}}0.$ И мы попадаем в
-условия леммы Жордана, которая утверждает, что тогда
-$$\frac1{2\pi}\int_{C_R}e^{-iwx}F(w+iy)dw\xra{R\ra{\infty}}0. $$
-Ну а по теореме Коши о вычетах:
-$$\wh{F}_R(x+iy)=\int_{-R}^R e^{-ixt}F(t+iy)dt=\int_{C_R}e^{-iwx}F(w+iy)dw\xra{R\ra{\infty}}0. $$
-Т.е. $x<0\Ra \wh{F}_R(x+iy)\xra{R\ra\infty}0$, т.е.
-$\wh{F}(x+iy)=0\;\fa x<0.$
+  По одному из свойств функций из класса $H^p$, $F(z)\xra{|z|\ra{\infty}}0.$ И мы попадаем в
+  условия леммы Жордана, которая утверждает, что тогда
+  $$\frac1{2\pi}\int_{C_R}e^{-iwx}F(w+iy)dw\xra{R\ra{\infty}}0. $$
+  Ну а по теореме Коши о вычетах:
+  $$\wh{F}_R(x+iy)=\int_{-R}^R e^{-ixt}F(t+iy)dt=\int_{C_R}e^{-iwx}F(w+iy)dw\xra{R\ra{\infty}}0. $$
+  Т.е. $x<0\Ra \wh{F}_R(x+iy)\xra{R\ra\infty}0$, т.е.
+  $\wh{F}(x+iy)=0\;\fa x<0.$
 
-Поскольку $F\in H^p,$ то $F(x+iy)\in L^p$ и значит $\wh{F}(x+iy)\in L^q.$ Но
-$\wh{F}(x+iy)\xra{y\ra0}\wh{F}(x)$ (сходимость в $L^q$). Поэтому $\wh{F}(x)=0$
-на $\R ^-.$
+  Поскольку $F\in H^p,$ то $F(x+iy)\in L^p$ и значит $\wh{F}(x+iy)\in L^q.$ Но
+  $\wh{F}(x+iy)\xra{y\ra0}\wh{F}(x)$ (сходимость в $L^q$). Поэтому $\wh{F}(x)=0$
+  на $\R ^-.$
 
-\begin{equation}\label{103}
-\int\limits_0^{\infty}e^{izt}\wh{F}(t)dt=|\text{равенство
-Парсеваля}|=\int_{\R }\wh{e^{izt}}F(t)dt=\ldots
-\end{equation}
+  \begin{equation}\label{103}
+    \int\limits_0^{\infty}e^{izt}\wh{F}(t)dt=|\text{равенство
+      Парсеваля}|=\int_{\R }\wh{e^{izt}}F(t)dt=\ldots
+  \end{equation}
 
-$$\wh{e^{izt}}=\frac1{2\pi}\int\limits_0^{\infty}e^{-iut}e^{izt}dt=\frac1{2\pi}\int\limits_0^{\infty}e^{-it(z-u)}dt=\left.\frac1{2\pi
-i(z-u)}e^{it(z-u)}\right|_{t=0}^{\infty}=\frac1{2\pi i}\frac1{u-z}.$$ Продолжаем равенство (\ref{103}):
-$$\ldots =\frac1{2\pi i}\int_{\R }\frac{F(t)}{t-z}dt=F(z),\quad Im\;z>0.$$
-Последнее равенство - известная теорема из комплексного анализа.$\quad\blacksquare$
+  $$\wh{e^{izt}}=\frac1{2\pi}\int\limits_0^{\infty}e^{-iut}e^{izt}dt=\frac1{2\pi}\int\limits_0^{\infty}e^{-it(z-u)}dt=\left.\frac1{2\pi
+    i(z-u)}e^{it(z-u)}\right|_{t=0}^{\infty}=\frac1{2\pi i}\frac1{u-z}.$$ Продолжаем равенство (\ref{103}):
+  $$\ldots =\frac1{2\pi i}\int_{\R }\frac{F(t)}{t-z}dt=F(z),\quad Im\;z>0.$$
+  Последнее равенство - известная теорема из комплексного анализа.
+\end{proof}
 
-\begin{theorems}[первая, Пэли-Винер]
+\begin{theorem}[первая, Пэли-Винер]
 Класс $H^2$ совпадает с классом функций, представимых в виде \\\hangindent=6.5cm (*) с $f\in
 L^2(\R ^+),\;Im\;z>0.$
-\end{theorems}
+\end{theorem}
 
 \subsection{Вторая и третья теоремы Пэли-Винера}
 В этом параграфе мы вернемся к теореме Пэли-Винера, изложенной в \S4.5 и докажем ее.
 
 $$F(z)=\int\limits_{-a}a e^{izt}f(t)dt.\quad(*)$$
 
-\begin{theorems}
+\begin{theorem}
 1. $f\in L^p(-a,a),\;1\le p \le2\Ra F(z)\in W^q_a.$ \\\hangindent=2.5cm 2. $F(z)\in W^p_a,\;1\le
 p\le2\Ra F(z)$ представляется в виде (*) с $f\in L^q(-a,a).$
-\end{theorems}
-\textbf{Доказательство:}
-\begin{enumerate}
-\item
-По неравенству Гельдера:
-$$|F(z)|\le\hn{e^{izt}}_q\hn{f}_p=C\hr{\int\limits_{-a}^a e^{-qyt}dt}^{1/q}\le C_1\left(\int\limits_0^a
-e^{q|y|t}dt\right)^{1/q}=C_1\hr{\frac{e^{q|y|a}-1}{q|y|}}\sim e^{a|y|}\le e^{a|z|}.$$
+\end{theorem}
+\begin{proof}
 
-Поэтому экспоненциальный тип у $F(z)$ не превосходит $a.$ Ну а то, что $F(x)\in L^q$ следует просто из
-теоремы Хаусдорфа-Юнга.
-\item
-Для доказательства второй части теоремы воспользуемся утверждением, которое не будем доказывать.
+  \begin{enumerate}
+  \item
+    По неравенству Гельдера:
+    $$|F(z)|\le\hn{e^{izt}}_q\hn{f}_p=C\hr{\int\limits_{-a}^a e^{-qyt}dt}^{1/q}\le C_1\left(\int\limits_0^a
+    e^{q|y|t}dt\right)^{1/q}=C_1\hr{\frac{e^{q|y|a}-1}{q|y|}}\sim e^{a|y|}\le e^{a|z|}.$$
 
-\begin{utv}[Boas <<Entire functions>>, 1954г.]
-$F(z)\in B^p_a\Ra F(z)e^{iaz}\in H^p (y>0).$
-\end{utv}
+    Поэтому экспоненциальный тип у $F(z)$ не превосходит $a.$ Ну а то, что $F(x)\in L^q$ следует просто из
+    теоремы Хаусдорфа-Юнга.
+  \item
+    Для доказательства второй части теоремы воспользуемся утверждением, которое не будем доказывать.
 
-Применяем это утверждение и теорему \ref{104} из предыдущего параграфа, получаем:
-$$F(z)e^{iaz}=\int\limits_0^{\infty}e^{izt}f_+(t)dt.$$
+    \begin{stm}[Boas <<Entire functions>>, 1954г.]
+      $F(z)\in B^p_a\Ra F(z)e^{iaz}\in H^p (y>0).$
+    \end{stm}
 
-Поэтому
+    Применяем это утверждение и теорему \ref{104} из предыдущего параграфа, получаем:
+    $$F(z)e^{iaz}=\int\limits_0^{\infty}e^{izt}f_+(t)dt.$$
 
-$$F(z)=\int\limits_0^{\infty}e^{iz(t-a)}f_+(t)dt=\intl{-a}{\infty}e^{izt}f_+(t+a)dt,\quad f_+(t+a)\in L^q(-a,\infty).$$
+    Поэтому
 
-Аналогично $F(-z)e^{iaz}\in H^p$ и поэтому
-$$F(z)=\int\limits_{-\infty}^a e^{izt}f_-(a-t)dt,\quad f_-(a-t)\in L^q(-\infty,a).$$
+    $$F(z)=\int\limits_0^{\infty}e^{iz(t-a)}f_+(t)dt=\intl{-a}{\infty}e^{izt}f_+(t+a)dt,\quad f_+(t+a)\in L^q(-a,\infty).$$
 
-Теперь только остается воспользоваться теоремой единственности для преобразования Фурье, откуда следует, что
-$f\in L^q(-a,a).\quad\blacksquare$
-\end{enumerate}
+    Аналогично $F(-z)e^{iaz}\in H^p$ и поэтому
+    $$F(z)=\int\limits_{-\infty}^a e^{izt}f_-(a-t)dt,\quad f_-(a-t)\in L^q(-\infty,a).$$
+
+    Теперь только остается воспользоваться теоремой единственности для преобразования Фурье, откуда следует, что
+    $f\in L^q(-a,a).$
+
+  \end{enumerate}
+\end{proof}
 Введем новый класс функций $H^p(-a,a)$. Он состоит из функций, аналитических в полосе $|y|<a$ и таких, что
 $$\sup_{|y|<a}\int_{\R }|f(x+iy)|^pdx<\infty.$$
 
 Пусть
 $$F(z)=\int_{\R }e^{izt}e^{-a|t|f(t)dt}.\quad(**)$$
 
-\begin{theorems}
+\begin{theorem}
 1. $f\in L^p(\R ),\;1\le p\le2\Ra F(z)\in H^q(-a,a).$\\\hangindent=2.5cm 2. $F(z)\in
 H^p,\;1\le p\le2\Ra F(z)$ представляется в виде (**) с $f\in L^q(\R ).$
-\end{theorems}
+\end{theorem}
 
-\begin{theorems}[третья, Пэли-Винер]
+\begin{theorem}[третья, Пэли-Винер]
 $H^2(-a,a)$ совпадает с классом функций, представимых в виде (**) с $f\in L^2(\R).$
-\end{theorems}
+\end{theorem}
 
 \end{document}
+
+
+%% Local Variables:
+%% eval: (setq compile-command (concat "latex  -halt-on-error -file-line-error " (buffer-name)))
+%% End:
