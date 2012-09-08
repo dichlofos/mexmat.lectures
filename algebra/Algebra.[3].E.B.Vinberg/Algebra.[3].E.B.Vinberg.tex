@@ -474,9 +474,9 @@ $$A=\langle e_1\rangle\oplus\ldots\oplus\langle e_n\rangle\simeq
 \end{theorem}
 
 \begin{proof}
-Пусть $\{e_1,\ldots,e_n\}$ и $\{e'_1,\ldots,e'_m\}$~--- два базиса.
+Пусть $\hc{\enumun e}$ и $\hc{e'_1,\ldots,e'_m}$~--- два базиса.
 Предположим, что $m>n$. Имеем
-$(e'_1,\ldots,e'_m)=(e_1,\ldots,e_n)\mathop{C}\limits_{n\times m}$.
+$$(e'_1,\ldots,e'_m)=(e_1,\ldots,e_n)\mathop{C}\limits_{n\times m}$$
 Можно рассматривать $C$ как матрицу над $\mathbb{Q}$. Т.к. $m>n$, то
 столбцы линейно зависимы над $\mathbb{Q}$, а значит, и над
 $\mathbb{Z}$. Но тогда $e_1',\ldots,e_m'$ линейно зависимы в $A$~---
@@ -494,16 +494,19 @@ $\{e'_1,\ldots, e'_n\}$~--- базис $\Leftrightarrow$ $\det C=\pm1$.
 \end{theorem}
 
 \begin{proof}
-1) Пусть $\det C=\pm1$. Тогда $C^{-1}$ целочисленна и
-$(e_1,\p\ldots, e_n)=(e'_1,\ldots,e'_n)C^{-1}$ $\Rightarrow$
-$e_1',\ldots,e_n'$ порождают $A$. Т.к. столбцы матрицы $C$ линейно
-независимы, то $\{e'_1,\ldots, e'_n\}$ линейно независимы.
+  \begin{enumerate}
+  \item Пусть $\det C=\pm1$. Тогда $C^{-1}$ целочисленна и
+    $(e_1,\p\ldots, e_n)=(e'_1,\ldots,e'_n)C^{-1}$ $\Rightarrow$
+    $e_1',\ldots,e_n'$ порождают $A$. Т.к. столбцы матрицы $C$ линейно
+    независимы, то $\{e'_1,\ldots, e'_n\}$ линейно независимы.
 
-2) Пусть $\{e'_1,\ldots, e'_n\}$~--- базис. Тогда $(e_1,\ldots,
-e_n)=(e'_1,\ldots,e'_n)D$, где $D$~--- целочисленная матрица
-$\Rightarrow$ $(e_1,\ldots, e_n)=(e_1,\ldots,e_n)CD$ $\Rightarrow$
-$CD=E$ $\Rightarrow$ $\det C\cdot \det D=1$ $\Rightarrow$ $\det
-C=\pm1$.
+  \item Пусть $\{e'_1,\ldots, e'_n\}$~--- базис. Тогда $(e_1,\ldots,
+    e_n)=(e'_1,\ldots,e'_n)D$, где $D$~--- целочисленная матрица, откуда
+    \begin{equation*}
+      (e_1,\ldots, e_n)=(e_1,\ldots,e_n)CD\Rightarrow
+      CD=E \Rightarrow \det C\cdot \det D=1 \Rightarrow \det C=\pm1
+    \end{equation*}
+  \end{enumerate}
 \end{proof}
 %----------------------------------------------------------%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -706,17 +709,18 @@ $i=1,\ldots,m-1$.
 \begin{proof}
 Пусть $\{e_1,\ldots,e_n\}$~--- произвольный базис группы $L$ и
 $\{f_1,\ldots,f_m\}$~--- базис $N$. Тогда
-$(f_1,\ldots,f_m)\p=(e_1,\ldots,e_n)\mathop{C}\limits_{n\times m}$
+$$(f_1,\ldots,f_m)\p=(e_1,\ldots,e_n)\mathop{C}\limits_{n\times m}$$
 ($C$~--- целочисленная матрица). При элементарных преобразованиях
-базиса группы $L$ $(e_1',\ldots,e_n')=(e_1,\ldots,e_n)U$ ($U$~---
+базиса группы $L$ $$(e_1',\ldots,e_n')=(e_1,\ldots,e_n)U$$ ($U$~---
 элементарная матрица) $\Rightarrow$
 $(f_1,\ldots,f_m)\p=(e_1',\ldots,e_n')U^{-1}C$, т.е. в $C$
 происходят целочисленные элементарные преобразования строк.
 
 При элементарных преобразованиях базиса подгруппы $N$ получаем:
-$(f_1',\ldots,f_m')=(f_1,\ldots,f_m)V$ $\Rightarrow$
-$(f_1',\ldots,f_m')=(e_1,\ldots,e_n)CV$, т.е. в $C$ происходят
-целочисленные элементарные преобразования столбцов.
+$$(f_1',\ldots,f_m')=(f_1,\ldots,f_m)V \Rightarrow
+(f_1',\ldots,f_m')=(e_1,\ldots,e_n)CV$$
+т.е. в $C$ происходят целочисленные элементарные преобразования
+столбцов.
 
 По лемме~\ref{1.V} матрицу $C$ можно таким образом привести к виду
 $C\p=\diag(u_1,\ldots,u_m)$. Т.к. $\rk C=m$, то $u_i\neq 0$ и
@@ -835,11 +839,11 @@ a_1\rangle_{p^{k_1}}\oplus\ldots\oplus\langle a_r\rangle_{p^{k_r}}$
 верно для групп порядка $p^l$, $l\leqslant k$. Пусть
 $k_1=\ldots=k_s=1$, $k_{s+1}>1$.
 
-Рассмотрим подгруппу $pA=\{pa: a\in A\}$. Ясно, что
+Рассмотрим подгруппу $pA=\hc{pa: a\in A}$. Ясно, что
 $$pA=\langle
 pa_s\rangle_{p^{k_{s+1}-1}}\oplus\ldots\oplus\langle
 pa_r\rangle_{p^{k_r-1}}.$$ По предположению индукции (для $pA$)
-набор $(k_{s+1}-1,\ldots,k_r-1)$ определен однозначно. Значит, набор
+набор $(k_{s+1}-1,\ldots,k_r-1)$ определен однозначно. Значит, и набор
 $(k_{s+1},\ldots,k_r)$ определен однозначно.
 
 Число $s$ определяется из равенства $s+k_{s+1}+\ldots+k_r=k$.
@@ -1431,11 +1435,17 @@ $A_n'=A_n$.
 
 \begin{note}
 Все произведения пар независимых транспозиций сопряжены не только в
-$S_n$ но и в $A_n$: $\forall \, i,j,k,l\quad
-(ij)(kl)=\tau((12)(34))\tau^{-1}$. Если $\tau$ четна, то все
+$S_n$ но и в $A_n$:
+\begin{equation*}
+  \forall \, i,j,k,l\quad
+  (ij)(kl)=\tau((12)(34))\tau^{-1}
+\end{equation*}
+Если $\tau$ четна, то все
 доказано. Если $\tau$ нечетна, то заменим $\tau$ на
 $\tau'=\tau(12)$. Тогда
-$\tau'((12)(34))\tau'^{-1}=\tau((12)(34))\tau^{-1}$.
+\begin{equation*}
+  \tau'((12)(34))\tau'^{-1}=\tau((12)(34))\tau^{-1}
+\end{equation*}
 \end{note}
 
 \begin{lemma}
@@ -2542,7 +2552,7 @@ K$).
 
 Кольцо $L$ можно рассматривать как векторное пространство над $K$.
 Из предыдущего следует, что
-$\{1,\alpha,\alpha^2,\ldots,\alpha^{n-1}\}$~--- базис этого
+$$\hc{1,\alpha,\alpha^2,\ldots,\alpha^{n-1}}$$ является базисом этого
 пространства, и, значит, $\dim_K L=n$.
 
 \begin{ex}
