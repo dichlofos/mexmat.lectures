@@ -9,6 +9,7 @@
 \setsansfont{CMU Sans Serif}
 \setmonofont{CMU Typewriter Text}
 \setmathfont{xits-math.otf}
+\DeclareMathOperator{\EF}{EF}
 \DeclareMathOperator{\Cnst}{Cnst}
 \DeclareMathOperator{\Fn}{Fn}
 \DeclareMathOperator{\Tm}{Tm_Ω}
@@ -49,7 +50,9 @@
 
 \contrib{Anonymus} -- уважаемые авторы \LaTeX{} лекций 2006 года.
 
-\contrib{Богатов Дмитрий <illusion.of.life92@gmail.com>} -- слияние источников и верстка.
+\contrib{Богатов Дмитрий <illusion.of.life92@gmail.com>} -- слияние
+источников и верстка.  Будьте крайне осторожны, ибо верстальщик крайне
+смутно представляет, о чем идет речь.
 
 \section{The beginning}
 \begin{df}
@@ -950,9 +953,126 @@ $\hc{\enumun x}⊆\FV(φ)$.  Тогда
 \end{df}
 
 \paragraph{Игра Эренфойхта длины $n$}
-Пусть $A$,$B$ -- модели.
-\end{document}
+\newcommand{\prettycircle}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-1.1pt} {#1}}}}
+\newcommand{\Pa}{\prettycircle{$∀$}}
+\newcommand{\Pe}{\prettycircle{$∃$}}
+Пусть $A$,$B$ -- модели. Обозначим первого игрока \Pa, второго \Pe.
+Опишем шаг игры:
+\begin{enumerate}
+\item \Pa\  выбирает элемент из $A$ или $B$.
+\item \Pe\  выбирает элеменит из $A$, если \Pa\ выбрал элемент из $B$ и наоборот.
 
+\end{enumerate}
+При этом \Pe\ хочет построить частичнй изоморфизм на выбранных
+элементах, \Pa\ мешает. Выигрышная стратегия строиться за \Pe.
+
+\begin{df}
+  $(A,\bar a) ≈_n (B,\bar b)$, если в $\EF(A,B)$ есть выигрышная стратегия за \Pe.
+\end{df}
+\begin{lemma}
+  $≈_n$ -- отношение эквивалентности.
+\end{lemma}
+\begin{lemma}
+  $(A,\bar a) ≈_{n+1}(B,b)$ тогда и только тогда, когда
+  \begin{equation*}
+    \bcase{
+      ∀α∈A ∃b∈B\cln (A,\bar aα) ≈_n (B,\bar bβ)\\
+      ∀β∈B ∃α∈A\cln (A,\bar aα) ≈_n (B,\bar bβ)
+      }
+  \end{equation*}
+\end{lemma}
+
+\begin{theorem}
+  $(A,\bar a) ≈_n (B,\bar b)$ $⇒$ $(A,\bar a) ≡_n (B,\bar b)$
+\end{theorem}
+
+\begin{lemma}
+  Пусть $Ω=\hc{=²}$. Тогда, если  $\hm{A}≥n$, $\hm{B}≥n$, то $A≡_nB$.
+\end{lemma}
+
+\begin{df}
+  \begin{align}
+    a\!\!↓ = A\vert\hc{x\vert x ≤a}\\
+    b\!\!↑= A\vert\hc{x\vert x≥a}
+  \end{align}
+\end{df}
+\tbk
+
+\section{Арифметика}
+Будем рассматривать сигнатуру $Ω = \hc{+,·,0,'}$.
+
+\begin{df}
+  Аксиоматика Робинсона($Q$):
+  \begin{nums}{-3}
+  \item $x'=y' ⇒ x = y$
+  \item $x'≠0$
+  \item $x≠0 → ∃y(y'=x)$
+  \item $x+0=x$
+  \item $x+y' = (x+y)'$
+  \item $x·0=0$
+  \item $x·y' = x·y+x$
+  \end{nums}
+\end{df}
+\begin{df}
+  Аксиома индукции: $\ol ∀(φ(0)∧∀x(φ(x)→φ(x'))→∀xφ(x))$
+\end{df}
+\begin{df}
+  Аксиоматика Пеано($PA$ -- аксиоматика Робинсона, дополненная аксиомой индуции
+\end{df}
+\begin{stm}
+  Аксиоматики $PA$, $Q$ -- непротиворечивы, т.к имеют стандартную модель $ℵ⊧PA$.
+\end{stm}
+\begin{df}
+  Пусть $T$ -- арифметическая теория. Функция $f\cln ℵ^k→ℵ$
+  называется представимой в $T$, если существует арифметическая
+  формула $φ(\enumun x, y)$, что $∀\enumuk m ∈ℵ$, что
+  \begin{equation*}
+    \begin{aligned}
+      f(\enumuk m) = n & ⇒ T⊦∀y(φ(\enumuk m, y) ↔y = n) \\
+      f(\enumuk m) ≠ n &⇒ T⊦¬φ(\enumuk m, n)
+    \end{aligned}
+  \end{equation*}
+\end{df}
+
+\begin{lemma}
+  $ m≠n ⇒T⊦(m≠n)$
+\end{lemma}
+\newcommand{\prs}{\ensuremath{\ol{\vphantom{e}\smash{⊂}}}}
+\begin{df}
+  $T_1\prs T_2$, если все теоремы $T_1$ доказуемы в $T_2$.
+\end{df}
+
+\begin{theorem}[Геделя]
+  Пусть $f\cln ℵ^k→ℵ$ -- тотальная вычислимая функция. $Q\prs T$, $ℵ⊧T$.
+  Тогда $f$ -- представима в $T$.
+\end{theorem}
+
+\begin{stm}
+Всякое перечислимое множество $S⊆ℵ$ есть множество значений тотальной
+вычислимой функции.
+\end{stm}
+
+\begin{df}
+$S⊆ℵ^k$ -- арифметическое, если $S$ определимо арифметической формулой.
+\end{df}
+
+\begin{theorem}
+  Если $S⊆ℵ$ -- перечислимо, то $S$ -- арифметическое.
+\end{theorem}
+
+\begin{theorem}[Существенная неразрешимость арифметики]
+  Если $Q⊆T⊆TA$, то $T$ -- неразрешима.
+\end{theorem}
+
+\begin{theorem}[Тарского]
+  Пусть $Q⊆T⊆TA$. Тогда
+  \begin{nums}{3}
+  \item $\hc{φ\vert ℵ⊧φ,\,φ∈\CFm}$ -- неарифметическое.
+  \item Не существует арифметичкской формулы $τ(x)$, что
+    $∀φ∈\CFm$ $T⊦(φ↔τ(φ))$
+  \end{nums}
+\end{theorem}
+\end{document}
 %% Local Variables:
 %% compile-command: "xelatex -halt-on-error -file-line-error main.tex"
 %% End:
