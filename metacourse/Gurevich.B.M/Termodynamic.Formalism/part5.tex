@@ -1,0 +1,107 @@
+\section{Ещё одна лекция}
+Перейдем другому подходу -- пусть теперь энергия взаимодействия бывает
+не только у соседей. Теперь полагаем, что $T = \Z^d$, $\hm{S} < ∞$,
+$V⊂T$ -- сосуд, $t∈T$, $V+t$ -- тоже сосуд. Отображение
+$τ_t\type{Ω_{V+t}}{Ω_V}$ задается естественным образом: $(τ_tω)(t') =
+ω(t+t')$.
+\begin{df}
+  Потенциал  $\displaystyle Φ=\hc{Φ_V\type{Ω_V}{\R}, \hm{V} < ∞}$
+\end{df}
+\begin{denote}
+  $\displaystyle \Fc = \hc{V⊂T\cln \hm{V} < ∞}$
+\end{denote}
+
+В дальнейшем нас будут интересовать только трансляционно-инвариантные
+потенциалы, т.е $Φ_{V+t}(ω) = Φ_V(τ_t(ω))$.
+
+\begin{df}
+  Взаимодействие конечного радиуса («финитное»), если
+  \begin{equation*}
+    ∃V_0∈\Fc\cln ∀V(∃ω∈Ω_V\cln Φ_V(ω) → ∃t\cln V+t ⊆ V_0)
+  \end{equation*}
+\end{df}
+\newcommand{\nw}[1]{\hn{#1}_w}
+\newcommand{\ns}[1]{\hn{#1}_s}
+\begin{df}
+  Определим нормы потенциалов
+  \begin{align*}
+    \nw Φ =\suml{0∈V∈\Fc}{}\frac{1}{\hm V}\max_{ω∈Ω_V}\hm{Φ_V(ω)}\\
+    \ns Φ = \suml{0∈V∈\Fc}{}\max_{ω∈Ω_V}\hm{Φ_V(ω)}
+  \end{align*}
+\end{df}
+
+\begin{problem}
+  С любой из этих норм пространство $Φ$ является Банаховым со
+  стандартным сложением и умножением.
+\end{problem}
+
+\begin{df}
+  Давлением называется величина, определяемая как $P≝\liml{\hm
+    V→+∞}\frac{\ln Z_V}{\hm V}$, где
+  \begin{equation*}
+    E_V(ω) = \suml{V'⊆V}{}Φ_{V'}(ω) \qquad
+    Z_V = \suml{ω∈Ω_V}{} e^{-E_V(ω)}
+  \end{equation*}
+\end{df}
+\begin{petit}
+  Шесть строчек, на которых парсер захлебнулся.
+\end{petit}
+
+\begin{df}
+  Последовательность $\hc{a_n}_{n=1}^∞$ называется субаддитивной, если
+  $a_{n+m} ≤ a_n + a_m$. Тогда существует
+  $$\liml{n→+∞}\frac{a_n}{n} = \inf\limits_n \frac{a_n}{n}$$
+\end{df}
+
+\begin{lemma}
+  $\displaystyle Z_{V_1\sqcup V_2} ≤ Z_{V_1}·Z_{V_2}·e^{N(V_2)\ns Φ}$,
+  где $N(V_2)$, грубо говоря, описывает размер приграничной полосы в
+  терминах $Λ$.
+\end{lemma}
+\begin{note}
+  Далее, полагаем, что $\hn ·  ≡ \ns ·$
+\end{note}
+\begin{proof}
+  \newcommand{\vsc}{{V_1\sqcup V_2}}
+  Для произвольного $ω∈Ω_{\vsc}$ распишем
+  \begin{equation*}
+    E_\vsc(ω) = E_{V_1}(ω\evn {V_1}) + E_{V_2}(ω\evn {V_2}) +E_{V_1|V_2}(ω)
+  \end{equation*}
+  \begin{petit}
+    Почему бы не использовать динамические переменные в математическом
+    тексте?
+  \end{petit}
+  \begin{denote}
+    Множество $V$ обладает свойством $⊛$, обозначаем $⊛V$, если
+    $V⊂\vsc, V∩V_1 ≠ ∅, V∩V_2 ≠ ∅$.
+  \end{denote}
+  \indent где $E_{V_1|V_2}(ω) = \suml{⊛V}{} Φ(ω\evn V)$
+
+
+  Для того, что бы оценить $E_\vsc(ω)$, возьмем любую точку $t$ из
+  $V_2$ и рассмотрим все $V$, содержащие эту точку. Оцениваем их
+  количество как количество множеств $V$, для которых $V∩V_2 ≠ ∅$.
+  \begin{petit}
+    Парсер сдох. Попробуйте запустить его снова. Пропущено примерно
+    половина страницы.
+  \end{petit}
+\end{proof}
+\begin{denote}
+  Пусть $\bar a = (a_1\sco a_d) ∈ ℵ^d$. Тогда будем рассматривать
+  $V(a) = [0, a_1 -1] × [0, a_2 -1] ×…× [0, a_d-1]$. Будем писать $a→∞$, подразумевая, что
+  $\min\limits_{i}a_i → ∞$.
+\end{denote}
+
+\newcommand{\zvfr}{\frac{\ln{Z_{V(a)}}}{\hm{V(a)}}}
+\newcommand{\zvfra}{\frac{\ln{Z_{V(a^*)}}}{\hm{V(a^*)}}}
+\newcommand{\limai}{\liml{a→+∞}{}}
+\begin{theorem}
+  Существует предел $\limai\zvfr$
+\end{theorem}
+\begin{proof}
+  Определим $P ≝ \inf\limits_a \zvfr$. Пусть $P > -∞$. Тогда $∀ε>0$ $ ∃\,a^*$, что
+  $\zvfra < P+ε$. Пусть $a = n*a^*$ (т.е $a_j = n*a_j^*$).
+\end{proof}
+%% Local Variables:
+%% compile-command: "xelatex -halt-on-error -file-line-error main.tex"
+%% End:
