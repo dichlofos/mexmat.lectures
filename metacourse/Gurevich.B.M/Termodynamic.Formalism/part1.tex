@@ -1,32 +1,32 @@
-\section{Лекция}
+\section{Распределение Гиббса на конечном множестве.}
 \newcommand{\sumx}{\ensuremath{\suml{x∈X}{}}}
 Рассмотрим систему с конечным множеством состояний $X=\hc{x_i}$. Для
 произвольного состояния $x∈X$ полагаем определенными следующие функции
-\begin{enumerate}
+\begin{nums}{-2}
 \item $E(x)$ -- энергия системы в состоянии $x$. $E\type X\R$
 \item $P(x)$  -- вероятность состояния, $\sumx P(x) = 1$
-\end{enumerate}
+\end{nums}
 \begin{df}
-  Постулатом Гибса называется следующее соотношение
+  Постулатом Гиббса называется следующее соотношение
   \begin{equation}
     \label{dist:gibs}
     \begin{array}{cc}
       P(x) = ce^{-βE(x)} & c = \frac 1{\sumx e^{-βE(x)}}
     \end{array}
   \end{equation}
-  \indent  Константа $c$ называется статистической суммой. В англоязычной
+  \indent  Константа $c$ называется \emph{статистической суммой}. В англоязычной
   литературе -- `partition function'.
 \end{df}
 \newcommand{\intX}{\intl{X}{}}
-Приведем некое обоснование постулата Гибса. Рассмотрим следующую функцию от распределения
-\begin{equation*}
-  φ(\vec P) = -\sumx P(x)\ln P\,(x) - \sumx P(x)E(x) = -\intX \ln P\, dP -\intX EdP
-\end{equation*}
-\begin{df}
+Приведем некое обоснование постулата Гиббса. Рассмотрим следующую функцию от распределения
+\begin{denote}
+$    φ(\vec P) ≝ -\sumx P(x)\ln P\,(x) - \sumx P(x)E(x) = -\intX \ln P\, dP -\intX EdP $
+\end{denote}
+\begin{denotes}
   Выражение $(-\intX \ln P dP)$ называется энтропией, $(\intX EdP\, )$ -- средней энергией.
-\end{df}
+\end{denotes}
 \begin{lemma}
-  Распределение Гибса~(\ref{dist:gibs}) является стационарной точкой функции $φ(\vec P)$.
+  Распределение Гиббса~(\ref{dist:gibs}) является стационарной точкой функции $φ(\vec P)$.
 \end{lemma}
 \begin{proof}
  Введем обозначения $P(x_i) = p_i$, $E(x_i) = u_i$. Множество всех
@@ -38,7 +38,7 @@
 
 $φ(p_1,…,p_n) = -\sumiun p_i\ln p_i - \sumiun p_iu_i$,
 
-где $u_i$ полагаем фиксированными. В соотвествии с теорией
+где $u_i$ полагаем фиксированными. В соответствии с теорией
 вариационного исчисления, вводим функцию
 \begin{equation*}
   \begin{array}{lr}
@@ -68,12 +68,13 @@ $φ(p_1,…,p_n) = -\sumiun p_i\ln p_i - \sumiun p_iu_i$,
 \end{df}
 
 \begin{df}
-  Функция $g$ -- выпуклая, если
-  \begin{equation*}
-    g(ap+bp') ≤ag(p)+bg(p')
-  \end{equation*}
+  Функция $g$ -- выпуклая, если $ g(ap+bp') ≤ag(p)+bg(p') $
 \end{df}
 
 Отсюда получаем, что распределение Гиббса действительно доставляет
 максимум функции $φ$, выпуклой как линейной комбинации выпуклых
 функций и с линейным ограничением на $\bar p$.
+
+%% Local Variables:
+%% compile-command: "xelatex -halt-on-error -file-line-error main.tex"
+%% End:
