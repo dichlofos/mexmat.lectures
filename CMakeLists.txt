@@ -18,6 +18,10 @@ set (GS_OPTS -sDEVICE=pdfwrite -r1200 -dNOPAUSE -dBATCH -g9912x14028)
 set (RAR_TEXT_OPTS a -md4096 -s -m5)
 set (RAR_BIN_OPTS a -md4096 -s -m5)
 
+set (RUN_LATEX ${CMAKE_SOURCE_DIR}/run-latex.sh)
+set (RUN_DVIPS ${CMAKE_SOURCE_DIR}/run-dvips.sh)
+set (RUN_MPOST ${CMAKE_SOURCE_DIR}/run-mpost.sh)
+
 message (STATUS "Found LaTeX: ${LATEX}")
 message (STATUS "Found MetaPost: ${MPOST}")
 
@@ -25,11 +29,11 @@ macro(mmPicture)
     set (PN "${ARGV0}")
     set (TN "${ARGV1}")
     add_custom_command(OUTPUT
-        "${PN}.done"
-        COMMAND "${MPOST}" ${MPOST_OPTS} "${PN}.mp" && touch "${PN}.done"
+        "generated/${PN}.done"
+        COMMAND "${RUN_MPOST}" ${PN}.done ${MPOST} ${MPOST_OPTS} "../${PN}.mp"
         DEPENDS "${PN}.mp"
     )
-    add_custom_target("MetaPosing ${PN} for ${TN}" ALL DEPENDS "${PN}.done")
+    add_custom_target("MetaPosing ${PN} for ${TN}" ALL DEPENDS "generated/${PN}.done")
     add_dependencies("Make ${TN}.dvi" "MetaPosing ${PN} for ${TN}")
     message(STATUS "Clean files: ${AUX_CLEAN_FILES}")
     set (AUX_CLEAN_FILES
@@ -45,14 +49,14 @@ macro(texify)
     set (RN "${ARGV1}")
     set (PN "${ARGV2}")
     add_custom_command(OUTPUT
-        "${FN}.dvi"
-        COMMAND "${LATEX}" ${LATEX_OPTS} "${FN}.tex"
+        "generated/${FN}.dvi"
+        COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "../${FN}.tex"
         DEPENDS "${FN}.tex"
     )
     add_custom_command(OUTPUT
-        "${FN}.ps"
-        COMMAND "${DVIPS}" "${FN}.dvi"
-        DEPENDS "${FN}.dvi"
+        "generated/${FN}.ps"
+        COMMAND "${RUN_DVIPS}" ${DVIPS} "${FN}.dvi"
+        DEPENDS "generated/${FN}.dvi"
     )
     add_custom_command(OUTPUT
         "${FN}.pdf"
@@ -79,12 +83,13 @@ macro(texify)
         COMMAND cp "${FN}.pdf" "${RN}.pdf"
         DEPENDS "${FN}.pdf"
     )
-    add_custom_target("Make ${FN}.dvi" ALL DEPENDS "${FN}.dvi")
-    add_custom_target("Make ${FN}.ps" ALL DEPENDS "${FN}.ps")
-    add_custom_target("Make ${FN}.pdf" ALL DEPENDS "${FN}.pdf")
-    add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
-    add_custom_target("Make ${RN}-pdf.rar" ALL DEPENDS "${RN}-pdf.rar")
-    add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
+    add_custom_target("Make ${FN}.dvi" ALL DEPENDS "generated/${FN}.dvi")
+    add_custom_target("Make ${FN}.ps" ALL DEPENDS "generated/${FN}.ps")
+    # disable for a while, to test only building while moving to generated/ structure
+    #add_custom_target("Make ${FN}.pdf" ALL DEPENDS "${FN}.pdf")
+    #add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
+    #add_custom_target("Make ${RN}-pdf.rar" ALL DEPENDS "${RN}-pdf.rar")
+    #add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
 
     if (PN)
         message(STATUS "Processing pictures for ${FN}...")

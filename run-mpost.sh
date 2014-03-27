@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -xe
 done_fn="$1"
 mpost_cmd="$2"
