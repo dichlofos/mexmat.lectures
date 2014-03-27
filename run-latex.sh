@@ -3,9 +3,17 @@ set -xe
 latex_cmd="$1"
 shift
 
+function link() {
+    if ! [ -e ../*.$1 ] ; then
+        return 0
+    fi
+    for i in ../*.$1 ; do
+        ln -sf "$i" .
+    done
+}
+
 mkdir -p generated
 cd generated
-for i in ../*.{tex,sty,eps} ; do
-    ln -sf "$i" .
-done
+link "tex"
+link "eps"
 $latex_cmd $@
