@@ -98,15 +98,9 @@ macro(texify)
         mmPicture("${PN}" "${FN}")
     endif (PN)
 
-    # TODO: this will not work for generated/
     set (AUX_CLEAN_FILES
         "${AUX_CLEAN_FILES}"
-        "${FN}.aux"
-        "${FN}.log"
-        "${FN}.toc"
-        "${FN}.ind"
-        "${FN}.ilg"
-        "${FN}.idx"
+        "generated"
     )
     set_directory_properties(PROPERTIES
         ADDITIONAL_MAKE_CLEAN_FILES "${AUX_CLEAN_FILES}")
