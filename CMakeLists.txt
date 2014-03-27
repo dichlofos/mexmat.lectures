@@ -48,6 +48,8 @@ macro(texify)
     set (FN "${ARGV0}")
     set (RN "${ARGV1}")
     set (PN "${ARGV2}")
+    # TODO: change to format
+    # texify (SOURCE ..., ..., ... PICTURES ..., ... INCLUDE ...)
     add_custom_command(OUTPUT
         "generated/${FN}.dvi"
         COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "../${FN}.tex"
