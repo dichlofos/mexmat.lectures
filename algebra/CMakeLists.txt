@@ -1,5 +1,5 @@
-add_subdirectory(E.S.Golod)
-add_subdirectory(Algebra.[3].E.B.Vinberg)
+add_subdirectory(Golod.E.S)
+add_subdirectory(Vinberg.E.B)
 add_subdirectory(Algebra.[3].V.N.Latyshev)
 add_subdirectory(EP.Algebra.[1.3].E.S.Golod)
 add_subdirectory(EP.Algebra.[1.3].V.N.Latyshev)
