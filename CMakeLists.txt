@@ -13,7 +13,7 @@ find_program(GS gs)
 find_program(RAR winrar)
 
 set (MPOST_OPTS --tex=latex)
-set (LATEX_OPTS --src)
+set (LATEX_OPTS --src-specials --interaction=nonstopmode)
 set (GS_OPTS -sDEVICE=pdfwrite -r1200 -dNOPAUSE -dBATCH -g9912x14028)
 set (RAR_TEXT_OPTS a -md4096 -s -m5)
 set (RAR_BIN_OPTS a -md4096 -s -m5)
@@ -52,11 +52,13 @@ macro(texify)
         "generated/${FN}.dvi"
         COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "../${FN}.tex"
         DEPENDS "${FN}.tex"
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
     add_custom_command(OUTPUT
         "generated/${FN}.ps"
         COMMAND "${RUN_DVIPS}" ${DVIPS} "${FN}.dvi"
         DEPENDS "generated/${FN}.dvi"
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
     add_custom_command(OUTPUT
         "${FN}.pdf"
@@ -95,6 +97,8 @@ macro(texify)
         message(STATUS "Processing pictures for ${FN}...")
         mmPicture("${PN}" "${FN}")
     endif (PN)
+
+    # TODO: this will not work for generated/
     set (AUX_CLEAN_FILES
         "${AUX_CLEAN_FILES}"
         "${FN}.aux"
