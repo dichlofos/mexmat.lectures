@@ -1,0 +1,21 @@
+DocName = "EP - ODE - V.M. Zakalukin"
+RarName = "ep-ode-zakalukin"
+
+t:
+ latex --src $(DocName).tex
+ dvips $(DocName).dvi
+a: t
+ wt $(RarName).rar $(DocName).ps "e2006*.ps"
+r: a c
+c:
+ del *.dvi *.mpx *.log *.aux *.toc
+p: t
+ gs -sDEVICE=pdfwrite -sOutputFile=$(DocName).pdf -r1200 -dNOPAUSE -dBATCH -g9912x14028 $(DocName).ps
+
+ gs -sDEVICE=pdfwrite -sOutputFile=e2006-m1.pdf -r1200 -dNOPAUSE -dBATCH -g9912x14028 e2006-m1.ps
+ gs -sDEVICE=pdfwrite -sOutputFile=e2006-m2.pdf -r1200 -dNOPAUSE -dBATCH -g9912x14028 e2006-m2.ps
+ gs -sDEVICE=pdfwrite -sOutputFile=e2006-m5.pdf -r1200 -dNOPAUSE -dBATCH -g9912x14028 e2006-m5.ps
+ gs -sDEVICE=pdfwrite -sOutputFile=e2006-m6.pdf -r1200 -dNOPAUSE -dBATCH -g9912x14028 e2006-m6.ps
+b: p
+ wr $(RarName)-pdf.rar $(DocName).pdf "e2006*.pdf"
+all: a b
