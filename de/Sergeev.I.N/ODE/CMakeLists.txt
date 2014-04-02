@@ -1,1 +1,0 @@
-texify(ODE-Sergeev-PR pr-ode-sergeev pictures)
