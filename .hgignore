@@ -6,3 +6,7 @@ CMakeFiles
 .*\.log$
 .*\.toc$
 .*/generated$
+
+# spikes
+de/Shaposhnikova.T.A/PDE/scan-polina/pde-lectures-shaposhnikova-hq.djvu
+de/Shaposhnikova.T.A/PDE/scan-polina/pde-lectures-shaposhnikova-lq.djvu
