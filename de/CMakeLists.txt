@@ -1,1 +1,6 @@
+add_subdirectory(Filimonov.A.M)
+add_subdirectory(Ilyashenko.Yu.S)
+add_subdirectory(Kondratiev.V.A)
+add_subdirectory(Radkevich.E.V)
 add_subdirectory(Sergeev.I.N)
+add_subdirectory(Zakalukin.V.M)
