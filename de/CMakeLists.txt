@@ -1,4 +1,5 @@
 add_subdirectory(Filimonov.A.M)
+add_subdirectory(Filippov.A.F)
 add_subdirectory(Ilyashenko.Yu.S)
 add_subdirectory(Kondratiev.V.A)
 add_subdirectory(Radkevich.E.V)
