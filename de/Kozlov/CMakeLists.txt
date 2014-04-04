@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add de/Kozlov")
+add_subdirectory(Ergodic.Theory)
