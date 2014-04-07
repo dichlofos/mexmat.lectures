@@ -1,2 +1,3 @@
-add_subdirectory(EP.Continuum.Mechanics.[Ext].M.E.Eglit)
+add_subdirectory(Arafaylov.S.I)
+add_subdirectory(Eglit.M.E)
 add_subdirectory(Karapetyan.A.V)
