@@ -1,4 +1,4 @@
-add_subdirectory(EP.Number.Theory.[7].A.I.Galochkin)
-add_subdirectory(EP.Number.Theory.[7].Yu.V.Nesterenko)
-add_subdirectory(Number.Theory.[7].A.I.Galochkin)
-add_subdirectory(Number.Theory.[7].Yu.V.Nesterenko)
+add_subdirectory(Chubarikov.V.N)
+add_subdirectory(Euler.Function)
+add_subdirectory(Galochkin.A.I)
+add_subdirectory(Nesterenko.Yu.V)
