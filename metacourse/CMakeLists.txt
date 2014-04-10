@@ -1,5 +1,6 @@
 add_subdirectory(Dyachenko.M.I)
 add_subdirectory(Gurevich.B.M)
+add_subdirectory(Latyshev.V.N)
 add_subdirectory(Lupanov.O.B)
 add_subdirectory(Rozanova.O.S)
 add_subdirectory(Rozendorn.E.R)
