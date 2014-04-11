@@ -1,2 +1,6 @@
-add_subdirectory(Economics.[3].O.M.Peganova)
-add_subdirectory("Math.History.[8].A.V.Dorofeeva+G.S.Smirnova")
+add_subdirectory(Diploma.Blank)
+add_subdirectory(Dorofeeva.A.V,Smirnova.G.S)
+add_subdirectory(Economics.Seminars)
+add_subdirectory(Math.History.Department)
+add_subdirectory(Math.History.Summary)
+add_subdirectory(Peganova.O.M)
