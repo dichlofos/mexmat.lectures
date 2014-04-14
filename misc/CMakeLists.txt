@@ -1,6 +1,7 @@
 add_subdirectory(Diploma.Blank)
 add_subdirectory(Dorofeeva.A.V,Smirnova.G.S)
 add_subdirectory(Economics.Seminars)
+add_subdirectory(Holikov.A.A)
 add_subdirectory(Math.History.Department)
 add_subdirectory(Math.History.Summary)
 add_subdirectory(Peganova.O.M)
