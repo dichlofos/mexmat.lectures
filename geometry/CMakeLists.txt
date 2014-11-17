@@ -1,5 +1,6 @@
 add_subdirectory(Bogaty.S.A)
 add_subdirectory(Fomenko.A.T)
+add_subdirectory(Gusein-Zade.S.M)
 add_subdirectory(Popelensky.F.Yu)
 add_subdirectory(Shafarevich.A.I)
 add_subdirectory(Sklyarenko.E.G)
