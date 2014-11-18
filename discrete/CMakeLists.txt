@@ -1,3 +1,5 @@
+add_subdirectory(Chashkin.A.V)
 add_subdirectory(DM)
 add_subdirectory(Lupanov.O.B)
+add_subdirectory(Tarannikov.Yu.V)
 add_subdirectory(Ugolnikov.A.B)
