@@ -1,5 +1,6 @@
 add_subdirectory(Bulinsky.A.V)
 add_subdirectory(Denisov.I.V)
+add_subdirectory(Gurevich.B.M)
 add_subdirectory(Kozhevnikova.I.A)
 add_subdirectory(misc)
 add_subdirectory(Oseledets)
