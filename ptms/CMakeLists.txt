@@ -1,3 +1,4 @@
+add_subdirectory(Boldin.M.V)
 add_subdirectory(Bulinskaya.E.V)
 add_subdirectory(Bulinsky.A.V)
 add_subdirectory(Denisov.I.V)
