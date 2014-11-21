@@ -1,6 +1,7 @@
 add_subdirectory(Diploma.Blank)
 add_subdirectory(Dorofeeva.A.V,Smirnova.G.S)
 add_subdirectory(Economics.Seminars)
+add_subdirectory(English.Topics)
 add_subdirectory(EP.Civil.Law)
 add_subdirectory(Gena.E.I)
 add_subdirectory(Holikov.A.A)
