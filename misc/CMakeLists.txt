@@ -1,3 +1,4 @@
+add_subdirectory(Afanasjeva.L.G)
 add_subdirectory(Diploma.Blank)
 add_subdirectory(Dorofeeva.A.V,Smirnova.G.S)
 add_subdirectory(Economics.Seminars)
