@@ -1,0 +1,18 @@
+DocName = "civdef-answers-cw-2"
+RarName = "civdef-answers-cw-2"
+
+t:
+# mp --tex=latex t.mp
+ latex --src $(DocName).tex
+ dvips $(DocName).dvi
+a: t
+ wt $(RarName).rar $(DocName).ps
+c:
+ del *.dvi *.mpx *.log *.aux *.toc
+p: t
+ gs -sDEVICE=pdfwrite -sOutputFile=$(DocName).pdf -r1200 -dNOPAUSE -dBATCH -g9912x14028 $(DocName).ps
+b: p
+ wr $(RarName)-pdf.rar $(DocName).pdf
+rr:
+ wr "civdef-cw-qa.rar" "civdef-quest-cw-1.doc" "civdef-quest-cw-2.doc" "civdef-answers-cw-1.doc" "civdef-answers-cw-2.pdf"
+all: a b rr
