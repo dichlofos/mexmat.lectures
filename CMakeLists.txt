@@ -119,6 +119,9 @@ macro(mmPack)
     add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
 endmacro(mmPack)
 
+macro(mmToDo)
+    message(STATUS "TODO: ${ARGV0}")
+endmacro(mmToDo)
 
 add_subdirectory(algebra)
 add_subdirectory(calculus)
