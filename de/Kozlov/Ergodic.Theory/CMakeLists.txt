@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add de/Kozlov")
+mmtodo("TODO: Add de/Kozlov")

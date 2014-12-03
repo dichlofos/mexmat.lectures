@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add de/Filippov.A.F/ODE")
+mmtodo("Translate de/Filippov.A.F/ODE to LaTeX")
