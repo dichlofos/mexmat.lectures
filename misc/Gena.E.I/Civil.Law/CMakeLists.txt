@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add misc/Gena.E.I/Civil.Law")
+mmtodo("Add misc/Gena.E.I/Civil.Law")

@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add misc/Economics.Seminars")
+mmtodo("Add misc/Economics.Seminars")

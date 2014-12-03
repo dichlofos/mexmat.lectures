@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add ptms/Boldin.M.V/Statistics.of.Empirical.Processes")
+mmtodo("Add ptms/Boldin.M.V/Statistics.of.Empirical.Processes")

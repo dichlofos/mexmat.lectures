@@ -1,2 +1,2 @@
 add_subdirectory(composite)
-message(WARNING "TODO: Add mechanics/Kovalev.V.L/Continuum.Mechanics")
+mmtodo("Add mechanics/Kovalev.V.L/Continuum.Mechanics")

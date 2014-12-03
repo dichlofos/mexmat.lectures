@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add discrete/Tarannikov.Yu.V/PR.Discrete")
+mmtodo("Add discrete/Tarannikov.Yu.V/PR.Discrete")

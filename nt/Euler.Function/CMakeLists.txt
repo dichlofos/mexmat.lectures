@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add nt/Euler.Function")
+mmtodo("Add nt/Euler.Function")

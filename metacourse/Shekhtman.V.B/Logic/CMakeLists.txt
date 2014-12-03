@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add metacourse/Shekhtman.V.B/Logic")
+mmtodo("Add metacourse/Shekhtman.V.B/Logic")

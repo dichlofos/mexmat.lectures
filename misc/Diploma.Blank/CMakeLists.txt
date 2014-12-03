@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add misc/Diploma.Blank")
+mmtodo("Add misc/Diploma.Blank")

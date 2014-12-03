@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add nt/Galochkin.A.I/Number.Theory.7/another2")
+mmtodo("Add nt/Galochkin.A.I/Number.Theory.7/another2")

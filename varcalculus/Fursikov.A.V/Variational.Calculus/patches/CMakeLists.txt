@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add varcalculus/Fursikov.A.V/Variational.Calculus/patches")
+mmtodo("Add varcalculus/Fursikov.A.V/Variational.Calculus/patches")

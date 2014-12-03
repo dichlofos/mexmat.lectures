@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add physics/Galtsov.D.V/Math.Additions.to.Quantum.Mechanics")
+mmtodo("Add physics/Galtsov.D.V/Math.Additions.to.Quantum.Mechanics")

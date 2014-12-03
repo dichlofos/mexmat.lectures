@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add ptms/misc/PR.Statistics")
+mmtodo("Add ptms/misc/PR.Statistics")

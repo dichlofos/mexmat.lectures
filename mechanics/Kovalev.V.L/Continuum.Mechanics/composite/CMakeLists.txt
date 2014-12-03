@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add mechanics/Kovalev.V.L/Continuum.Mechanics/composite")
+mmtodo("Add mechanics/Kovalev.V.L/Continuum.Mechanics/composite")

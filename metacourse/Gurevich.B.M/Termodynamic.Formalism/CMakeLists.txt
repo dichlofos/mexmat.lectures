@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add metacourse/Gurevich.B.M/Termodynamic.Formalism")
+mmtodo("Add metacourse/Gurevich.B.M/Termodynamic.Formalism")
