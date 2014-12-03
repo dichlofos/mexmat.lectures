@@ -1,1 +1,1 @@
-texify (PR.ODE.PAA pr-ode-prikhodko)
+add_subdirectory(PR.ODE)
