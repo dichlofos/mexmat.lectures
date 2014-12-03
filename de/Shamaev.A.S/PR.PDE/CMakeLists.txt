@@ -1,1 +1,1 @@
-message(WARNING "TODO: Add de/Shamaev.A.S/PR.PDE")
+mmtodo("TeXify de/Shamaev.A.S/PR.PDE")
