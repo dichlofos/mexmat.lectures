@@ -1,1 +1,3 @@
-mmtodo("Add metacourse/Shekhtman.V.B/Logic")
+texify (Logic.ShVB logic-shekhtman pictures)
+add_subdirectory(add)
+add_subdirectory(problems)
