@@ -1,1 +1,1 @@
-texify (Meteorology.RER meteorology-rozendorn)
+texify (Meteorology.RER meteorology-m-rozendorn)
