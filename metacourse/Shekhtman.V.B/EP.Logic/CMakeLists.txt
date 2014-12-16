@@ -1,1 +1,1 @@
-texify (EP.Logic.SVB ep-logic-shekhtman)
+texify (EP.Logic.ShVB ep-logic-shekhtman)
