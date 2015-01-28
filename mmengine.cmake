@@ -16,7 +16,6 @@ macro(mmPicture)
     )
     add_custom_target("MetaPosing ${PN} for ${TN}" ALL DEPENDS "generated/${PN}.done")
     add_dependencies("Make ${TN}.dvi" "MetaPosing ${PN} for ${TN}")
-    message(STATUS "Clean files: ${AUX_CLEAN_FILES}")
     set (AUX_CLEAN_FILES
         "${AUX_CLEAN_FILES}"
         "${PN}.log"
