@@ -6,7 +6,7 @@ for c in $filez ; do
         continue
     fi
     d=$(dirname $c)
-    sed -i -e 's:Add $d:Add:' $c
+    sed -i -e "s:Add $d:Add:" $c
     echo $d
     echo $c
     echo '==='
