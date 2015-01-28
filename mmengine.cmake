@@ -101,5 +101,5 @@ macro(mmPack)
 endmacro(mmPack)
 
 macro(mmToDo)
-    message(STATUS "TODO: ${ARGV0}")
+    message(STATUS "TODO: ${CMAKE_CURRENT_SOURCE_DIR}: ${ARGV0}")
 endmacro(mmToDo)
