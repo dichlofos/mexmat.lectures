@@ -101,5 +101,6 @@ macro(mmPack)
 endmacro(mmPack)
 
 macro(mmToDo)
-    message(STATUS "TODO: ${CMAKE_CURRENT_SOURCE_DIR}: ${ARGV0}")
+    string(REPLACE "${CMAKE_SOURCE_DIR}/" "" _relative_source_dir "${CMAKE_CURRENT_SOURCE_DIR}")
+    message(STATUS "TODO: ${ARGV0} at ${_relative_source_dir}")
 endmacro(mmToDo)

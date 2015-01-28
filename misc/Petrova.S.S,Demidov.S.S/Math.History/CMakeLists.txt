@@ -1,2 +1,2 @@
-mmtodo("Add misc/Petrova.S.S,Demidov.S.S/Math.History")
+mmtodo("Add")
 # mathhistory-petrova-demidov

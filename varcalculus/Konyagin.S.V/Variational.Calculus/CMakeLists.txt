@@ -1,2 +1,2 @@
-mmtodo("Add varcalculus/Konyagin.S.V/Variational.Calculus, need sources")
+mmtodo("Add, need sources")
 # variationalcalculus-konyagin

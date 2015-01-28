@@ -1,1 +1,1 @@
-mmtodo("Add metacourse/Shekhtman.V.B/Logic/add")
+mmtodo("Add")

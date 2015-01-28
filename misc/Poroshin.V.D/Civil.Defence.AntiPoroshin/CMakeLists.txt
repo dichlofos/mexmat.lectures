@@ -1,2 +1,2 @@
-mmtodo("Add misc/Poroshin.V.D/Civil.Defence.AntiPoroshin")
+mmtodo("Add")
 # civdef.rar

@@ -1,1 +1,1 @@
-mmtodo("Add misc/Diploma.Blank")
+mmtodo("Add")

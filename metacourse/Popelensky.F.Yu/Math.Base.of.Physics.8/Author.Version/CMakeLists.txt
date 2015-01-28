@@ -1,2 +1,2 @@
-mmtodo("Add metacourse/Popelensky.F.Yu/Math.Base.of.Physics.8/Author.Version")
+mmtodo("Add")
 #mathbaseofphysics-8s-popelensky-author-pdf.rar

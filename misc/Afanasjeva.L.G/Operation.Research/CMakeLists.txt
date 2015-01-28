@@ -1,2 +1,2 @@
-mmtodo("Add misc/Afanasjeva.L.G/Operation.Research")
+mmtodo("Add")
 # operationresearch-afanasjeva.rar

@@ -1,1 +1,1 @@
-mmtodo("Add misc/Economics.Seminars")
+mmtodo("Add")
