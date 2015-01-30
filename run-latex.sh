@@ -16,6 +16,7 @@ function link() {
 
 mkdir -p generated
 cd generated
+link "sty"
 link "tex"
 link "eps"
 if ! $latex_cmd "$@" ; then
