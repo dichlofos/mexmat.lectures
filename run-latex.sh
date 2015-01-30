@@ -19,6 +19,9 @@ cd generated
 link "sty"
 link "tex"
 link "eps"
+# pictures
+link "1"
+
 if ! $latex_cmd "$@" ; then
     rm -f *.dvi
     rm -f *.ps
