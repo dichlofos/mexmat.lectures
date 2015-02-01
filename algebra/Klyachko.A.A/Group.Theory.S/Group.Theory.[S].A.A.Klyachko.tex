@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper,draft]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{dmvn}
@@ -11,20 +11,10 @@
 \textwidth=16cm%
 \textheight=686pt%
 \makeindex
-\newcommand{\inst}{}
 \begin{document}
 \begin{center}{\sf Записи лекций СПЕЦКУРСА по ТЕОРИИ ГРУПП (А.А.
 Клячко)}
 \end{center}
-\begin{petit}
-  После перевода данной работы на \LaTeX и dmvn-пакет,
-  были потеряны значения следующих макросов:
-  \begin{verbatim}
-    \Mq \Mz \Mn \Mp \inst \Ck \cod
-   \end{verbatim}
-  Нашедшему просьба прислать патч.
-\end{petit}
-
 \noindent {\small Везде нет различия между обозначениями $\subset$
 и $\subseteq$ --- оба означают нестрогое включение. Как правило,
 мы пишем $H<G$, если $H$ --- подгруппа $G$, и $S\subset G$, если
@@ -116,8 +106,8 @@ A (b\leqslant a \rightarrow b=a)$.
 каждая цепь в непустом ЧУМ'е ограничена сверху, то в нём есть
 максимальный элемент.}
 
-\begin{theorem}Во всяком векторном пространстве существует
-базис.
+\begin{theorem}
+Во всяком векторном пространстве существует базис.
 \end{theorem}
 
 \begin{proof} Действительно, если у нас есть возрастающая цепь
@@ -259,16 +249,19 @@ $A<C'<C$. Тогда $C=C'\oplus C''$ и $B=H\oplus C''\oplus C'$, что
 Пересечение полных подгрупп не всегда полно.
 \end{note}
 
-\begin{ex}$\widetilde{\Mz}=\Mq$.
+\begin{ex}
+$\widetilde{\Mz}=\Mq$.
 \end{ex}
 
-\begin{ex}$\widetilde{\Mz_p}=\Mz_{p^\infty}=\cup(\Mz_p\subset\Mz_{p^2}\subset\Mz_{p^3}\subset
+\begin{ex}
+$\widetilde{\Mz_p}=\Mz_{p^\infty}=\cup(\Mz_p\subset\Mz_{p^2}\subset\Mz_{p^3}\subset
 \dots)$.
 \end{ex}
 
 \begin{problem} Проверить, что это
 пополнение.
 \end{problem}
+
 \inst Пусть $x\in\Mz_{p^n}$ и $(q,p)=1$.
 Тогда $1=p^nd_1+qd_2$ и $x=xp^nd_1+xqd_2=qd_2x$ $d_2x$ --- искомый
 корень. В $\Mz_{p^\infty}$ нет собственных полных подгрупп,
@@ -351,8 +344,9 @@ $\bigoplus\limits_{i\in\Mn}\Mq\oplus\bigoplus\limits_{i\in\Mn}C_i$
 $B$ и $G=B\oplus H$. Тогда $H$ --- редуцирована. Таким образом,
 доказана
 
-\begin{theorem}Любая абелева группа раскладывается в
-прямое произведение полной и редуцированной.$\square$
+\begin{theorem}
+Любая абелева группа раскладывается в
+прямое произведение полной и редуцированной. $\square$
 \end{theorem}
 
 \subsection{Категорный язык}
@@ -569,7 +563,8 @@ X\rangle=\{\prod\limits_{finite}x_i^{\varepsilon_i}:~x_i\in X,
  X,~g_i\in G,~\varepsilon_i=\pm 1\}$
 --- {\em нормальная подгруппа, порождённая $X$ {\em (\/}нормальное замыкание\index{нормальное замыкание}{\em )\/}}.
 
-\begin{ex} Если $A=\langle X\rangle$ и $B=\langle Y\rangle$, то
+\begin{ex}
+Если $A=\langle X\rangle$ и $B=\langle Y\rangle$, то
 $[A,B]=\ncl{\{[x,y]:~x\in X,~y\in Y\}}=C$.
 
 Включение $C\subset[A,B]$ очевидно. Чтобы убедиться в
@@ -579,7 +574,8 @@ x_ky_1\dots y_m=$ \par\hfill$=(x_1\dots x_k)^{-1}{y_m}^{-1}\dots
 y_2^{-1}x_1\dots x_ky_2\dots y_m=\dots=e$.$\square$
 \end{ex}
 
-\begin{ex} Если $A=\ncl{X}$ и $B=\langle Y\rangle$, то $[A,B]=\ncl{\{[x,y]:~x\in X,~y\in
+\begin{ex}
+Если $A=\ncl{X}$ и $B=\langle Y\rangle$, то $[A,B]=\ncl{\{[x,y]:~x\in X,~y\in
 Y\}}=C$.
 
 Опять же, нас интересует включение $[A,B]\subset C$. Рассмотрим
@@ -614,12 +610,14 @@ $[\gamma_i,\gamma_j]=\big[\gamma_i,[\gamma_{j-1},G]\big]=[\gamma_{j-1},G,\gamma_
 $[x_1,\dots,x_n]\in\gamma_n$.
 
 \vskip 2pt Пусть $a\in\gamma_i,~b\in\gamma_j,~c\in\gamma_k$, тогда
-$[a,b]=[b,a]^{-1}$, $[a,bc]=[a,c][a,b][a,b,c]=
-[a,b][a,c]\big[[a,c],[a,b]\big][a,b,c]=[a,b][a,c]\pmod{\gamma_{i+j+k}}$,
+$[a,b]=[b,a]^{-1}$,
+$$[a,bc]=[a,c][a,b][a,b,c]=
+[a,b][a,c]\big[[a,c],[a,b]\big][a,b,c]=[a,b][a,c]\pmod{\gamma_{i+j+k}},$$
 поскольку $[a,b,c]\in\gamma_{i+j+k}$ и
 $\big[[a,c],[a,b]\big]\in\gamma_{2i+j+k}$, а также
-$[a,b,c^a]=\big[[a,b],c[c,a]\big]=\big[[a,b],c\big]
-\big[[a,b],[c,a]\big]\pmod{\gamma_{j+i+k+i+k}}$. Отсюда имеем:
+$$[a,b,c^a]=\big[[a,b],c[c,a]\big]=\big[[a,b],c\big]
+\big[[a,b],[c,a]\big]\pmod{\gamma_{j+i+k+i+k}}.$$
+Отсюда имеем:
 \begin{center}
 $ab=ba\pmod{\gamma_{i+j}}$
 \\ $[a,bc]=[a,b][a,c]\pmod{\gamma_{i+j+k}}$
@@ -748,7 +746,8 @@ $\frac{H\cap\gamma_i}{H\cap\gamma_{i+1}}\subset\frac{\gamma_i}{\gamma_{i+1}}$.
 y_1,\dots,y_{n_1}\rangle H\cap\gamma_2= \langle
 y_1,\dots,y_{n_1}\rangle\langle y'_1,\dots,y'_{n_2}\rangle
 H\cap\gamma_3=...=\langle y_1,\dots,y_{n_k}^{(k)}\rangle$, что и
-доказывает теорему.\end{proof}
+доказывает теорему.
+\end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{ex}\index{пример!не конечно порождённой подгруппы в конечно порождённой группе}
@@ -831,15 +830,19 @@ $\pi$-примарной}\index{группа!$\pi$-примарная}, где $
 числа из $\pi$.
 
 \begin{theorem}
-{$G$ --- нильпотентная. Следующие свойства переносятся с $G/G'$ на
+$G$ --- нильпотентная. Следующие свойства переносятся с $G/G'$ на
 $G$:
 \par $\left.0\right)$ нетривиальность;
-\par $\left.1\right)$ порождённость множеством $X$, т.е. если $X\subset
-G$ такое, что $\langle X\rangle=G\pmod{G/G'}$ (т.е. ${\langle
-X\rangle G'=G}$), то $\langle X\rangle$=G;
+\par $\left.1\right)$ порождённость множеством $X$, т.е. если
+$X\subset G$ такое, что
+$$
+\langle X\rangle=G\pmod{G/G'}\mbox{ (т.е. }\langle
+X\rangle G'=G\mbox{), то }\langle X\rangle =G;
+$$
 \par $\left.2\right)$ $\pi$-примарность;
 \par $\left.3\right)$ конечность;
-\par $\left.4\right)$ полнота.}\label{from quotient to group}
+\par $\left.4\right)$ полнота.
+\label{from quotient to group}
 \end{theorem}
 
 \begin{proof} $\left.1\right)$ Индукция по членам нижнего центрального
@@ -853,7 +856,7 @@ $\gamma_k=\langle X\rangle\gamma_k$ для всех $k$; спускаясь до
 $\gamma_{s+1}$ будем иметь утверждение теоремы.
 
 $\left.2\right)$ Индукция по членам нижнего центрального ряда:
-нужно доказать, что $G/\gamma_s(G)$ --- $\pi$-примарна, т.е. что
+нужно доказать, что $G/\gamma_s(G)$ является $\pi$-примарной, т.е. что
 для каждого $g\in G$ существует $n$ --- $\pi$-число, такое, что
 $g^n\in\gamma_s$. Для этого достаточно показать, что
 $\gamma_i/\gamma_{i+1}$ --- $\pi$-примарна при всех $i$.
@@ -862,9 +865,7 @@ $[\gamma_i,\gamma_i]\subset\gamma_{i+1}$ стало быть, $\gamma_i$
 доказывать $\pi$-примарность образующих. Пусть $x\in\gamma_{i-1}$
 и $y\in G$, a $n$ --- такой, что $y^n\in\gamma_2$. Рассмотрим
 $[x,y]$ ($\gamma_i=[\gamma_{i-1},G]$). Тогда
-$[x,y]^n=[x,y^n]\pmod{\gamma_{i+1}}=$
-
-\hfill$=1\pmod{\gamma_{i+1}}$.
+$$[x,y]^n=[x,y^n]\pmod{\gamma_{i+1}}=1\pmod{\gamma_{i+1}}.$$
 
 $\left.3\right)$ Из $\left.1\right)$ имеем конечную порождённость.
 В то же время $G/G'$
@@ -2289,7 +2290,7 @@ a=(_{2~1}^{1~0}),b=(_{0~1}^{1~2})\rangle\subset\mathbf{SL}_2(\Mz)$.
 ($a^k(_y^x)=(_{y+2kx}^{~~~x})$, $b^k(_y^x)=(_{~~~y}^{x+2ky})$),
 переставляя области $X$ и $Y$:
 
-\begin{figure}[h]%
+\begin{figure}[ht]%
 \hfil\epsffile{groups10.eps}\hfil
 \end{figure}
 \end{ex}
