@@ -30,10 +30,8 @@ if ! $latex_cmd "$@" > $log_file 2>&1 ; then
     echo "    $latex_cmd $@"
     echo "Removing output files"
     rm -f *.dvi
-    rm -f *.ps
-    rm -f *.pdf
     rm -f *.aux
-    echo "==================================== ERROR LOG =========="
+    echo "==================================== LATEX ERROR LOG ===="
     cat $log_file
     echo "==================================== END ================"
     exit 1
