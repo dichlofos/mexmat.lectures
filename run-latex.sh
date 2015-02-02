@@ -6,11 +6,12 @@ latex_cmd="$1"
 shift
 
 function link() {
-    if ! [ -e ../*.$1 ] ; then
-        return 0
-    fi
-    for i in ../*.$1 ; do
-        ln -sf "$i" .
+    linked_files="../*.$1"
+    for f in $linked_files ; do
+        if ! [ -e "$f" ] ; then
+            return 0
+        fi
+        ln -sf "$f" .
     done
 }
 
@@ -22,13 +23,18 @@ link "eps"
 # pictures
 link "1"
 
-if ! $latex_cmd "$@" ; then
+log_file="run_latex.log"
+
+if ! $latex_cmd "$@" > $log_file 2>&1 ; then
+    echo "There was an error processing command:"
+    echo "    $latex_cmd $@"
+    echo "Removing output files"
     rm -f *.dvi
     rm -f *.ps
     rm -f *.pdf
     rm -f *.aux
-    echo "There was an error processing command:"
-    echo "    $latex_cmd $@"
-    echo "Removing output files"
+    echo "==================================== ERROR LOG =========="
+    cat $log_file
+    echo "==================================== END ================"
     exit 1
 fi

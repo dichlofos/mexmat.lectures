@@ -149,7 +149,7 @@ macro(mm_texify_ex)
 
     add_custom_command(OUTPUT
         "generated/${FN}.dvi"
-        COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "../${FN}.tex"
+        COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "${FN}.tex"
         DEPENDS "${FN}.tex" ${include_}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
