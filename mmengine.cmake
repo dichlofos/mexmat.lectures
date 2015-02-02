@@ -127,7 +127,7 @@ macro(mm_texify_ex)
             set(mode_ "include")
         elseif (arg_ STREQUAL "ARCHIVE")
             set(mode_ "archive")
-        #message("!!!!!!!!!!!!!!!!!!arg: ${arg_}")
+        # check mode arguments
         elseif (mode_ STREQUAL "sources")
             set (sources_ ${sources_} ${arg_})
         elseif (mode_ STREQUAL "pictures")
@@ -142,10 +142,10 @@ macro(mm_texify_ex)
     set (FN "${sources_}")
     set (PN "${pictures_}")
     set (RN "${archive_}")
-    message("  Processing ${sources_}")
-    message("    pictures: ${pictures_}")
-    message("    include: ${include_}")
-    message("    archive: ${include_}")
+    #message("  Processing ${sources_}")
+    #message("    pictures: ${pictures_}")
+    #message("    include: ${include_}")
+    #message("    archive: ${include_}")
 
     add_custom_command(OUTPUT
         "generated/${FN}.dvi"
@@ -207,16 +207,33 @@ macro(mm_texify_ex)
 
 endmacro(mm_texify_ex)
 
-macro(mmPack)
-    set (RN "${ARGV0}")
-    set (FN "${ARGV1}")
+macro(mm_pack)
+    set (args_ ${ARGN})
+    set (include_)
+    set (archive_)
+
+    set (mode_ "begin")
+    foreach (arg_ IN LISTS args_)
+        if (arg_ STREQUAL "INCLUDE")
+            set(mode_ "include")
+        elseif (arg_ STREQUAL "ARCHIVE")
+            set(mode_ "archive")
+        # check mode arguments
+        elseif (mode_ STREQUAL "include")
+            set (include_ ${include_} ${arg_})
+        elseif (mode_ STREQUAL "archive")
+            set (archive_ ${arg_})
+        endif()
+    endforeach()
+
+    set (archive_full_ "${archive_}.7z")
     add_custom_command(OUTPUT
-        "${RN}.rar"
-        COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}.rar" "${FN}"
-        DEPENDS "${FN}"
+        ${archive_full_}
+        COMMAND "${ARCHIVER}" ${ARCHIVER_OPTS} "${archive_full_}" "${include_}"
+        DEPENDS "${include_}"
     )
-    add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
-endmacro(mmPack)
+    add_custom_target("Make ${archive_full_}" ALL DEPENDS "${archive_full_}")
+endmacro(mm_pack)
 
 macro(mmToDo)
     string(REPLACE "${CMAKE_SOURCE_DIR}/" "" _relative_source_dir "${CMAKE_CURRENT_SOURCE_DIR}")

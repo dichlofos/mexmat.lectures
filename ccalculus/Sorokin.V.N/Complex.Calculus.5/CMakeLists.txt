@@ -1,1 +1,4 @@
-mmPack(complex.calculus-5s-sorokin "*.doc")
+mm_pack(
+    INCLUDE "*.doc"
+    ARCHIVE complex.calculus-5s-sorokin
+)
