@@ -39,8 +39,9 @@ fi
 if grep -q "Rerun" $log_file ; then
     echo "Rebuilding $@ to get proper xrefs"
     $latex_cmd "$@" > $log_file.2 2>&1
-fi
-if grep -q "Rerun" $log_file.2 ; then
-    echo "Something goes wrong with xref rebuilding, please check $log_file.2"
-    exit 1
+
+    if grep -q "Rerun" $log_file.2 ; then
+        echo "Something goes wrong with xref rebuilding, please check $log_file.2"
+        exit 1
+    fi
 fi

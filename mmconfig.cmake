@@ -25,6 +25,7 @@ set (ARCHIVER_OPTS ${P7Z_OPTS})
 set (RUN_LATEX ${CMAKE_SOURCE_DIR}/run-latex.sh)
 set (RUN_DVIPS ${CMAKE_SOURCE_DIR}/run-dvips.sh)
 set (RUN_MPOST ${CMAKE_SOURCE_DIR}/run-mpost.sh)
+set (RUN_ARCHIVER ${CMAKE_SOURCE_DIR}/run-archiver.sh)
 
 message (STATUS "Found LaTeX: ${LATEX}")
 message (STATUS "Found MetaPost: ${MPOST}")

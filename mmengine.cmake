@@ -228,8 +228,8 @@ macro(mm_pack)
 
     set (archive_full_ "${archive_}.7z")
     add_custom_command(OUTPUT
-        ${archive_full_}
-        COMMAND "${ARCHIVER}" ${ARCHIVER_OPTS} "${archive_full_}" "${include_}"
+        "generated/${archive_full_}"
+        COMMAND "${RUN_ARCHIVER}" ${ARCHIVER} ${ARCHIVER_OPTS} "generated/${archive_full_}" "${include_}"
         DEPENDS "${include_}"
     )
     add_custom_target("Make ${archive_full_}" ALL DEPENDS "${archive_full_}")
