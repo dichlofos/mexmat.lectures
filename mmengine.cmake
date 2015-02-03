@@ -168,16 +168,20 @@ macro(mm_texify)
         COMMAND "${GS}" ${GS_OPTS} "-sOutputFile=${FN}.pdf" "${FN}.ps"
         DEPENDS "${FN}.ps"
     )
-    add_custom_command(OUTPUT
-        "${RN}.rar"
-        COMMAND "${RAR}" ${RAR_TEXT_OPTS} "${RN}.rar" "${FN}.ps"
-        DEPENDS "${FN}.ps"
+    mm_pack(
+        INCLUDE "${FN}.ps"
+        ARCHIVE ${archive_}
     )
-    add_custom_command(OUTPUT
-        "${RN}-pdf.rar"
-        COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}-pdf.rar" "${FN}.pdf"
-        DEPENDS "${FN}.pdf"
-    )
+    #add_custom_command(OUTPUT
+    #    "${RN}.rar"
+    #    COMMAND "${RAR}" ${RAR_TEXT_OPTS} "${RN}.rar" "${FN}.ps"
+    #    DEPENDS "${FN}.ps"
+    #)
+    #add_custom_command(OUTPUT
+    #    "${RN}-pdf.rar"
+    #    COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}-pdf.rar" "${FN}.pdf"
+    #    DEPENDS "${FN}.pdf"
+    #)
     add_custom_command(OUTPUT
         "${RN}.pdf"
         COMMAND cp "${FN}.pdf" "${RN}.pdf"
@@ -187,7 +191,7 @@ macro(mm_texify)
     add_custom_target("Make ${FN}.ps" ALL DEPENDS "generated/${FN}.ps")
     # disable for a while, to test only building while moving to generated/ structure
     #add_custom_target("Make ${FN}.pdf" ALL DEPENDS "${FN}.pdf")
-    #add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
+    #add_custom_target("Make ${RN}.7z" ALL DEPENDS "${RN}.7z")
     #add_custom_target("Make ${RN}-pdf.rar" ALL DEPENDS "${RN}-pdf.rar")
     #add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
 
@@ -231,7 +235,7 @@ macro(mm_pack)
         COMMAND "${RUN_ARCHIVER}" ${ARCHIVER} ${ARCHIVER_OPTS} "generated/${archive_full_}" "${include_}"
         DEPENDS "${include_}"
     )
-    add_custom_target("Make ${archive_full_}" ALL DEPENDS "${archive_full_}")
+    add_custom_target("Make ${archive_full_}" ALL DEPENDS "generated/${archive_full_}")
 endmacro()
 
 
