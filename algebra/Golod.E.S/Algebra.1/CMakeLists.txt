@@ -1,3 +1,7 @@
-texify(Algebra.[1].E.S.Golod algebra.[1].e.s.golod)
+mm_texify(
+    SOURCES Algebra.[1].E.S.Golod
+    ARCHIVE algebra-1s-golod
+    INCLUDE graph
+)
 
 

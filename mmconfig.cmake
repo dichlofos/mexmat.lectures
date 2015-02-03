@@ -22,6 +22,7 @@ set (P7Z_OPTS a)
 set (ARCHIVER ${P7Z})
 set (ARCHIVER_OPTS ${P7Z_OPTS})
 
+set (RUN_SYMLINK ${CMAKE_SOURCE_DIR}/run-symlink.sh)
 set (RUN_LATEX ${CMAKE_SOURCE_DIR}/run-latex.sh)
 set (RUN_DVIPS ${CMAKE_SOURCE_DIR}/run-dvips.sh)
 set (RUN_MPOST ${CMAKE_SOURCE_DIR}/run-mpost.sh)

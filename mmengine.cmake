@@ -43,14 +43,13 @@ macro(mmPictureEx)
 
 endmacro()
 
-# DEPRECATED, use mmTexifyEx instead
+
+# DEPRECATED, use mm_texify instead
 macro(texify)
     set (FN "${ARGV0}")
     set (RN "${ARGV1}")
     set (PN "${ARGV2}")
 
-    # TODO: change to format
-    # texify (SOURCE ..., ..., ... PICTURES ..., ... INCLUDE ...)
     add_custom_command(OUTPUT
         "generated/${FN}.dvi"
         COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "../${FN}.tex"
@@ -62,11 +61,6 @@ macro(texify)
         COMMAND "${RUN_DVIPS}" ${DVIPS} "${FN}.dvi"
         DEPENDS "generated/${FN}.dvi"
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    )
-    add_custom_command(OUTPUT
-        "${FN}.pdf"
-        COMMAND "${GS}" ${GS_OPTS} "-sOutputFile=${FN}.pdf" "${FN}.ps"
-        DEPENDS "${FN}.ps"
     )
     add_custom_command(OUTPUT
         "${FN}.pdf"
@@ -110,7 +104,7 @@ macro(texify)
 endmacro()
 
 
-macro(mm_texify_ex)
+macro(mm_texify)
     set (args_ ${ARGN})
     set (sources_)
     set (pictures_)
@@ -139,6 +133,10 @@ macro(mm_texify_ex)
         endif()
     endforeach()
 
+    if (NOT archive_)
+        message(FATAL_ERROR "ARCHIVE section is not set at ${CMAKE_CURRENT_SOURCE_DIR}: ${archive_}")
+    endif()
+
     set (FN "${sources_}")
     set (PN "${pictures_}")
     set (RN "${archive_}")
@@ -148,9 +146,15 @@ macro(mm_texify_ex)
     #message("    archive: ${include_}")
 
     add_custom_command(OUTPUT
+        "generated/symlink.done"
+        COMMAND "${RUN_SYMLINK}" ${include_}
+        DEPENDS ${include_}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    )
+    add_custom_command(OUTPUT
         "generated/${FN}.dvi"
         COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "${FN}.tex"
-        DEPENDS "${FN}.tex" ${include_}
+        DEPENDS "${FN}.tex" "generated/symlink.done" ${include_}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
     add_custom_command(OUTPUT
@@ -158,11 +162,6 @@ macro(mm_texify_ex)
         COMMAND "${RUN_DVIPS}" ${DVIPS} "${FN}.dvi"
         DEPENDS "generated/${FN}.dvi"
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    )
-    add_custom_command(OUTPUT
-        "${FN}.pdf"
-        COMMAND "${GS}" ${GS_OPTS} "-sOutputFile=${FN}.pdf" "${FN}.ps"
-        DEPENDS "${FN}.ps"
     )
     add_custom_command(OUTPUT
         "${FN}.pdf"
@@ -204,8 +203,8 @@ macro(mm_texify_ex)
     set_directory_properties(PROPERTIES
         ADDITIONAL_MAKE_CLEAN_FILES "${AUX_CLEAN_FILES}")
 
+endmacro()
 
-endmacro(mm_texify_ex)
 
 macro(mm_pack)
     set (args_ ${ARGN})
@@ -233,9 +232,10 @@ macro(mm_pack)
         DEPENDS "${include_}"
     )
     add_custom_target("Make ${archive_full_}" ALL DEPENDS "${archive_full_}")
-endmacro(mm_pack)
+endmacro()
+
 
 macro(mmToDo)
     string(REPLACE "${CMAKE_SOURCE_DIR}/" "" _relative_source_dir "${CMAKE_CURRENT_SOURCE_DIR}")
     message(STATUS "TODO: ${ARGV0} at ${_relative_source_dir}")
-endmacro(mmToDo)
+endmacro()

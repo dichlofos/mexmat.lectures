@@ -14,5 +14,4 @@ if ! $dvips_cmd "$@" > $log_file 2>&1 ; then
     cat $log_file
     echo "==================================== END ================"
     exit 1
-
 fi

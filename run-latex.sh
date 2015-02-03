@@ -1,27 +1,29 @@
 #!/usr/bin/env bash
 
-set -e
+set -xe
 
 latex_cmd="$1"
 shift
 
-function link() {
+function link_mask() {
     linked_files="../*.$1"
     for f in $linked_files ; do
         if ! [ -e "$f" ] ; then
             return 0
         fi
-        ln -sf "$f" .
+        if ! [ -e ./$(basename "$f") ] ; then
+            ln -sf "$f" .
+        fi
     done
 }
 
 mkdir -p generated
 cd generated
-link "sty"
-link "tex"
-link "eps"
+link_mask "sty"
+link_mask "tex"
+link_mask "eps"
 # pictures
-link "1"
+#link "1"
 
 log_file="run_latex.log"
 

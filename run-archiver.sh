@@ -9,7 +9,8 @@ if ! $archiver_cmd "$@" > $log_file 2>&1 ; then
     echo "There was an error processing command:"
     echo "    $archiver_cmd $@"
     echo "Removing output files"
-    rm -f *.ps
+    rm -f *.rar
+    rm -f *.7z
     echo "==================================== ARCHIVER ERROR LOG ="
     cat $log_file
     echo "==================================== END ================"

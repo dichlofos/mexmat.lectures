@@ -1,9 +1,4 @@
-#texify(
-#    Group.Theory.[S].A.A.Klyachko
-#    group.theory-klyachko
-#)
-
-mm_texify_ex(
+mm_texify(
     SOURCES
         Group.Theory.[S].A.A.Klyachko
     INCLUDE
