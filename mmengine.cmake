@@ -5,6 +5,10 @@
 #
 # Author and maintainer: Mikhail Veltishchev <dichlofos-mv@yandex.ru>
 
+# Code style
+# --------------------------------------------------------------------
+# Local variables: lower_case_with_underscore_at_end_
+# Macro calls: PEP8-style: one argument at line if many
 
 macro(mmPicture)
     set (PN "${ARGV0}")
