@@ -169,7 +169,7 @@ macro(mm_texify)
         DEPENDS "${FN}.ps"
     )
     mm_pack(
-        INCLUDE "${FN}.ps"
+        INCLUDE "generated/${FN}.ps"
         ARCHIVE ${archive_}
     )
     #add_custom_command(OUTPUT
