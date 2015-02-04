@@ -17,6 +17,21 @@ function link_mask() {
     done
 }
 
+function run_latex_iteration() {
+    log_file="run_latex.$iteration.log"
+    if ! $latex_cmd "$@" > $log_file 2>&1 ; then
+        echo "There was an error processing command:"
+        echo "    $latex_cmd $@"
+        echo "Removing output files"
+        rm -f *.dvi
+        rm -f *.aux
+        echo "==================================== LATEX ERROR LOG [$iteration]="
+        cat $log_file
+        echo "==================================== END ================"
+        exit 1
+    fi
+}
+
 mkdir -p generated
 cd generated
 link_mask "sty"
@@ -25,32 +40,19 @@ link_mask "eps"
 # pictures
 #link "1"
 
+iteration=1
 log_file="run_latex.log"
-
-if ! $latex_cmd "$@" > $log_file 2>&1 ; then
-    echo "There was an error processing command:"
-    echo "    $latex_cmd $@"
-    echo "Removing output files"
-    rm -f *.dvi
-    rm -f *.aux
-    echo "==================================== LATEX ERROR LOG ===="
-    cat $log_file
-    echo "==================================== END ================"
-    exit 1
-fi
-if grep -q "Rerun" $log_file ; then
-    echo "Rebuilding $@ to get proper xrefs"
-    $latex_cmd "$@" > $log_file.2 2>&1
-    grep -i warning $log_file.2 || true
-
-    if grep -q "Rerun" $log_file.2 ; then
-        echo "Rebuilding twice $@ to get proper xrefs"
-        $latex_cmd "$@" > $log_file.3 2>&1
-        grep -i warning $log_file.3 || true
-
-        if grep -q "Rerun" $log_file.3 ; then
-            echo "Something goes wrong with xref rebuilding, please check $log_file.3"
-            exit 1
-        fi
+while true ; do
+    run_latex_iteration "$@"
+    if ! grep -q "Rerun" $log_file ; then
+        break
     fi
-fi
+    echo "  Rebuilding $@ to get proper xrefs"
+    iteration=$((iteration + 1))
+    if [ "$iteration" -gt "4" ] ; then
+        echo "Something goes wrong with xref rebuilding, please check $log_file"
+        exit 1
+    fi
+done
+# obtain remaining warnings from last log
+grep -i warning $log_file || true
