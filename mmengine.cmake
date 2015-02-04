@@ -240,6 +240,6 @@ endmacro()
 
 
 macro(mmToDo)
-    string(REPLACE "${CMAKE_SOURCE_DIR}/" "" _relative_source_dir "${CMAKE_CURRENT_SOURCE_DIR}")
-    message(STATUS "TODO: ${ARGV0} at ${_relative_source_dir}")
+    string(REPLACE "${CMAKE_SOURCE_DIR}/" "" relative_source_dir_ "${CMAKE_CURRENT_SOURCE_DIR}")
+    message(STATUS "TODO: ${ARGV0} at ${relative_source_dir_}")
 endmacro()
