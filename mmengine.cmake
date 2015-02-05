@@ -24,7 +24,7 @@ macro(mm_picture)
 
     add_custom_command(OUTPUT
         "generated/${pic_name_}.done"
-        COMMAND "${RUN_MPOST}" ${pic_name_}.done ${MPOST} ${MPOST_OPTS} "../${pic_name_}"
+        COMMAND "${RUN_MPOST}" "${pic_name_}.done" "${pic_name_}" ${MPOST} ${MPOST_OPTS}
         DEPENDS "${pic_name_}"
     )
     add_custom_target("MetaPosing ${pic_name_} for ${tex_name_}" ALL DEPENDS "generated/${pic_name_}.done")
