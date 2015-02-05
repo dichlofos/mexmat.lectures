@@ -3,5 +3,3 @@ mm_texify(
     ARCHIVE algebra-1s-golod
     INCLUDE graph
 )
-
-

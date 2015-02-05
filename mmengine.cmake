@@ -10,41 +10,29 @@
 # Local variables: lower_case_with_underscore_at_end_
 # Macro calls: PEP8-style: one argument at line if many
 
-macro(mmPicture)
-    set (PN "${ARGV0}")
-    set (TN "${ARGV1}")
+macro(mm_picture)
+    set (pic_name_ "${ARGV0}")
+    set (tex_name_ "${ARGV1}")
+
+    get_filename_component(pic_name_we_ ${pic_name_} NAME_WE)
+    message(STATUS ${pic_name_we_})
+    if (${pic_name_we_} STREQUAL ${pic_name_})
+        # fallback
+        set(pic_name_we_ ${pic_name_})
+        set(pic_name_ "${pic_name_}.mp")
+    endif()
+
     add_custom_command(OUTPUT
-        "generated/${PN}.done"
-        COMMAND "${RUN_MPOST}" ${PN}.done ${MPOST} ${MPOST_OPTS} "../${PN}.mp"
-        DEPENDS "${PN}.mp"
+        "generated/${pic_name_}.done"
+        COMMAND "${RUN_MPOST}" ${pic_name_}.done ${MPOST} ${MPOST_OPTS} "../${pic_name_}"
+        DEPENDS "${pic_name_}"
     )
-    add_custom_target("MetaPosing ${PN} for ${TN}" ALL DEPENDS "generated/${PN}.done")
-    add_dependencies("Make ${TN}.dvi" "MetaPosing ${PN} for ${TN}")
+    add_custom_target("MetaPosing ${pic_name_} for ${tex_name_}" ALL DEPENDS "generated/${pic_name_}.done")
+    add_dependencies("Make ${tex_name_}.dvi" "MetaPosing ${pic_name_} for ${tex_name_}")
     set (AUX_CLEAN_FILES
         "${AUX_CLEAN_FILES}"
-        "${PN}.log"
-        "${PN}.mpx"
+        "generated"
     )
-
-endmacro(mmPicture)
-
-macro(mmPictureEx)
-    set (PN "${ARGV0}")
-    set (TN "${ARGV1}")
-    get_filename_component(pic_name_ ${PN} NAME_WE)
-    add_custom_command(OUTPUT
-        "generated/${PN}.done"
-        COMMAND "${RUN_MPOST}" ${PN}.done ${MPOST} ${MPOST_OPTS} "../${PN}"
-        DEPENDS "${PN}"
-    )
-    add_custom_target("MetaPosing ${PN} for ${TN}" ALL DEPENDS "generated/${PN}.done")
-    add_dependencies("Make ${TN}.dvi" "MetaPosing ${PN} for ${TN}")
-    set (AUX_CLEAN_FILES
-        "${AUX_CLEAN_FILES}"
-        "${pic_name_}.log"
-        "${pic_name_}.mpx"
-    )
-
 endmacro()
 
 
@@ -96,15 +84,12 @@ macro(texify)
 
     if (PN)
         message(STATUS "Processing pictures for ${FN}...")
-        mmPicture("${PN}" "${FN}")
+        mm_picture("${PN}" "${FN}")
     endif (PN)
 
-    set (AUX_CLEAN_FILES
-        "${AUX_CLEAN_FILES}"
-        "generated"
-    )
     set_directory_properties(PROPERTIES
-        ADDITIONAL_MAKE_CLEAN_FILES "${AUX_CLEAN_FILES}")
+        ADDITIONAL_MAKE_CLEAN_FILES "generated"
+    )
 endmacro()
 
 
@@ -156,21 +141,21 @@ macro(mm_texify)
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
     add_custom_command(OUTPUT
-        "generated/${FN}.dvi"
-        COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "${FN}.tex"
-        DEPENDS "${FN}.tex" "generated/symlink.done" ${include_}
+        "generated/${sources_}.dvi"
+        COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "${sources_}.tex"
+        DEPENDS "${sources_}.tex" "generated/symlink.done" ${include_}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
     add_custom_command(OUTPUT
-        "generated/${FN}.ps"
-        COMMAND "${RUN_DVIPS}" ${DVIPS} "${FN}.dvi"
-        DEPENDS "generated/${FN}.dvi"
+        "generated/${sources_}.ps"
+        COMMAND "${RUN_DVIPS}" ${DVIPS} "${sources_}.dvi"
+        DEPENDS "generated/${sources_}.dvi"
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
     add_custom_command(OUTPUT
-        "${FN}.pdf"
-        COMMAND "${GS}" ${GS_OPTS} "-sOutputFile=${FN}.pdf" "${FN}.ps"
-        DEPENDS "${FN}.ps"
+        "generated/${sources_}.pdf"
+        COMMAND "${RUN_LATEX}" ${PDF_LATEX}  "-sOutputFile=${sources_}.pdf" "${sources_}.ps"
+        DEPENDS "${sources_}.ps"
     )
     mm_pack(
         INCLUDE "generated/${FN}.ps"
@@ -200,16 +185,13 @@ macro(mm_texify)
     #add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
 
     if (PN)
-        message(STATUS "Processing pictures for ${FN}...")
-        mmPictureEx("${PN}" "${FN}")
+        message(STATUS "Processing pictures for ${sources_}...")
+        mm_picture("${pictures_}" "${sources_}")
     endif (PN)
 
-    set (AUX_CLEAN_FILES
-        "${AUX_CLEAN_FILES}"
-        "generated"
-    )
     set_directory_properties(PROPERTIES
-        ADDITIONAL_MAKE_CLEAN_FILES "${AUX_CLEAN_FILES}")
+        ADDITIONAL_MAKE_CLEAN_FILES "generated"
+    )
 
 endmacro()
 
