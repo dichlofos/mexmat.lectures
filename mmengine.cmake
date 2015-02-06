@@ -99,6 +99,7 @@ macro(mm_texify)
     set (pictures_)
     set (include_)
     set (archive_)
+    set (program_)
 
     set (mode_ "begin")
     foreach (arg_ IN LISTS args_)
@@ -110,6 +111,8 @@ macro(mm_texify)
             set(mode_ "include")
         elseif (arg_ STREQUAL "ARCHIVE")
             set(mode_ "archive")
+        elseif (arg_ STREQUAL "PROGRAM")
+            set(mode_ "program")
         # check mode arguments
         elseif (mode_ STREQUAL "sources")
             set (sources_ ${sources_} ${arg_})
@@ -119,6 +122,8 @@ macro(mm_texify)
             set (include_ ${include_} ${arg_})
         elseif (mode_ STREQUAL "archive")
             set (archive_ ${arg_})
+        elseif (mode_ STREQUAL "program")
+            set (program_ ${arg_})
         endif()
     endforeach()
 
@@ -126,9 +131,10 @@ macro(mm_texify)
         message(FATAL_ERROR "ARCHIVE section is not set at ${CMAKE_CURRENT_SOURCE_DIR}: ${archive_}")
     endif()
 
-    set (FN "${sources_}")
-    set (PN "${pictures_}")
-    set (RN "${archive_}")
+    if (NOT program_)
+        set(program_ "${LATEX}")
+    endif()
+
     #message("  Processing ${sources_}")
     #message("    pictures: ${pictures_}")
     #message("    include: ${include_}")
@@ -142,7 +148,7 @@ macro(mm_texify)
     )
     add_custom_command(OUTPUT
         "generated/${sources_}.dvi"
-        COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "${sources_}.tex"
+        COMMAND "${RUN_LATEX}" ${program_} ${LATEX_OPTS} "${sources_}.tex"
         DEPENDS "${sources_}.tex" "generated/symlink.done" ${include_}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
@@ -158,36 +164,22 @@ macro(mm_texify)
         DEPENDS "${sources_}.ps"
     )
     mm_pack(
-        INCLUDE "generated/${FN}.ps"
+        INCLUDE "generated/${sources_}.ps"
         ARCHIVE ${archive_}
     )
-    #add_custom_command(OUTPUT
-    #    "${RN}.rar"
-    #    COMMAND "${RAR}" ${RAR_TEXT_OPTS} "${RN}.rar" "${FN}.ps"
-    #    DEPENDS "${FN}.ps"
-    #)
-    #add_custom_command(OUTPUT
-    #    "${RN}-pdf.rar"
-    #    COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}-pdf.rar" "${FN}.pdf"
-    #    DEPENDS "${FN}.pdf"
-    #)
     add_custom_command(OUTPUT
-        "${RN}.pdf"
-        COMMAND cp "${FN}.pdf" "${RN}.pdf"
-        DEPENDS "${FN}.pdf"
+        "generated/${archive_}.pdf"
+        COMMAND cp "generated/${sources_}.pdf" "generated/${archive_}.pdf"
+        DEPENDS "generated/${sources_}.pdf"
     )
-    add_custom_target("Make ${FN}.dvi" ALL DEPENDS "generated/${FN}.dvi")
-    add_custom_target("Make ${FN}.ps" ALL DEPENDS "generated/${FN}.ps")
-    # disable for a while, to test only building while moving to generated/ structure
-    #add_custom_target("Make ${FN}.pdf" ALL DEPENDS "${FN}.pdf")
-    #add_custom_target("Make ${RN}.7z" ALL DEPENDS "${RN}.7z")
-    #add_custom_target("Make ${RN}-pdf.rar" ALL DEPENDS "${RN}-pdf.rar")
-    #add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
+    add_custom_target("Make ${sources_}.dvi" ALL DEPENDS "generated/${sources_}.dvi")
+    add_custom_target("Make ${sources_}.ps" ALL DEPENDS "generated/${sources_}.ps")
+    add_custom_target("Make ${archive_}.pdf" ALL DEPENDS "generated/${archive_}.pdf")
 
-    if (PN)
+    if (pictures_)
         message(STATUS "Processing pictures for ${sources_}...")
         mm_picture("${pictures_}" "${sources_}")
-    endif (PN)
+    endif()
 
     set_directory_properties(PROPERTIES
         ADDITIONAL_MAKE_CLEAN_FILES "generated"
