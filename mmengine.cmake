@@ -160,8 +160,8 @@ macro(mm_texify)
     )
     add_custom_command(OUTPUT
         "generated/${sources_}.pdf"
-        COMMAND "${RUN_LATEX}" ${PDF_LATEX}  "-sOutputFile=${sources_}.pdf" "${sources_}.ps"
-        DEPENDS "${sources_}.ps"
+        COMMAND "${RUN_LATEX}" ${PDF_LATEX} "${sources_}.tex"
+        DEPENDS "${sources_}.tex"
     )
     mm_pack(
         INCLUDE "generated/${sources_}.ps"

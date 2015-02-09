@@ -6,6 +6,7 @@
 
 
 find_program(LATEX NAMES latexmk texify latex)
+find_program(PDF_LATEX NAMES pdflatex)
 find_program(DVIPS dvips)
 find_program(MPOST mpost)
 find_program(GS gs)
