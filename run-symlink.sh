@@ -19,3 +19,5 @@ cd generated
 for i in $@ ; do
     link_files "$i"
 done
+
+touch symlink.done
