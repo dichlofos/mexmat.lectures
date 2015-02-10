@@ -44,7 +44,7 @@ macro(texify)
 
     add_custom_command(OUTPUT
         "generated/${FN}.dvi"
-        COMMAND "${RUN_LATEX}" ${LATEX} ${LATEX_OPTS} "../${FN}.tex"
+        COMMAND "${RUN_LATEX}" "../${FN}.tex" ${LATEX} ${LATEX_OPTS}
         DEPENDS "${FN}.tex"
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
@@ -148,7 +148,7 @@ macro(mm_texify)
     )
     add_custom_command(OUTPUT
         "generated/${sources_}.dvi"
-        COMMAND "${RUN_LATEX}" ${program_} ${LATEX_OPTS} "${sources_}.tex"
+        COMMAND "${RUN_LATEX}" "${sources_}.tex" ${program_} ${LATEX_OPTS}
         DEPENDS "${sources_}.tex" "generated/symlink.done" ${include_}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
@@ -160,7 +160,7 @@ macro(mm_texify)
     )
     add_custom_command(OUTPUT
         "generated/${sources_}.pdf"
-        COMMAND "${RUN_LATEX}" ${PDF_LATEX} "${sources_}.tex"
+        COMMAND "${RUN_LATEX}" "${sources_}.tex" ${PDF_LATEX}
         DEPENDS "${sources_}.tex"
     )
     mm_pack(

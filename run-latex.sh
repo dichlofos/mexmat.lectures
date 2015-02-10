@@ -2,6 +2,9 @@
 
 set -e
 
+source_file="$1"
+shift
+
 latex_cmd="$1"
 shift
 
@@ -18,8 +21,9 @@ function link_mask() {
 }
 
 function run_latex_iteration() {
-    log_file="run_latex.$iteration.log"
-    if ! $latex_cmd "$@" > $log_file 2>&1 ; then
+    source_for_log="$(basename "$source_file")"
+    log_file="run_latex.$source_for_log.$iteration.log"
+    if ! $latex_cmd "$@" "$source_file" > $log_file 2>&1 ; then
         echo "There was an error processing command:"
         echo "    $latex_cmd $@"
         echo "Removing output files"
@@ -37,8 +41,6 @@ cd generated
 link_mask "sty"
 link_mask "tex"
 link_mask "eps"
-# pictures
-#link "1"
 
 iteration=1
 log_file="run_latex.log"
