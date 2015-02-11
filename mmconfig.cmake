@@ -31,4 +31,5 @@ set (RUN_MPOST ${CMAKE_SOURCE_DIR}/run-mpost.sh)
 set (RUN_ARCHIVER ${CMAKE_SOURCE_DIR}/run-archiver.sh)
 
 message (STATUS "Found LaTeX: ${LATEX}")
+message (STATUS "Found PDFLaTeX: ${PDF_LATEX}")
 message (STATUS "Found MetaPost: ${MPOST}")

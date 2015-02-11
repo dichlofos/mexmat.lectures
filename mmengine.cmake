@@ -146,34 +146,49 @@ macro(mm_texify)
         DEPENDS ${include_}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
-    add_custom_command(OUTPUT
-        "generated/${sources_}.dvi"
-        COMMAND "${RUN_LATEX}" "${sources_}.tex" ${program_} ${LATEX_OPTS}
-        DEPENDS "${sources_}.tex" "generated/symlink.done" ${include_}
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    )
-    add_custom_command(OUTPUT
-        "generated/${sources_}.ps"
-        COMMAND "${RUN_DVIPS}" ${DVIPS} "${sources_}.dvi"
-        DEPENDS "generated/${sources_}.dvi"
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    )
-    add_custom_command(OUTPUT
-        "generated/${sources_}.pdf"
-        COMMAND "${RUN_LATEX}" "${sources_}.tex" ${PDF_LATEX} ${PDFLATEX_OPTS}
-        DEPENDS "${sources_}.tex"
-    )
-    mm_pack(
-        INCLUDE "generated/${sources_}.ps"
-        ARCHIVE ${archive_}
-    )
+
+    if (NOT program_ STREQUAL "xelatex")
+        # default TeX -> DVI -> PS mode
+        add_custom_command(OUTPUT
+            "generated/${sources_}.dvi"
+            COMMAND "${RUN_LATEX}" "${sources_}.tex" ${program_} ${LATEX_OPTS}
+            DEPENDS "${sources_}.tex" "generated/symlink.done" ${include_}
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        )
+        add_custom_command(OUTPUT
+            "generated/${sources_}.ps"
+            COMMAND "${RUN_DVIPS}" ${DVIPS} "${sources_}.dvi"
+            DEPENDS "generated/${sources_}.dvi"
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        )
+        add_custom_target("Make ${sources_}.dvi" ALL DEPENDS "generated/${sources_}.dvi")
+        add_custom_target("Make ${sources_}.ps" ALL DEPENDS "generated/${sources_}.ps")
+        mm_pack(
+            INCLUDE "generated/${sources_}.ps"
+            ARCHIVE ${archive_}
+        )
+
+        add_custom_command(OUTPUT
+            "generated/${sources_}.pdf"
+            COMMAND "${RUN_LATEX}" "${sources_}.tex" ${PDF_LATEX} ${PDFLATEX_OPTS}
+            DEPENDS "${sources_}.tex"
+        )
+    else()
+        # xelatex mode writes directly to PDF by default
+        add_custom_command(OUTPUT
+            "generated/${sources_}.pdf"
+            COMMAND "${RUN_LATEX}" "${sources_}.tex" ${program_} ${LATEX_OPTS}
+            DEPENDS "${sources_}.tex" "generated/symlink.done" ${include_}
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        )
+    endif()
+
     add_custom_command(OUTPUT
         "generated/${archive_}.pdf"
         COMMAND cp "generated/${sources_}.pdf" "generated/${archive_}.pdf"
         DEPENDS "generated/${sources_}.pdf"
     )
-    add_custom_target("Make ${sources_}.dvi" ALL DEPENDS "generated/${sources_}.dvi")
-    add_custom_target("Make ${sources_}.ps" ALL DEPENDS "generated/${sources_}.ps")
+
     add_custom_target("Make ${archive_}.pdf" ALL DEPENDS "generated/${archive_}.pdf")
 
     if (pictures_)
