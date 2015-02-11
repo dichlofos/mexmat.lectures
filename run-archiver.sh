@@ -2,8 +2,7 @@
 set -e
 archiver_cmd="$1"
 shift
-#mkdir -p generated
-#cd generated
+mkdir -p generated
 log_file="generated/run_archiver.log"
 if ! $archiver_cmd "$@" > $log_file 2>&1 ; then
     echo "There was an error processing command:"
