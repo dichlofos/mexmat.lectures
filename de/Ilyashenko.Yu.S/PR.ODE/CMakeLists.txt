@@ -1,2 +1,5 @@
-texify(PR.ODE.IYuS.tex pr-ode-ilyashenko)
+mm_texify(
+    SOURCES PR.ODE.IYuS
+    ARCHIVE pr-ode-ilyashenko
+)
 # was ode-ilyashenko
