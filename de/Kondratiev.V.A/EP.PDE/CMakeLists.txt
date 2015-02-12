@@ -1,1 +1,4 @@
-texify(EP.PDE.VAK.tex ep-pde-kondratiev)
+mm_texify(
+    SOURCES EP.PDE.VAK
+    ARCHIVE ep-pde-kondratiev
+)
