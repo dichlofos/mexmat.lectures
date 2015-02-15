@@ -1,11 +1,16 @@
-\documentclass[12pt,a4paper,draft]{article}
-\usepackage{xecyr}
+\documentclass[unicode,12pt,draft]{article}
 \usepackage{dmvn}
-\tocsubsectionparam{3em}
+\usepackage{dmvnadd}
+\usepackage{polyglossia}
+\usepackage{unicode-math}
+\usepackage{fontspec}
+\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+\setmathfont{xits-math.otf}
 
-\DeclareRobustCommand*{\т}{~--- }
-\DeclareRobustCommand*{\ч}{~-- }
-\DeclareMathOperator*{\tg}{tg}
+\tocsubsectionparam{3em}
 
 \begin{document}
 %title
