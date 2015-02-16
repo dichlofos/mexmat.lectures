@@ -58,3 +58,4 @@ while true ; do
 done
 # obtain remaining warnings from last log
 grep -i warning $log_file || true
+grep -i overfull $log_file || true
