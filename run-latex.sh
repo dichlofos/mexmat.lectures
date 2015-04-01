@@ -21,6 +21,8 @@ function link_mask() {
 }
 
 function run_latex_iteration() {
+    index_file="$(echo $source_file | sed -re 's/\.tex$/.ind/')"
+    touch "$index_file"
     source_for_log="$(basename "$source_file")"
     log_file="run_latex.$source_for_log.$iteration.log"
     if ! $latex_cmd "$@" "$source_file" > $log_file 2>&1 ; then
@@ -56,6 +58,12 @@ while true ; do
         exit 1
     fi
 done
+
+if [ -e "*.idx" ] ; then
+    echo "Index files detected, running makeindex..."
+    makeindex *.idx
+fi
+
 # obtain remaining warnings from last log
 grep -i warning $log_file || true
 grep -i overfull $log_file || true
