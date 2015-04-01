@@ -1,1 +1,6 @@
-texify(Functional.Calculus.[5].V.V.Ryzhikov functional.calculus-5s-ryzhikov pictures)
+mm_texify(
+    SOURCES Functional.Calculus.[5].V.V.Ryzhikov
+    ARCHIVE functional.calculus-5s-ryzhikov
+    #PICTURES pictures
+    PROGRAM xelatex
+)
