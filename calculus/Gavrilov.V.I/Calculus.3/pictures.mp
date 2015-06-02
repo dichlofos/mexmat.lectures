@@ -1,6 +1,6 @@
 verbatimtex
 \documentclass{article}
-\usepackage{dmvn}
+\usepackage[utf]{dmvn}
 \begin{document}
 \footnotesize
 etex
@@ -33,7 +33,7 @@ p1 := z5..z6..z7;
 
 pair w[];
 
-vardef makes(expr i) = 
+vardef makes(expr i) =
 save w;
 
 pair w[];
