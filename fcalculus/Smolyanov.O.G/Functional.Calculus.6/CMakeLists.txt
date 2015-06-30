@@ -1,2 +1,5 @@
-texify(Functional.Calculus.[6].O.G.Smolyanov functional.calculus-6s-smolyanov)
+mm_texify(
+    SOURCES Functional.Calculus.[6].O.G.Smolyanov
+    ARCHIVE functional.calculus-6s-smolyanov
+)
 add_subdirectory(Funcan2Metapost)
