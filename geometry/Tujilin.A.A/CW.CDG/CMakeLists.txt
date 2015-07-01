@@ -1,1 +1,4 @@
-texify (CW.CDG.TAA cw-cdg-tujilin)
+mm_texify(
+    SOURCES CW.CDG.TAA
+    ARCHIVE cw-cdg-tujilin
+)
