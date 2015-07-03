@@ -1,1 +1,5 @@
-texify (Logic.UVA logic-new-uspensky quantor)
+mm_texify(
+    SOURCES Logic.UVA
+    PICTURES quantor
+    ARCHIVE logic-new-uspensky
+)
