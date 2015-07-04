@@ -1,17 +1,14 @@
 \documentclass[a4paper,oneside,fleqn,10pt]{article}
 % ----------------------------------
-\usepackage[utf8]{inputenc} \usepackage[russian]{babel}
-\usepackage[simple]{dmvn} \usepackage{color} \usepackage{epigraph}
-\tocsubsectionparam{3em} \tocsubsubsectionparam{3.4em}
+\usepackage[simple,utf]{dmvn}
+\usepackage{color}
+\usepackage{epigraph}
+\usepackage{dmvnhist}
 
-\newcommand{\isp}{\Psi} \newcommand{\vr}{\vrule height 11pt depth 6pt
-  width 0pt} \newcommand{\phz}{\phantom{0}}
-\newcommand{\pe}[2]{${#1}\ldots{#2}$}
-\newcommand{\cpic}[1]{$$\epsfbox{pictures.#1}$$}
-\newcommand{\hwbox}[2]{\hbox to #1{
-    \hfil\hbox{\vtop{\hsize=#1\advance\hsize
-        by-10pt\relax\noindent#2\vskip8pt}}\hfil}}
-\newcommand{\dx}{\,dx} \newcommand{\dy}{\,dy}
+\tocsubsectionparam{3em}
+\tocsubsubsectionparam{3.4em}
+
+\dmvnhistinitialize
 
 \begin{document}
 \dmvntitle{Курс лекций} {по истории математики} {лекторы --- Алла
@@ -1889,7 +1886,7 @@ $$ откуда $y = \frac{-9}{3} = -3$, потом $x = \frac{10}{5} =2$.  На
 Вообще у индийцев всё было очень красиво. Они писали в стихах, чтобы
 легче запоминалось.
 
-$12$~век \auth{Бхаскара} 
+$12$~век \auth{Бхаскара}
     <<Венец учения>>. Это были 4 книги:
 
 \textbf{1}: <<Лилавати>> (прекрасное) арифметика.

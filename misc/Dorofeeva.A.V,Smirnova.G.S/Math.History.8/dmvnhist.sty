@@ -50,7 +50,7 @@
   \hbox to \textwidth{\footnotesize\tt Н.О.И.П. <<МЕХМАТСКАЯ ИСТИНА>>\hss Вып.\;егодня~г.\strut}
   \hbox to \textwidth{\vrule width \textwidth height .4pt}}}
   \renewcommand{\@oddfoot}{\footnotesize\tt\hfil\thepage\hfil}
-  
+
   \textwidth=85mm
   \textheight=110mm
   \footskip=4mm
@@ -141,7 +141,7 @@
 \def\sauth#1#2{\index{#2}\textsc{#1}}
 \def\rauth#1#2#3{\index{#3, #1. #2.}\textsc{#1.\,#2.\,#3}}
 \def\eauth#1#2{\index{#2, #1.}\textsc{#1.\,#2}}
-\long\def\mycomment#1{$[$#1$]$}
+\long\def\authorcomment#1{$[$#1$]$}
 \def\pe#1#2{${#1}\ldots{#2}$}
 \def\cpic#1{$$\epsfbox{pictures.#1}$$}
 
@@ -149,7 +149,7 @@
 
 \newbox\psibox
 \setbox\psibox\hbox{$\Psi$}
-\def\isp{\rotu\psibox}
+\def\isp{\@rotu\psibox}
 
 \def\fns{\footnotesize}
 \def\phz{\phantom{0}}

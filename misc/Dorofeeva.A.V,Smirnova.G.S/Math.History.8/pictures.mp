@@ -3,7 +3,7 @@ input dmvnaux;
 
 verbatimtex
   \documentclass[a4paper]{article}
-  \usepackage[simple]{dmvn}
+  \usepackage[simple,utf]{dmvn}
   \begin{document}
   \footnotesize
 etex
