@@ -3,7 +3,7 @@
 \input rotate
 
 \newbox\rotbox
-\def\rotleft#1{\setbox\rotbox\hbox{#1}\rotl\rotbox}
+\def\rotleft#1{\setbox\rotbox\hbox{#1}\@rotl\rotbox}
 \newcommand{\indep}{\mathop{\lower.07em\hbox{\rotleft{$\vDash$}}}\nolimits}
 
 \def\mcomp#1{\mskip-10mu#1\mskip-10mu}
@@ -18,10 +18,6 @@
 \def\bigsyml#1{\setbox\mysmallbox\hbox{#1}\setbox\mybigbox\hbox{\Size#1}\raise\ht\mysmallbox\hbox{\lower\ht\mybigbox\copy\mybigbox}}
 
 \def\bigsymh#1{\smash{\hbox{\Size#1}}}
-
-\newenvironment{petit}
-{\par \smallskip \hrule \smallskip \footnotesize}
-{\par \smallskip \hrule \smallskip}
 
 \newcommand{\dx}{\,dx}
 \newcommand{\dy}{\,dy}
