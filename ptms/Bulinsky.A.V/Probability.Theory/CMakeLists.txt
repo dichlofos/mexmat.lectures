@@ -1,1 +1,11 @@
-texify(Probability.Theory.BAV probability.theory-4s-bulinsky exponent)
+mm_texify(
+    SOURCES Probability.Theory.BAV
+    ARCHIVE probability.theory-4s-bulinsky
+    PICTURES
+        exponent
+        gauss
+        independ
+        lesseq
+        poisson
+        uniform
+)

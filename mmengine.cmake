@@ -189,9 +189,9 @@ macro(mm_texify)
     endif()
     add_custom_target("Make ${sources_}.pdf" ALL DEPENDS "generated/${archive_}.pdf")
 
-    if (pictures_)
-        mm_picture("${pictures_}" "${sources_}" "Make ${sources_}.${pic_dep_}")
-    endif()
+    foreach (picture_ ${pictures_})
+        mm_picture("${picture_}" "${sources_}" "Make ${sources_}.${pic_dep_}")
+    endforeach()
 
 
     add_custom_command(
