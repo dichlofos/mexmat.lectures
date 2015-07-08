@@ -42,9 +42,10 @@ for line in lines:
             print len(tokens), tokens
     out_lines.append(line)
 
+out_text = '\n'.join(out_lines)
 if fixed:
-    print '\n'.join(out_lines)
+    print out_text
 
-if False:
+if fixed:
     with open(cmf, 'w') as f:
-        f.write(text)
+        f.write(out_text)
