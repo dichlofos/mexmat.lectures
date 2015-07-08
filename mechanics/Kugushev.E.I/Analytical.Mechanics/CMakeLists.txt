@@ -1,1 +1,4 @@
-texify (Analytical.Mechanics.KEI analytical.mechanics-kugushev)
+mm_texify(
+    SOURCES Analytical.Mechanics.KEI
+    ARCHIVE analytical.mechanics-kugushev
+)

@@ -1,1 +1,5 @@
-texify (Logic.LOB logic-lupanov pictures)
+mm_texify(
+    SOURCES Logic.LOB
+    ARCHIVE logic-lupanov
+    PICTURES pictures
+)

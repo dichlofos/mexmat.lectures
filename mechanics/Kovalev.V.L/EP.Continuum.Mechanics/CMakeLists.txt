@@ -1,1 +1,4 @@
-texify (EP.Continuum.Mechanics.KVL ep-continuum.mechanics-kovalev)
+mm_texify(
+    SOURCES EP.Continuum.Mechanics.KVL
+    ARCHIVE ep-continuum.mechanics-kovalev
+)

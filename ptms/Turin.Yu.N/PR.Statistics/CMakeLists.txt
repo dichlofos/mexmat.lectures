@@ -1,1 +1,4 @@
-texify (PR.Statistics pr-statistics-turin)
+mm_texify(
+    SOURCES PR.Statistics
+    ARCHIVE pr-statistics-turin
+)

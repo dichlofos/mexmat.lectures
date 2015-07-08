@@ -1,1 +1,4 @@
-texify (EP.Statistics.TYuN ep-statistics-turin)
+mm_texify(
+    SOURCES EP.Statistics.TYuN
+    ARCHIVE ep-statistics-turin
+)

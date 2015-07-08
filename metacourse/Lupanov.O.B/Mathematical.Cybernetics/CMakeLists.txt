@@ -1,1 +1,4 @@
-texify(Mathematical.Cybernetics.[M].O.B.Lupanov.tex mathematical.cybernetics-m-lupanov)
+mm_texify(
+    SOURCES Mathematical.Cybernetics.[M].O.B.Lupanov.tex
+    ARCHIVE mathematical.cybernetics-m-lupanov
+)

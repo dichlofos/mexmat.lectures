@@ -1,1 +1,5 @@
-texify(Analytical.Mechanics.KAV analytical.mechanics-8s-karapetyan pictures)
+mm_texify(
+    SOURCES Analytical.Mechanics.KAV
+    ARCHIVE analytical.mechanics-8s-karapetyan
+    PICTURES pictures
+)

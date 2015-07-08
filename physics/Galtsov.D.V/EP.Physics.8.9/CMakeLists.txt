@@ -1,2 +1,5 @@
 mmtodo("Add/Questions.tex")
-texify(EP.Physics.[8.9].D.V.Galtsov ep-physics-8s9s-galtsov)
+mm_texify(
+    SOURCES EP.Physics.[8.9].D.V.Galtsov
+    ARCHIVE ep-physics-8s9s-galtsov
+)

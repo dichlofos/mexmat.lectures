@@ -1,1 +1,4 @@
-texify (EP.GMP ep-course.programs-gmp)
+mm_texify(
+    SOURCES EP.GMP
+    ARCHIVE ep-course.programs-gmp
+)

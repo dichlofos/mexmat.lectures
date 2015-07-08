@@ -1,1 +1,4 @@
-texify (Continuum.Mechanics.GDV continuum.mechanics-georgievsky)
+mm_texify(
+    SOURCES Continuum.Mechanics.GDV
+    ARCHIVE continuum.mechanics-georgievsky
+)

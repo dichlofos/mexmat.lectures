@@ -1,1 +1,4 @@
-texify (Shpora.Probability shpora-probability)
+mm_texify(
+    SOURCES Shpora.Probability
+    ARCHIVE shpora-probability
+)

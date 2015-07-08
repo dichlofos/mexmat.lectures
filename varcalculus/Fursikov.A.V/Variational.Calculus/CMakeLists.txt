@@ -1,3 +1,7 @@
-texify (Variational.Calculus.FAV variational.calculus-fursikov pictures)
+mm_texify(
+    SOURCES Variational.Calculus.FAV
+    ARCHIVE variational.calculus-fursikov
+    PICTURES pictures
+)
 # variationalcalculus-fursikov
 add_subdirectory(patches)

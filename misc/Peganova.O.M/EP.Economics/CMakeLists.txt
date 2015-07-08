@@ -1,1 +1,4 @@
-texify (EP.Economics.POM ep-economics-peganova)
+mm_texify(
+    SOURCES EP.Economics.POM
+    ARCHIVE ep-economics-peganova
+)

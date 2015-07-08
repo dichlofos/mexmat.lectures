@@ -1,1 +1,4 @@
-texify (EP.Probability.Theory.SVV ep-probability.theory-senatov)
+mm_texify(
+    SOURCES EP.Probability.Theory.SVV
+    ARCHIVE ep-probability.theory-senatov
+)

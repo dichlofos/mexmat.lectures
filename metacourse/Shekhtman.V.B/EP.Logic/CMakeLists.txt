@@ -1,1 +1,4 @@
-texify (EP.Logic.ShVB ep-logic-shekhtman)
+mm_texify(
+    SOURCES EP.Logic.ShVB
+    ARCHIVE ep-logic-shekhtman
+)

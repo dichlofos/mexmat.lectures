@@ -1,1 +1,4 @@
-texify (TFFA.Application.RVV tffa.application.ergodic.theory-ryzhikov)
+mm_texify(
+    SOURCES TFFA.Application.RVV
+    ARCHIVE tffa.application.ergodic.theory-ryzhikov
+)

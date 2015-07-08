@@ -1,1 +1,4 @@
-texify (EP.Continuum.Mechanics.GYaG ep-continuum.mechanics-galin)
+mm_texify(
+    SOURCES EP.Continuum.Mechanics.GYaG
+    ARCHIVE ep-continuum.mechanics-galin
+)

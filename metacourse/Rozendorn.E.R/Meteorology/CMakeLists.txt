@@ -1,1 +1,4 @@
-texify (Meteorology.RER meteorology-m-rozendorn)
+mm_texify(
+    SOURCES Meteorology.RER
+    ARCHIVE meteorology-m-rozendorn
+)

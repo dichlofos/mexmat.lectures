@@ -1,1 +1,4 @@
-texify (CW.PDE.STA cw-pde-shaposhnikova)
+mm_texify(
+    SOURCES CW.PDE.STA
+    ARCHIVE cw-pde-shaposhnikova
+)

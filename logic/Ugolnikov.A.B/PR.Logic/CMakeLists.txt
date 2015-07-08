@@ -1,1 +1,4 @@
-texify (PR.Logic.UAB pr-logic-ugolnikov)
+mm_texify(
+    SOURCES PR.Logic.UAB
+    ARCHIVE pr-logic-ugolnikov
+)

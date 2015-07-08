@@ -1,1 +1,4 @@
-texify(EP.Linear.Algebra.[2].E.G.Sklyarenko ep-linear.algebra-2s-sklyarenko)
+mm_texify(
+    SOURCES EP.Linear.Algebra.[2].E.G.Sklyarenko
+    ARCHIVE ep-linear.algebra-2s-sklyarenko
+)

@@ -1,1 +1,4 @@
-texify(Algebra.[3].E.S.Golod algebra-3s-golod)
+mm_texify(
+    SOURCES Algebra.[3].E.S.Golod
+    ARCHIVE algebra-3s-golod
+)

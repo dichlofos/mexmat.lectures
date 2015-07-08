@@ -1,1 +1,4 @@
-texify (EP.Calculus.[2].V.I.Gavrilov ep-calculus-2s-gavrilov)
+mm_texify(
+    SOURCES EP.Calculus.[2].V.I.Gavrilov
+    ARCHIVE ep-calculus-2s-gavrilov
+)

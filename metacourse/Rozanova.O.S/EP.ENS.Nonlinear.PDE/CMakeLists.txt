@@ -1,1 +1,4 @@
-texify (EP-ens_Rozanova ep-ens-nonlinear.pde-rozanova)
+mm_texify(
+    SOURCES EP-ens_Rozanova
+    ARCHIVE ep-ens-nonlinear.pde-rozanova
+)

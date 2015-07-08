@@ -1,1 +1,4 @@
-texify (EP.Databases.KMI ep-databases-kumskov)
+mm_texify(
+    SOURCES EP.Databases.KMI
+    ARCHIVE ep-databases-kumskov
+)

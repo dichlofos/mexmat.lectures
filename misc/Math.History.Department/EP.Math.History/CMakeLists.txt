@@ -1,1 +1,4 @@
-texify (EP.Math.History.MHD ep-mathhistory-mhdepartment)
+mm_texify(
+    SOURCES EP.Math.History.MHD
+    ARCHIVE ep-mathhistory-mhdepartment
+)

@@ -1,1 +1,4 @@
-texify (SEM.Linear.Algebra.Helpers sem-linear.algebra.helpers)
+mm_texify(
+    SOURCES SEM.Linear.Algebra.Helpers
+    ARCHIVE sem-linear.algebra.helpers
+)

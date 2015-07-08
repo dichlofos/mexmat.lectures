@@ -1,1 +1,4 @@
-texify (Random.Processes.ZAM random.processes-zubkov)
+mm_texify(
+    SOURCES Random.Processes.ZAM
+    ARCHIVE random.processes-zubkov
+)

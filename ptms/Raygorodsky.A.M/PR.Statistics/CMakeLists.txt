@@ -1,1 +1,4 @@
-texify (PR.Statistics.RAM pr-statistics-raygorodsky)
+mm_texify(
+    SOURCES PR.Statistics.RAM
+    ARCHIVE pr-statistics-raygorodsky
+)

@@ -1,1 +1,4 @@
-texify (EP.Classical.Mechanics.KAV ep-classical.mechanics-karapetyan)
+mm_texify(
+    SOURCES EP.Classical.Mechanics.KAV
+    ARCHIVE ep-classical.mechanics-karapetyan
+)

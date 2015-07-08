@@ -1,1 +1,5 @@
-texify(Complex.Calculus.[5].E.P.Dolzhenko complex.calculus-5s-dolzhenko pictures)
+mm_texify(
+    SOURCES Complex.Calculus.[5].E.P.Dolzhenko
+    ARCHIVE complex.calculus-5s-dolzhenko
+    PICTURES pictures
+)

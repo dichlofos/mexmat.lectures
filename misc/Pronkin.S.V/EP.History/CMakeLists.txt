@@ -1,1 +1,4 @@
-texify (EP.History.PSV ep-history-pronkin)
+mm_texify(
+    SOURCES EP.History.PSV
+    ARCHIVE ep-history-pronkin
+)

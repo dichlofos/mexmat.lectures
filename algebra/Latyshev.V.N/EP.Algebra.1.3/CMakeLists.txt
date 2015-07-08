@@ -1,1 +1,4 @@
-texify (EP.Algebra.[1.3].V.N.Latyshev ep-algebra-1s3s-latyshev)
+mm_texify(
+    SOURCES EP.Algebra.[1.3].V.N.Latyshev
+    ARCHIVE ep-algebra-1s3s-latyshev
+)

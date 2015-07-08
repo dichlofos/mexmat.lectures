@@ -1,1 +1,4 @@
-texify (CW.CDG.MVM cw-cdg-manuilov)
+mm_texify(
+    SOURCES CW.CDG.MVM
+    ARCHIVE cw-cdg-manuilov
+)

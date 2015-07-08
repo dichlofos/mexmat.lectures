@@ -1,3 +1,7 @@
 add_subdirectory(problems)
 add_subdirectory(graf)
-texify(Quantum.Mechanics.[7].ShAI quantummechanics-7s-shafarevich pic)
+mm_texify(
+    SOURCES Quantum.Mechanics.[7].ShAI
+    ARCHIVE quantummechanics-7s-shafarevich
+    PICTURES pic
+)

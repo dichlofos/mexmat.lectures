@@ -1,1 +1,4 @@
-texify (EP.Logic.LOB ep-logic-lupanov)
+mm_texify(
+    SOURCES EP.Logic.LOB
+    ARCHIVE ep-logic-lupanov
+)

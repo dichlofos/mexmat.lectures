@@ -1,1 +1,4 @@
-texify (EP.Classical.Mechanics.KEI ep-classical.mechanics-kugushev)
+mm_texify(
+    SOURCES EP.Classical.Mechanics.KEI
+    ARCHIVE ep-classical.mechanics-kugushev
+)

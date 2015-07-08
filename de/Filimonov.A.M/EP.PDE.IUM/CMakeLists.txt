@@ -1,1 +1,4 @@
-texify(EP.PDE.FAM ep-pde-filimonov)
+mm_texify(
+    SOURCES EP.PDE.FAM
+    ARCHIVE ep-pde-filimonov
+)

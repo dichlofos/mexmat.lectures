@@ -1,1 +1,4 @@
-texify (main discrete.mathematics-7s-ugolnikov)
+mm_texify(
+    SOURCES main
+    ARCHIVE discrete.mathematics-7s-ugolnikov
+)

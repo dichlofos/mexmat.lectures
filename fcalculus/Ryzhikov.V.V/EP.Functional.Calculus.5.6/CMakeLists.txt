@@ -1,1 +1,4 @@
-texify (EP.Functional.Calculus.[5.6].V.V.Ryzhikov ep-functional.calculus-5s6s-ryzhikov)
+mm_texify(
+    SOURCES EP.Functional.Calculus.[5.6].V.V.Ryzhikov
+    ARCHIVE ep-functional.calculus-5s6s-ryzhikov
+)

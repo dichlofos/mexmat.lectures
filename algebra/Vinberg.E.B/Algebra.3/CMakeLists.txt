@@ -1,1 +1,4 @@
-texify(Algebra.[3].E.B.Vinberg algebra-3s-vinberg)
+mm_texify(
+    SOURCES Algebra.[3].E.B.Vinberg
+    ARCHIVE algebra-3s-vinberg
+)

@@ -1,1 +1,4 @@
-texify(EP.Number.Theory.[7].A.I.Galochkin ep-number.theory-7s-galochkin)
+mm_texify(
+    SOURCES EP.Number.Theory.[7].A.I.Galochkin
+    ARCHIVE ep-number.theory-7s-galochkin
+)

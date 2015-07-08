@@ -1,1 +1,4 @@
-texify (EP.Logic.UVA ep-logic-uspensky)
+mm_texify(
+    SOURCES EP.Logic.UVA
+    ARCHIVE ep-logic-uspensky
+)

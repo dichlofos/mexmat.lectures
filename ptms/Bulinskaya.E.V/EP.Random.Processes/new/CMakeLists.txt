@@ -1,1 +1,4 @@
-texify (EP.Random.Processes.BEV ep-random.processes-bulinskaya)
+mm_texify(
+    SOURCES EP.Random.Processes.BEV
+    ARCHIVE ep-random.processes-bulinskaya
+)

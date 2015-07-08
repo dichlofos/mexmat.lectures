@@ -1,1 +1,4 @@
-texify (EP.CDG.[3].SEG ep-cdg-3s-sklyarenko)
+mm_texify(
+    SOURCES EP.CDG.[3].SEG
+    ARCHIVE ep-cdg-3s-sklyarenko
+)

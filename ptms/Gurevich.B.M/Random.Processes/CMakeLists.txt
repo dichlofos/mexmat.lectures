@@ -1,2 +1,6 @@
-texify (Random.Processes.[6].GBM random.processes-gurevich pictures)
+mm_texify(
+    SOURCES Random.Processes.[6].GBM
+    ARCHIVE random.processes-gurevich
+    PICTURES pictures
+)
 # randomprocesses-gurevich

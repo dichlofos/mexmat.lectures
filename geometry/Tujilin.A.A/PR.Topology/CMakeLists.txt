@@ -1,1 +1,4 @@
-texify (PR.Topology.[4].TAA pr-topology-4s-tujilin)
+mm_texify(
+    SOURCES PR.Topology.[4].TAA
+    ARCHIVE pr-topology-4s-tujilin
+)

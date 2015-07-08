@@ -1,1 +1,4 @@
-texify (CDG.[3].SAI cdg-3s-shafarevich)
+mm_texify(
+    SOURCES CDG.[3].SAI
+    ARCHIVE cdg-3s-shafarevich
+)

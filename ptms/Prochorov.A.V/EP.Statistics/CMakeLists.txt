@@ -1,1 +1,4 @@
-texify (EP.Statistics.PAV ep-statistics-prochorov)
+mm_texify(
+    SOURCES EP.Statistics.PAV
+    ARCHIVE ep-statistics-prochorov
+)

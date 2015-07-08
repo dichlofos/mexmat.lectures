@@ -1,1 +1,4 @@
-texify (SEM.Statistics.KIA sem-statistics-kozhevnikova)
+mm_texify(
+    SOURCES SEM.Statistics.KIA
+    ARCHIVE sem-statistics-kozhevnikova
+)

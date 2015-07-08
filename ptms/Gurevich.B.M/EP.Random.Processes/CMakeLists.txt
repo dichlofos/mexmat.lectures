@@ -1,1 +1,4 @@
-texify (EP.Random.Processes.GBM ep-randomprocesses-gurevich)
+mm_texify(
+    SOURCES EP.Random.Processes.GBM
+    ARCHIVE ep-randomprocesses-gurevich
+)
