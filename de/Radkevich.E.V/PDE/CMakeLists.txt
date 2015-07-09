@@ -1,3 +1,5 @@
 add_subdirectory(old-source)
-# was: pde-radkevich-pdf.rar
-mmtodo("Add")
+mm_pack(
+    INCLUDE DND-PDE-REV.pdf
+    ARCHIVE pde-radkevich-pdf
+)
