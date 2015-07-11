@@ -6,7 +6,6 @@ Solar energy is presently being used on a smaller scale in furnaces for homes an
 swimming pools. On a larger scale use, solar energy could be used to run cars, power plants,
 and space ships (like the picture you see above) .
 
-
 Geothermal energy is an alternative energy source, although it is not resourceful enough to
 replace more than a minor amount of the future's energy needs. Geothermal energy is obtained
 from the internal heat of the planet and can be used to generate steam to run a steam turbine.
@@ -21,13 +20,13 @@ So, how does this help us? It turns out that if we drill down only three miles w
 temperatures of 100 degrees, celsius, which is enough to boil water to run a steam-powered electric
 powerplant. Drilling three miles through the earth is possible, but not easy, so luckily there are
 easier routes to access this power source, known as geothermal hotspots.
- 
+
 Geothermal hotspots are volcanic features which are found all around the world. Basically a hotspot
 is an area of reduced thickness in the mantle which transmits excess internal heat from the interior
 of the earth to the outer crust. These hotspots are well known for their unique effects on the surface,
 such as the volcanic islands of Hawaii, the mineral deposits and gyesers in Yellowstone National Park,
 or the hotsprings in Iceland. These geothermal hotspots can easily be used to generate electricity. 
- 
+
 Some systems pump hot-water into permeable sedimentary hospots found underground and then use the steam
 to generate electricity. Then the used steam is condensed and sent back down to the permeable
 sedimentary stream. Another system utilizes volcanic magma which is still partly molten at around
@@ -44,6 +43,12 @@ of the costs required in upkeep and the shortage of potential sites.
 Even the power of the tides can be harnessed to produce electricity.
  
 Similar to the more conventional hydroelectric dams, the tidal process utilizes the natural motion
-of the tides to fill reservoirs, which are then slowly discharged through electricity-producing turbines. The former USSR produced 300 MW in its Lumkara plant using this method. 
+of the tides to fill reservoirs, which are then slowly discharged through electricity-producing turbines.
+The former USSR produced 300 MW in its Lumkara plant using this method. 
 
-Hydroelectricity comes from the damming of rivers and utilizing the potential energy stored in the water. As the water stored behind a dam is released at high pressure, its kinetic energy is transferred onto turbine blades and used to generate electricity. This system has enormous costs up front, but has relatively low maintenance costs and provides power quite cheaply. In the United States approximately 180,000 MW of hydroelectric power potential is available, and about a third of that is currently being harnessed.
+Hydroelectricity comes from the damming of rivers and utilizing the potential energy stored in the water.
+As the water stored behind a dam is released at high pressure, its kinetic energy is transferred onto
+turbine blades and used to generate electricity. This system has enormous costs up front, but has
+relatively low maintenance costs and provides power quite cheaply. In the United States approximately
+180,000 MW of hydroelectric power potential is available, and about a third of that is currently
+being harnessed.

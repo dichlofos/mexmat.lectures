@@ -1,4 +1,4 @@
 mm_texify(
-    SOURCES Eng.Science.and.Technology
-    ARCHIVE eng-science.and.technology
+    SOURCES Eng.Computer.Models.Verification
+    ARCHIVE eng-computer.models.verification
 )
