@@ -25,8 +25,11 @@ It's easy!
    https://bitbucket.org/dmvn-corp/dmvn.package
 *  In the repo root, say
 
+```
+#!bash
     cmake .
     make
+```
 
 *  Voila!
 *  If any errors, fix them and try again.
