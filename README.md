@@ -17,11 +17,12 @@ team of TeX/LaTeX professionals.
 
 It's easy!
 
-*  Install CMake (cygwin is OK)
+*  Install CMake (cygwin cmake is OK)
 *  Install LaTeX
-*  Install RAR archiver
+*  Install 7z opensource archiver
 *  Install GhostScript (cygwin gs is OK)
 *  Install DMVN LaTeX style package
+   https://bitbucket.org/dmvn-corp/dmvn.package
 *  In the repo root, say
 
     cmake .
@@ -32,6 +33,5 @@ It's easy!
 
 Feel free to contact us via email, we'll hope we answer all your
 questions related to our project.
-
 
 [1]: http://dmvn.mexmat.net
