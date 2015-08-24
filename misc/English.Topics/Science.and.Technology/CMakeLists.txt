@@ -7,3 +7,8 @@ mm_texify(
     SOURCES Eng.Energy.Sources
     ARCHIVE eng-energy.sources
 )
+
+mm_texify(
+    SOURCES Eng.Science.and.Technology
+    ARCHIVE eng-science.and.technology
+)
