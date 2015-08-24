@@ -5,7 +5,7 @@
 # Author and maintainer: Mikhail Veltishchev <dichlofos-mv@yandex.ru>
 
 
-find_program(LATEX NAMES nlatexmk ntexify nlatex)
+find_program(LATEX NAMES latexmk texify latex)
 if ("${LATEX}" STREQUAL "LATEX-NOTFOUND")
     message( "No latex found. Tried latexmk, texify, latex")
 endif()
