@@ -1,2 +1,0 @@
-all:
-	wr multidimensional.gaussian.calculus-turin-pdf.rar "*.pdf"
