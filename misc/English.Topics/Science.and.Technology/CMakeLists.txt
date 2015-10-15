@@ -12,3 +12,8 @@ mm_texify(
     SOURCES Eng.Science.and.Technology
     ARCHIVE eng-science.and.technology
 )
+
+mm_texify(
+    SOURCES Eng.Robots
+    ARCHIVE eng-robots
+)
