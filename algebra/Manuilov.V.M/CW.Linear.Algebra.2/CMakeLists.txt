@@ -1,1 +1,4 @@
-texify (CW.Linear.Algebra.MVM )
+mm_texify(
+    SOURCES CW.Linear.Algebra.MVM
+    ARCHIVE cw-linear.algebra-manuilov
+)
