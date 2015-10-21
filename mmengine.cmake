@@ -15,10 +15,7 @@ macro(mm_picture)
     set (tex_name_ "${ARGV1}")
     set (target_ "${ARGV2}")
 
-    #message(STATUS "Processing pictures for ${tex_name_}...")
-
     get_filename_component(pic_name_we_ ${pic_name_} NAME_WE)
-    #message(STATUS ${pic_name_we_})
     if (${pic_name_we_} STREQUAL ${pic_name_})
         # fallback
         set(pic_name_we_ ${pic_name_})
@@ -38,62 +35,12 @@ macro(mm_picture)
     )
 endmacro()
 
-
-# DEPRECATED, use mm_texify instead
-macro(texify)
-    set (FN "${ARGV0}")
-    set (RN "${ARGV1}")
-    set (PN "${ARGV2}")
-
-    add_custom_command(
-        OUTPUT "generated/${FN}.dvi"
-        COMMAND "${RUN_LATEX}" "../${FN}.tex" ${LATEX} ${LATEX_OPTS}
-        DEPENDS "${FN}.tex"
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    )
-    add_custom_command(
-        OUTPUT "generated/${FN}.ps"
-        COMMAND "${RUN_DVIPS}" ${DVIPS} "${FN}.dvi"
-        DEPENDS "generated/${FN}.dvi"
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    )
-    add_custom_command(
-        OUTPUT "${FN}.pdf"
-        COMMAND "${GS}" ${GS_OPTS} "-sOutputFile=${FN}.pdf" "${FN}.ps"
-        DEPENDS "${FN}.ps"
-    )
-    add_custom_command(
-        OUTPUT "${RN}.rar"
-        COMMAND "${RAR}" ${RAR_TEXT_OPTS} "${RN}.rar" "${FN}.ps"
-        DEPENDS "${FN}.ps"
-    )
-    add_custom_command(
-        OUTPUT "${RN}-pdf.rar"
-        COMMAND "${RAR}" ${RAR_BIN_OPTS} "${RN}-pdf.rar" "${FN}.pdf"
-        DEPENDS "${FN}.pdf"
-    )
-    add_custom_command(
-        OUTPUT "${RN}.pdf"
-        COMMAND cp "${FN}.pdf" "${RN}.pdf"
-        DEPENDS "${FN}.pdf"
-    )
-    add_custom_target("Make ${FN}.dvi" ALL DEPENDS "generated/${FN}.dvi")
-    add_custom_target("Make ${FN}.ps" ALL DEPENDS "generated/${FN}.ps")
-    # disable for a while, to test only building while moving to generated/ structure
-    #add_custom_target("Make ${FN}.pdf" ALL DEPENDS "${FN}.pdf")
-    #add_custom_target("Make ${RN}.rar" ALL DEPENDS "${RN}.rar")
-    #add_custom_target("Make ${RN}-pdf.rar" ALL DEPENDS "${RN}-pdf.rar")
-    #add_custom_target("Make ${RN}.pdf" ALL DEPENDS "${RN}.pdf")
-
-    if (PN)
-        mm_picture("${PN}" "${FN}" "Make ${FN}.dvi")
-    endif (PN)
-
-    set_directory_properties(PROPERTIES
-        ADDITIONAL_MAKE_CLEAN_FILES "generated"
-    )
+macro(mm_filter)
+    string(REPLACE "[" "-" output_ "${ARGV1}")
+    string(REPLACE "]" "-" output_ ${output_})
+    string(REPLACE " " "-" output_ ${output_})
+    set (${ARGV0} "${output_}")
 endmacro()
-
 
 macro(mm_texify)
     set (args_ ${ARGN})
@@ -137,17 +84,14 @@ macro(mm_texify)
         set(program_ "${LATEX}")
     endif()
 
-    #message("  Processing ${sources_}")
-    #message("    pictures: ${pictures_}")
-    #message("    include: ${include_}")
-    #message("    archive: ${include_}")
-
     add_custom_command(
         OUTPUT "generated/symlink.done"
         COMMAND "${RUN_SYMLINK}" ${include_}
         DEPENDS ${include_}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
+
+    mm_filter(filtered_sources_ ${sources_})
 
     if (NOT program_ STREQUAL "xelatex")
         # default TeX -> DVI -> PS mode
@@ -163,8 +107,8 @@ macro(mm_texify)
             DEPENDS "generated/${sources_}.dvi"
             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         )
-        add_custom_target("Make ${sources_}.dvi" ALL DEPENDS "generated/${sources_}.dvi")
-        add_custom_target("Make ${sources_}.ps" ALL DEPENDS "generated/${sources_}.ps")
+        add_custom_target("Make-${filtered_sources_}.dvi" ALL DEPENDS "generated/${sources_}.dvi")
+        add_custom_target("Make-${filtered_sources_}.ps" ALL DEPENDS "generated/${sources_}.ps")
 
         mm_pack(
             INCLUDE "generated/${sources_}.ps"
@@ -187,10 +131,10 @@ macro(mm_texify)
         )
         set (pic_dep_ "pdf")
     endif()
-    add_custom_target("Make ${sources_}.pdf" ALL DEPENDS "generated/${archive_}.pdf")
+    add_custom_target("Make-${filtered_sources_}.pdf" ALL DEPENDS "generated/${archive_}.pdf")
 
     foreach (picture_ ${pictures_})
-        mm_picture("${picture_}" "${sources_}" "Make ${sources_}.${pic_dep_}")
+        mm_picture("${picture_}" "${sources_}" "Make-${filtered_sources_}.${pic_dep_}")
     endforeach()
 
 
@@ -200,7 +144,8 @@ macro(mm_texify)
         DEPENDS "generated/${sources_}.pdf"
     )
 
-    add_custom_target("Make ${archive_}.pdf" ALL DEPENDS "generated/${archive_}.pdf")
+    mm_filter(filtered_archive_ ${archive_})
+    add_custom_target("Make-${filtered_archive_}.pdf" ALL DEPENDS "generated/${archive_}.pdf")
 
     set_directory_properties(PROPERTIES
         ADDITIONAL_MAKE_CLEAN_FILES "generated"
@@ -234,7 +179,7 @@ macro(mm_pack)
         COMMAND "${RUN_ARCHIVER}" ${ARCHIVER} ${ARCHIVER_OPTS} "generated/${archive_full_}" ${include_}
         DEPENDS ${include_}
     )
-    add_custom_target("Make ${archive_full_}" ALL DEPENDS "generated/${archive_full_}")
+    add_custom_target("Make-${archive_full_}" ALL DEPENDS "generated/${archive_full_}")
 endmacro()
 
 
