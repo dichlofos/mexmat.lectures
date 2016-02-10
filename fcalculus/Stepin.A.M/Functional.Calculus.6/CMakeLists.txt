@@ -3,4 +3,5 @@ mm_texify(
     ARCHIVE functional.calculus-5s-stepin
     PICTURES pictures
 )
+mmtodo("Fix dashes")
 add_subdirectory(Addition)
