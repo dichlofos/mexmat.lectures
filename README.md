@@ -10,7 +10,7 @@ team of TeX/LaTeX professionals.
 
 *  Mikhail Veltishchev (dichlofos-mv@yandex.ru): project lead, website
    and infrastructure programming, maintenance, lectures typesetting.
-*  Dmitry Veltishchev (vdm-photo@ya.ru): incoming materials monitoring,
+*  Dmitry Veltishchev (dm.velt@ya.ru): incoming materials monitoring,
    typesetting. 
 
 ## How to build ##
